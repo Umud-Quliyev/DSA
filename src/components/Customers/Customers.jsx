@@ -1,4 +1,3 @@
-import React from "react";
 import "./Customers.css";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,7 +23,7 @@ const Customers = () => {
     { src: bakcell },
   ];
   return (
-    <div className="contanierr">
+    <div id="customer" className="contanierr">
       <div className="customers">
         <div className="customer__title">
           <h2>Əməkdaşlıq etdiyimiz şirkətlər</h2>
