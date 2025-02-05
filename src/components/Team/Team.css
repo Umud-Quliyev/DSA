@@ -2,6 +2,48 @@
   text-align: center;
 }
 
-.teacher__title h2{
-    
+.teacher__title h2 {
+  font-size: 40px;
+  font-weight: 300px;
+  color: #212331;
+}
+
+.teacher__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teacher__profile {
+  max-width: 160px;
+  width: 100%;
+}
+
+.profile__img img {
+  border-radius: 50%;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.profile__img img:hover {
+  border: 5px solid #862359;
+}
+
+.profile__info {
+  text-align: center;
+}
+
+.profile__info h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1b1136;
+}
+
+.profile__info span {
+  color: #1b1136;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 500;
 }

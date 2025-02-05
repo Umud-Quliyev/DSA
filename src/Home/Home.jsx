@@ -6,7 +6,7 @@ import MainSection from "../components/MainSection.jsx/MainSection";
 const Home = () => {
   return (
     <div>
-      <MainSection/>
+      <MainSection />
       <Customers />
       <TrainingProgram />
       <Team />
