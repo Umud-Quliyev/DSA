@@ -83,6 +83,7 @@ const TrainingProgram = () => {
                 {/* {index < steps.length - 1 && (
                   <div className="hidden md:block w-full h-1 bg-teal-400 mt-6"></div>
                 )} */}
+                {/* ABC */}
               </div>
             ))}
           </div>
