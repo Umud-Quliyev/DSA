@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./Home/Home";
-import Practics from "./Practics/Practics";
+
 import "./App.css";
-import TrainingProgram from "./components/Training_Program/page";
+import Practics from "./Pages/Practics/Practics";
+/* import TrainingProgram from "./components/Training_Program/page"; */
 
 function App() {
   return (
