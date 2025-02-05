@@ -1,12 +1,11 @@
 import logo from "../../assets/svg/8bf0d7d8.svg";
 const Header = () => {
   return (
-    <div className="px-0 flex bg-[red] w-full">
+    <div className="flex justify-center items-center h-30 relative z-1 text-[#fff]">
       <div className="w-48">
-
-        <img src={logo} alt="" className="w-full"/>
+        <img src={logo} alt="" className="text-[]"/>
       </div>
-      <ul className="w-full flex justify-evenly">
+      <ul className="w-3/5 flex items-center justify-evenly ">
         <li>Əsas</li>
         <li>Müştərilər</li>
         <li>Təlim Proqramı</li>
