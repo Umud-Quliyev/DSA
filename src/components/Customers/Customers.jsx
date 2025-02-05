@@ -1,5 +1,6 @@
+import React from "react";
 import "./Customers.css";
-
+import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { Swiper, SwiperSlide } from "swiper/react";
