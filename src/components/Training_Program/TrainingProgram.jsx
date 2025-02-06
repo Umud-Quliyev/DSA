@@ -34,7 +34,7 @@ const TrainingProgram = () => {
   ];
 
   return (
-    <section className="bg-gray-100 text-gray-900 flex flex-col justify-center items-center">
+    <section id="training" className="bg-gray-100 text-gray-900 flex flex-col justify-center items-center pt-10">
       <div className="container">
         {/* Training Program Section */}
         <div className="max-w-5xl mx-auto py-16 px-6">

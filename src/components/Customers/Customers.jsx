@@ -11,6 +11,7 @@ import azercell from "../../assets/img/azercell.png";
 import bravo from "../../assets/img/bravo.png";
 import bakcell from "../../assets/img/bakcell.png";
 import { Pagination } from "swiper/modules";
+import { Element } from "react-scroll";
 
 const Customers = () => {
   const customers = [
@@ -23,19 +24,32 @@ const Customers = () => {
     { src: bakcell },
   ];
   return (
-    <div id="customer" className="contanierr">
+    <Element name="customer" className="contanierr">
       <div className="customers">
         <div className="customer__title">
           <h2>Əməkdaşlıq etdiyimiz şirkətlər</h2>
         </div>
         <div className="customer__list">
           <Swiper
-            slidesPerView={5}
             spaceBetween={30}
             pagination={{
               clickable: true,
             }}
             modules={[Pagination]}
+            breakpoints={{
+              967: {
+                slidesPerView: 5,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              520: {
+                slidesPerView: 3,
+              },
+              320: {
+                slidesPerView: 2,
+              },
+            }}
           >
             {customers.map((customer, index) => (
               <SwiperSlide key={index}>
@@ -45,7 +59,7 @@ const Customers = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

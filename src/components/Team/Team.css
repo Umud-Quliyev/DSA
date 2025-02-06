@@ -1,7 +1,8 @@
-.teacher__title {
-  text-align: center;
+.teachers {
+  padding: 60px 0;
+  background-color: #f6f6f6;
 }
 
-.teacher__title h2{
-    
+.graduates {
+  padding: 60px 0;
 }

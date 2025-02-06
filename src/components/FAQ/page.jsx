@@ -5,10 +5,11 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { Element } from "react-scroll";
 
 const FAQ = () => {
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <Element name="faq" className="max-w-4xl mx-auto px-4 py-20">
       <h1 className="text-3xl font-semibold text-center mb-4">FAQ</h1>
       <Accordion className="mb-4">
         <AccordionSummary
@@ -215,7 +216,7 @@ const FAQ = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </Element>
   );
 };
 

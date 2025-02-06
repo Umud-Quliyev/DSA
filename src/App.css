@@ -1,13 +1,11 @@
 @import "tailwindcss";
 
-
 .contanierr {
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
 }
-
 
 @font-face {
   font-family: "Gotham";
@@ -15,3 +13,35 @@
   font-style: normal;
   src: url("./assets/fonts/Gotham-Light.otf") format("truetype");
 }
+
+/*  navbar  */
+
+
+.scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #000000;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  animation: slideDown 1s ease-out;
+  transform: translateY(-100px);
+  animation-fill-mode: forwards;
+}
+.active{
+  background-color: #fccd00;
+  color: #000000;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);  
+  }
+  to {
+    transform: translateY(0px); 
+  }
+}
+
+
