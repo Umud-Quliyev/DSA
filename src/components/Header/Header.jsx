@@ -12,34 +12,41 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["main",  "customer", "training", "team", "faq", "contact"];
+      const sections = ["main", "customer", "training", "team", "faq", "contact"];
       const scrollPosition = window.scrollY;
+  
       sections.map((section) => {
         const el = document.getElementById(section);
-        console.log(el)
+        console.log(el,"el")
         if (el) {
           const offsetTop = el.offsetTop;
           const offsetHeight = el.offsetHeight;
+          
+          // Şu anki scroll pozisyonuna göre, hangi bölümde olduğumuzu kontrol et
           if (scrollPosition >= offsetTop - 100 && scrollPosition < offsetTop + offsetHeight - 100) {
             setActiveSection(section);
           }
         }
       });
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+console.log(activeSection, "activesection")
+
   useEffect(() => {
     const handleNavigation = () => {
       const scroll = window.scrollY;
 
       if (scroll > 50) {
         setColor(true); 
-        setChooseScroll(true); 
+        setChooseScroll(true);
+        setDropdown(false) 
       } else {
         setColor(false);
         setChooseScroll(false); 
@@ -72,25 +79,25 @@ const Header = () => {
         )}
       </div>
       <ul className="w-3/5 flex items-center justify-evenly ">
-        <Link to="main" smooth={true} duration={1500} className={activeSection === "main" ? "active" : ""}>
+        <Link to="main" smooth={true} duration={1500} className={activeSection == "main" ? "active" : ""}>
           {" "}
-          <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
+          <li className="hover:text-[#fccd00] cursor-pointer ">Əsas</li>
         </Link>
-        <Link to="customer" smooth={true} duration={1500} className={activeSection === "customer" ? "active" : ""}>
+        <Link to="customer" smooth={true} duration={1500} className={activeSection == "customer" ? "active" : ""}>
           {" "}
           <li className="hover:text-[#fccd00] cursor-pointer">Müştərilər</li>
         </Link>
-        <Link to="training" smooth={true} duration={1500} className={activeSection === "training" ? "active" : ""}>
+        <Link to="training" smooth={true} duration={1500} className={activeSection == "training" ? "active" : ""}>
           <li className="hover:text-[#fccd00] cursor-pointer  ">Təlim Proqramı</li>
         </Link>
-        <Link to="team" smooth={true} duration={1500} className={activeSection === "team" ? "active" : ""}>
+        <Link to="team" smooth={true} duration={1500} className={activeSection == "team" ? "active" : ""}>
           <li className="hover:text-[#fccd00] cursor-pointer" >Komandamız</li>
         </Link>
-        <Link to="faq" smooth={true} duration={1500} className={activeSection === "faq" ? "active" : ""}>
+        <Link to="faq" smooth={true} duration={1500} className={activeSection == "faq" ? "active" : ""}>
           {" "}
           <li className="hover:text-[#fccd00] cursor-pointer li">FAQ</li>
         </Link>
-        <Link to="contact" smooth={true} duration={1500} className={activeSection === "contact" ? "active" : ""}>
+        <Link to="contact" smooth={true} duration={1500} className={activeSection == "contact" ? "active" : ""}>
           <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
         </Link>
         <Link to="">

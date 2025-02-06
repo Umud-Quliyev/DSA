@@ -1,9 +1,8 @@
-import { Element } from "react-scroll";
 import Header from "../Header/Header";
 
 const MainSection = () => {
   return (
-    <Element name="main" className="bg-[url(./assets/png/main-bg.jpg)] h-[100vh] w-full">
+    <section id="main" name="main" className="bg-[url(./assets/png/main-bg.jpg)] h-[100vh] w-full">
       <Header />
       <div className="text-[#fff] flex  flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
           <h1 className="text-[40px]">12 HƏFTƏDƏ</h1>
@@ -28,7 +27,7 @@ const MainSection = () => {
           </button>
         </div>
       </div>
-    </Element>
+    </section>
   );
 };
 

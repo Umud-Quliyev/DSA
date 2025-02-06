@@ -24,7 +24,7 @@ const Customers = () => {
     { src: bakcell },
   ];
   return (
-    <Element name="customer" className="contanierr">
+    <section id="customer" name="customer" className="contanierr">
       <div className="customers">
         <div className="customer__title">
           <h2>Əməkdaşlıq etdiyimiz şirkətlər</h2>
@@ -59,7 +59,7 @@ const Customers = () => {
           </Swiper>
         </div>
       </div>
-    </Element>
+    </section>
   );
 };
 
