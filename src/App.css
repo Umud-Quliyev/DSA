@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 .contanierr {
   max-width: 1110px;
   width: 100%;
@@ -8,10 +7,62 @@
   padding: 0;
 }
 
-
 @font-face {
   font-family: "Gotham";
   font-weight: 600;
   font-style: normal;
   src: url("./assets/fonts/Gotham-Light.otf") format("truetype");
 }
+
+/*  navbar  */
+/* .nav{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: transform 0.7s ease;  
+  z-index: 1000;  
+} */
+
+.scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease;
+  background-color: #fff;
+  color: #000000;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  animation: slideDown 1s ease-out;
+  transform: translateY(0px);
+}
+.scrollUp{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease;
+  background-color: #fff;
+  color: #000000;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  animation: slideDown1 1s ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);  
+  }
+  to {
+    transform: translateY(0px); 
+  }
+}
+@keyframes slideDown1 {
+  from {
+    transform: translateY(100px);  
+  }
+  to {
+    transform: translateY(0px); 
+  }
+}
+
