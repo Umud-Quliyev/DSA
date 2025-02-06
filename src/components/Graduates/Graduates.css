@@ -8,8 +8,20 @@
   font-size: 40px;
 }
 
-.graduates__list .graduate img {
+.graduates__img img {
   border-radius: 50%;
+  transition: border 0.3s ease, border-radius 0.3s ease;
+  border: 5px solid transparent;
+  box-sizing: border-box;
+}
+
+.graduate:hover {
+  cursor: pointer;
+  color: #862359;
+}
+
+.graduate:hover .graduates__img img {
+  border: 5px solid #862359;
 }
 
 .graduate__info h3 {
@@ -17,7 +29,6 @@
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 18px;
-  color: #1b1136;
 }
 
 .graduate__info h5 {

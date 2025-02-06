@@ -42,58 +42,51 @@ const Graduates = () => {
     },
     {
       img: aksin,
-      fullname: "Minurə Hüseynli",
-      position: "Head of Data Analytics and Reporting",
-      workplace: "Digital Umbrella",
+      fullname: "Akşin Hüseynov",
+      position: "Data Analyst",
+      workplace: "Universal Music Group, Almaniya",
     },
     {
       img: namiq,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Namiq Cəfərov",
+      position: "Data Analyst",
+      workplace: "Digital Umbrella",
     },
     {
       img: emil,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Emil Aydınsoy",
+      position: "Senior Data Scientist",
+      workplace: "Proxify, İsveç",
     },
     {
       img: leyla,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Leyla Fərzəliyeva",
+      position: "Head of Analysis and Statistics Division",
+      workplace: "DSMF",
     },
     {
       img: teymur,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Teymur Kosayev",
+      position: "Data Analyst",
+      workplace: "Accenture, Polşa",
     },
     {
       img: sevda,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Sevda Əsgərzadə",
+      position: "Business Analyst",
+      workplace: "Kapital Bank",
     },
     {
       img: rauf,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Rauf Omarov",
+      position: "Data Scientist",
+      workplace: "Kapital Bank",
     },
     {
       img: terlan,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
+      fullname: "Tərlan Cəbiyev",
+      position: "Lead Data Scientist",
+      workplace: "PashaPay",
     },
   ];
 

@@ -1,4 +1,3 @@
-
 .teacher__title {
   text-align: center;
   margin-bottom: 25px;
@@ -21,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 240px;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -29,19 +29,18 @@
   width: 100%;
 }
 
+.teacher__profile:hover {
+  color: #862359;
+}
+
 .profile__img img {
   border-radius: 50%;
   border: 5px solid transparent;
-  cursor: pointer;
   transition: ease 0.3s;
 }
 
-.profile__img img:hover {
+.teacher__profile:hover .profile__img img {
   border: 5px solid #862359;
-}
-
-.teacher__profile:hover {
-  color: #862359;
 }
 
 .profile__info {

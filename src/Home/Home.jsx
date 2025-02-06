@@ -3,6 +3,7 @@ import Customers from "../components/Customers/Customers";
 import Team from "../components/Team/Team";
 import MainSection from "../components/MainSection.jsx/MainSection";
 import FAQ from "../components/FAQ/page";
+import Contact from "../components/Contact/Contact";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <TrainingProgram />
       <Team />
       <FAQ />
+      <Contact />
     </div>
   );
 };
