@@ -13,7 +13,7 @@ const ScrollToTop = () => {
         document.documentElement.scrollHeight - window.innerHeight;
       const progress = pathLength - (scrollTop * pathLength) / scrollHeight;
       setScrollY(progress);
-      setIsVisible(scrollTop > 50);
+      setIsVisible(scrollTop > 200);
     };
 
     window.addEventListener("scroll", handleScroll);

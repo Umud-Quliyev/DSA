@@ -30,12 +30,25 @@ const Customers = () => {
         </div>
         <div className="customer__list">
           <Swiper
-            slidesPerView={5}
             spaceBetween={30}
             pagination={{
               clickable: true,
             }}
             modules={[Pagination]}
+            breakpoints={{
+              967: {
+                slidesPerView: 5,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              520: {
+                slidesPerView: 3,
+              },
+              320: {
+                slidesPerView: 2,
+              },
+            }}
           >
             {customers.map((customer, index) => (
               <SwiperSlide key={index}>

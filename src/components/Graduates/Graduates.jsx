@@ -146,7 +146,20 @@ const Graduates = () => {
         </div>
         <div className="graduates__list">
           <Swiper
-            slidesPerView={5}
+            breakpoints={{
+              967: {
+                slidesPerView: 5,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              520: {
+                slidesPerView: 3,
+              },
+              320: {
+                slidesPerView: 2,
+              },
+            }}
             spaceBetween={78}
             pagination={{
               clickable: true,
@@ -178,7 +191,7 @@ const Graduates = () => {
         </div>
         <div className="workplace__list">
           {graduate__workplace.map((workplace, index) => (
-            <div className="workplace">
+            <div key={index} className="workplace">
               <img src={workplace.src} alt={`sirket ${index}`} />
             </div>
           ))}
