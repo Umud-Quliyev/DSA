@@ -39,37 +39,37 @@ const Header = () => {
   return (
     <div
       className={`flex justify-center items-center h-20  text-[#fff] nav z-10 ${
-        chooseScroll ? "scrolled" : "scrollUp"
+        chooseScroll ? "scrolled" : ""
       }`}
     >
       <div className="w-40">
         {color ? (
-          <img src={logoBlack} alt="" />
+          <img src={logoBlack} alt="" className='cursor-pointer'/>
         ) : (
-          <img src={logo} alt="" className="" />
+          <img src={logo} alt="" className="cursor-pointer" />
         )}
       </div>
       <ul className="w-3/5 flex items-center justify-evenly ">
         <Link to="main" smooth={true} duration={1500}>
           {" "}
-          <li className="hover:text-[#fccd00]">Əsas</li>
+          <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
         </Link>
         <Link to="training" smooth={true} duration={1500}>
-          <li className="hover:text-[#fccd00]">Təlim Proqramı</li>
+          <li className="hover:text-[#fccd00] cursor-pointer">Təlim Proqramı</li>
         </Link>
         <Link to="team" smooth={true} duration={1500}>
-          <li className="hover:text-[#fccd00]" >Komandamız</li>
+          <li className="hover:text-[#fccd00] cursor-pointer" >Komandamız</li>
         </Link>
         <Link to="faq" smooth={true} duration={1500}>
           {" "}
-          <li className="hover:text-[#fccd00] li">FAQ</li>
+          <li className="hover:text-[#fccd00] cursor-pointer li">FAQ</li>
         </Link>
         <Link to="contact" smooth={true} duration={1500}>
-          <li className="hover:text-[#fccd00]">Əlaqə</li>
+          <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
         </Link>
         <Link to="">
           <li
-            className="flex items-center gap-1 relative hover:text-[#fccd00]"
+            className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
             onClick={handleClick}
           >
             Təlimlər <IoMdArrowDropdown />
