@@ -1,0 +1,58 @@
+.graduates__title {
+  text-align: center;
+}
+
+.graduates__title h2 {
+  font-weight: 300;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+
+.graduates__list .graduate img {
+  border-radius: 50%;
+}
+
+.graduate__info h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1b1136;
+}
+
+.graduate__info h5 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.graduate__info h5 span {
+  font-weight: bold;
+}
+
+.swiper-slide {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.workplace__title {
+  text-align: center;
+}
+
+.workplace__title h2 {
+  font-weight: 300;
+  font-size: 40px;
+  color: #212331;
+}
+
+.workplace__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.workplace__list .workplace {
+  padding: 30px;
+  max-width: 270px;
+  width: 100%;
+}
