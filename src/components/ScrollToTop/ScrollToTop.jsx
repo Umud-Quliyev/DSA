@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./scrollToTop.css";
+import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [scrollY, setScrollY] = useState(0);
