@@ -9,49 +9,28 @@ const Header = () => {
   const [color, setColor] = useState(false);
   const [chooseScroll, setChooseScroll] = useState(false);
   const [currentScroll, setCurrentScroll] = useState(0);
-  /* useEffect(() => {
-    const handleScroll = () => {
-      const nav = document.querySelector(".nav");
-      const scroll = window.scrollY;
-      if (scroll > 100) {
-        if (scroll > currentScroll) {
-          nav.classList.add("scrolled");
-          setColor(true);
-          setChooseScroll(false);
-        } else {
-          setChooseScroll(true);
-        }
-      }
-      setCurrentScroll(scroll);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); */
+ 
 
   useEffect(() => {
     const handleNavigation = () => {
       const scroll = window.scrollY;
 
       if (scroll > 100) {
-        setColor(true); // Logo rengini değiştirmek için
-        setChooseScroll(true); // Navbar scroll olduğunda sabit olsun
+        setColor(true); 
+        setChooseScroll(true); 
       } else {
         setColor(false);
-        setChooseScroll(false); // 100'ün altına inince navbar normal konumuna gelsin
+        setChooseScroll(false); 
       }
 
-      setCurrentScroll(scroll); // Geçerli scroll değerini güncelle
+      setCurrentScroll(scroll); 
     };
 
-    window.addEventListener("scroll", handleNavigation); // Scroll eventini dinle
+    window.addEventListener("scroll", handleNavigation); 
     return () => {
-      window.removeEventListener("scroll", handleNavigation); // component unmount olduğunda event dinleyiciyi kaldır
+      window.removeEventListener("scroll", handleNavigation); 
     };
-  }, [currentScroll]); // currentScroll değiştikçe useEffect çalışacak
+  }, [currentScroll]); 
 
   const handleClick = () => {
     setDropdown(!dropdown);
