@@ -15,7 +15,7 @@ const Header = () => {
     const handleNavigation = () => {
       const scroll = window.scrollY;
 
-      if (scroll > 100) {
+      if (scroll > 50) {
         setColor(true); 
         setChooseScroll(true); 
       } else {
@@ -61,7 +61,7 @@ const Header = () => {
         </Link>
         <Link to="">
           {" "}
-          <li className="hover:text-[#fccd00]">FAQ</li>
+          <li className="hover:text-[#fccd00] li">FAQ</li>
         </Link>
         <Link to="">
           <li className="hover:text-[#fccd00]">Əlaqə</li>
@@ -73,7 +73,7 @@ const Header = () => {
           >
             Təlimlər <IoMdArrowDropdown />
             {dropdown && (
-              <div className="absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5  flex gap-10 flex-wrap rounded-[5px]">
+              <div className="absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5  flex gap-10 flex-wrap rounded-[5px] z-10">
                 <div>
                   <h1 className="text-[#2fa8a5] font-bold">Data Analitika</h1>
                   <p className="text-[#50264E] font-bold">
