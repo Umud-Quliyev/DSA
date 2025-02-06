@@ -4,6 +4,7 @@ import Team from "../components/Team/Team";
 import MainSection from "../components/MainSection.jsx/MainSection";
 import FAQ from "../components/FAQ/page";
 import Contact from "../components/Contact/Contact";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Team />
       <FAQ />
       <Contact />
+      <ScrollToTop />
     </div>
   );
 };

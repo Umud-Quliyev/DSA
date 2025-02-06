@@ -39,6 +39,7 @@
 
 .form__select {
   width: 100%;
+  outline: none;
 }
 
 .MuiSelect-select {
