@@ -9,7 +9,7 @@ import { Element } from "react-scroll";
 
 const FAQ = () => {
   return (
-    <Element name="faq" className="max-w-4xl mx-auto p-4">
+    <Element name="faq" className="max-w-4xl mx-auto px-4 py-20">
       <h1 className="text-3xl font-semibold text-center mb-4">FAQ</h1>
       <Accordion className="mb-4">
         <AccordionSummary
