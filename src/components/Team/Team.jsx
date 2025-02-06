@@ -9,18 +9,17 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Teachers from "../Teachers/Teachers";
 import Graduates from "../Graduates/Graduates";
-import { Element } from "react-scroll";
 
 const Team = () => {
   return (
-    <Element name="team" className="team">
+    <section id="team" name="team" className="team">
       <div className="teachers">
         <Teachers />
       </div>
       <div className="graduates">
         <Graduates />
       </div>
-    </Element>
+    </section>
   );
 };
 
