@@ -5,6 +5,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { Element } from "react-scroll";
 
 const Contact = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -14,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contanierr">
+    <Element name="contact" className="contanierr">
       <div className="contact">
         <div className="contact__title">
           <h2>Əlaqə</h2>
@@ -78,7 +79,7 @@ const Contact = () => {
           <button type="submit">Göndər</button>
         </form>
       </div>
-    </div>
+    </Element>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Element } from 'react-scroll';
 import logo from "../../assets/svg/8bf0d7d8.svg";
 import logoBlack from "../../assets/svg/logoBlack.svg";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -35,6 +35,7 @@ const Header = () => {
   const handleClick = () => {
     setDropdown(!dropdown);
   };
+  
   return (
     <div
       className={`flex justify-center items-center h-20  text-[#fff] nav z-10 ${
@@ -49,21 +50,21 @@ const Header = () => {
         )}
       </div>
       <ul className="w-3/5 flex items-center justify-evenly ">
-        <Link to="">
+        <Link to="main" smooth={true} duration={1500}>
           {" "}
           <li className="hover:text-[#fccd00]">Əsas</li>
         </Link>
-        <Link to="">
+        <Link to="training" smooth={true} duration={1500}>
           <li className="hover:text-[#fccd00]">Təlim Proqramı</li>
         </Link>
-        <Link to="">
-          <li className="hover:text-[#fccd00]">Komandamız</li>
+        <Link to="team" smooth={true} duration={1500}>
+          <li className="hover:text-[#fccd00]" >Komandamız</li>
         </Link>
-        <Link to="">
+        <Link to="faq" smooth={true} duration={1500}>
           {" "}
           <li className="hover:text-[#fccd00] li">FAQ</li>
         </Link>
-        <Link to="">
+        <Link to="contact" smooth={true} duration={1500}>
           <li className="hover:text-[#fccd00]">Əlaqə</li>
         </Link>
         <Link to="">
