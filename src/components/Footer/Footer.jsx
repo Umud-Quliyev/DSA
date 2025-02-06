@@ -46,6 +46,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    // I will add new code
   );
 };
 
