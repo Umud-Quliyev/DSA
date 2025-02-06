@@ -4,7 +4,7 @@ import MainSection from "../components/MainSection.jsx/MainSection";
 import FAQ from "../components/FAQ/page";
 import Contact from "../components/Contact/Contact";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import TrainingProgram from "../components/Training_Program/Page";
+import TrainingProgram from "../components/Training_Program/Training_Program";
 
 const Home = () => {
   return (
