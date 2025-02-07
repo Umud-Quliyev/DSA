@@ -1,0 +1,89 @@
+[
+    {
+      "id": 1,
+      "name": "Data Analitika",
+      "title": "Beginner to Intermediate",
+      "sections": [
+        {
+          "id": 2,
+          "headers": "Excel ilə Data Analitikası",
+          "description": "“Excel ilə data analitikası” təlimi ilkin və orta səviyyəli Excel istifadəçiləri, Exceldən mütəmadi istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün analitika dünyasına başlanğıc məqsədilə dizayn olunub. Bu məqsədlə sizə Microsoft Exceldən istifadə etməklə ilkin analitik anlayışlar və tətbiqi biliklər vasitəsilə datanı necə idarə etmək və data əsaslı qərarlar vermək öyrədiləcək.",
+          "img": "../src/assets/png/"
+        },
+        {
+          "id": 3,
+          "headers": "Power BI ilə Data Analitikası",
+          "description": "Bu təlim, sizə özü “düşünən” biznes intellekti vasitəsilə real zamanda real hesabatları hazırlamaqda kömək edəcək. Təlim vasitəsilə siz Power BI proqramının bütün komponentlərini anlayacaq, onların bir yerdə, ahəng şəklində necə işlədiyinin şahidi olacaq və heyranedici nəticələr əldə edəcək vizual dashboardlar hazırlama bilik və bacarıqları öyrənəcəksiniz. Bu təlimdə, Microsoft şirkətinin ən son təqdim etdiyi Biznes İntellekt aləti olan Power BI ilə istənilən mənbədən olan datanı asan və tez şəkildə əldə edərək dəqiqələr içərisində mənalı, baxımlı və dinamik hesabatları hazırlamaq üçün gərəkən texnikalar öyrədiləcək. Üstəlik bunun üçün İT mütəxəssisi, texniki dəstək gözləməyə ehtiyacınız olmayacaq.",
+          "img": "https://example.com/images/powerbi-analytics.jpg"
+        },
+        {
+          "id": 4,
+          "headers": "SQL ilə Data Analitikası",
+          "description": "Təlim ərzində SQL vasitəsilə məlumatı bazadan çəkmək üçün sorğu yazmağı, filtr etməyi, formatını dəyişməyi, bir neçə mənbədən vahid mənbə kimi istifadə etməyi və databaza üzərində digər əməliyyatları çox sadə və praktiki şəkildə öyrənəcəksiniz. Bu da sizə məlumatlar üzərində hesablamalar aparmağa, gündəlik, həftəlik, aylıq hesabat və analizlərin hazırlanması prosesini optimallaşdırmağa kömək edəcək. Təlim daha əvvəl heç bir proqramlaşdırma təcrübəsi olmayan insanların belə rahatlıqla anlayacağı formada hazırlanıb.",
+          "img": "https://example.com/images/sql-analytics.jpg"
+        },
+        {
+          "id": 5,
+          "headers": "Tableau ilə Data Analitikası",
+          "description": "Qərarvermədə datanın çox önəmli olduğu bir dövrdə datanıza hakim olmamaqla nələri itirə biləcəyinizi izah etmək heç də çətin deyil. Dünyaca məşhur 'Gartner' reytinqində 5 il ardıcıl olaraq liderliyini əldə saxlayan, interaktiv vizual təsvirin 'Qızıl Standartı' hesab edilən Tableau proqramını əhatə edən bu təlim dataya hakim olmaq, yəni onu 'görmək' və 'anlamaq' prinsiplərinə əsaslanır. Təlim proqramında sadəcə statik qrafik hazırlanması deyil, həm də datanızda gizli olan vacib məlumatı üzə çıxarmaq üçün lazım interaktiv dashboardların hazırlanması nəzərdə tutulub.",
+          "img": "https://example.com/images/tableau-analytics.jpg"
+        },
+        {
+          "id": 6,
+          "headers": "SPSS ilə Statistika və Data Analitikası",
+          "description": "Təlim müddətində IBM SPSS-ə məxsus alətlər olan SPSS Modeler və SPSS Statistics ilə datanı daxil etmək, təmizləmək və idarə etməkdən, diaqnostik təhlillər ilə analitik data təhlilinə qədər onlarla yeni metodologiyaları real biznes, satış, maliyyə, səhiyyə və dövlət datalarına tətbiq edərək öyrənəcəksiniz. SPSS Modeler böyük həcmli data ilə işləyən, cəld və dəqiq analitik təhlil aparmaq istəyən hər kəsin seçimidir.",
+          "img": "https://example.com/images/spss-analytics.jpg"
+        },
+        {
+          "id": 7,
+          "headers": "R ilə Data Analitikası",
+          "description": "Datadan məna çıxarın! Proqnoz verin! Bu proqramda sizi həyəcanlandıracaq praktiki biliklər əldə edəcəksiniz! Təlim müddətində R proqramlaşdırma dilinin fundamental anlayışlarını mənimsəyəcəksiniz. Əldə etdiyiniz texniki bacarıqlarla çirkli datanın təmizlənməsi və təhlilini marketinq, maliyyə, biznes, səhiyyə və dövlət qurumlarında real iş mühitində qarşılaşılan problemlərə tətbiq edərək öyrənəcəksiniz.",
+          "img": "https://example.com/images/r-analytics.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Data Science",
+      "title": "Beginner to Intermediate",
+      "sections": [
+        {
+          "id": 9,
+          "headers": "Python ilə Data Analitikası",
+          "description": "Data Təhlilinin Süni İntellekt və Proqramlaşdırma bacarıqları ilə avtomatlaşdırılması üçün ən populyar dillərdən biri məhz Python-dur. Təlim data analitiklər üçün proqramlaşdırma, alqoritm qurma mövzusunda baza bilikləri formalaşdırır. Daha sonra təməl analitika kitabxanalarını istifadə etməklə siz datanı təmizləməkdən təhlilinə qədər onlarla metodologiyaları öyrənəcəksiniz. Tədris müddətində əhatə olunan mövzuları real datalar üzərində təhlillər aparmaqla tətbiq edəcəksiniz. Nəticədə siz həm proqramçı kimi alqoritmik düşüncə qabiliyyətinə yiyələnəcək, həm də data analitik kimi datadan istifadə etməklə qərar verməyi öyrənəcəksiniz.",
+          "img": "https://example.com/images/python-analytics.jpg"
+        },
+        {
+          "id": 10,
+          "headers": "Big Data",
+          "description": "Datanın sürətlə böyüdüyü dövrdə ənənəvi məlumat bazaları Datanı efektiv idarəetmədə ciddi problemlər yaradır. Big Data texnologiyaları ilk dəfə Google şirkəti tərəfindən yaradılmış Google File System əsasında çalışaraq eyni anda birdən çox serverin gücündən paralel istifadə etmə imkanları yaradır. Bu da analitiklərin böyük data ilə bağlı yaşadığı problemin tam həllinə şərait yarada bilir. Müasir dünyada bütün böyük şirkətlər Big Data Ekosistemi qurmağa çalışır və yaxın zamanda bütün datalar Data Lakelərdə yığılmağa başlayacaq ki, bu da sizin ənənəvi üsullardan istifadə etməklə Big Data üzərində təhlillər aparmağınıza məhdudiyyətlər yaradacaq. Big Data təlimi sizi müasir paralel hesablama texnologiyaları ilə tanış edərək gələcəyə indidən hazır olmaq imkanı yaradacaq. Big Data təlimi Big Data Elminə başlamaq üçün möhtəşəm seçimdir. Siz bu təlimdə son illərdə yaranmış ən əsas onlarla Big Data alətininin mahiyyətini paralel öyrənməklə əmək bazarında əksər data mütəxəssislərindən önə çıxmaq imkanı əldə edəcəksiniz.",
+          "img": "https://example.com/images/big-data.jpg"
+        },
+        {
+          "id": 11,
+          "headers": "Python ilə Dərin Öyrənmə",
+          "description": "Python ilə Deep Learning təlimində siz datanızı analiz üçün hazırlayaraq, Proqnozlaşdırma və Şəkillərin tanınması üçün Maşın Öyrənməsi, Dərin Öyrənmə və Süni İntellekt alqoritmlərinin yaradılmasından istifadəsinə və baza ilə inteqrasiyasına qədər Dərin Öyrənmə bacarıqlarını öyrənəcəksiniz. Data Təhlilinin Süni İntellekt və Proqramlaşdırma bacarıqları ilə avtomatlaşdırılması üçün ən populyar dillərdən biri məhz Python-dur. Tədris müddətində marketinq, maliyyə, biznes, səhiyyə və dövlət qurumlarında qərarların verilməsində əhəmiyyət kəsb edən metodologiyaları real iş mühitində qarşılaşılan problemlərə tətbiq edərək öyrənəcəksiniz.",
+          "img": "https://example.com/images/deep-learning.jpg"
+        },
+        {
+          "id": 12,
+          "headers": "SPSS ilə Data Hazırlanması və Maşın Öyrənməsi",
+          "description": "Təlim müddətində IBM SPSS-ə məxsus iki alət SPSS Statistics və SPSS Modeler ilə diaqnostik təhlillər, proqnozlaşdırma, maşın öyrənməsi, klaster analizi, time series analizi, modelin qiymətləndirilməsi və deployment ilə qurulmuş modelin tətbiqinə qədər onlarla analitik metodologiyaları real biznes, satış, maliyyə, səhiyyə və dövlət datalarına tətbiq edərək öyrənəcəksiniz. SPSS Modeler böyük həcmli data ilə işləyən, cəld və dəqiq analitik təhlil aparmaq istəyən hər kəsin seçimidir.",
+          "img": "https://example.com/images/spss-machine-learning.jpg"
+        },
+        {
+          "id": 13,
+          "headers": "R ilə Maşın Öyrənməsi",
+          "description": "R ilə Data Science təlimində siz datanızı analiz və ya model üçün hazırlayaraq Proqnozlaşdırma, Maşın Öyrənməsi, Dərin Öyrənmə və Süni İntellekt alqoritmlərinin yaradılmasından istifadəsinə və baza ilə inteqrasiyasına qədər data elmi bacarıqlarını öyrənəcəksiniz. Təlim zamanı marketing, maliyyə, biznes, səhiyyə və dövlət qurumlarında qərarların verilməsində əhəmiyyət kəsb edən metodologiyaları real iş mühitində qarşılaşılan problemlərə tətbiq edərək öyrənəcəksiniz.",
+          "img": "https://example.com/images/r-machine-learning.jpg"
+        },
+        {
+          "id": 14,
+          "headers": "Python ilə Maşın Öyrənməsi",
+          "description": "Python ilə Maşın Öyrənməsi təlimində siz datanızı analiz üçün hazırlayaraq diaqnostik təhlillər, proqnozlaşdırma, maşın öyrənməsi, klaster analizi, time series analizi və modelin qiymətləndirilməsi ilə qurulmuş modelin müxtəlif platformalarda inteqrasiyasına qədər onlarla maşın öyrənməsi metodologiyalarını öyrənəcəksiniz. Maşın öyrənməsi real iş mühitində qərarvermə prosesini avtomatlaşdırmaq üçün böyük əhəmiyyət kəsb edir. Tədris müddətində marketinq, maliyyə, biznes, səhiyyə və dövlət qurumlarında qərar qəbulunda mühüm rol oynayan metodologiyaları real iş problemlərinə tətbiq edərək praktiki təcrübə qazanacaqsınız.",
+          "img": "https://example.com/images/python-machine-learning.jpg"
+        }
+      ]
+    }
+  ]
+  
