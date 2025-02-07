@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const PracticTable = () => {
+const PracticTable = ({bgColor, setBgColor}) => {
 const navigate = useNavigate()
 
 const [course, setCourse] = useState(null)
@@ -25,6 +25,7 @@ console.log(course, "course")
 
   const clickHandler =(d)=>{
     navigate(`/telim/${d.id}`)
+    setBgColor(true)
   }
   return (
     <div className="absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5  flex gap-10 flex-wrap rounded-[5px] z-10">
