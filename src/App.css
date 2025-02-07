@@ -16,7 +16,6 @@
 
 /*  navbar  */
 
-
 .scrolled {
   position: fixed;
   width: 100%;
@@ -29,20 +28,19 @@
   transform: translateY(-100px);
   animation-fill-mode: forwards;
 }
-.active{
+
+.active {
   background-color: #fccd00;
   color: #fff;
   padding: 5px 20px;
   border-radius: 20px;
-  
 }
+
 @keyframes slideDown {
   from {
-    transform: translateY(-100px);  
+    transform: translateY(-100px);
   }
   to {
-    transform: translateY(0px); 
+    transform: translateY(0px);
   }
 }
-
-
