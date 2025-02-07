@@ -22,7 +22,6 @@ const Header = () => {
           const offsetTop = el.offsetTop;
           const offsetHeight = el.offsetHeight;
           
-          // Şu anki scroll pozisyonuna göre, hangi bölümde olduğumuzu kontrol et
           if (scrollPosition >= offsetTop - 100 && scrollPosition < offsetTop + offsetHeight - 100) {
             setActiveSection(section);
           }
@@ -37,7 +36,6 @@ const Header = () => {
     };
   }, []);
 
-console.log(activeSection, "activesection")
 
   useEffect(() => {
     const handleNavigation = () => {
@@ -79,26 +77,26 @@ console.log(activeSection, "activesection")
         )}
       </div>
       <ul className="w-3/5 flex items-center justify-evenly ">
-        <Link to="main" smooth={true} duration={1500} className={activeSection == "main" ? "active" : ""}>
+        <Link to="main" smooth={true} duration={1500}>
           {" "}
-          <li className="hover:text-[#fccd00] cursor-pointer ">Əsas</li>
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "main" ? "active" : ""}`}>Əsas</li>
         </Link>
-        <Link to="customer" smooth={true} duration={1500} className={activeSection == "customer" ? "active" : ""}>
+        <Link to="customer" smooth={true} duration={1500}>
           {" "}
-          <li className="hover:text-[#fccd00] cursor-pointer">Müştərilər</li>
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "customer" ? "active" : ""}`}>Müştərilər</li>
         </Link>
-        <Link to="training" smooth={true} duration={1500} className={activeSection == "training" ? "active" : ""}>
-          <li className="hover:text-[#fccd00] cursor-pointer  ">Təlim Proqramı</li>
+        <Link to="training" smooth={true} duration={1500} >
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "training" ? "active" : ""} `}>Təlim Proqramı</li>
         </Link>
-        <Link to="team" smooth={true} duration={1500} className={activeSection == "team" ? "active" : ""}>
-          <li className="hover:text-[#fccd00] cursor-pointer" >Komandamız</li>
+        <Link to="team" smooth={true} duration={1500}>
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "team" ? "active" : ""}`} >Komandamız</li>
         </Link>
-        <Link to="faq" smooth={true} duration={1500} className={activeSection == "faq" ? "active" : ""}>
+        <Link to="faq" smooth={true} duration={1500}>
           {" "}
-          <li className="hover:text-[#fccd00] cursor-pointer li">FAQ</li>
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "faq" ? "active" : ""}`}>FAQ</li>
         </Link>
-        <Link to="contact" smooth={true} duration={1500} className={activeSection == "contact" ? "active" : ""}>
-          <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
+        <Link to="contact" smooth={true} duration={1500}>
+          <li className={`hover:text-[#fccd00] cursor-pointer ${activeSection == "contact" ? "active" : ""}`}>Əlaqə</li>
         </Link>
         <Link to="">
           <li
