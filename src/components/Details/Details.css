@@ -1,0 +1,7 @@
+.training__img img {
+  max-width: 112px;
+  width: 100%;
+  height: 112px;
+  border-radius: 50%;
+  border: 2px solid #ffcc00;
+}

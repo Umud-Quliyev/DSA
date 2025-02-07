@@ -1,0 +1,100 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "name": "Data Analitika",
+      "title": "Beginner to Intermediate"
+    },
+    {
+      "id": 2,
+      "name": "Data Science",
+      "title": "Beginner to Intermediate"
+    }
+  ],
+  "sections": [
+    {
+      "id": "2",
+      "headers": "Excel ilə Data Analitikası",
+      "trainingId": 1,
+      "description": "“Excel ilə data analitikası” təlimi ilkin və orta səviyyəli Excel istifadəçiləri, Exceldən mütəmadi istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün analitika dünyasına başlanğıc məqsədilə dizayn olunub. Bu məqsədlə sizə Microsoft Exceldən istifadə etməklə ilkin analitik anlayışlar və tətbiqi biliklər vasitəsilə datanı necə idarə etmək və data əsaslı qərarlar vermək öyrədiləcək.",
+      "img": "../src/assets/png/1718277287a.png"
+    },
+    {
+      "id": "3",
+      "headers": "Power BI ilə Data Analitikası",
+      "trainingId": 1,
+      "description": "Bu təlim, sizə özü “düşünən” biznes intellekti vasitəsilə real zamanda real hesabatları hazırlamaqda kömək edəcək...",
+      "img": "../src/assets/png/1722257717a.jpg"
+    },
+    {
+      "id": "4",
+      "headers": "SQL ilə Data Analitikası",
+      "trainingId": 1,
+      "description": "Təlim ərzində SQL vasitəsilə məlumatı bazadan çəkmək üçün sorğu yazmağı, filtr etməyi, formatını dəyişməyi...",
+      "img": "../src/assets/png/1722342855a.jpg"
+    },
+    {
+      "id": "5",
+      "headers": "Tableau ilə Data Analitikası",
+      "trainingId": 1,
+      "description": "Qərarvermədə datanın çox önəmli olduğu bir dövrdə datanıza hakim olmamaqla nələri itirə biləcəyinizi izah etmək...",
+      "img": "../src/assets/png/1722348302a.jpg"
+    },
+    {
+      "id": "6",
+      "headers": "SPSS ilə Statistika və Data Analitikası",
+      "trainingId": 1,
+      "description": "Təlim müddətində IBM SPSS-ə məxsus alətlər olan SPSS Modeler və SPSS Statistics ilə datanı daxil etmək, təmizləmək...",
+      "img": "../src/assets/png/1722426195a.jpg"
+    },
+    {
+      "id": "7",
+      "headers": "R ilə Data Analitikası",
+      "trainingId": 1,
+      "description": "Datadan məna çıxarın! Proqnoz verin! Bu proqramda sizi həyəcanlandıracaq praktiki biliklər əldə edəcəksiniz!",
+      "img": "../src/assets/png/1722429891a.jpg"
+    },
+    {
+      "id": "9",
+      "headers": "Python ilə Data Analitikası",
+      "trainingId": 2,
+      "description": "Data Təhlilinin Süni İntellekt və Proqramlaşdırma bacarıqları ilə avtomatlaşdırılması üçün ən populyar dillərdən biri...",
+      "img": "../src/assets/png/1722427652a.jpg"
+    },
+    {
+      "id": "10",
+      "headers": "Big Data",
+      "trainingId": 2,
+      "description": "Datanın sürətlə böyüdüyü dövrdə ənənəvi məlumat bazaları Datanı efektiv idarəetmədə ciddi problemlər yaradır...",
+      "img": "../src/assets/png/1720083556a.png"
+    },
+    {
+      "id": "11",
+      "headers": "Python ilə Dərin Öyrənmə",
+      "trainingId": 2,
+      "description": "Python ilə Deep Learning təlimində siz datanızı analiz üçün hazırlayaraq, Proqnozlaşdırma və Şəkillərin tanınması üçün...",
+      "img": "../src/assets/png/1722432239a.jpg"
+    },
+    {
+      "id": "12",
+      "headers": "SPSS ilə Data Hazırlanması və Maşın Öyrənməsi",
+      "trainingId": 2,
+      "description": "Təlim müddətində IBM SPSS-ə məxsus iki alət SPSS Statistics və SPSS Modeler ilə diaqnostik təhlillər, proqnozlaşdırma...",
+      "img": "../src/assets/png/1722507051a.jpg"
+    },
+    {
+      "id": "13",
+      "headers": "R ilə Maşın Öyrənməsi",
+      "trainingId": 2,
+      "description": "R ilə Data Science təlimində siz datanızı analiz və ya model üçün hazırlayaraq Proqnozlaşdırma, Maşın Öyrənməsi...",
+      "img": "../src/assets/png/1722517893a.jpg"
+    },
+    {
+      "id": "14",
+      "headers": "Python ilə Maşın Öyrənməsi",
+      "trainingId": 2,
+      "description": "Python ilə Maşın Öyrənməsi təlimində siz datanızı analiz üçün hazırlayaraq diaqnostik təhlillər, proqnozlaşdırma...",
+      "img": "../src/assets/png/1738237524a.jpg"
+    }
+  ]
+}
