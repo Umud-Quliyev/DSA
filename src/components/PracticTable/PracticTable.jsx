@@ -48,7 +48,7 @@ const PracticTable = () => {
                 onClick={() => clickHandler(section)}
                 className="text-[#50264E] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb]"
               >
-                - {section.headers}
+                - {section.headers?.az}
               </span>
             ))}
           </div>

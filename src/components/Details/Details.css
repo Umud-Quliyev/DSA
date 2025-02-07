@@ -22,3 +22,192 @@
 .training__desc {
   padding: 32px 0;
 }
+
+.training__workplace {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-style: 18px;
+  background-color: #33cccc;
+  height: 74px;
+}
+
+.training__table {
+  padding: 32px 0 48px 0;
+}
+
+.table__title h2 {
+  padding-bottom: 16px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 59px;
+}
+.table__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.table__card {
+  max-width: 255px;
+  width: 100%;
+  box-shadow: 0 0 5px 0 #bdb2bd;
+  border-radius: 15px;
+}
+
+.card__title {
+  padding: 18px;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card__title h3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: white;
+}
+
+.card__date {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card__date svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card__date span {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.card__time {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card__time svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card__time span {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.card__button button {
+  border: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 7px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 1rem;
+}
+
+.training__company {
+  background-color: #3b388b;
+  height: 73px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.training__company .contanierr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training__company button {
+  cursor: pointer;
+  padding: 7px 30px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: #33cccc;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.training__info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 0px;
+}
+
+.info__title h2 {
+  font-size: 40px;
+  line-height: 59px;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.info__certificate h2 {
+  font-size: 40px;
+  line-height: 59px;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.info__certificate {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.certificate__img {
+  max-width: 460px;
+  width: 100%;
+}
+
+.training__demo {
+  padding: 48px 0 64px 0;
+  background-color: #3b388b;
+  color: white;
+}
+
+.training__lessons {
+  display: flex;
+  gap: 30px;
+}
+
+.demo__title span {
+  font-size: 24px;
+  line-height: 59px;
+  color: white;
+  font-weight: 500;
+}
+
+.demo__info span {
+  font-size: 16px;
+  line-height: 35px;
+  color: #22c4cd;
+}

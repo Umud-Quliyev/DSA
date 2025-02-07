@@ -14,86 +14,93 @@
   "sections": [
     {
       "id": "2",
-      "headers": "Excel ilə Data Analitikası",
+      "headers": {
+        "az": "Excel ilə Data Analitikası",
+        "en": "Excel for Data Analytics",
+        "de": "Datenanalyse mit Excel",
+        "ru": "Анализ данных с Excel"
+      },
       "trainingId": 1,
-      "description": "“Excel ilə data analitikası” təlimi ilkin və orta səviyyəli Excel istifadəçiləri, Exceldən mütəmadi istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün analitika dünyasına başlanğıc məqsədilə dizayn olunub. Bu məqsədlə sizə Microsoft Exceldən istifadə etməklə ilkin analitik anlayışlar və tətbiqi biliklər vasitəsilə datanı necə idarə etmək və data əsaslı qərarlar vermək öyrədiləcək.",
-      "img": "../src/assets/png/1718277287a.png"
+      "description": "“Excel ilə data analitikası” təlimi...",
+      "img": "../src/assets/png/1718277287a.png",
+      "info": "Bu təlimdə siz, Excelin ən çox istifadə olunan xüsusiyyətlərini tətbiq etməklə datanın necə analiz olunmasını öyrənəcək, Pivot cədvəllərlə asan, cəld və daha ətraflı təhlil edərək datadan mənalı nəticələr əldə edə biləcəksiniz. İşlədiyiniz sahədən (marketinq, satış, maliyyə, İR və ya digər) asılı olmayaraq Excel vasitəsilə sadə cədvəllərdən mürəkkəb və dinamik daşbordlara kimi datanızı vizuallaşdıra və müxtəlif modellər (məs. satış proqnozu) qura biləcəksiniz. Bundan əlavə “what if” analizi aparmaq, Pivot Cədvəlləri ilə işləmək və Excelin ən çox istifadə olunan funksiyaları və mürəkkəb formulalarını istifadə etməklə işinizdə və ya biznesinizdə datanı asanlıqla analiz edərək qərarlarınızı daha asan və əsaslı verə biləcəksiniz. Təlim müddətində Excel funksiyaları, formulaları və digər mövzular sizə asan başa düşəcəyiniz tərzdə və rahat anlaşılacaq praktiki çalışmalar üzərində izah olunacaq. Əlavə olaraq təlimdə təqdim olunan keyzlər vasitəsilə, öyrəndiyiniz bilikləri müxtəlif biznes dataları üzərində tətbiq edərək Exceldə analitik qabiliyyətinizi inkişaf etdirəcəksiniz.",
+      "whois": "Marketinq, satış, maliyyə, İnsan Resursları (İR) və ya digər sahələrdə çalışan hər kəs üçün uyğundur.",
+      "certificateText": "Təlimi müvəffəqiyyətlə bitirən şəxslərə Certified Excel ilə Data Analitika və digər şəxslərə isə iştirakçı sertifikatı təqdim ediləcək. Sağ tərəfdə nümunə sertifikatı görə bilərsiniz.",
+      "certificateImg": "https://dsa.az/uploads/1718277287b.jpg",
+      "demovideo": "GLneLGYZgnA",
+      "demolessons": "Yeni başlayanlar üçün Excel"
+      
     },
     {
       "id": "3",
-      "headers": "Power BI ilə Data Analitikası",
+      "headers": {
+        "az": "Power BI ilə Data Analitikası",
+        "en": "Data Analytics with Power BI",
+        "de": "Datenanalyse mit Power BI",
+        "ru": "Анализ данных с Power BI"
+      },
       "trainingId": 1,
-      "description": "Bu təlim, sizə özü “düşünən” biznes intellekti vasitəsilə real zamanda real hesabatları hazırlamaqda kömək edəcək...",
+      "description": "Bu təlim, sizə özü “düşünən”...",
       "img": "../src/assets/png/1722257717a.jpg"
     },
     {
       "id": "4",
-      "headers": "SQL ilə Data Analitikası",
+      "headers": {
+        "az": "SQL ilə Data Analitikası",
+        "en": "Data Analytics with SQL",
+        "de": "Datenanalyse mit SQL",
+        "ru": "Анализ данных с SQL"
+      },
       "trainingId": 1,
-      "description": "Təlim ərzində SQL vasitəsilə məlumatı bazadan çəkmək üçün sorğu yazmağı, filtr etməyi, formatını dəyişməyi...",
+      "description": "Təlim ərzində SQL vasitəsilə...",
       "img": "../src/assets/png/1722342855a.jpg"
     },
     {
       "id": "5",
-      "headers": "Tableau ilə Data Analitikası",
+      "headers": {
+        "az": "Tableau ilə Data Analitikası",
+        "en": "Data Analytics with Tableau",
+        "de": "Datenanalyse mit Tableau",
+        "ru": "Анализ данных с Tableau"
+      },
       "trainingId": 1,
-      "description": "Qərarvermədə datanın çox önəmli olduğu bir dövrdə datanıza hakim olmamaqla nələri itirə biləcəyinizi izah etmək...",
+      "description": "Qərarvermədə datanın çox önəmli olduğu...",
       "img": "../src/assets/png/1722348302a.jpg"
     },
     {
-      "id": "6",
-      "headers": "SPSS ilə Statistika və Data Analitikası",
-      "trainingId": 1,
-      "description": "Təlim müddətində IBM SPSS-ə məxsus alətlər olan SPSS Modeler və SPSS Statistics ilə datanı daxil etmək, təmizləmək...",
-      "img": "../src/assets/png/1722426195a.jpg"
-    },
-    {
-      "id": "7",
-      "headers": "R ilə Data Analitikası",
-      "trainingId": 1,
-      "description": "Datadan məna çıxarın! Proqnoz verin! Bu proqramda sizi həyəcanlandıracaq praktiki biliklər əldə edəcəksiniz!",
-      "img": "../src/assets/png/1722429891a.jpg"
-    },
-    {
       "id": "9",
-      "headers": "Python ilə Data Analitikası",
+      "headers": {
+        "az": "Python ilə Data Analitikası",
+        "en": "Data Analytics with Python",
+        "de": "Datenanalyse mit Python",
+        "ru": "Анализ данных с Python"
+      },
       "trainingId": 2,
-      "description": "Data Təhlilinin Süni İntellekt və Proqramlaşdırma bacarıqları ilə avtomatlaşdırılması üçün ən populyar dillərdən biri...",
+      "description": "Data Təhlilinin Süni İntellekt...",
       "img": "../src/assets/png/1722427652a.jpg"
     },
     {
       "id": "10",
-      "headers": "Big Data",
+      "headers": {
+        "az": "Big Data",
+        "en": "Big Data",
+        "de": "Big Data",
+        "ru": "Big Data"
+      },
       "trainingId": 2,
-      "description": "Datanın sürətlə böyüdüyü dövrdə ənənəvi məlumat bazaları Datanı efektiv idarəetmədə ciddi problemlər yaradır...",
+      "description": "Datanın sürətlə böyüdüyü dövrdə...",
       "img": "../src/assets/png/1720083556a.png"
     },
     {
-      "id": "11",
-      "headers": "Python ilə Dərin Öyrənmə",
-      "trainingId": 2,
-      "description": "Python ilə Deep Learning təlimində siz datanızı analiz üçün hazırlayaraq, Proqnozlaşdırma və Şəkillərin tanınması üçün...",
-      "img": "../src/assets/png/1722432239a.jpg"
-    },
-    {
-      "id": "12",
-      "headers": "SPSS ilə Data Hazırlanması və Maşın Öyrənməsi",
-      "trainingId": 2,
-      "description": "Təlim müddətində IBM SPSS-ə məxsus iki alət SPSS Statistics və SPSS Modeler ilə diaqnostik təhlillər, proqnozlaşdırma...",
-      "img": "../src/assets/png/1722507051a.jpg"
-    },
-    {
-      "id": "13",
-      "headers": "R ilə Maşın Öyrənməsi",
-      "trainingId": 2,
-      "description": "R ilə Data Science təlimində siz datanızı analiz və ya model üçün hazırlayaraq Proqnozlaşdırma, Maşın Öyrənməsi...",
-      "img": "../src/assets/png/1722517893a.jpg"
-    },
-    {
       "id": "14",
-      "headers": "Python ilə Maşın Öyrənməsi",
+      "headers": {
+        "az": "Python ilə Maşın Öyrənməsi",
+        "en": "Machine Learning with Python",
+        "de": "Maschinelles Lernen mit Python",
+        "ru": "Машинное обучение с Python"
+      },
       "trainingId": 2,
-      "description": "Python ilə Maşın Öyrənməsi təlimində siz datanızı analiz üçün hazırlayaraq diaqnostik təhlillər, proqnozlaşdırma...",
+      "description": "Python ilə Maşın Öyrənməsi...",
       "img": "../src/assets/png/1738237524a.jpg"
     }
   ]
