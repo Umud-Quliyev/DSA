@@ -1,79 +1,34 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PracticTable = () => {
 const navigate = useNavigate()
-  const data = [
-    {
-      id: 1,
-      name: "Data Analitika",
-      title: "Beginner to Intermediate",
-      sections: [
-        {
-          id: 2,
-          headers: "Excel ilə Data Analitikası",
-        },
-        {
-          id: 3,
-          headers: "Power BI ilə Data Analitikası",
-        },
-        {
-          id: 4,
-          headers: "SQL ilə Data Analitikası",
-        },
-        {
-          id: 5,
-          headers: "Tableau ilə Data Analitikası",
-        },
-        {
-          id: 6,
-          headers: "SPSS ilə Statistika və Data Analitikası",
-        },
-        {
-          id: 7,
-          headers: "R ilə Data Analitikası",
-        },
-      ],
-    },
-    {
-      id: 8,
-      name: "Data Science",
-      title: "Beginner to Intermediate",
-      sections: [
-        {
-          id: 9,
-          headers: "Python ilə Data Analitikası",
-        },
-        {
-          id: 10,
-          headers: " Big Dataı",
-        },
-        {
-          id: 11,
-          headers: "Python ilə Dərin Öyrənmə",
-        },
-        {
-          id: 12,
-          headers: " SPSS ilə Data Hazırlanması və Maşın Öyrənməsi",
-        },
-        {
-          id: 13,
-          headers: "R ilə Maşın Öyrənməsi",
-        },
-        {
-          id: 14,
-          headers: "Python ilə Maşın Öyrənməsi",
-        },
-      ],
-    },
-  ];
+
+const [course, setCourse] = useState(null)
+
+useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const {data} = await axios("http://localhost:3000/data");
+        setCourse(data)
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+  
+    fetchData();
+  }, []);  
+console.log(course, "course")
+  
 
   const clickHandler =(d)=>{
     navigate(`/telim/${d.id}`)
   }
-  console.log(data, "data");
   return (
     <div className="absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5  flex gap-10 flex-wrap rounded-[5px] z-10">
-      {data.map((d) => (
+      {course?.map((d) => (
         <div key={d.id}>
           <h1 className="text-[#2fa8a5] font-bold">{d.name}</h1>
           <p className="text-[#50264E] font-bold">{d.title}</p>
