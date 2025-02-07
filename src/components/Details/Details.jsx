@@ -28,14 +28,20 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div className="container">
+    <div className="contanierr">
       <div className="training__details">
         {selectedTraining ? (
-          <div className="training__img">
-            <img src={selectedTraining.img} alt="" />
-          </div>
+          <>
+            <div className="training__title">
+              <img src={selectedTraining.img} alt="" />
+              <h2>{selectedTraining.headers}</h2>
+            </div>
+            <div className="training__desc">
+              <p>{selectedTraining.description}</p>
+            </div>
+          </>
         ) : (
-          <p>Training not found</p>
+          <p>Telim Tapilmadi</p>
         )}
       </div>
     </div>
