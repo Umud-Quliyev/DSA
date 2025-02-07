@@ -66,7 +66,7 @@ const Header = () => {
   
   return (
     <div
-      className={`flex justify-center items-center h-20  text-[#fff] nav z-10 ${
+      className={`flex justify-center items-center  h-[70px] text-[#fff] bg-[red] nav  ${
         chooseScroll ? "scrolled" : ""
       }`}
     >

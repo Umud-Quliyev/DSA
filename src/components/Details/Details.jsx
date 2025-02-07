@@ -3,7 +3,11 @@ import { useParams } from "react-router-dom";
 const Details = () => {
   const { id } = useParams();
   console.log(id);
-  return <div>Details</div>;
+  return (
+    <div className="h-[200vh]">
+      
+    </div>
+  );
 };
 
 export default Details;
