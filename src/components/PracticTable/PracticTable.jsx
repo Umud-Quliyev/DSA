@@ -30,7 +30,7 @@ const PracticTable = () => {
 
     fetchData();
   }, []);
-
+console.log(trainings, "training")
   const clickHandler = (section) => {
     navigate(`/telim/${section.id}`);
   };
