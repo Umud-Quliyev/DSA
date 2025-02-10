@@ -16,14 +16,15 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
   const location = useLocation();
 
-  const isLocation = location.pathname === "/"
+  const isLocation = location.pathname === "/";
 
   useEffect(() => {
     if (!isLocation) {
       setBgColor(true);
-      setActiveSection("")
+      setActiveSection("");
     } else {
       setBgColor(false);
+      setDropdown(false);
     }
   }, [isLocation]);
   useEffect(() => {
@@ -96,150 +97,103 @@ const Header = () => {
           chooseScroll ? "scrolled" : bgColor ? "bgColor" : ""
         } `}
       >
-        <div className="w-40">
-          {color ? (
-            <img src={logoBlack} alt="" className="cursor-pointer" />
-          ) : (
-            <img src={logo} alt="" className="cursor-pointer" />
-          )}
-        </div>
-        <ul className="w-3/5 flex items-center justify-evenly ">
         {isLocation ? (
-          <>
-            <Link to="main" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "main" ? "active" : ""
-                }`}
-              >
-                Əsas
-              </li>
-            </Link>
-            <Link to="customer" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "customer" ? "active" : ""
-                }`}
-              >
-                Müştərilər
-              </li>
-            </Link>
-            <Link to="training" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "training" ? "active" : ""
-                }`}
-              >
-                Təlim Proqramı
-              </li>
-            </Link>
-            <Link to="team" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "team" ? "active" : ""
-                }`}
-              >
-                Komandamız
-              </li>
-            </Link>
-            <Link to="faq" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "faq" ? "active" : ""
-                }`}
-              >
-                FAQ
-              </li>
-            </Link>
-            <Link to="contact" smooth={true} duration={1500}>
-              <li
-                className={`hover:text-[#fccd00] cursor-pointer ${
-                  activeSection === "contact" ? "active" : ""
-                }`}
-              >
-                Əlaqə
-              </li>
-            </Link>
-          </>
+          <div className="w-40 cursor-pointer">
+            <img src={color ? logoBlack : logo} alt="logo" />
+          </div>
         ) : (
-          <>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
-            </NavLink>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">Müştərilər</li>
-            </NavLink>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">Təlim Proqramı</li>
-            </NavLink>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">Komandamız</li>
-            </NavLink>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">FAQ</li>
-            </NavLink>
-            <NavLink to="/">
-              <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
-            </NavLink>
-          </>
+          <NavLink to={"/"} className="w-40 cursor-pointer">
+            <img src={color ? logoBlack : logo} alt="logo" />
+          </NavLink>
         )}
-         {/*  <Link to="main" smooth={true} duration={1500}>
-            {" "}
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "main" ? "active" : ""
-              }`}
-            >
-              Əsas
-            </li>
-          </Link>
-          <Link to="customer" smooth={true} duration={1500}>
-            {" "}
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "customer" ? "active" : ""
-              }`}
-            >
-              Müştərilər
-            </li>
-          </Link> */}
-          {/* <Link to="training" smooth={true} duration={1500}>
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "training" ? "active" : ""
-              } `}
-            >
-              Təlim Proqramı
-            </li>
-          </Link>
-          <Link to="team" smooth={true} duration={1500}>
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "team" ? "active" : ""
-              }`}
-            >
-              Komandamız
-            </li>
-          </Link>
-          <Link to="faq" smooth={true} duration={1500}>
-            {" "}
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "faq" ? "active" : ""
-              }`}
-            >
-              FAQ
-            </li>
-          </Link>
-          <Link to="contact" smooth={true} duration={1500}>
-            <li
-              className={`hover:text-[#fccd00] cursor-pointer ${
-                activeSection == "contact" ? "active" : ""
-              }`}
-            >
-              Əlaqə
-            </li>
-          </Link> */}
+
+        <ul className="w-3/5 flex items-center justify-evenly ">
+          {isLocation ? (
+            <>
+              <Link to="main" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "main" ? "active" : ""
+                  }`}
+                >
+                  Əsas
+                </li>
+              </Link>
+              <Link to="customer" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "customer" ? "active" : ""
+                  }`}
+                >
+                  Müştərilər
+                </li>
+              </Link>
+              <Link to="training" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "training" ? "active" : ""
+                  }`}
+                >
+                  Təlim Proqramı
+                </li>
+              </Link>
+              <Link to="team" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "team" ? "active" : ""
+                  }`}
+                >
+                  Komandamız
+                </li>
+              </Link>
+              <Link to="faq" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "faq" ? "active" : ""
+                  }`}
+                >
+                  FAQ
+                </li>
+              </Link>
+              <Link to="contact" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "contact" ? "active" : ""
+                  }`}
+                >
+                  Əlaqə
+                </li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Müştərilər
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Təlim Proqramı
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Komandamız
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">FAQ</li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
+              </NavLink>
+            </>
+          )}
+
           <li
             className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
             onClick={handleClick}
