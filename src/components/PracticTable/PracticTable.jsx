@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const PracticTable = () => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
-  const [sections, setSections] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
