@@ -4,15 +4,16 @@ import logoBlack from "../../assets/svg/logoBlack.svg";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useState, useEffect } from "react";
 import PracticTable from "../PracticTable/PracticTable";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
-  console.log(bgColor, "bgcolor");
   const [dropdown, setDropdown] = useState(false);
   const [color, setColor] = useState(false);
   const [chooseScroll, setChooseScroll] = useState(false);
   const [currentScroll, setCurrentScroll] = useState(0);
   const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
@@ -73,16 +74,20 @@ const Header = () => {
   const handleClick = () => {
     setDropdown(!dropdown);
   };
-
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setBgColor(true);
+      setActiveSection("")
+    } else {
+      setBgColor(false);
+    }
+  }, [location.pathname]);
   return (
     <>
-      
       <div
-        className={`flex justify-center items-center  h-[70px]  ${bgColor ? (`${
-          chooseScroll ? "scrolled" : "bgColor"
-        }`) : "nav"} ${
-          chooseScroll ? "scrolled" : ""
-        }`}
+        className={`flex justify-center items-center  h-[70px] nav  ${
+          chooseScroll ? "scrolled" : bgColor ? "bgColor" : ""
+        } `}
       >
         <div className="w-40">
           {color ? (
@@ -154,9 +159,7 @@ const Header = () => {
             onClick={handleClick}
           >
             Təlimlər <IoMdArrowDropdown />
-            {dropdown && (
-              <PracticTable bgColor={bgColor} setBgColor={setBgColor} />
-            )}
+            {dropdown && <PracticTable />}
           </li>
         </ul>
       </div>
