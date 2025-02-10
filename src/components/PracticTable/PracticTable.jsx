@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const PracticTable = () => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
-  const [sections, setSections] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +17,7 @@ const PracticTable = () => {
         const mergedData = trainingsData.map((training) => ({
           ...training,
           sections: sectionsData.filter(
-            (sec) => sec.trainingId === training.id
+            (sec) => Number(sec.trainingId) === Number(training.id)
           ),
         }));
 
@@ -30,7 +29,7 @@ const PracticTable = () => {
 
     fetchData();
   }, []);
-console.log(trainings, "training")
+
   const clickHandler = (section) => {
     navigate(`/telim/${section.id}`);
   };
