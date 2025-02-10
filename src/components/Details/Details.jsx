@@ -71,7 +71,7 @@ const Details = () => {
   };
 
   return (
-    <div className="training__details">
+    <div className="training__details pt-20">
       <div className="contanierr">
         <div className="training__title">
           <img src={selectedTraining.img} alt={selectedTraining.headers?.az} />

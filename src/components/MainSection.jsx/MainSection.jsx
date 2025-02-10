@@ -1,8 +1,6 @@
-
 const MainSection = () => {
   return (
-    <section id="main" name="main" className="bg-[url(./assets/png/main-bg.jpg)] h-[100vh] w-full bg-no-repeat relative">
-     
+    <section id="main" name="main">
       <div className="text-[#fff]  flex  flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 ">
           <h1 className="text-[3.91vw] font-[200]">12 Həftədə</h1>
           <h2 className="text-[3.91vw]  font-bold">Data Scientist Olmaq?</h2>

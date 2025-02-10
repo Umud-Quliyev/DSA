@@ -15,17 +15,25 @@
 }
 
 /*  navbar  */
-.bgColor{
-background-image: linear-gradient(45deg, #1b1136, #e0195b);
-color: #1b1136;
+.bgColor {
+  background-image: linear-gradient(45deg, #1b1136, #e0195b);
+  color: #1b1136;
 }
-
-.nav{
-  background-color: transparent;
-  position: sticky;
+#main {
+  background-image: url("../src/assets/png/main-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
   width: 100%;
+  position: relative;
+}
+.nav {
+  background-color: transparent;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 99;
   color: #fff;
 }
@@ -38,8 +46,7 @@ color: #1b1136;
   background-color: #fff;
   color: #000000;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-  animation: slideDown 1s ease-out;
-  transform: translateY(-100px);
+  animation: slideDown 1s ease;
   animation-fill-mode: forwards;
   z-index: 99;
 }
@@ -53,9 +60,11 @@ color: #1b1136;
 
 @keyframes slideDown {
   from {
-    transform: translateY(-100px);
+    transform: translateY(-150px);
+    opacity: 0;
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
   }
 }

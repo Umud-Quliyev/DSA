@@ -8,7 +8,7 @@ import TrainingProgram from "../components/Training_Program/TrainingProgram";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <MainSection />
       <Customers />
       <TrainingProgram />
