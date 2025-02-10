@@ -18,7 +18,7 @@ const PracticTable = () => {
         const mergedData = trainingsData.map((training) => ({
           ...training,
           sections: sectionsData.filter(
-            (sec) => sec.trainingId === training.id
+            (sec) => Number(sec.trainingId) === Number(training.id)
           ),
         }));
 
@@ -30,7 +30,7 @@ const PracticTable = () => {
 
     fetchData();
   }, []);
-console.log(trainings, "training")
+
   const clickHandler = (section) => {
     navigate(`/telim/${section.id}`);
   };
