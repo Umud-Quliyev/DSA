@@ -3,14 +3,14 @@ import Team from "../components/Team/Team";
 import MainSection from "../components/MainSection.jsx/MainSection";
 import FAQ from "../components/FAQ/Faq";
 import Contact from "../components/Contact/Contact";
-import TrainingProgram from "../components/Training_Program/TrainingProgram";
+import Training from "../components/Training/Training";
 
 const Home = () => {
   return (
     <div>
       <MainSection />
       <Customers />
-      <TrainingProgram />
+      <Training />
       <Team />
       <FAQ />
       <Contact />
