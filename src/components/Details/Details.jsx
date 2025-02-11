@@ -245,6 +245,34 @@ const Details = () => {
           </div>
         </div>
       </div>
+
+      <div className="testimonials"></div>
+
+      <div className="trainers">
+        <div className="contanierr">
+          <div className="trainers__title">
+            <h2>Təlimçilər</h2>
+          </div>
+          <div className="trainers__list">
+            {selectedTraining.trainers.map((info, index) => (
+              <div key={index} className="trainer">
+                <div className="trainer__img">
+                  <img src={info.trainerImg} alt="" />
+                </div>
+                <div className="trainer__info">
+                  <h3>{info.trainerName}</h3>
+                  <span>{info.trainerWorkplace}</span>
+                  <p>{info.trainerDesc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="session__tables">
+        
+      </div>
     </div>
   );
 };
