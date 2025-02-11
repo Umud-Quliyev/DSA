@@ -104,23 +104,23 @@ const MainSection = () => {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="flex flex-col items-center w-5/6 mx-auto px-20">
-          <h2 className="text-[#212331] text-[2.61vw]">Proqramın üstünlükləri</h2>
-          <div className="flex justify-between gap-5 mt-20 flex-wrap text-center">
-            <div className="flex flex-col items-center gap-2 w-[350px]">
+      <section className="my-20 second-main-section">
+        <div className="flex flex-col items-center w-5/6 mx-auto px-20 text-[#555555]">
+          <h2 className="text-[#212331] text-[2.61vw] font-[300]">Proqramın üstünlükləri</h2>
+          <div className="flex justify-between gap-5 my-10 flex-wrap text-center main-div">
+            <div className="flex flex-col items-center gap-2 w-[350px]  cursor-pointer sub-main-div">
               <img src={edu} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
               <h4 className="text-[1.18vw] font-bold"> Data Science Bootcamp</h4>
               <p className="text-[.92vw]">Data Science Academy sizə intensiv olaraq təşkil olunmuş 140 saatlıq proqram təklif edir.</p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[350px]">
-              <img src={practic} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
+            <div className="flex flex-col items-center gap-2 w-[350px]  cursor-pointer sub-main-div">
+              <img src={practic} alt="" className="w-[100px] bg-[#28AAA8] rounded-full "/>
               <h4 className="text-[1.18vw] font-bold">Təlim Proqramı</h4>
               <p  className="text-[.92vw] ">
               R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, Mongo DB, MapReduce, Hive, Hadoop, Tenserflow, Tableau, SPSS, SPSS Modeler və digər çox istifadə olunanan proqramları birgə tədris edən yeganə proqram.
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[350px]">
+            <div className="flex flex-col items-center gap-2 w-[350px]  cursor-pointer sub-main-div">
               <img src={mentor} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
               <h4 className="text-[1.18vw] font-bold">Mentor seçim prosesi
               </h4>
@@ -128,7 +128,7 @@ const MainSection = () => {
               Bootcamp müddətində tədris vaxtlarınızdan əlavə şəxsi mentorunuz ilə görüşərək bütün suallarınıza cavab tapın.
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[350px]">
+            <div className="flex flex-col items-center gap-2 w-[350px]  cursor-pointer sub-main-div">
               <img src={project} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
               <h4 className="text-[1.18vw] font-bold">Layihələrimiz</h4>
               <p  className="text-[.92vw]">
@@ -136,14 +136,14 @@ const MainSection = () => {
                 şəxsi Data Science GitHub portfolionuzu yaradın.
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[350px]">
+            <div className="flex flex-col items-center gap-2 w-[350px] cursor-pointer sub-main-div">
               <img src={career} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
               <h4 className="text-[1.18vw] font-bold">Community</h4>
               <p  className="text-[.92vw]">
               Birə-bir karyera dəstəyi əsasında CV və Linkedin profilinizi dizayn etmək, sınaq müsahibələrlə müsahibədə necə davranmalı olduğunuzu öyrənmək və ekskluziv olaraq əməkdaşlıq etdiyimiz şirkətlərdə işləmək imkanı əldə edin.
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[350px]">
+            <div className="flex flex-col items-center gap-2 w-[350px]  cursor-pointer sub-main-div">
               <img src={community} alt="" className="w-[100px] bg-[#28AAA8] rounded-full"/>
               <h4 className="text-[1.18vw] font-bold">Layihələrimiz</h4>
               <p  className="text-[.92vw]">
