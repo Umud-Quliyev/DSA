@@ -316,10 +316,68 @@
   flex-direction: column;
 }
 
+.case__info{
+  height: 100%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: end;
+}
+
 .case__info h3 {
   font-weight: bold;
   font-size: 22px;
   line-height: 20px;
   font-weight: 500;
   padding-bottom: 16px;
+}
+
+.testimonials {
+  background-color: #3b388b;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.trainers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.trainers {
+  padding: 80px 0;
+}
+
+.trainers__title h2 {
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 64px;
+}
+
+.trainer__img {
+  max-width: 150px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.trainer__img img {
+  border-radius: 50%;
+}
+
+.trainer {
+  display: flex;
+  gap: 60px;
+}
+
+.trainer__info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.trainer__info span {
+  display: block;
+  font-weight: 500;
+  padding-bottom: 16px;
+  color: #22c4cd;
 }

@@ -8,7 +8,7 @@
     {
       "id": 2,
       "name": "Data Science",
-      "title": "Beginner to Intermediate"
+      "title": ["Beginner to Intermediate"]
     }
   ],
   "sections": [
@@ -35,50 +35,58 @@
         {
           "sessionName": "Sessiya 1",
           "sessionInfo": [
-            "Data elmi haqqında ümumi məlumat, Əsas Statistika Anlayışları.",
-            "Təsviri Analitika, Z skorlar, Normal paylanma",
-            "SPSS Statistics və SPSS Modeller programlarına giriş.",
-            "Outlierların müəyyən olunması və idarə olunması."
+            "Excelə giriş",
+            "Data tipləri",
+            "Filtrləmə. Referanslar",
+            "Excel ilə data manipulyasiyası",
+            "Datanın təmizlənməsi. Data validation",
+            "Qrafiklərin qurulması",
+            "Keyboard qısayolları (shortcuts)"
           ],
           "caseName": "Case Study 1",
-          "caseInfo": [
-            "Telekommunikasiya datası üzərində Təsviri Analitika",
-            ""
-          ]
+          "caseInfo": ["Satış datası üzərində əməliyyatlar"]
         },
         {
           "sessionName": "Sessiya 2",
           "sessionInfo": [
-            "Əsas statistik anlayışlar, Normal paylanma",
-            "Normal paylanmanın sıxlıq funkisiyası",
-            "Normal paylanma əsasında ehtimalların hesablanması",
-            "Normal Paylanma testləri",
-            "Nümunə paylanması, Ehtimal Paylanmaları",
-            "Mərkəzi Limit Teoremi",
-            "Diaqnostik Analitika"
+            "Şərti formatlama",
+            "İrəli səviyyəli excel funksiyaları",
+            "Şərti ifadələr",
+            "Mətn funksiyaları"
           ],
           "caseName": "Case Study 2",
-          "caseInfo": ["Bank datası üzərində diaqnostik analizlər.", ""]
+          "caseInfo": ["Oyun satışları datası üzərində əməliyyatlar."]
         },
         {
           "sessionName": "Sessiya 3",
           "sessionInfo": [
-            "Ədədi ortaların müqayisəsi, ANOVA Analizi",
-            "CRİSP-DM Data Təhlili Layihələri üzrə beynəlxalq Stanartlar.",
-            "CRİSP-DM əsasında Data Layihəsinin “Datanın başa düşülməsi” mərhələsi üzrə hesabatının hazırlanması.",
-            "CRİSP-DM əsasında Data Layihəsinin “Datanın Yığılması” mərhələsi üzrə hesabatının hazırlanması.",
-            "CRİSP-DM əsasında Data Layihəsinin “Datanın Təsviri” mərhələsi üzrə hesabatının hazırlanması.",
-            "CRİSP-DM əsasında Data Layihəsinin “Datanın Tədqiqi və Vizuallaşdırma” mərhələsi üzrə hesabatının hazırlanması."
-          ]
+            "Pivot Table ilə data analizi",
+            "Pivot chart ilə data analizi"
+          ],
+          "caseName": "Case Study 3",
+          "caseInfo": ["Film İMDB datası üzərində əməliyyatlar."]
         },
         {
-          "sessionName": "",
-          "sessionInfo": [""],
-          "caseName": "Case Study 3",
-          "caseInfo": [
-            "Telekommunikasiya datası üzərində Təsviri Analitika",
-            ""
-          ]
+          "sessionName": "Sessiya 4",
+          "sessionInfo": [
+            "Excel funksiyalarının tətbiqi və Dashboardların qurulması."
+          ],
+          "caseName": "Case Study 4",
+          "caseInfo": ["Dashboardın qurulması"]
+        }
+      ],
+      "trainers": [
+        {
+          "trainerImg": "../src/assets/img/minure.jpg",
+          "trainerName": "Minurə Hüseynli",
+          "trainerWorkplace": "Head of Data Analytics and Reporting, Digital Umbrella",
+          "trainerDesc": "Minurə Hüseynli data sahəsində professional olaraq 8 ildən artıq iş təcrübəsinə sahibdir. Hal-hazırda Digital Umbrella şirkətində Data Analytics və Reporting şöbəsinin rəhbəri vəzifəsində çalışır. Fərqli sektorlar üzrə bir çox yerli və beynəlxalq data science layihələrində məsləhətçi olaraq çalışmışdır. Layihələrin icrası zamanı 10 nəfərə qədər komandalara rəhbərlik etmişdir. Hal-hazırda bir neçə şirkət üçün data science xidmətləri göstərir. Advanced statistics, Python ilə machine learning, SQL ilə dataların idarə olunması, Tableau və digər BI proqramlarla vizual analitika, datadan stratejik informasiyaların əldə olunması üzrə geniş praktiki biliklərə sahibdir."
+        },
+        {
+          "trainerImg": "../src/assets/img/sebnur.jpg",
+          "trainerName": "Şəbnur Pənahlı  ",
+          "trainerWorkplace": "Head of Data Analytics and Reporting, Digital Umbrella",
+          "trainerDesc": "Data elmi sahəsində 2 ildən artıq təcrübəsi olan Şəbnur Pənahlı bank sektorunun qabaqcıl komandalarından birində “Biznes Analyst”vəzifəsini icra edir. Müəllim, məlumatların təhlili, maşın öyrənməsi alqoritmləri, və data vizualizasiyası sahəsində geniş biliklərə sahibdir. Əsas bacarıqları arasında Tableau, R, Python, SPSS, SQL, və statistik təhlil alətləri yer alır."
         }
       ]
     },
