@@ -21,14 +21,66 @@
         "ru": "Анализ данных с Excel"
       },
       "trainingId": 1,
-      "description": "“Excel ilə data analitikası” təlimi...",
+      "description": "“Excel ilə data analitikası” təlimi ilkin və orta səviyyəli Excel istifadəçiləri, Exceldən mütəmadi istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün analitika dünyasına başlanğıc məqsədilə dizayn olunub. Bu məqsədlə sizə Microsoft Exceldən istifadə etməklə ilkin analitik anlayışlar və tətbiqi biliklər vasitəsilə datanı necə idarə etmək və data əsaslı qərarlar vermək öyrədiləcək.",
       "img": "../src/assets/png/1718277287a.png",
       "info": "Bu təlimdə siz, Excelin ən çox istifadə olunan xüsusiyyətlərini tətbiq etməklə datanın necə analiz olunmasını öyrənəcək, Pivot cədvəllərlə asan, cəld və daha ətraflı təhlil edərək datadan mənalı nəticələr əldə edə biləcəksiniz. İşlədiyiniz sahədən (marketinq, satış, maliyyə, İR və ya digər) asılı olmayaraq Excel vasitəsilə sadə cədvəllərdən mürəkkəb və dinamik daşbordlara kimi datanızı vizuallaşdıra və müxtəlif modellər (məs. satış proqnozu) qura biləcəksiniz. Bundan əlavə “what if” analizi aparmaq, Pivot Cədvəlləri ilə işləmək və Excelin ən çox istifadə olunan funksiyaları və mürəkkəb formulalarını istifadə etməklə işinizdə və ya biznesinizdə datanı asanlıqla analiz edərək qərarlarınızı daha asan və əsaslı verə biləcəksiniz. Təlim müddətində Excel funksiyaları, formulaları və digər mövzular sizə asan başa düşəcəyiniz tərzdə və rahat anlaşılacaq praktiki çalışmalar üzərində izah olunacaq. Əlavə olaraq təlimdə təqdim olunan keyzlər vasitəsilə, öyrəndiyiniz bilikləri müxtəlif biznes dataları üzərində tətbiq edərək Exceldə analitik qabiliyyətinizi inkişaf etdirəcəksiniz.",
-      "whois": "Marketinq, satış, maliyyə, İnsan Resursları (İR) və ya digər sahələrdə çalışan hər kəs üçün uyğundur.",
+      "whois": "Bu təlim, Excelin ilkin və orta səviyyəli istifadəçiləri üçün nəzərdə tutulmuşdur. Mütəmadi olaraq Exceldən istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün əla bir fürsətdir. Marketinq, satış, maliyyə, İnsan Resursları (İR) və ya digər sahələrdə çalışan hər kəs üçün uyğundur. Təlim, Excelin ən çox istifadə olunan xüsusiyyətlərini öyrənməyə kömək edir. Datayı sadə cədvəllərdən mürəkkəb və dinamik daşbordlara qədər vizuallaşdırmağı öyrədir. Təlim, datanın analiz olunmasını və mənalı nəticələr əldə edilməsini öyrədir. Pivot cədvəllərlə asan və cəld təhlil aparmağı öyrədir. Mürəkkəb funksiyalar və makrolarla analitik prosesləri avtomatlaşdırma bacarıqları qazandırır. `What-if` analizi aparmaq və müxtəlif modellər qurmağı öyrədir.",
       "certificateText": "Təlimi müvəffəqiyyətlə bitirən şəxslərə Certified Excel ilə Data Analitika və digər şəxslərə isə iştirakçı sertifikatı təqdim ediləcək. Sağ tərəfdə nümunə sertifikatı görə bilərsiniz.",
       "certificateImg": "https://dsa.az/uploads/1718277287b.jpg",
       "demovideo": "GLneLGYZgnA",
-      "demolessons": "Yeni başlayanlar üçün Excel"
+      "lessonName": "Yeni başlayanlar üçün Excel",
+      "lessonCreator": "Kenji Explains",
+      "lessonInfo": "Bu videonu izlədikdə Excel ilə Data Analitikası haqqında baza məlumatlara sahib olacaqsınız. Video Kenji Explains tərəfindəndir.",
+      "syllabus": [
+        {
+          "sessionName": "Sessiya 1",
+          "sessionInfo": [
+            "Data elmi haqqında ümumi məlumat, Əsas Statistika Anlayışları.",
+            "Təsviri Analitika, Z skorlar, Normal paylanma",
+            "SPSS Statistics və SPSS Modeller programlarına giriş.",
+            "Outlierların müəyyən olunması və idarə olunması."
+          ],
+          "caseName": "Case Study 1",
+          "caseInfo": [
+            "Telekommunikasiya datası üzərində Təsviri Analitika",
+            ""
+          ]
+        },
+        {
+          "sessionName": "Sessiya 2",
+          "sessionInfo": [
+            "Əsas statistik anlayışlar, Normal paylanma",
+            "Normal paylanmanın sıxlıq funkisiyası",
+            "Normal paylanma əsasında ehtimalların hesablanması",
+            "Normal Paylanma testləri",
+            "Nümunə paylanması, Ehtimal Paylanmaları",
+            "Mərkəzi Limit Teoremi",
+            "Diaqnostik Analitika"
+          ],
+          "caseName": "Case Study 2",
+          "caseInfo": ["Bank datası üzərində diaqnostik analizlər.", ""]
+        },
+        {
+          "sessionName": "Sessiya 3",
+          "sessionInfo": [
+            "Ədədi ortaların müqayisəsi, ANOVA Analizi",
+            "CRİSP-DM Data Təhlili Layihələri üzrə beynəlxalq Stanartlar.",
+            "CRİSP-DM əsasında Data Layihəsinin “Datanın başa düşülməsi” mərhələsi üzrə hesabatının hazırlanması.",
+            "CRİSP-DM əsasında Data Layihəsinin “Datanın Yığılması” mərhələsi üzrə hesabatının hazırlanması.",
+            "CRİSP-DM əsasında Data Layihəsinin “Datanın Təsviri” mərhələsi üzrə hesabatının hazırlanması.",
+            "CRİSP-DM əsasında Data Layihəsinin “Datanın Tədqiqi və Vizuallaşdırma” mərhələsi üzrə hesabatının hazırlanması."
+          ]
+        },
+        {
+          "sessionName": "",
+          "sessionInfo": [""],
+          "caseName": "Case Study 3",
+          "caseInfo": [
+            "Telekommunikasiya datası üzərində Təsviri Analitika",
+            ""
+          ]
+        }
+      ]
     },
     {
       "id": "3",

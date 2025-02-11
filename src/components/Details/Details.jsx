@@ -141,14 +141,16 @@ const Details = () => {
           <div className="info__desc">
             <p>{selectedTraining?.info}</p>
           </div>
-          <div className="info__title">
-            <h2>Bu təlim kimlər üçündür?</h2>
-            <p>{selectedTraining?.whois}</p>
-          </div>
-          <div className="info__certificate">
-            <div className="certificate__text">
-              <h2>Sertifikat</h2>
-              <p>{selectedTraining?.certificateText}</p>
+          <div className="certificate__container">
+            <div className="info__certificate">
+              <div className="info__title">
+                <h2>Bu təlim kimlər üçündür?</h2>
+                <p>{selectedTraining?.whois}</p>
+              </div>
+              <div className="certificate__text">
+                <h2>Sertifikat</h2>
+                <p>{selectedTraining?.certificateText}</p>
+              </div>
             </div>
             <div className="certificate__img">
               <img src={selectedTraining?.certificateImg} alt="" />
@@ -159,45 +161,87 @@ const Details = () => {
 
       <div className="training__demo">
         <div className="contanierr">
-          <div className="demo__title">
-            <span>Nümayiş dərsi</span>
-          </div>
           <div className="training__lessons">
-            <div className="training__video">
-              <iframe
-                width="530"
-                height="374"
-                src={`https://www.youtube.com/embed/${selectedTraining?.demovideo}`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+            <div>
+              <span>Nümayiş dərsi</span>
+              <div className="training__video">
+                <iframe
+                  width="530"
+                  height="374"
+                  src={`https://www.youtube.com/embed/${selectedTraining?.demovideo}`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
             <div className="lessons__info">
               <div className="info__title">
-                <h2>Excel ilə Data Analitikası</h2>
+                <h2>{selectedTraining.headers.az}</h2>
               </div>
               <div className="demo__info">
                 <div>
                   <span>Dərs</span>
-                  <p>Yeni başlayanlar üçün Excel</p>
+                  <p>{selectedTraining.lessonName}</p>
                 </div>
                 <div>
                   <span>Təlimçi</span>
-                  <p>Kenji Explains</p>
+                  <p>{selectedTraining.lessonCreator}</p>
                 </div>
                 <div>
                   <span>Məlumat</span>
-                  <p>
-                    Bu videonu izlədikdə Excel ilə Data Analitikası haqqında
-                    baza məlumatlara sahib olacaqsınız. Video Kenji Explains
-                    tərəfindəndir.
-                  </p>
+                  <p>{selectedTraining.lessonInfo}</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="syllabus">
+        <div className="contanierr">
+          <div className="syllabus__title">
+            <h2>Sillabus</h2>
+          </div>
+          <div className="syllabus__container">
+            {selectedTraining?.syllabus?.length > 0 ? (
+              selectedTraining.syllabus.map((info, index) => (
+                <div key={index} className="syllabus__item">
+                  {info.sessionName && (
+                    <div className="session__info">
+                      <h3>
+                        <strong>{info.sessionName}</strong>
+                      </h3>
+                      <ul>
+                        {info.sessionInfo
+                          ?.filter((item) => item.trim() !== "")
+                          .map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                      </ul>
+                    </div>
+                  )}
+                  {info.caseName && (
+                    <div className="case__info">
+                      <h3>
+                        <strong>{info.caseName}</strong>
+                      </h3>
+                      <ul>
+                        {info.caseInfo
+                          ?.filter((item) => item.trim() !== "")
+                          .map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <p>Sillabus məlumatı mövcud deyil</p>
+            )}
           </div>
         </div>
       </div>

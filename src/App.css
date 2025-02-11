@@ -38,6 +38,11 @@
   color: #fff;
 }
 
+.practic__table {
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 20px;
+}
+
 .scrolled {
   position: fixed;
   width: 100%;

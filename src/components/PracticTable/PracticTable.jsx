@@ -35,7 +35,7 @@ const PracticTable = () => {
   };
 
   return (
-    <div className="absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5 flex gap-10 flex-wrap rounded-[5px] z-10">
+    <div className="practic__table absolute top-10 right-0 w-max bg-[#FFF] px-4 py-5 flex gap-10 flex-wrap rounded-[5px] z-10">
       {trainings.map((training) => (
         <div key={training.id}>
           <h1 className="text-[#2fa8a5] font-bold">{training.name}</h1>
@@ -45,7 +45,7 @@ const PracticTable = () => {
               <span
                 key={section.id}
                 onClick={() => clickHandler(section)}
-                className="text-[#50264E] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb]"
+                className="text-[#50264E] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1"
               >
                 - {section.headers?.az}
               </span>
