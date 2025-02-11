@@ -25,7 +25,7 @@ const Customers = () => {
   ];
   return (
     <section id="customer" name="customer" className="contanierr">
-      <div className="customers">
+      <div className="customers pt-15">
         <div className="customer__title">
           <h2>Əməkdaşlıq etdiyimiz şirkətlər</h2>
         </div>
