@@ -27,7 +27,7 @@ const MainSection = () => {
             <br /> karyera dəstəyi əsasında <br /> bizimlə mümkündür!
           </span>
           <div className="flex gap-5 mx-auto pt-3">
-            <Link to={"/müraciət"} className="text-center bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3  w-[12.6vw] hover:bg-transparent cursor-pointer">
+            <Link to={"/muraciet"} className="text-center bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3  w-[12.6vw] hover:bg-transparent cursor-pointer">
               MURACIƏT ET
             </Link>
             <Link to={"/program"} className="text-center bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3 w-[12.6vw] hover:bg-transparent cursor-pointer">
