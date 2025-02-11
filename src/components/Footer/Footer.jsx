@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/svg/logoblack.svg";
+import logo from "../../assets/svg/logoBlack.svg";
 import { Link } from "react-scroll";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
