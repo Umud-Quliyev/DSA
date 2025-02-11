@@ -4,6 +4,7 @@ import community from "../../assets/png/community.png"
 import edu from "../../assets/png/edu.png"
 import mentor from "../../assets/png/mentor.png"
 import practic from "../../assets/png/telim.png"
+import { Link } from "react-router-dom"
 const MainSection = () => {
 
   return (
@@ -26,12 +27,12 @@ const MainSection = () => {
             <br /> karyera dəstəyi əsasında <br /> bizimlə mümkündür!
           </span>
           <div className="flex gap-5 mx-auto pt-3">
-            <button className="bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3  w-[12.6vw] hover:bg-transparent cursor-pointer">
+            <Link to={"/müraciət"} className="text-center bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3  w-[12.6vw] hover:bg-transparent cursor-pointer">
               MURACIƏT ET
-            </button>
-            <button className="bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3 w-[12.6vw] hover:bg-transparent cursor-pointer">
+            </Link>
+            <Link to={"/program"} className="text-center bg-[#2baaaa] rounded-[20px] text-[1.05vw] p-3 w-[12.6vw] hover:bg-transparent cursor-pointer">
               PROQRAMI YÜKLƏ
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -97,7 +98,7 @@ const MainSection = () => {
             </div>
           </div>
           <div className="w-1/6 mx-auto mt-15">
-            <button className=" bg-[#28AAA8] text-[#fff] py-3 px-10 rounded-[30px]">
+            <button className=" bg-[#28AAA8] text-[#fff] py-3 px-10 rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
               MÜRACİƏT ET
             </button>
           </div>

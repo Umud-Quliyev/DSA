@@ -5,7 +5,7 @@ import Header from "../components/Header/Header";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-between h-[100vh]">
       <header>
         <Header />
       </header>
