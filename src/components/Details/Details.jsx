@@ -248,24 +248,31 @@ const Details = () => {
 
       <div className="testimonials"></div>
 
-      {selectedTraining?.trainers?.length > 0 ? (
-        selectedTraining.trainers.map((info, index) => (
-          <div key={index} className="trainer">
-            <div className="trainer__img">
-              <img src={info?.trainerImg} alt="" />
-            </div>
-            <div className="trainer__info">
-              <h3>{info?.trainerName}</h3>
-              <span>{info?.trainerWorkplace}</span>
-              <p>{info?.trainerDesc}</p>
-            </div>
-          </div>
-        ))
-      ) : (
+      <div className="trainers">
         <div className="contanierr">
-          <p>Təlimçi tapılmadı.</p>
+          <div className="trainers__title">
+            <h2>Təlimçilər</h2>
+          </div>
+          <div className="trainers__list">
+            {selectedTraining?.trainers?.length > 0 ? (
+              selectedTraining.trainers.map((info, index) => (
+                <div key={index} className="trainer">
+                  <div className="trainer__img">
+                    <img src={info?.trainerImg} alt="" />
+                  </div>
+                  <div className="trainer__info">
+                    <h3>{info?.trainerName}</h3>
+                    <span>{info?.trainerWorkplace}</span>
+                    <p>{info?.trainerDesc}</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>Təlimçi tapılmadı.</p>
+            )}
+          </div>
         </div>
-      )}
+      </div>
 
       <div className="session__tables"></div>
     </div>

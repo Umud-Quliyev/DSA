@@ -1,52 +1,61 @@
 import React from "react";
-import {
-  Facebook,
-  Twitter,
-  LinkedIn,
-  Instagram,
-  GitHub,
-  YouTube,
-} from "@mui/icons-material";
+import logo from "../../assets/svg/logoblack.svg";
+import { Link } from "react-scroll";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6 px-4 mt-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        {/* Logo & Copyright */}
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-xl font-semibold">Data Science Academy</h2>
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} All rights reserved.
-          </p>
+    <div className="contanierr">
+      <div className="footer__container">
+        <div className="footer">
+          <div>
+            <img src={logo} alt="Logo" />
+          </div>
+          <div className="subscribe">
+            <input type="text" placeholder="Email daxil edin" />
+            <button>Abone ol</button>
+          </div>
+          <ul>
+            <Link to="main" smooth={true} duration={1500}>
+              <li>Əsas</li>
+            </Link>
+            <Link to="customer" smooth={true} duration={1500}>
+              <li>Müştərilər</li>
+            </Link>
+            <Link to="training" smooth={true} duration={1500}>
+              <li>Təlim Proqramı</li>
+            </Link>
+            <Link to="team" smooth={true} duration={1500}>
+              <li>Komandamız</li>
+            </Link>
+            <Link to="faq" smooth={true} duration={1500}>
+              <li>FAQ</li>
+            </Link>
+            <Link to="contact" smooth={true} duration={1500}>
+              <li>Əlaqə</li>
+            </Link>
+          </ul>
         </div>
-
-        {/* Social Icons */}
-        <div className="flex space-x-4">
-          <a
-            target="_blank"
-            href="https://www.facebook.com/datascienceacademy.az/"
-            className="hover:text-blue-500 transition"
-          >
-            <Facebook fontSize="large" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/company/dsa-azerbaijan"
-            className="hover:text-blue-700 transition"
-          >
-            <LinkedIn fontSize="large" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.instagram.com/datascienceacademy_/"
-            className="hover:text-pink-500 transition"
-          >
-            <Instagram fontSize="large" />
-          </a>
+        <div className="footer__bottom">
+          <div className="languages">
+            <ul>
+              <li className="language__active">Azərbaycan</li>
+              <li>English</li>
+              <li>French</li>
+            </ul>
+          </div>
+          <div className="socials">
+            <FaFacebook />
+            <FaInstagram />
+            <FaLinkedin />
+          </div>
+          <div className="copyright">
+            <p>{new Date().getFullYear()} All rights reserved.</p>
+          </div>
         </div>
       </div>
-    </footer>
-    // I will add new code
+    </div>
   );
 };
 
