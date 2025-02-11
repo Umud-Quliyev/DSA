@@ -316,12 +316,11 @@
   flex-direction: column;
 }
 
-.case__info{
+.case__info {
   height: 100%;
-    display: flex
-;
-    flex-direction: column;
-    justify-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .case__info h3 {
