@@ -1,0 +1,87 @@
+.footer__container {
+  padding: 40px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.footer img {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.subscribe {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.subscribe input {
+  max-width: 275px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+  height: 49px;
+}
+
+.subscribe button {
+  width: 100%;
+  max-width: 135px;
+  border: none;
+  background-color: #28aaa8;
+  color: #fff;
+  height: 49px;
+  cursor: pointer;
+}
+
+.footer ul {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer ul a li {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.languages ul {
+  display: flex;
+}
+
+.languages ul li {
+  padding: 8px 16px;
+}
+
+.languages .language__active {
+  background-color: #28aaa8;
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socials svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
