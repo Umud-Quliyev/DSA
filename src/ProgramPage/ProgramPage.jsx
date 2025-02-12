@@ -1,12 +1,12 @@
 const ProgramPage = () => {
   return (
-    <section className="">
+    <section className="pt-30">
       <div className="w-5/6 mx-auto flex flex-col items-center justify-start">
         <h2 className="text-[2.61vw] font-[300]">Təlim proqramı</h2>
         <span className="text-[#28aaa8] text-[1.31vw]">
           Təlim Proqramını Yükləmək Üçün Zəhmət Olmasa Emailinizi Daxil Edin
         </span>
-        <form action="" className="w-5/6">
+        <form action="" className="w-5/6  mt-10">
           <input
             type="text"
             placeholder="Email:"
