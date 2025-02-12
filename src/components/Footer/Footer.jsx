@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/svg/logoBlack.svg";
 import { Link } from "react-scroll";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -49,6 +49,7 @@ const Footer = () => {
             <FaFacebook />
             <FaInstagram />
             <FaLinkedin />
+            <FaWhatsapp />
           </div>
           <div className="copyright">
             <p>{new Date().getFullYear()} All rights reserved.</p>

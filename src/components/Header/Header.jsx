@@ -6,6 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useState, useEffect } from "react";
 import PracticTable from "../PracticTable/PracticTable";
 import { useLocation } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -202,6 +203,13 @@ const Header = () => {
             {dropdown && <PracticTable />}
           </li>
         </ul>
+
+        <div className="socials">
+          <FaFacebook />
+          <FaInstagram />
+          <FaLinkedin />
+          <FaWhatsapp />
+        </div>
       </div>
     </>
   );

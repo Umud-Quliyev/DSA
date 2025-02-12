@@ -9,6 +9,7 @@
 .training__title {
   display: flex;
   align-items: center;
+  margin-top: 40px;
   gap: 20px;
 }
 
@@ -380,3 +381,46 @@
   padding-bottom: 16px;
   color: #22c4cd;
 }
+
+.tables__title h2 {
+  padding-bottom: 16px;
+  font-weight: 5 00;
+  font-size: 24px;
+  line-height: 59px;
+}
+
+.training__price p span {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.training__price p {
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.session__tables .card__body {
+  align-items: center;
+}
+
+.session__tables .card__time span {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.session__tables .table__card {
+  max-width: 340px;
+  width: 100%;
+}
+
+.session__tables .table__list {
+  flex-wrap: wrap;
+}
+
+.session__tables .card__title {
+  text-align: center;
+}
+

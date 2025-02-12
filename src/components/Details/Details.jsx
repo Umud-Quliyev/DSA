@@ -44,7 +44,7 @@ const Details = () => {
       language: "en",
       title: selectedTraining?.headers?.en || "Training",
       date: "1st of February",
-      time: "TBD",
+      time: "Planned",
       bgcolor: "#E21B5D",
     },
     {
@@ -274,7 +274,43 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="session__tables"></div>
+      <div className="session__tables">
+        <div className="contanierr">
+          <div className="tables__title">
+            <h2>Sessiyalar</h2>
+          </div>
+          <div className="table__list">
+            {trainingData.map((training, index) => (
+              <div className="table__card" key={index}>
+                <div
+                  style={{ backgroundColor: training.bgcolor }}
+                  className="card__title"
+                >
+                  <h3>{training.title}</h3>
+                </div>
+                <div className="card__body">
+                  <div className="card__time">
+                    <FaRegClock color={training.bgcolor} />
+                    <span>{training.time}</span>
+                  </div>
+                  <div className="training__price">
+                    <p>
+                      <span>300 AZN</span> 175 AZN
+                    </p>
+                  </div>
+                </div>
+                <div className="card__button">
+                  <button style={{ backgroundColor: training.bgcolor }}>
+                    {registerTexts[training.language]}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      
     </div>
   );
 };
