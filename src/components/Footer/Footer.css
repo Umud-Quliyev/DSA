@@ -85,3 +85,25 @@
   height: 24px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer ul {
+    display: none;
+  }
+
+  .subscribe {
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .socials {
+    display: none;
+  }
+}
