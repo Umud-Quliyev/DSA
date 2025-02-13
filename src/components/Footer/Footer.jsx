@@ -1,7 +1,12 @@
 import React from "react";
 import logo from "../../assets/svg/logoBlack.svg";
 import { Link } from "react-scroll";
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
