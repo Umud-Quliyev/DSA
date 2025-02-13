@@ -64,16 +64,16 @@ const RequestPage = () => {
 
   return (
     <section className="pt-30 request">
-      <div className="w-5/6 mx-auto">
-        <h2 className="text-[2.61vw] text-center font-[300] text-[#212331]">
+      <div className="w-5/6 mx-auto ">
+        <h2 className="text-[4vw] text-center font-[300] text-[#212331] md:text-[2.61vw]">
           Müraciət
         </h2>
         <form
-          className="my-10 flex flex-wrap justify-evenly gap-3 mx-auto"
+          className="my-10  flex flex-wrap justify-evenly gap-3 mx-auto md:w-full"
           onSubmit={handleSubmit}
         >
           {["name", "surname", "email", "phone"].map((field, index) => (
-            <div key={index} className="w-[49%]">
+            <div key={index} className="w-full md:w-[49%] ">
               <input
                 name={field}
                 value={formData[field]}

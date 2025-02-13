@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const MainSection = () => {
   return (
     <>
-      <section id="main" name="main" className="">
-        <div className=" text-[#fff]  flex  flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 md:full ">
-          <h1 className=" font-[300] text-[5vw] md:text-[3.91vw]">12 Həftədə</h1>{/* md:text-[3.91vw] */}
+      <section id="main" name="main" className="h-[60vh] xl:h-[100vh]">
+        <div className=" text-[#fff]  flex  flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3  ">
+          <h1 className=" font-[300] text-[5vw] md:text-[3.91vw]">12 Həftədə</h1>
           <h2 className=" text-nowrap text-[6vw] font-bold md:text-[3.85vw]">Data Scientist Olmaq?</h2>
           <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center  p-4">
             <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw]">
@@ -43,7 +43,7 @@ const MainSection = () => {
       </section>
       <section className=" ">
         <div className="w-full mx-auto  px-10 md:w-5/6 md:px-20 md:mx-auto">
-          <h2 className="text-[#279996] text-[4vw] my-10 md:text-[2.61vw]">DSA Bootcamp</h2>
+          <h2 className="text-[#279996] text-[4vw] my-5 md:text-[2.61vw] md:my-10">DSA Bootcamp</h2>
           <div className="flex flex-wrap justify-between w-full">
             <div className="flex flex-col gap-3 w-full text-[#555555] md:w-4/5">
               <h2 className="font-bold text-[3vw] md:text-[1.18vw]">İcmal</h2>
@@ -75,8 +75,8 @@ const MainSection = () => {
                 əməkdaşlıq əsasında data və analitika mütəxəssisləri təmin edir.
               </span>
             </div>
-            <div className="flex pt-5 justify-between w-full text-[#555555] md:w-1/5 md:flex-col">
-              <div className="flex flex-col gap-3">
+            <div className="flex pt-1 justify-between w-full text-[#555555] md:w-1/5 md:flex-col">
+              <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-[2.5vw] md:text-[1.18vw]">Ön bilik tələbi</h3>
                 <span className="text-[1.5vw] md:text-[.92vw] w-4/5">
                   Orta səviyyə ingilis dili, analitikaya həvəs və təhlil
@@ -87,14 +87,14 @@ const MainSection = () => {
                   üstünlükdür.
                 </span>
               </div>
-              <div className="flex  flex-col gap-3 ">
+              <div className="flex  flex-col gap-2 ">
                 <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Tədris Müddəti</h3>
                 <span className="text-[1.5vw] w-4/5 md:text-[.92vw]">
                   3 ay, həftədə 3 dəfə, hər dərs fasilələr ilə 4 saat davam
                   edəcək.
                 </span>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Məkan</h3>
                 <span className="text-[1.5vw] w-4/5 md:text-[.92vw]">
                   Aşıq Alı 24, Odlar Yurdu universiteti ilə üzbəüz
@@ -102,7 +102,7 @@ const MainSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/6 mx-auto mt-15 ">
+          <div className="flex items-center justify-center mt-15  md:w-full">
             <button className=" text-[1.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
               MÜRACİƏT ET
             </button>
