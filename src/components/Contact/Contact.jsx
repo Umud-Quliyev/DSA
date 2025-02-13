@@ -20,6 +20,8 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
 
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
@@ -64,7 +66,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+      const response = await fetch(`${BASE_URL}/api/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
