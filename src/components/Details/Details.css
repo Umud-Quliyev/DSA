@@ -24,7 +24,7 @@
   padding: 32px 0;
 }
 
-.training__desc p {
+.training__desc span {
   font-size: 18px;
   line-height: 26px;
 }
@@ -250,6 +250,7 @@
 }
 
 .lessons__info {
+  width: 100%;
   padding-top: 42px;
 }
 
@@ -369,6 +370,10 @@
   gap: 60px;
 }
 
+.trainer__info{
+  width: 100%;
+}
+
 .trainer__info h3 {
   font-size: 20px;
   font-weight: bold;
@@ -423,4 +428,3 @@
 .session__tables .card__title {
   text-align: center;
 }
-
