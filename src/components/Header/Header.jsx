@@ -100,7 +100,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`flex justify-between px-10 items-center  h-[70px] md:justify-center nav  ${
+        className={`flex gap-20 px-10 items-center  h-[70px] md:justify-center nav  ${
           chooseScroll ? "scrolled" : bgColor ? "bgColor" : ""
         } `}
       >
@@ -220,7 +220,7 @@ const Header = () => {
           {
             open ? (<div className="sidebar w-[35%] md:w-0">
                <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-20">
-                <span className="absolute top-[20px] right-[50px]" onClick={()=>setOpen(false)}><IoClose /></span>
+                <span className="absolute top-[20px] right-[10px]" onClick={()=>setOpen(false)}><IoClose /></span>
           {isLocation ? (
             <>
               <Link to="main" smooth={true} duration={1500}>
@@ -314,7 +314,7 @@ const Header = () => {
             Təlimlər <IoMdArrowDropdown />
             {dropdown && <PracticTable />}
           </li>
-        <div className="  items-center flex gap-5">
+        <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
           <FaFacebook />
           <FaInstagram />
           <FaLinkedin />
