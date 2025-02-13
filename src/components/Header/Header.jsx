@@ -6,7 +6,13 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useState, useEffect } from "react";
 import PracticTable from "../PracticTable/PracticTable";
 import { useLocation } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -15,8 +21,9 @@ const Header = () => {
   const [chooseScroll, setChooseScroll] = useState(false);
   const [currentScroll, setCurrentScroll] = useState(0);
   const [activeSection, setActiveSection] = useState("");
+  const [open, setOpen] = useState(false)
   const location = useLocation();
-
+console.log(open)
   const isLocation = location.pathname === "/";
 
   useEffect(() => {
@@ -77,7 +84,6 @@ const Header = () => {
         setColor(false);
         setChooseScroll(false);
       }
-
       setCurrentScroll(scroll);
     };
 
@@ -94,7 +100,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`flex justify-center items-center  h-[70px] nav  ${
+        className={`flex justify-between px-10 items-center  h-[70px] md:justify-center nav  ${
           chooseScroll ? "scrolled" : bgColor ? "bgColor" : ""
         } `}
       >
@@ -108,7 +114,7 @@ const Header = () => {
           </NavLink>
         )}
 
-        <ul className="w-3/5 flex items-center justify-evenly ">
+        <ul className="w-full text-nowrap hidden   items-center justify-evenly md:w-3/5 md:flex">
           {isLocation ? (
             <>
               <Link to="main" smooth={true} duration={1500}>
@@ -204,12 +210,118 @@ const Header = () => {
           </li>
         </ul>
 
-        <div className="socials">
+        <div className="hidden  items-center gap-4 md:flex">
           <FaFacebook />
           <FaInstagram />
           <FaLinkedin />
           <FaWhatsapp />
         </div>
+        <AiOutlineMenu className="block md:hidden " onClick={()=>setOpen(!open)}/>
+          {
+            open ? (<div className="sidebar">
+               <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-10">
+          {isLocation ? (
+            <>
+              <Link to="main" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "main" ? "active" : ""
+                  }`}
+                >
+                  Əsas
+                </li>
+              </Link>
+              <Link to="customer" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "customer" ? "active" : ""
+                  }`}
+                >
+                  Müştərilər
+                </li>
+              </Link>
+              <Link to="training" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "training" ? "active" : ""
+                  }`}
+                >
+                  Təlim Proqramı
+                </li>
+              </Link>
+              <Link to="team" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "team" ? "active" : ""
+                  }`}
+                >
+                  Komandamız
+                </li>
+              </Link>
+              <Link to="faq" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "faq" ? "active" : ""
+                  }`}
+                >
+                  FAQ
+                </li>
+              </Link>
+              <Link to="contact" smooth={true} duration={1500}>
+                <li
+                  className={`hover:text-[#fccd00] cursor-pointer ${
+                    activeSection === "contact" ? "active" : ""
+                  }`}
+                >
+                  Əlaqə
+                </li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Müştərilər
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Təlim Proqramı
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  Komandamız
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">FAQ</li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
+              </NavLink>
+            </>
+          )}
+
+          <li
+            className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
+            onClick={handleClick}
+          >
+            Təlimlər <IoMdArrowDropdown />
+            {dropdown && <PracticTable />}
+          </li>
+        <div className="  items-center flex gap-5">
+          <FaFacebook />
+          <FaInstagram />
+          <FaLinkedin />
+          <FaWhatsapp />
+        </div>
+        </ul>
+            </div>) : ""
+          }
       </div>
     </>
   );
