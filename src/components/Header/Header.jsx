@@ -13,6 +13,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -23,7 +24,6 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
   const [open, setOpen] = useState(false)
   const location = useLocation();
-console.log(open)
   const isLocation = location.pathname === "/";
 
   useEffect(() => {
@@ -114,7 +114,7 @@ console.log(open)
           </NavLink>
         )}
 
-        <ul className="w-full text-nowrap hidden   items-center justify-evenly md:w-3/5 md:flex">
+        <ul className="w-full text-nowrap hidden  items-center justify-evenly  md:flex">
           {isLocation ? (
             <>
               <Link to="main" smooth={true} duration={1500}>
@@ -210,16 +210,17 @@ console.log(open)
           </li>
         </ul>
 
-        <div className="hidden  items-center gap-4 md:flex">
+        <div className="hidden  items-center gap-4 lg:flex">
           <FaFacebook />
           <FaInstagram />
           <FaLinkedin />
           <FaWhatsapp />
         </div>
-        <AiOutlineMenu className="block md:hidden " onClick={()=>setOpen(!open)}/>
+        <AiOutlineMenu className={`${open ? "hidden" : ""} block md:hidden`} onClick={()=>setOpen(true)}/>
           {
-            open ? (<div className="sidebar">
-               <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-10">
+            open ? (<div className="sidebar w-[35%] md:w-0">
+               <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-20">
+                <span className="absolute top-[20px] right-[50px]" onClick={()=>setOpen(false)}><IoClose /></span>
           {isLocation ? (
             <>
               <Link to="main" smooth={true} duration={1500}>
