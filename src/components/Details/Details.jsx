@@ -4,11 +4,14 @@ import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
 import { Box, Modal, Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import Cluster from "../Cluster/Cluster";
 
 const Details = () => {
   const { id } = useParams();
   const [selectedTraining, setSelectedTraining] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const [trainings, setTrainings] = useState([]);
 
   const [openModals, setOpenModals] = useState({});
 
@@ -26,6 +29,22 @@ const Details = () => {
         setLoading(true);
 
         const response = await fetch(`http://localhost:3000/sections/${id}`);
+
+        const trainingsRes = await fetch("http://localhost:3000/trainings");
+        const trainingsData = await trainingsRes.json();
+
+        const sectionsRes = await fetch("http://localhost:3000/sections");
+        const sectionsData = await sectionsRes.json();
+
+        const mergedData = trainingsData.map((training) => ({
+          ...training,
+          sections: sectionsData.filter(
+            (sec) => Number(sec.trainingId) === Number(training.id)
+          ),
+        }));
+
+        setTrainings(mergedData);
+
         if (!response.ok) {
           throw new Error("Error");
         }
@@ -610,6 +629,8 @@ const Details = () => {
           </Box>
         </Modal>
       </div>
+
+      <Cluster />
     </div>
   );
 };

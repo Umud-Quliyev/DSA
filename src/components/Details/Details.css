@@ -370,7 +370,7 @@
   gap: 60px;
 }
 
-.trainer__info{
+.trainer__info {
   width: 100%;
 }
 
@@ -407,6 +407,11 @@
   padding-left: 5px;
 }
 
+.session__tables {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
 .session__tables .card__body {
   align-items: center;
 }
@@ -427,4 +432,74 @@
 
 .session__tables .card__title {
   text-align: center;
+}
+
+.cluster {
+  background-color: #f1f2f2;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.cluster__title h2 {
+  font-size: 24px;
+  padding-bottom: 32px;
+  font-weight: 500;
+}
+
+.cluster__list {
+  background-color: #fff;
+  padding: 24px 32px 32px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.list__title span {
+  font-size: 21px;
+  font-weight: 500;
+  padding-bottom: 24px;
+  display: block;
+}
+
+.cluster__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.training h4 {
+  font-size: 20px;
+}
+
+.training__chk input {
+  width: 24px;
+  height: 24px;
+}
+
+.MuiCheckbox-root {
+  padding: 0 !important;
+}
+
+.training__chk {
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.training__price {
+  padding-top: 10px;
+  text-align: end;
+}
+
+.training__price p {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.training__register {
+  text-align: end;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
 }

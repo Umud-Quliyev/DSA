@@ -21,6 +21,7 @@
         "ru": "Анализ данных с Excel"
       },
       "trainingId": 1,
+      "price": 175,
       "description": "“Excel ilə data analitikası” təlimi ilkin və orta səviyyəli Excel istifadəçiləri, Exceldən mütəmadi istifadə edən işgüzar mütəxəssislər və biznes işçiləri üçün analitika dünyasına başlanğıc məqsədilə dizayn olunub. Bu məqsədlə sizə Microsoft Exceldən istifadə etməklə ilkin analitik anlayışlar və tətbiqi biliklər vasitəsilə datanı necə idarə etmək və data əsaslı qərarlar vermək öyrədiləcək.",
       "img": "../src/assets/png/1718277287a.png",
       "info": "Bu təlimdə siz, Excelin ən çox istifadə olunan xüsusiyyətlərini tətbiq etməklə datanın necə analiz olunmasını öyrənəcək, Pivot cədvəllərlə asan, cəld və daha ətraflı təhlil edərək datadan mənalı nəticələr əldə edə biləcəksiniz. İşlədiyiniz sahədən (marketinq, satış, maliyyə, İR və ya digər) asılı olmayaraq Excel vasitəsilə sadə cədvəllərdən mürəkkəb və dinamik daşbordlara kimi datanızı vizuallaşdıra və müxtəlif modellər (məs. satış proqnozu) qura biləcəksiniz. Bundan əlavə “what if” analizi aparmaq, Pivot Cədvəlləri ilə işləmək və Excelin ən çox istifadə olunan funksiyaları və mürəkkəb formulalarını istifadə etməklə işinizdə və ya biznesinizdə datanı asanlıqla analiz edərək qərarlarınızı daha asan və əsaslı verə biləcəksiniz. Təlim müddətində Excel funksiyaları, formulaları və digər mövzular sizə asan başa düşəcəyiniz tərzdə və rahat anlaşılacaq praktiki çalışmalar üzərində izah olunacaq. Əlavə olaraq təlimdə təqdim olunan keyzlər vasitəsilə, öyrəndiyiniz bilikləri müxtəlif biznes dataları üzərində tətbiq edərək Exceldə analitik qabiliyyətinizi inkişaf etdirəcəksiniz.",
@@ -99,6 +100,7 @@
         "ru": "Анализ данных с Power BI"
       },
       "trainingId": 1,
+      "price": 250,
       "description": "Bu təlim, sizə özü “düşünən”...",
       "img": "../src/assets/png/1722257717a.jpg"
     },
