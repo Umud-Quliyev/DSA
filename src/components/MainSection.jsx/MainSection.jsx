@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const MainSection = () => {
   return (
     <>
-      <section id="main" name="main" className="h-[60vh] xl:h-[100vh]">
+      <section id="main" name="main" className="h-[40vh] xl:h-[100vh]">
         <div className=" text-[#fff]  flex  flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3  ">
           <h1 className=" font-[300] text-[5vw] md:text-[3.91vw]">12 Həftədə</h1>
           <h2 className=" text-nowrap text-[6vw] font-bold md:text-[3.85vw]">Data Scientist Olmaq?</h2>
@@ -78,25 +78,25 @@ const MainSection = () => {
             <div className="flex pt-1 justify-between w-full text-[#555555] md:w-1/5 md:flex-col">
               <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-[2.5vw] md:text-[1.18vw]">Ön bilik tələbi</h3>
-                <span className="text-[1.5vw] md:text-[.92vw] w-4/5">
+                <span className="text-[2vw] md:text-[1.18vw] w-4/5">
                   Orta səviyyə ingilis dili, analitikaya həvəs və təhlil
                   bacarığı
                 </span>
-                <span className="text-[1.5vw] md:text-[.92vw] w-4/5">
+                <span className="text-[2vw] md:text-[1.18vw] w-4/5">
                   *İlkin proqramlaşdırma və təməl statistika biliklərinin olması
                   üstünlükdür.
                 </span>
               </div>
               <div className="flex  flex-col gap-2 ">
                 <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Tədris Müddəti</h3>
-                <span className="text-[1.5vw] w-4/5 md:text-[.92vw]">
+                <span className="text-[2vw] w-4/5 md:text-[1.18vw]">
                   3 ay, həftədə 3 dəfə, hər dərs fasilələr ilə 4 saat davam
                   edəcək.
                 </span>
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Məkan</h3>
-                <span className="text-[1.5vw] w-4/5 md:text-[.92vw]">
+                <span className="text-[2vw] w-4/5 md:text-[1.18vw]">
                   Aşıq Alı 24, Odlar Yurdu universiteti ilə üzbəüz
                 </span>
               </div>
