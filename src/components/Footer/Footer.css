@@ -80,7 +80,6 @@
   gap: 16px;
 }
 
-footer svg {
 .footer svg {
   width: 24px;
   height: 24px;
@@ -107,4 +106,16 @@ footer svg {
   .socials {
     display: none;
   }
+}
+.informations {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.informations p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }

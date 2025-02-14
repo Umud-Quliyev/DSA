@@ -540,12 +540,12 @@ const Details = () => {
               selectedTraining.trainers.map((info, index) => (
                 <div key={index} className="trainer">
                   <div className="trainer__img">
-                    <img src={info?.trainerImg} alt="" />
+                    <img src={info?.image} alt="" />
                   </div>
                   <div className="trainer__info">
-                    <h3>{info?.trainerName}</h3>
-                    <span>{info?.trainerWorkplace}</span>
-                    <p>{info?.trainerDesc}</p>
+                    <h3>{info?.name}</h3>
+                    <span>{info?.work_location}</span>
+                    <p>{info?.info}</p>
                   </div>
                 </div>
               ))

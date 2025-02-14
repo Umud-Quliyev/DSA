@@ -1,10 +1,12 @@
 import React from "react";
 import logo from "../../assets/svg/logoBlack.svg";
 import { Link } from "react-scroll";
+import { IoMdMail } from "react-icons/io";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
 import "./Footer.css";
@@ -21,26 +23,20 @@ const Footer = () => {
             <input type="text" placeholder="Email daxil edin" />
             <button>Abone ol</button>
           </div>
-          <ul>
-            <Link to="main" smooth={true} duration={1500}>
-              <li>Əsas</li>
-            </Link>
-            <Link to="customer" smooth={true} duration={1500}>
-              <li>Müştərilər</li>
-            </Link>
-            <Link to="training" smooth={true} duration={1500}>
-              <li>Təlim Proqramı</li>
-            </Link>
-            <Link to="team" smooth={true} duration={1500}>
-              <li>Komandamız</li>
-            </Link>
-            <Link to="faq" smooth={true} duration={1500}>
-              <li>FAQ</li>
-            </Link>
-            <Link to="contact" smooth={true} duration={1500}>
-              <li>Əlaqə</li>
-            </Link>
-          </ul>
+          <div className="informations">
+            <p>
+              <span>
+              <IoMdMail />
+              </span>
+              blablabla@gmail.com
+            </p>
+            <p>
+              <span>
+                <FaPhone />
+              </span>{" "}
+              0550505050{" "}
+            </p>
+          </div>
         </div>
         <div className="footer__bottom">
           <div className="languages">
