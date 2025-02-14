@@ -43,7 +43,7 @@ const RequestPage = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch(`${BASE_URL}/api/apply/`, {
+      const response = await fetch(`${BASE_URL}/apply/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

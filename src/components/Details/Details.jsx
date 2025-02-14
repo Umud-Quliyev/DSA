@@ -28,7 +28,14 @@ const Details = () => {
       try {
         setLoading(true);
 
-        const response = await fetch(`http://localhost:3000/sections/${id}`);
+        const response = await fetch(`http://127.0.0.1:8000/scripts/11/`);
+
+        if (!response.ok) {
+          throw new Error("Error fetching training details");
+        }
+
+        const data = await response.json();
+        setSelectedTraining(data);
 
         const trainingsRes = await fetch("http://localhost:3000/trainings");
         const trainingsData = await trainingsRes.json();
@@ -44,14 +51,8 @@ const Details = () => {
         }));
 
         setTrainings(mergedData);
-
-        if (!response.ok) {
-          throw new Error("Error");
-        }
-        const data = await response.json();
-        setSelectedTraining(data);
       } catch (err) {
-        setError(err.message);
+        console.error("Fetch Error:", err);
       } finally {
         setLoading(false);
       }
@@ -63,7 +64,7 @@ const Details = () => {
   const trainingData = [
     {
       language: "az",
-      title: selectedTraining?.headers?.az || "Təlim",
+      title: selectedTraining?.title || "Təlim",
       date: "1 Fevral",
       time: "Təyin ediləcək",
       bgcolor: "#22C4CD",
@@ -120,10 +121,10 @@ const Details = () => {
           ) : (
             <>
               <img
-                src={selectedTraining?.img}
-                alt={selectedTraining?.headers?.az}
+                src={selectedTraining?.image}
+                alt={selectedTraining?.title}
               />
-              <h2>{selectedTraining.headers?.az}</h2>
+              <h2>{selectedTraining.title}</h2>
             </>
           )}
         </div>
@@ -205,26 +206,26 @@ const Details = () => {
                     </div>
                   </div>
                 ))
-              : trainingData.map((training, index) => (
+              : selectedTraining.sessions.map((training, index) => (
                   <div className="table__card" key={index}>
                     <div
-                      style={{ backgroundColor: training.bgcolor }}
+                      style={{ backgroundColor: "#22C4CD" }}
                       className="card__title"
                     >
-                      <h3>{training.title}</h3>
+                      <h3>{selectedTraining.title}</h3>
                     </div>
                     <div className="card__body">
                       <div className="card__date">
-                        <FaCalendarAlt color={training.bgcolor} />
+                        <FaCalendarAlt color="#22C4CD" />
                         <span>{training.date}</span>
                       </div>
                       <div className="card__time">
-                        <FaRegClock color={training.bgcolor} />
-                        <span>{training.time}</span>
+                        <FaRegClock color="#22C4CD" />
+                        <span>{training.hour}</span>
                       </div>
                     </div>
                     <div className="card__button">
-                      <button style={{ backgroundColor: training.bgcolor }}>
+                      <button style={{ backgroundColor: "#22C4CD" }}>
                         {registerTexts[training.language]}
                       </button>
                     </div>
@@ -289,7 +290,7 @@ const Details = () => {
                 />
               </>
             ) : (
-              <p>{selectedTraining?.info}</p>
+              <p>{selectedTraining?.information}</p>
             )}
           </div>
           <div className="certificate__container">
@@ -336,7 +337,7 @@ const Details = () => {
                     />
                   </>
                 ) : (
-                  <p>{selectedTraining?.whois}</p>
+                  <p>{selectedTraining?.for_who}</p>
                 )}
               </div>
               <div className="certificate__text">
@@ -363,7 +364,7 @@ const Details = () => {
                     />
                   </>
                 ) : (
-                  <p>{selectedTraining?.certificateText}</p>
+                  <p>{selectedTraining?.certificates}</p>
                 )}
               </div>
             </div>
@@ -376,7 +377,7 @@ const Details = () => {
                   height={310}
                 />
               ) : (
-                <img src={selectedTraining?.certificateImg} alt="" />
+                <img src={selectedTraining?.certificate_image} alt="" />
               )}
             </div>
           </div>
@@ -395,7 +396,7 @@ const Details = () => {
                   <iframe
                     width="530"
                     height="374"
-                    src={`https://www.youtube.com/embed/${selectedTraining?.demovideo}`}
+                    src={`https://www.youtube.com/embed/${selectedTraining?.link}`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -410,7 +411,7 @@ const Details = () => {
                 {loading ? (
                   <Skeleton variant="text" width="100%" height={30} />
                 ) : (
-                  <h2>{selectedTraining?.headers?.az}</h2>
+                  <h2>{selectedTraining?.title}</h2>
                 )}
               </div>
               <div className="demo__info">
@@ -419,7 +420,7 @@ const Details = () => {
                   {loading ? (
                     <Skeleton variant="text" width="100%" height={20} />
                   ) : (
-                    <p>{selectedTraining?.lessonName}</p>
+                    <p>{selectedTraining?.broadcast.title}</p>
                   )}
                 </div>
                 <div>
@@ -427,7 +428,7 @@ const Details = () => {
                   {loading ? (
                     <Skeleton variant="text" width="100%" height={20} />
                   ) : (
-                    <p>{selectedTraining?.lessonCreator}</p>
+                    <p>{selectedTraining?.broadcast.trainer}</p>
                   )}
                 </div>
                 <div>
@@ -439,7 +440,7 @@ const Details = () => {
                       <Skeleton variant="text" width="80%" height={20} />
                     </>
                   ) : (
-                    <p>{selectedTraining?.lessonInfo}</p>
+                    <p>{selectedTraining?.broadcast.info}</p>
                   )}
                 </div>
               </div>
@@ -472,28 +473,30 @@ const Details = () => {
             ) : selectedTraining?.syllabus?.length > 0 ? (
               selectedTraining.syllabus.map((info, index) => (
                 <div key={index} className="syllabus__item">
-                  {info.sessionName && (
+                  {info.title && (
                     <div className="session__info">
                       <h3>
-                        <strong>{info.sessionName}</strong>
+                        <strong>{info.title}</strong>
                       </h3>
                       <ul>
-                        {info.sessionInfo
-                          ?.filter((item) => item.trim() !== "")
+                        {info.description
+                          ?.split(/\r\n/)
+                          .filter((item) => item.trim() !== "")
                           .map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                       </ul>
                     </div>
                   )}
-                  {info.caseName && (
+                  {info.information && (
                     <div className="case__info">
                       <h3>
-                        <strong>{info.caseName}</strong>
+                        <strong>{info.label}</strong>
                       </h3>
                       <ul>
-                        {info.caseInfo
-                          ?.filter((item) => item.trim() !== "")
+                        {info.information
+                          ?.split(/\r\n/)
+                          .filter((item) => item.trim() !== "")
                           .map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
