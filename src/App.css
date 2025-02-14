@@ -118,12 +118,35 @@ h2 {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 123;
+  color: #000000;
+  animation-name: closesidebar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
 @keyframes sidebar {
   from {
     transform: translateX(400px);
   }
   to {
     transform: translateX(0);
+  }
+}
+@keyframes closesidebar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400px);
   }
 }
