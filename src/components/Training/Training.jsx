@@ -1,10 +1,9 @@
-import React from "react";
 import "./Training.css";
 
 const Training = () => {
   return (
     <>
-      <div name="training">
+      <section id="training" name="training">
         <div className="contanierr">
           <div className="training_program_info">
             <h2>Təlim Proqramı</h2>
@@ -102,7 +101,7 @@ const Training = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
