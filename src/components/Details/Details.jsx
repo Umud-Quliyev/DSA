@@ -2,23 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
-import { Box, Modal, Skeleton } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import Modals from "../Modal/Modals";
 
 const Details = () => {
   const { id } = useParams();
   const [selectedTraining, setSelectedTraining] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const [openModals, setOpenModals] = useState({});
+  const [openModals, setOpenModals] = useState(false);
 
-  const handleOpen = (index) => {
+  /* const handleOpen = (index) => {
     setOpenModals({ ...openModals, [index]: true });
   };
 
   const handleClose = (index) => {
     setOpenModals({ ...openModals, [index]: false });
-  };
+  }; */
 
   useEffect(() => {
     const fetchTrainingDetails = async () => {
@@ -79,8 +80,16 @@ const Details = () => {
     ru: "Зарегистрироваться",
   };
 
+
+const openModal = ()=>{
+  setOpenModals(true)
+}
+
   return (
     <div className="training__details pt-20">
+      {
+        openModals && <Modals setOpenModals={setOpenModals}/>
+      }
       <div className="contanierr">
         <div className="training__title">
           {loading ? (
@@ -205,7 +214,7 @@ const Details = () => {
                       </div>
                     </div>
                     <div className="card__button">
-                      <button style={{ backgroundColor: training.bgcolor }}>
+                      <button style={{ backgroundColor: training.bgcolor }} onClick={openModal}>
                         {registerTexts[training.language]}
                       </button>
                     </div>
@@ -593,7 +602,7 @@ const Details = () => {
           </div>
         </div>
 
-        <Modal
+        {/* <Modal
           open={false}
           onClose={() => handleClose(index)}
           disableEscapeKeyDown={false}
@@ -608,7 +617,7 @@ const Details = () => {
               </div>
             </div>
           </Box>
-        </Modal>
+        </Modal> */}
       </div>
     </div>
   );
