@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -25,6 +26,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isLocation = location.pathname === "/";
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!isLocation) {
@@ -123,7 +126,7 @@ const Header = () => {
                     activeSection === "main" ? "active" : ""
                   }`}
                 >
-                  Əsas
+                  {t("nav.main")}
                 </li>
               </Link>
               <Link to="customer" smooth={true} duration={1500}>
@@ -132,7 +135,7 @@ const Header = () => {
                     activeSection === "customer" ? "active" : ""
                   }`}
                 >
-                  Müştərilər
+                  {t("nav.customer")}
                 </li>
               </Link>
               <Link to="training" smooth={true} duration={1500}>
@@ -141,7 +144,7 @@ const Header = () => {
                     activeSection === "training" ? "active" : ""
                   }`}
                 >
-                  Təlim Proqramı
+                  {t("nav.training")}
                 </li>
               </Link>
               <Link to="team" smooth={true} duration={1500}>
@@ -150,7 +153,7 @@ const Header = () => {
                     activeSection === "team" ? "active" : ""
                   }`}
                 >
-                  Komandamız
+                  {t("nav.team")}
                 </li>
               </Link>
               <Link to="faq" smooth={true} duration={1500}>
@@ -168,35 +171,39 @@ const Header = () => {
                     activeSection === "contact" ? "active" : ""
                   }`}
                 >
-                  Əlaqə
+                  {t("nav.contact")}
                 </li>
               </Link>
             </>
           ) : (
             <>
               <NavLink to="/">
-                <li className="hover:text-[#fccd00] cursor-pointer">Əsas</li>
-              </NavLink>
-              <NavLink to="/">
                 <li className="hover:text-[#fccd00] cursor-pointer">
-                  Müştərilər
+                  {t("nav.main")}
                 </li>
               </NavLink>
               <NavLink to="/">
                 <li className="hover:text-[#fccd00] cursor-pointer">
-                  Təlim Proqramı
+                  {t("nav.customer")}
                 </li>
               </NavLink>
               <NavLink to="/">
                 <li className="hover:text-[#fccd00] cursor-pointer">
-                  Komandamız
+                  {t("nav.training")}
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  {t("nav.team")}
                 </li>
               </NavLink>
               <NavLink to="/">
                 <li className="hover:text-[#fccd00] cursor-pointer">FAQ</li>
               </NavLink>
               <NavLink to="/">
-                <li className="hover:text-[#fccd00] cursor-pointer">Əlaqə</li>
+                <li className="hover:text-[#fccd00] cursor-pointer">
+                  {t("nav.contact")}
+                </li>
               </NavLink>
             </>
           )}
@@ -205,7 +212,7 @@ const Header = () => {
             className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
             onClick={handleClick}
           >
-            Təlimlər <IoMdArrowDropdown />
+            {t("nav.trainings")} <IoMdArrowDropdown />
             {dropdown && <PracticTable />}
           </li>
         </ul>
@@ -221,7 +228,7 @@ const Header = () => {
           onClick={() => setOpen(true)}
         />
         {open ? (
-          <div className='sidebar w-[35%] md:w-0'>
+          <div className="sidebar w-[35%] md:w-0">
             <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-20">
               <span
                 className="absolute top-[20px] right-[10px] text-[20px]"
@@ -237,7 +244,7 @@ const Header = () => {
                         activeSection === "main" ? "active" : ""
                       }`}
                     >
-                      Əsas
+                      {t("nav.main")}
                     </li>
                   </Link>
                   <Link to="customer" smooth={true} duration={1500}>
@@ -246,7 +253,7 @@ const Header = () => {
                         activeSection === "customer" ? "active" : ""
                       }`}
                     >
-                      Müştərilər
+                      {t("nav.customer")}
                     </li>
                   </Link>
                   <Link to="training" smooth={true} duration={1500}>
@@ -255,7 +262,7 @@ const Header = () => {
                         activeSection === "training" ? "active" : ""
                       }`}
                     >
-                      Təlim Proqramı
+                      {t("nav.training")}
                     </li>
                   </Link>
                   <Link to="team" smooth={true} duration={1500}>
@@ -264,7 +271,7 @@ const Header = () => {
                         activeSection === "team" ? "active" : ""
                       }`}
                     >
-                      Komandamız
+                      {t("nav.team")}
                     </li>
                   </Link>
                   <Link to="faq" smooth={true} duration={1500}>
@@ -282,7 +289,7 @@ const Header = () => {
                         activeSection === "contact" ? "active" : ""
                       }`}
                     >
-                      Əlaqə
+                      {t("nav.contact")}
                     </li>
                   </Link>
                 </>
@@ -290,22 +297,22 @@ const Header = () => {
                 <>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Əsas
+                      {t("nav.main")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Müştərilər
+                      {t("nav.customer")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Təlim Proqramı
+                      {t("nav.training")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Komandamız
+                      {t("nav.team")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
@@ -313,7 +320,7 @@ const Header = () => {
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Əlaqə
+                      {t("nav.contact")}
                     </li>
                   </NavLink>
                 </>
@@ -323,27 +330,27 @@ const Header = () => {
                 className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
                 onClick={handleClick}
               >
-                Təlimlər <IoMdArrowDropdown />
+                {t("nav.trainings")} <IoMdArrowDropdown />
                 {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
                   <FaFacebook />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaInstagram />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaLinkedin />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaWhatsapp />
                 </div>
               </div>
             </ul>
           </div>
         ) : (
-          <div className='close w-[35%] md:w-0'>
+          <div className="close w-[35%] md:w-0">
             <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-20">
               <span
                 className="absolute top-[20px] right-[10px] text-[20px]"
@@ -359,7 +366,7 @@ const Header = () => {
                         activeSection === "main" ? "active" : ""
                       }`}
                     >
-                      Əsas
+                      {t("nav.main")}
                     </li>
                   </Link>
                   <Link to="customer" smooth={true} duration={1500}>
@@ -368,7 +375,7 @@ const Header = () => {
                         activeSection === "customer" ? "active" : ""
                       }`}
                     >
-                      Müştərilər
+                      {t("nav.customer")}
                     </li>
                   </Link>
                   <Link to="training" smooth={true} duration={1500}>
@@ -377,7 +384,7 @@ const Header = () => {
                         activeSection === "training" ? "active" : ""
                       }`}
                     >
-                      Təlim Proqramı
+                      {t("nav.training")}
                     </li>
                   </Link>
                   <Link to="team" smooth={true} duration={1500}>
@@ -386,7 +393,7 @@ const Header = () => {
                         activeSection === "team" ? "active" : ""
                       }`}
                     >
-                      Komandamız
+                      {t("nav.team")}
                     </li>
                   </Link>
                   <Link to="faq" smooth={true} duration={1500}>
@@ -404,7 +411,7 @@ const Header = () => {
                         activeSection === "contact" ? "active" : ""
                       }`}
                     >
-                      Əlaqə
+                      {t("nav.contact")}
                     </li>
                   </Link>
                 </>
@@ -412,22 +419,22 @@ const Header = () => {
                 <>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Əsas
+                      {t("nav.main")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Müştərilər
+                      {t("nav.customer")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Təlim Proqramı
+                      {t("nav.training")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Komandamız
+                      {t("nav.team")}
                     </li>
                   </NavLink>
                   <NavLink to="/">
@@ -435,7 +442,7 @@ const Header = () => {
                   </NavLink>
                   <NavLink to="/">
                     <li className="hover:text-[#fccd00] cursor-pointer">
-                      Əlaqə
+                      {t("nav.contact")}
                     </li>
                   </NavLink>
                 </>
@@ -445,20 +452,20 @@ const Header = () => {
                 className="flex items-center gap-1 relative hover:text-[#fccd00] cursor-pointer"
                 onClick={handleClick}
               >
-                Təlimlər <IoMdArrowDropdown />
+                {t("nav.trainings")} <IoMdArrowDropdown />
                 {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
                   <FaFacebook />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaInstagram />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaLinkedin />
                 </div>
-                <div  className="text-[20px]">
+                <div className="text-[20px]">
                   <FaWhatsapp />
                 </div>
               </div>

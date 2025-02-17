@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Faq.css";
+import { useTranslation } from "react-i18next";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -13,12 +14,8 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&::before": {
-    display: "none",
-  },
+  "&:not(:last-child)": { borderBottom: 0 },
+  "&::before": { display: "none" },
 }));
 
 const AccordionSummary = styled((props) => (
@@ -44,12 +41,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const Faq = () => {
-  const [expanded, setExpanded] = useState("false");
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
+  const { t, i18n } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
   const [faqItems, setFaqItems] = useState([]);
 
   useEffect(() => {
@@ -57,6 +50,24 @@ const Faq = () => {
       try {
         const faqRes = await fetch("http://localhost:3000/faq");
         const faqData = await faqRes.json();
+
+        faqData.forEach((item) => {
+          const itemId = String(item.id || "default");
+
+          i18n.addResource(
+            i18n.language,
+            "translation",
+            `faq.${itemId}.question`,
+            item.question
+          );
+          i18n.addResource(
+            i18n.language,
+            "translation",
+            `faq.${itemId}.answer`,
+            item.answer
+          );
+        });
+
         setFaqItems(faqData);
       } catch (error) {
         console.error("Veri çekme hatası:", error);
@@ -64,13 +75,17 @@ const Faq = () => {
     };
 
     fetchData();
-  }, []);
+  }, [i18n.language]);
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <section id="faq" name="faq" className="faq">
       <div className="contanierr">
         <div className="faq__title">
-          <h2>FAQ</h2>
+          <h2>{t("faq.title")}</h2>
         </div>
         <div className="faq__list">
           {faqItems.length > 0 ? (
@@ -85,15 +100,21 @@ const Faq = () => {
                   aria-controls={`panel${index}d-content`}
                   id={`panel${index}d-header`}
                 >
-                  <Typography component="span">{item.questions}</Typography>
+                  <Typography component="span">
+                    {i18n.language === "az"
+                      ? item.question_az
+                      : item.question_en}
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{item.answer}</Typography>
+                  <Typography>
+                    {i18n.language === "az" ? item.answer_az : item.answer_en}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             ))
           ) : (
-            <p>Yükleniyor...</p>
+            <p>{t("faq.loading")}</p>
           )}
         </div>
       </div>

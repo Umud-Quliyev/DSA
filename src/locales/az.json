@@ -1,0 +1,165 @@
+{
+  "download_program": "Proqramı yüklə",
+  "apply_now": "MÜRACİƏT ET",
+  "bootcamp_title": "12 Həftədə",
+  "bootcamp_subtitle": "Data Scientist Olmaq?",
+  "bootcamp_name": "Data Science Academy",
+  "bootcamp_type": "Bootcamp",
+  "bootcamp_start_date": "1 Fevral 2025",
+  "bootcamp_description": "Ən müasir tədris proqramı, real biznes layihələri və fərdi karyera dəstəyi əsasında bizimlə mümkündür!",
+  "overview": "İcmal",
+  "overview_text": "Data Science Academy Bootcamp Data Analitikası, Vizuallaşdırma, Machine Learning, Deep Learning, Artificial İntellegence və Big Data mövzularının birlikdə tədris edildiyi dünyanın ən geniş Data Science proqramlarından biridir. Siz bu proqramda Statistika, Data Analitikası və Data Science metodologiyalarını R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, Mongo DB, MapReduce, Hive, Hadoop, Tenserflow, Tableau, SPSS, SPSS Modeler və digər çox istifadə olunanan vasitələrlə öyrənəcəksiniz. Vaxtınızın böyük hissəsində real layihələrlə işləyərək biliklərinizi tətbiq edəcək və proqram sonunda GitHub Data Science Portfolionuzu yaradacaqsınız. Şəxsi mentorlarınızla işləyərkən real biznes problemləri və datasetlərlə əlaqəli suallarınıza cavab tapmaq imkanınız olacaq. Bootcamp müddətində peşəkar Data Analitiklərdən ibarət olan Data Science cəmiyyətimizə qoşularaq Data Science Spacedə həyata keçirilən müxtəlif networking tədbirlərinə qoşulacaqsınız. Bootcamp sonunda imtahan nəticələrinə əsasasən Participant, Data Analyst, Junior Data Scientist, Data Scientist, Associate Data Scientist sertifikatlarından biri təqdim olunacaq. Bununla yanaşı, individual karyera xidməti və CV- Vakansiya* bazamıza giriş əldə edəcəksiniz.",
+  "overview_sub_text": "Akademiyamız bir çox nüfuzlu yerli və qlobal şirkətlərə əməkdaşlıq əsasında data və analitika mütəxəssisləri təmin edir.",
+  "requirements": "Ön bilik tələbi",
+  "requirements_description": "Orta səviyyə ingilis dili, analitikaya həvəs və təhlil bacarığı",
+  "extra_requirements": "İlkin proqramlaşdırma və təməl statistika biliklərinin olması üstünlükdür.",
+  "duration": "Tədris Müddəti",
+  "duration_description": "3 ay, həftədə 3 dəfə, hər dərs fasilələr ilə 4 saat davam edəcək.",
+  "location": "Məkan",
+  "location_description": "Aşıq Alı 24, Odlar Yurdu universiteti ilə üzbəüz",
+  "program_advantages": "Proqramın üstünlükləri",
+  "data_science_bootcamp": "Data Science Bootcamp",
+  "data_science_bootcamp_desc": "Data Science Academy sizə intensiv olaraq təşkil olunmuş 140 saatlıq proqram təklif edir.",
+  "training_program": "Təlim Proqramı",
+  "training_program_desc": "R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, Mongo DB, MapReduce, Hive, Hadoop, Tensorflow, Tableau, SPSS, SPSS Modeler və digər çox istifadə olunan proqramları birgə tədris edən yeganə proqram.",
+  "mentor_selection": "Mentor seçim prosesi",
+  "mentor_selection_desc": "Bootcamp müddətində tədris vaxtlarınızdan əlavə şəxsi mentorunuz ilə görüşərək bütün suallarınıza cavab tapın.",
+  "projects": "Layihələrimiz",
+  "projects_desc": "Capstone layihələri əsasında bilik və bacarıqlarınızı göstərən şəxsi Data Science GitHub portfolionuzu yaradın.",
+  "career_support": "Karyera Dəstəyi",
+  "career_support_desc": "Birə-bir karyera dəstəyi əsasında CV və Linkedin profilinizi dizayn etmək, sınaq müsahibələrlə müsahibədə necə davranmalı olduğunuzu öyrənmək və ekskluziv olaraq əməkdaşlıq etdiyimiz şirkətlərdə işləmək imkanı əldə edin.",
+  "community": "Cəmiyyət",
+  "community_desc": "Peşəkar Data Analitiklərdən ibarət olan Data Science cəmiyyətimizə qoşularaq Data Science Spacedə həyata keçirilən müxtəlif networking tədbirlərinə qoşulun.",
+  "customer_title": "Əməkdaşlıq etdiyimiz şirkətlər",
+  "training_program": "Təlim Proqramı",
+  "training_info": "Elektron Hökumətin İnkişafı Mərkəzi, Paşa Bank, Bakcell, Beynəlxalq Bank və Access Bank kimi iri qurumlarda çalışan mütəxəssislərimiz tərəfindən seçilmiş kitablar, real biznes və analitika keyzləri əsasında yaradılmışdır. Proqram bazardakı trendlər və biznesin tələbləri nəzərə alınaraq müntəzəm yenilənir. Bu proqram Statistika, Data Analitikası və Data Science metodologiyalarını R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, Hadoop, TensorFlow, Tableau, SPSS, SPSS Modeler öyrədilməsi daxil olmaqla 140 saatlıq tədris məzmununu əhatə edəcəkdir.",
+  "training_download": "Təlim proqramını yükləyin",
+  "training_process_title": "Proses necə işləyir?",
+  "training_step_1": "İlkin Hazırlıq",
+  "training_step_1_desc": "Bootcamp başlamazdan əvvəl bilik və bacarıqlarınız test olunaraq uyğun təlim proqramlarına yönləndiriləcəksiniz.",
+  "training_step_2": "Bootcamp",
+  "training_step_2_desc": "Data Analitikası, Vizuallaşdırma, Machine Learning, Deep Learning, Artificial Intelligence, Big Data mövzularını dünyanın ən geniş Data Science tədris proqramlarından biri ilə öyrənəcəksiniz.",
+  "training_step_3": "Tətbiq",
+  "training_step_3_desc": "Şəxsi mentorunuz ilə bərabər real layihələr üzərində çalışaraq öyrəndiyiniz bilikləri tətbiq edəcəksiniz.",
+  "training_step_4": "Karyera",
+  "training_step_4_desc": "Peşəkar Data analitiklər və HR mütəxəssisləri ilə görüşüb birə-bir müzakirələr aparacaq və CV-Vakansiya bazasına giriş əldə edəcəksiniz.",
+  "training_step_5": "Təbriklər!",
+  "training_step_5_desc": "Dünya yeni bir Data Scientist qazandı.",
+  "trainers": "Təlimçilərimiz",
+
+  "nav": {
+    "main": "Əsas",
+    "customer": "Müştərilər",
+    "training": "Təlim Proqramı",
+    "team": "Komandamız",
+    "faq": "FAQ",
+    "contact": "Əlaqə",
+    "trainings": "Təlimlər"
+  },
+
+  "graduates": {
+    "title": "Məzunlarımız",
+    "workplace_title": "Məzunlarımız burada çalışır",
+    "positions": {
+      "remote_data_scientist": "Uzaqdan Data Alimi",
+      "data_analyst": "Data Analitiki",
+      "senior_data_scientist": "Baş Data Alimi",
+      "head_of_analysis": "Analiz və Statistika Bölməsinin Rəhbəri",
+      "business_analyst": "Biznes Analitiki",
+      "data_scientist": "Data Alimi",
+      "lead_data_scientist": "Baş Data Alimi"
+    }
+  },
+
+  "teachers": {
+    "title": "Təlimçilərimiz"
+  },
+
+  "teacher": {
+    "etibar": {
+      "name": "Etibar Hüseynli",
+      "position": "Chief Data Scientist",
+      "workplace": "QSS Analytics",
+      "desc": "Etibar Hüseynli data sahəsində professional olaraq 8 ildən artıq iş təcrübəsinə sahibdir. Hal-hazırda Digital Umbrella şirkətində Data Analytics və Reporting şöbəsinin rəhbəri vəzifəsində çalışır."
+    },
+    "minure": {
+      "name": "Minurə Hüseynli",
+      "position": "Head of Data Analytics and Reporting",
+      "workplace": "Digital Umbrella",
+      "desc": "Minurə Hüseynli data sahəsində professional olaraq 8 ildən artıq iş təcrübəsinə sahibdir. Fərqli sektorlar üzrə bir çox yerli və beynəlxalq data science layihələrində məsləhətçi olaraq çalışmışdır."
+    },
+    "behruz": {
+      "name": "Bəhruz Qasımov",
+      "position": "Məlumatların keyfiyyəti üzrə ekspert",
+      "workplace": "Pasha Bank",
+      "desc": "Bəhruz Qasımov hal-hazırda 'Paşa Bank'da 'Məlumatların keyfiyyəti və təminatının idarə edilməsi' üzrə baş mütəxəssis olaraq çalışır."
+    },
+    "emil": {
+      "name": "Emil Mirzəyev",
+      "position": "Süni intellekt və Strateji Qərarqəbuletmə Tədqiqatçısı",
+      "workplace": "University College London",
+      "desc": "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir."
+    },
+    "turgut": {
+      "name": "Turqut Abdullayev",
+      "position": "Data Scientist",
+      "workplace": "University College London",
+      "desc": "Turqut Abdullayev süni intellekt sahəsində araşdırmalar aparır və data analitikası üzrə geniş təcrübəyə sahibdir."
+    },
+    "ehmed": {
+      "name": "Əhməd Əhmədov",
+      "position": "Senior Data Scientist",
+      "workplace": "University College London",
+      "desc": "Əhməd Əhmədov data analitikası və maşın öyrənməsi sahəsində 10 ildən artıq təcrübəyə malikdir."
+    },
+    "celal": {
+      "name": "Cəlal Rəhmanov",
+      "position": "Data Elmi üzrə Ekspert",
+      "workplace": "Kapital Bank",
+      "desc": "Cəlal Rəhmanov Kapital Bank-da məlumat elmi sahəsində çalışır."
+    },
+    "sebnur": {
+      "name": "Şəbnur Pənahlı",
+      "position": "Business Analyst",
+      "workplace": "Kapital Bank",
+      "desc": "Şəbnur Pənahlı biznes analitikası üzrə təcrübəli mütəxəssisdir."
+    }
+  },
+
+  "faq": {
+    "title": "Tez-tez verilən suallar"
+  },
+
+  "contact": {
+    "title": "Əlaqə",
+    "name": "Ad",
+    "surname": "Soyad",
+    "email": "Email",
+    "phone": "Əlaqə nömrəsi",
+    "service": "Sizə hansı sahədə kömək edə bilərik?",
+    "message": "Mesaj",
+    "send": "Göndər",
+    "success": "Uğurla göndərildi!",
+    "error": "Xəta baş verdi!",
+    "errors": {
+      "name": "Ad boş ola bilməz.",
+      "surname": "Soyad boş ola bilməz.",
+      "email": "Email boş ola bilməz.",
+      "email_invalid": "Düzgün bir email daxil edin.",
+      "phone": "Telefon nömrəsi boş ola bilməz.",
+      "phone_invalid": "Telefon nömrəsi minimum 10 rəqəm olmalıdır.",
+      "service": "Xidmət seçilməlidir.",
+      "message": "Mesaj boş ola bilməz.",
+      "message_short": "Mesaj minimum 10 simvol olmalıdır."
+    },
+    "services": {
+      "data_science": "Data Science Bootcamp",
+      "spss": "SPSS Modeler Bootcamp",
+      "credit_risk": "Kredit-Risk Analitikası",
+      "corporate_training": "Korporativ Təlimlər",
+      "data_employee": "Data ilə əlaqəli işçi axtarırsınız",
+      "paid_project": "Ödənişli proyekt köməyi",
+      "free_project": "Ödənişsiz proyekt köməyi"
+    }
+  }
+}

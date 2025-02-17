@@ -1,31 +1,24 @@
+import { t } from "i18next";
 import "./Training.css";
+import { useTranslation } from "react-i18next";
 
 const Training = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section id="training" name="training">
         <div className="contanierr">
           <div className="training_program_info">
-            <h2>Təlim Proqramı</h2>
-            <p>
-              Elektron Hökumətin İnkişafı Mərkəzi, Paşa Bank, Bakcell,
-              Beynəlxalq Bank və Access Bank kimi iri qurumlarda çalışan
-              mütəxəssislərimiz tərəfindən seçilmiş kitablar, real biznes və
-              analitika keyzləri əsasında yaradılmışdır. Proqram bazardakı
-              trendlər və biznesin tələbləri nəzərə alınaraq müntəzəm yenilənir.
-              Bu proqram Statistika, Data Analitikası və Data Science
-              metodologiyalarını R, Python, Spark, Spark SQL, Spark MLlib, AWS,
-              Hadoop, Mongo DB, MapReduce, Hive, Hadoop, Tenserflow, Tableau,
-              SPSS, SPSS Modeler öyrədilməsi daxil olmaqla 140 saatlıq tədris
-              məzmununu əhatə edəcəkdir.
-            </p>
-            <button>Təlİm proqramını yükləyİn</button>
+            <h2>{t("training_program")}</h2>
+            <p>{t("training_info")}</p>
+            <button>{t("training_download")}</button>
           </div>
         </div>
         <div className="training__program">
           <div className="contanierr">
             <div className="program__title">
-              <h2>Proses necə işləyir?</h2>
+              <h2>{t("training_process_title")}</h2>
             </div>
             <div className="training__process">
               <div className="process">
@@ -33,13 +26,10 @@ const Training = () => {
                   <span>01</span>
                 </div>
                 <div className="process__title">
-                  <p>İlkin Hazırlıq</p>
+                  <p>{t("training_step_1")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>
-                    Bootcamp başlamazdan əvvəl bilik və bacarıqlarınız test
-                    olunaraq uyğun təlim proqramlarına yönləndiriləcəksiniz.
-                  </p>
+                  <p>{t("training_step_1_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -47,29 +37,21 @@ const Training = () => {
                   <span>02</span>
                 </div>
                 <div className="process__title">
-                  <p>Bootcamp</p>
+                  <p>{t("training_step_2")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>
-                    Data Analitikası, Vizuallaşdırma, Machine Learning, Deep
-                    Learning, Artificial İntellegence, Big Data mövzularını
-                    dünyanın ən geniş Data Science tədris proqramlarından biri
-                    ilə öyrənəcəksiniz.
-                  </p>
+                  <p>{t("training_step_2_desc")}</p>
                 </div>
               </div>
-              <div className="process ">
+              <div className="process">
                 <div className="process__numb processbf__numb">
                   <span>03</span>
                 </div>
                 <div className="process__title">
-                  <p>Tətbiq</p>
+                  <p>{t("training_step_3")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>
-                    Şəxsi mentorunuz ilə bərabər real layihələr üzərində
-                    çalışaraq öyrəndiyiniz bilikləri tətbiq edəcəksiniz.
-                  </p>
+                  <p>{t("training_step_3_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -77,14 +59,10 @@ const Training = () => {
                   <span>04</span>
                 </div>
                 <div className="process__title">
-                  <p>Karyera</p>
+                  <p>{t("training_step_4")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>
-                    Peşəkar Data analitiklər və HR mütəxəsisləri ilə görüşüb
-                    birə-bir müzakirələr aparacaq və CV-Vakansiya bazasına giriş
-                    əldə edəcəksiniz.
-                  </p>
+                  <p>{t("training_step_4_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -92,10 +70,10 @@ const Training = () => {
                   <span>05</span>
                 </div>
                 <div className="process__title">
-                  <p>Təbriklər!</p>
+                  <p>{t("training_step_5")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>Dünya yeni Data Scientist qazandı.</p>
+                  <p>{t("training_step_5_desc")}</p>
                 </div>
               </div>
             </div>

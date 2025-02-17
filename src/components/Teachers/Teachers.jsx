@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { t } from "i18next";
 import "./Teachers.css";
 import etibar from "../../assets/img/etibarm.jpg";
 import minure from "../../assets/img/minure.jpg";
@@ -10,6 +11,7 @@ import celal from "../../assets/img/celal.jpg";
 import sebnur from "../../assets/img/sebnur.jpg";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { useTranslation } from "react-i18next";
 
 const Teachers = () => {
   const [openModals, setOpenModals] = useState({});
@@ -22,63 +24,64 @@ const Teachers = () => {
     setOpenModals({ ...openModals, [index]: false });
   };
 
+  const { t } = useTranslation();
+
   const teachers = [
     {
       img: etibar,
-      fullname: "Etibar Hüseynli",
-      position: "Chief Data Scientist",
-      workplace: "QSS Analytics",
-      desc: "Minurə Hüseynli data sahəsində professional olaraq 8 ildən artıq iş təcrübəsinə sahibdir. Hal-hazırda Digital Umbrella şirkətində Data Analytics və Reporting şöbəsinin rəhbəri vəzifəsində çalışır. Fərqli sektorlar üzrə bir çox yerli və beynəlxalq data science layihələrində məsləhətçi olaraq çalışmışdır. Layihələrin icrası zamanı 10 nəfərə qədər komandalara rəhbərlik etmişdir. Hal-hazırda bir neçə şirkət üçün data science xidmətləri göstərir. Advanced statistics, Python ilə machine learning, SQL ilə dataların idarə olunması, Tableau və digər BI proqramlarla vizual analitika, datadan stratejik informasiyaların əldə olunması üzrə geniş praktiki biliklərə sahibdir.",
+      fullname: t("teacher.etibar.name"),
+      position: t("teacher.etibar.position"),
+      workplace: t("teacher.etibar.workplace"),
+      desc: t("teacher.etibar.desc"),
     },
     {
       img: minure,
-      fullname: "Minurə Hüseynli",
-      position: "Head of Data Analytics and Reporting",
-      workplace: "Digital Umbrella",
-      desc: "Minurə Hüseynli data sahəsində professional olaraq 8 ildən artıq iş təcrübəsinə sahibdir. Hal-hazırda Digital Umbrella şirkətində Data Analytics və Reporting şöbəsinin rəhbəri vəzifəsində çalışır. Fərqli sektorlar üzrə bir çox yerli və beynəlxalq data science layihələrində məsləhətçi olaraq çalışmışdır.",
+      fullname: t("teacher.minure.name"),
+      position: t("teacher.minure.position"),
+      workplace: t("teacher.minure.workplace"),
+      desc: t("teacher.minure.desc"),
     },
     {
       img: behruz,
-      fullname: "Bəhruz Qasımov",
-      position:
-        "Məlumatların keyfiyyəti və təminatının idarə edilməsi üzrə ekspert",
-      workplace: "Pasha Bank",
-      desc: "Bəhruz Qasımov hal-hazırda 'Paşa Bank'da 'Məlumatların keyfiyyəti və təminatının idarə edilməsi' üzrə baş mütəxəssis olaraq çalışır. Həmçinin, TuranBank ASC, Yapı Kredi Bank Azərbaycan, Unbank kimi şirkətlərdə data sahəsində çalışmış və 14 ildən artıq peşəkar iş təcrübəsinə malikdir.",
+      fullname: t("teacher.behruz.name"),
+      position: t("teacher.behruz.position"),
+      workplace: t("teacher.behruz.workplace"),
+      desc: t("teacher.behruz.desc"),
     },
     {
       img: emil,
-      fullname: "Emil Mirzəyev",
-      position: "Süni intellekt və Strateji Qərarqəbuletmə Researcher",
-      workplace: "University College London",
-      desc: "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir və hal-hazırda dünyanın top universitetlərindən biri olan University College London-da Süni intellekt və Strateji Qərarqəbuletmə sahələrinin kəsişməsində elmi araşdırma ilə məşğuldur. Python və Data Science ilə 10 ilə yaxın təcrübəsi var və öz işlərini MIT, Harvard və LBS kimi nüfuzlu universitetlərdə, hebelə çoxsaylı beynəlxalq konfranslarda təqdim etmişdir. Azərbaycanda da ML, AI ilə bağlı mövzularda çoxsaylı pulsuz vörkşoplar keçmişdir.",
+      fullname: t("teacher.emil.name"),
+      position: t("teacher.emil.position"),
+      workplace: t("teacher.emil.workplace"),
+      desc: t("teacher.emil.desc"),
     },
     {
       img: turgut,
-      fullname: "Turqut Abdullayev",
-      position: "Süni intellekt və Strateji Qərarqəbuletmə Researcher",
-      workplace: "University College London",
-      desc: "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir və hal-hazırda dünyanın top universitetlərindən biri olan University College London-da Süni intellekt və Strateji Qərarqəbuletmə sahələrinin kəsişməsində elmi araşdırma ilə məşğuldur. Python və Data Science ilə 10 ilə yaxın təcrübəsi var və öz işlərini MIT, Harvard və LBS kimi nüfuzlu universitetlərdə, hebelə çoxsaylı beynəlxalq konfranslarda təqdim etmişdir. Azərbaycanda da ML, AI ilə bağlı mövzularda çoxsaylı pulsuz vörkşoplar keçmişdir.",
+      fullname: t("teacher.turgut.name"),
+      position: t("teacher.turgut.position"),
+      workplace: t("teacher.turgut.workplace"),
+      desc: t("teacher.turgut.desc"),
     },
     {
       img: ehmed,
-      fullname: "Əhməd Əhmədov",
-      position: "Senior Data Scientist",
-      workplace: "University College London",
-      desc: "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir və hal-hazırda dünyanın top universitetlərindən biri olan University College London-da Süni intellekt və Strateji Qərarqəbuletmə sahələrinin kəsişməsində elmi araşdırma ilə məşğuldur. Python və Data Science ilə 10 ilə yaxın təcrübəsi var və öz işlərini MIT, Harvard və LBS kimi nüfuzlu universitetlərdə, hebelə çoxsaylı beynəlxalq konfranslarda təqdim etmişdir. Azərbaycanda da ML, AI ilə bağlı mövzularda çoxsaylı pulsuz vörkşoplar keçmişdir.",
+      fullname: t("teacher.ehmed.name"),
+      position: t("teacher.ehmed.position"),
+      workplace: t("teacher.ehmed.workplace"),
+      desc: t("teacher.ehmed.desc"),
     },
     {
       img: celal,
-      fullname: "Cəlal Rəhmanov",
-      position: "Data Elmi üzrə Ekspert",
-      workplace: "Kapital Bank",
-      desc: "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir və hal-hazırda dünyanın top universitetlərindən biri olan University College London-da Süni intellekt və Strateji Qərarqəbuletmə sahələrinin kəsişməsində elmi araşdırma ilə məşğuldur. Python və Data Science ilə 10 ilə yaxın təcrübəsi var və öz işlərini MIT, Harvard və LBS kimi nüfuzlu universitetlərdə, hebelə çoxsaylı beynəlxalq konfranslarda təqdim etmişdir. Azərbaycanda da ML, AI ilə bağlı mövzularda çoxsaylı pulsuz vörkşoplar keçmişdir.",
+      fullname: t("teacher.celal.name"),
+      position: t("teacher.celal.position"),
+      workplace: t("teacher.celal.workplace"),
+      desc: t("teacher.celal.desc"),
     },
     {
       img: sebnur,
-      fullname: "Şəbnur Pənahlı",
-      position: "Business Analyst",
-      workplace: "Kapital Bank",
-      desc: "Dr. Emil Mirzəyev İqtisadiyyat və Biznes Administrasiyası üzrə ikili fəlsəfə elmləri doktoru (PhD) dərəcəsinə sahibdir və hal-hazırda dünyanın top universitetlərindən biri olan University College London-da Süni intellekt və Strateji Qərarqəbuletmə sahələrinin kəsişməsində elmi araşdırma ilə məşğuldur. Python və Data Science ilə 10 ilə yaxın təcrübəsi var və öz işlərini MIT, Harvard və LBS kimi nüfuzlu universitetlərdə, hebelə çoxsaylı beynəlxalq konfranslarda təqdim etmişdir. Azərbaycanda da ML, AI ilə bağlı mövzularda çoxsaylı pulsuz vörkşoplar keçmişdir.",
+      fullname: t("teacher.sebnur.name"),
+      position: t("teacher.sebnur.position"),
+      workplace: t("teacher.sebnur.workplace"),
+      desc: t("teacher.sebnur.desc"),
     },
   ];
 
@@ -86,7 +89,7 @@ const Teachers = () => {
     <div className="contanierr">
       <div className="teachers">
         <div className="teacher__title">
-          <h2>Təlimçilərimiz</h2>
+          <h2>{t("teachers.title")}</h2>
         </div>
         <div className="teacher__list">
           {teachers.map((teacher, index) => (

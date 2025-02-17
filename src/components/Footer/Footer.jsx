@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/svg/logoBlack.svg";
-import { Link } from "react-scroll";
 import { IoMdMail } from "react-icons/io";
 import {
   FaFacebook,
@@ -13,8 +12,28 @@ import { IoIosMail } from "react-icons/io";
 import { FaLocationDot, FaPhoneFlip, FaPhoneVolume } from "react-icons/fa6";
 
 import "./Footer.css";
+import i18n from "../i18n";
 
 const Footer = () => {
+  const [activeLang, setActiveLang] = useState(i18n.language || "az");
+
+  const smoothScrollToTop = () => {
+    const scrollStep = window.scrollY / 50;
+    const scrollAnimation = () => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, -scrollStep);
+        requestAnimationFrame(scrollAnimation);
+      }
+    };
+    requestAnimationFrame(scrollAnimation);
+  };
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setActiveLang(lang);
+    smoothScrollToTop();
+  };
+
   return (
     <div className="contanierr">
       <div className="footer__container">
