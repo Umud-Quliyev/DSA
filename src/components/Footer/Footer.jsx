@@ -51,37 +51,52 @@ const Footer = () => {
               <button>Abone ol</button>
             </div>
           </div>
-            <div className="flex justify-evenly w-full  py-3">
-              <div className="flex items-center gap-3">
+          <div className="flex justify-evenly w-full  py-3">
+            <div className="flex items-center gap-3">
               <FaPhoneVolume />
-                <div>
-                  <p>Əlaqə telefon</p>
-                  <p>077 341 43 40</p>
-                </div>
+              <div>
+                <p>Əlaqə telefon</p>
+                <p>077 341 43 40</p>
               </div>
-              <div className="flex items-center gap-3">
+            </div>
+            <div className="flex items-center gap-3">
               <IoIosMail />
-                <div>
-                  <p>Poçt Ünvanı</p>
-                  <p>example@gmail.com</p>
-                </div>
+              <div>
+                <p>Poçt Ünvanı</p>
+                <p>example@gmail.com</p>
               </div>
-              <div className="flex items-center gap-3">
+            </div>
+            <div className="flex items-center gap-3">
               <FaLocationDot />
 
-                <div>
-                  <p>Ünvan</p>
-                  <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
-                </div>
+              <div>
+                <p>Ünvan</p>
+                <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
               </div>
-           
+            </div>
           </div>
         </div>
         <div className="footer__bottom">
           <div className="languages">
             <ul>
-              <li className="language__active">Azərbaycan</li>
-              <li>English</li>
+              <li
+                onClick={() => changeLanguage("az")}
+                className={activeLang === "az" ? "language__active" : ""}
+              >
+                Azərbaycan
+              </li>
+              <li
+                onClick={() => changeLanguage("en")}
+                className={activeLang === "en" ? "language__active" : ""}
+              >
+                English
+              </li>
+              <li
+                onClick={() => changeLanguage("fr")}
+                className={activeLang === "fr" ? "language__active" : ""}
+              >
+                French
+              </li>
             </ul>
           </div>
           <div className="socials">
