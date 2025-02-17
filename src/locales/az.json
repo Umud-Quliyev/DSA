@@ -161,5 +161,14 @@
       "paid_project": "Ödənişli proyekt köməyi",
       "free_project": "Ödənişsiz proyekt köməyi"
     }
+  },
+
+  "footer": {
+    "subscribePlaceholder": "Email daxil edin",
+    "subscribeButton": "Abone ol",
+    "contactPhone": "Əlaqə telefon",
+    "contactEmail": "Poçt Ünvanı",
+    "contactAddress": "Ünvan",
+    "rightsReserved": "Bütün hüquqlar qorunur."
   }
 }

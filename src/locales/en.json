@@ -160,5 +160,14 @@
       "paid_project": "Paid project assistance",
       "free_project": "Free project assistance"
     }
+  },
+
+  "footer": {
+    "subscribePlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe",
+    "contactPhone": "Contact Phone",
+    "contactEmail": "Email Address",
+    "contactAddress": "Address",
+    "rightsReserved": "All rights reserved."
   }
 }

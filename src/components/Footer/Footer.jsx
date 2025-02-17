@@ -1,20 +1,23 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../../assets/svg/logoBlack.svg";
+import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaPhone,
+  FaPhoneVolume,
   FaWhatsapp,
 } from "react-icons/fa";
+
 import { IoIosMail } from "react-icons/io";
-import { FaLocationDot, FaPhoneFlip, FaPhoneVolume } from "react-icons/fa6";
 
 import "./Footer.css";
 import i18n from "../i18n";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [activeLang, setActiveLang] = useState(i18n.language || "az");
 
   const smoothScrollToTop = () => {
@@ -45,32 +48,31 @@ const Footer = () => {
             <div className="subscribe w-full py-2">
               <input
                 type="text"
-                placeholder="Email daxil edin"
+                placeholder={t("footer.subscribePlaceholder")}
                 className="w-full"
               />
-              <button>Abone ol</button>
+              <button>{t("footer.subscribeButton")}</button>
             </div>
           </div>
-          <div className="flex justify-evenly w-full  py-3">
+          <div className="flex justify-evenly w-full py-3">
             <div className="flex items-center gap-3">
               <FaPhoneVolume />
               <div>
-                <p>Əlaqə telefon</p>
+                <p>{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <IoIosMail />
               <div>
-                <p>Poçt Ünvanı</p>
+                <p>{t("footer.contactEmail")}</p>
                 <p>example@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <FaLocationDot />
-
               <div>
-                <p>Ünvan</p>
+                <p>{t("footer.contactAddress")}</p>
                 <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
               </div>
             </div>
@@ -91,12 +93,6 @@ const Footer = () => {
               >
                 English
               </li>
-              <li
-                onClick={() => changeLanguage("fr")}
-                className={activeLang === "fr" ? "language__active" : ""}
-              >
-                French
-              </li>
             </ul>
           </div>
           <div className="socials">
@@ -106,7 +102,9 @@ const Footer = () => {
             <FaWhatsapp />
           </div>
           <div className="copyright">
-            <p>{new Date().getFullYear()} All rights reserved.</p>
+            <p>
+              {new Date().getFullYear()} {t("footer.rightsReserved")}
+            </p>
           </div>
         </div>
       </div>
