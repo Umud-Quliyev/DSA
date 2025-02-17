@@ -67,6 +67,7 @@
 
 .languages ul li {
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 .languages .language__active {

@@ -167,36 +167,60 @@
   ],
   "faq": [
     {
-      "questions": "12 həftəlik Data Science Bootcampda nə təklif edirsiniz?",
-      "answer": "12 həftəlik proqramımız sizin peşəkar karyera addımlarınızı atmağınız üçün lazım olacaq bütün data science biliklərini əhatə edəcək və bu sahədə uğurlu karyeraya başlamağınızı təmin edəcəkdir. Data Science Bootcamp vasitəsi ilə siz ilkin səviyyədən peşəkar Data Scientist pilləsinə qədər yüksələ bilərsiniz. Bu proqramda Vizuallaşdırma, Data analitikası, Machine Learning, Deep Learning, Artificial İntellegence metodologiyalarının müxtəlif real biznes situasiyalarına tətbiqini R, Python, Hadoop, Spark, SPSS, SPSS Modeller və Tableau kimi ən müasir proqram paketləri vasitəsi ilə öyrənəcəksiniz."
+      "id": 1,
+      "question_az": "12 həftəlik Data Science Bootcampda nə təklif edirsiniz?",
+      "answer_az": "12 həftəlik proqramımız sizin peşəkar karyera addımlarınızı atmağınız üçün lazım olacaq bütün data science biliklərini əhatə edəcək və bu sahədə uğurlu karyeraya başlamağınızı təmin edəcəkdir. Data Science Bootcamp vasitəsi ilə siz ilkin səviyyədən peşəkar Data Scientist pilləsinə qədər yüksələ bilərsiniz. Bu proqramda Vizuallaşdırma, Data analitikası, Machine Learning, Deep Learning, Artificial İntellegence metodologiyalarının müxtəlif real biznes situasiyalarına tətbiqini R, Python, Hadoop, Spark, SPSS, SPSS Modeller və Tableau kimi ən müasir proqram paketləri vasitəsi ilə öyrənəcəksiniz.",
+      "question_en": "What do you offer in the 12-week Data Science Bootcamp?",
+      "answer_en": "Our 12-week program covers all the essential data science knowledge you need to take professional career steps and ensures a successful start in this field. Through the Data Science Bootcamp, you can advance from a beginner level to a professional Data Scientist. In this program, you will learn the application of Visualization, Data Analytics, Machine Learning, Deep Learning, and Artificial Intelligence methodologies to various real business situations using modern software packages such as R, Python, Hadoop, Spark, SPSS, SPSS Modeler, and Tableau."
     },
     {
-      "questions": "Müraciət prosesi necədir?",
-      "answer": "Qeydiyyat üçün ilkin olaraq online müraciət formunu doldurmalısınız. Bundan sonra, əməkdaşımız sizinlə əlaqə saxlayacaqdır. Müraciət və Tədris proqramı ilə bağlı hər hansı sualınız yaranarsa 051 341 43 40 nömrəsi və ya info@dsa.az maili ilə əlaqə saxlaya bilərsiniz."
+      "id": 2,
+      "question_az": "Müraciət prosesi necədir?",
+      "answer_az": "Qeydiyyat üçün ilkin olaraq online müraciət formunu doldurmalısınız. Bundan sonra, əməkdaşımız sizinlə əlaqə saxlayacaqdır. Müraciət və Tədris proqramı ilə bağlı hər hansı sualınız yaranarsa 051 341 43 40 nömrəsi və ya info@dsa.az maili ilə əlaqə saxlaya bilərsiniz.",
+      "question_en": "What is the application process?",
+      "answer_en": "To register, you must first fill out the online application form. After that, our representative will contact you. If you have any questions regarding the application or training program, you can contact us at +994 51 341 43 40 or via email at info@dsa.az."
     },
     {
-      "questions": "Kimlər iştirak edə bilər?",
-      "answer": "Data ilə işləyən dövlət və özəl sahədə çalışanlar, elmi tədqiqatçılar, proqramistlər, data mühəndisləri, layihə menecerləri, rəhbər şəxslər, biznes idarəçiləri, marketoloqlar, maliyyəçilər, mühasiblər, tələbələr və data science sahəsinə marağı olan hər kəs iştirak edə bilər."
+      "id": 3,
+      "question_az": "Kimlər iştirak edə bilər?",
+      "answer_az": "Data ilə işləyən dövlət və özəl sahədə çalışanlar, elmi tədqiqatçılar, proqramistlər, data mühəndisləri, layihə menecerləri, rəhbər şəxslər, biznes idarəçiləri, marketoloqlar, maliyyəçilər, mühasiblər, tələbələr və data science sahəsinə marağı olan hər kəs iştirak edə bilər.",
+      "question_en": "Who can participate?",
+      "answer_en": "Anyone interested in data science, including government and private sector employees, researchers, programmers, data engineers, project managers, executives, business administrators, marketers, financiers, accountants, students, and professionals, can participate."
     },
     {
-      "questions": "Data Science Academy iştirakçılara hansı karyera xidmətləri təklif edir?",
-      "answer": "Bootcamp sonunda Data analitiklər və HR mütəxəssisləri ilə görüşüb birə-bir məsləhətlər alacaqsınız. Konsultasiya zamanı müsahibədə necə davranmalı olduğunuz və əməkhaqqı sövdələşməsi kimi mövzulara toxunulacaq. Daha sonra CV-niz, Linkedin profiliniz və Data Science GitHub portfolionuz hazırlanacaq və CV-Vakansiya* bazasına daxil olunacaq. Son olaraq ekskluziv olaraq əməkdaşlıq etdiyimiz şirkətlərdə işləmək imkanı əldə edəcəksiniz. Akademiyamız bir çox nüfuzlu yerli və qlobal şirkətlərə əməkdaşlıq əsasında data və analitika mütəxəssisləri təmin edir."
+      "id": 4,
+      "question_az": "Data Science Academy iştirakçılara hansı karyera xidmətləri təklif edir?",
+      "answer_az": "Bootcamp sonunda Data analitiklər və HR mütəxəssisləri ilə görüşüb birə-bir məsləhətlər alacaqsınız. Konsultasiya zamanı müsahibədə necə davranmalı olduğunuz və əməkhaqqı sövdələşməsi kimi mövzulara toxunulacaq. Daha sonra CV-niz, Linkedin profiliniz və Data Science GitHub portfolionuz hazırlanacaq və CV-Vakansiya bazasına daxil olunacaq. Son olaraq ekskluziv olaraq əməkdaşlıq etdiyimiz şirkətlərdə işləmək imkanı əldə edəcəksiniz.",
+      "question_en": "What career services does the Data Science Academy offer to participants?",
+      "answer_en": "At the end of the Bootcamp, you will have one-on-one consultations with data analysts and HR specialists. The consultation will cover topics such as interview behavior and salary negotiation. Then, your CV, LinkedIn profile, and Data Science GitHub portfolio will be prepared and added to the CV-Vacancy database. Finally, you will have the exclusive opportunity to work with our partner companies."
     },
     {
-      "questions": "İştirakçılar proqramı bitirdikdən sonra sertifikatla təmin olunacaqmı?",
-      "answer": "Bootcamp sonunda Data analitiklər və HR mütəxəssisləri ilə görüşüb birə-bir məsləhətlər alacaqsınız. Konsultasiya zamanı müsahibədə necə davranmalı olduğunuz və əməkhaqqı sövdələşməsi kimi mövzulara toxunulacaq. Daha sonra CV-niz, Linkedin profiliniz və Data Science GitHub portfolionuz hazırlanacaq və CV-Vakansiya* bazasına daxil olunacaq. Son olaraq ekskluziv olaraq əməkdaşlıq etdiyimiz şirkətlərdə işləmək imkanı əldə edəcəksiniz. Akademiyamız bir çox nüfuzlu yerli və qlobal şirkətlərə əməkdaşlıq əsasında data və analitika mütəxəssisləri təmin edir."
+      "id": 5,
+      "question_az": "İştirakçılar proqramı bitirdikdən sonra sertifikatla təmin olunacaqmı?",
+      "answer_az": "Bəli, Bootcamp-ı uğurla başa vuran iştirakçılar sertifikat əldə edəcəklər.",
+      "question_en": "Will participants receive a certificate after completing the program?",
+      "answer_en": "Yes, participants who successfully complete the Bootcamp will receive a certificate."
     },
     {
-      "questions": "Bootcamp kimlər tərəfindən tədris olunur?",
-      "answer": "Bootcamp Elektron Hökumətin İnkişafı Mərkəzi, Bakcell, Beynəlxalq Bank və Paşa Bank kimi qabaqcıl müəssisələrdə Data Scientist və Data Analitik kimi çalışan təlimçilərimiz tərəfindən tədris olunacaqdır."
+      "id": 6,
+      "question_az": "Bootcamp kimlər tərəfindən tədris olunur?",
+      "answer_az": "Bootcamp Elektron Hökumətin İnkişafı Mərkəzi, Bakcell, Beynəlxalq Bank və Paşa Bank kimi qabaqcıl müəssisələrdə Data Scientist və Data Analitik kimi çalışan təlimçilərimiz tərəfindən tədris olunacaqdır.",
+      "question_en": "Who teaches the Bootcamp?",
+      "answer_en": "The Bootcamp is taught by our trainers who work as Data Scientists and Data Analysts in leading institutions such as the Electronic Government Development Center, Bakcell, International Bank, and Pasha Bank."
     },
     {
-      "questions": "Bootcampa başlamaq üçün hansı biliklər tələb olunur",
-      "answer": "Bootcampda iştirak etmək üçün data analitikası və statistika elminə marağınızın olması, orta səviyyə ingilis dili və təhlil bacarıqlarınızın olması vacibdir. İlkin proqramlaşdırma və təməl statistika biliklərinizin olması üstünlükdür. Proqrama uyğunluğunuzu test etmək üçün bizə müraciət edə bilərsiniz. Testin nəticəsi əsasında İlkin hazırlıq proqramına yönləndirilə bilərsiniz."
+      "id": 7,
+      "question_az": "Bootcampa başlamaq üçün hansı biliklər tələb olunur?",
+      "answer_az": "Bootcampda iştirak etmək üçün data analitikası və statistika elminə marağınızın olması, orta səviyyə ingilis dili və təhlil bacarıqlarınızın olması vacibdir. İlkin proqramlaşdırma və təməl statistika biliklərinizin olması üstünlükdür.",
+      "question_en": "What knowledge is required to start the Bootcamp?",
+      "answer_en": "To participate in the Bootcamp, you should have an interest in data analytics and statistics, intermediate English proficiency, and analytical skills. Basic programming and fundamental statistics knowledge are advantageous."
     },
     {
-      "questions": "Təlimlər nə zaman başlayır?",
-      "answer": "Təlimlərin başlama tarixləri haqqında məlumatları səhifənin ön hissəsində və sosial şəbəkələrdə verilən elanlar vasitəsilə öyrənə bilərsiniz. Başlama vaxtını dəqiqləşdirmək üçün 051 341 43 40 nömrəsi və ya info@dsa.az maili ilə əlaqə saxlaya bilərsiniz."
+      "id": 8,
+      "question_az": "Təlimlər nə zaman başlayır?",
+      "answer_az": "Təlimlərin başlama tarixləri haqqında məlumatları səhifənin ön hissəsində və sosial şəbəkələrdə verilən elanlar vasitəsilə öyrənə bilərsiniz. Başlama vaxtını dəqiqləşdirmək üçün 051 341 43 40 nömrəsi və ya info@dsa.az maili ilə əlaqə saxlaya bilərsiniz.",
+      "question_en": "When do the training sessions start?",
+      "answer_en": "You can learn about the training start dates from the homepage or announcements on social media. To confirm the start date, you can contact us at +994 51 341 43 40 or via email at info@dsa.az."
     }
-  ]
+  ] 
 }

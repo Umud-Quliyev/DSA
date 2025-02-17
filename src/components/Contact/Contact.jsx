@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Contact.css";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -9,6 +10,8 @@ import { toast, ToastContainer } from "react-toastify";
 import { Bounce } from "react-toastify";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -29,23 +32,23 @@ const Contact = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Ad boş ola bilməz.";
-    if (!formData.surname.trim()) newErrors.surname = "Soyad boş ola bilməz.";
+    if (!formData.name.trim()) newErrors.name = t("errors.name");
+    if (!formData.surname.trim()) newErrors.surname = t("errors.surname");
     if (!formData.email.trim()) {
-      newErrors.email = "Email boş ola bilməz.";
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = "Düzgün bir email daxil edin.";
+      newErrors.email = t("errors.email.empty");
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = t("errors.email.invalid");
     }
     if (!formData.phone.trim()) {
-      newErrors.phone = "Telefon nömrəsi boş ola bilməz.";
+      newErrors.phone = t("errors.phone.empty");
     } else if (!/^\d{10,}$/.test(formData.phone)) {
-      newErrors.phone = "Telefon nömrəsi minimum 10 rəqəm olmalıdır.";
+      newErrors.phone = t("errors.phone.invalid");
     }
-    if (!formData.service) newErrors.service = "Xidmət seçilməlidir.";
+    if (!formData.service) newErrors.service = t("errors.service");
     if (!formData.message.trim()) {
-      newErrors.message = "Mesaj boş ola bilməz.";
+      newErrors.message = t("errors.message.empty");
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Mesaj minimum 10 simvol olmalıdır.";
+      newErrors.message = t("errors.message.short");
     }
 
     setErrors(newErrors);
@@ -56,37 +59,21 @@ const Contact = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const requestData = {
-      name: formData.name,
-      surname: formData.surname,
-      email: formData.email,
-      phone: formData.phone,
-      category: formData.service,
-      message: formData.message,
-    };
-
     try {
       const response = await fetch(`${BASE_URL}/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(requestData),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        toast.success("Uğurla göndərildi!", {
+        toast.success(t("toast.success"), {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
           transition: Bounce,
         });
-
         setFormData({
           name: "",
           surname: "",
@@ -96,38 +83,22 @@ const Contact = () => {
           message: "",
         });
       } else {
-        toast.error("Xəta baş verdi!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          transition: Bounce,
-        });
+        throw new Error();
       }
-    } catch (error) {
-      toast.error("Xəta baş verdi!", {
+    } catch {
+      toast.error(t("toast.error"), {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
         transition: Bounce,
       });
     }
   };
 
   return (
-    <section id="contact" name="contact" className="contanierr">
+    <section id="contact" className="contanierr">
       <div className="contact">
         <div className="contact__title">
-          <h2>Əlaqə</h2>
+          <h2>{t("contact.title")}</h2>
         </div>
         <form className="contact__form" onSubmit={handleSubmit}>
           <div className="form__head">
@@ -136,8 +107,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Ad:"
-              required
+              placeholder={t("contact.name")}
             />
             {errors.name && <p className="error">{errors.name}</p>}
             <input
@@ -145,8 +115,7 @@ const Contact = () => {
               name="surname"
               value={formData.surname}
               onChange={handleChange}
-              placeholder="Soyad:"
-              required
+              placeholder={t("contact.surname")}
             />
             {errors.surname && <p className="error">{errors.surname}</p>}
           </div>
@@ -156,53 +125,46 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Email:"
-              required
+              placeholder={t("contact.email")}
             />
             {errors.email && <p className="error">{errors.email}</p>}
             <input
-              type="number"
+              type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Əlaqə nömrəsi:"
-              required
+              placeholder={t("contact.phone")}
             />
             {errors.phone && <p className="error">{errors.phone}</p>}
           </div>
           <div className="form__select">
             <FormControl fullWidth error={!!errors.service}>
-              <InputLabel id="service-select-label">
-                Sizə hansı sahədə kömək edə bilərik?
-              </InputLabel>
+              <InputLabel>{t("contact.service")}</InputLabel>
               <Select
-                labelId="service-select-label"
-                id="service-select"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                required
               >
                 <MenuItem value="Data Science Bootcamp">
-                  Data Science Bootcamp
+                  {t("contact.services.data_science")}
                 </MenuItem>
                 <MenuItem value="SPSS Modeler Bootcamp">
-                  SPSS Modeler Bootcamp
+                  {t("contact.services.spss")}
                 </MenuItem>
-                <MenuItem value="Kredit-Risk Analitikası">
-                  Kredit-Risk Analitikası
+                <MenuItem value="SPSS Modeler Bootcamp">
+                  {t("contact.services.credit_risk")}
                 </MenuItem>
-                <MenuItem value="Korporativ Təlimlər">
-                  Korporativ Təlimlər
+                <MenuItem value="SPSS Modeler Bootcamp">
+                  {t("contact.services.corporate_training")}
                 </MenuItem>
-                <MenuItem value="Data ilə əlaqəli işçi axtarırsınız">
-                  Data ilə əlaqəli işçi axtarırsınız
+                <MenuItem value="SPSS Modeler Bootcamp">
+                  {t("contact.services.data_employee")}
                 </MenuItem>
-                <MenuItem value="Ödənişli proyekt köməyi">
-                  Ödənişli proyekt köməyi
+                <MenuItem value="SPSS Modeler Bootcamp">
+                  {t("contact.services.paid_project")}
                 </MenuItem>
-                <MenuItem value="Ödənişsiz proyekt köməyi">
-                  Ödənişsiz proyekt köməyi
+                <MenuItem value="SPSS Modeler Bootcamp">
+                  {t("contact.services.free_project")}
                 </MenuItem>
               </Select>
               {errors.service && <p className="error">{errors.service}</p>}
@@ -213,26 +175,16 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Mesaj"
-              required
+              placeholder={t("contact.message")}
             ></textarea>
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
-
-          <button type="submit">Göndər</button>
+          <button type="submit">{t("contact.send")}</button>
         </form>
       </div>
       <ToastContainer
         position="top-right"
         autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
         transition={Bounce}
       />
     </section>

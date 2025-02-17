@@ -5,106 +5,105 @@ import edu from "../../assets/png/edu.png";
 import mentor from "../../assets/png/mentor.png";
 import practic from "../../assets/png/telim.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const MainSection = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <section id="main" name="main" className="h-[50vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]">
-        <div className=" text-[#fff]  flex  flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3  ">
-          <h1 className=" font-[300] text-[5vw] md:text-[3.91vw]">12 Həftədə</h1>
-          <h2 className=" text-nowrap text-[6vw] font-bold md:text-[3.85vw]">Data Scientist Olmaq?</h2>
-          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center  p-4">
+      <section
+        id="main"
+        name="main"
+        className="h-[50vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
+      >
+        <div className="text-[#fff] flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
+          <h1 className="font-[300] text-[5vw] md:text-[3.91vw]">
+            {t("bootcamp_title")}
+          </h1>
+          <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.85vw]">
+            {t("bootcamp_subtitle")}
+          </h2>
+          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4">
             <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw]">
-              Data Science Academy
+              {t("bootcamp_name")}
             </span>
-            <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw]">
-              BOOTCAMP
+            <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw] uppercase">
+              {t("bootcamp")}
             </h3>
-            <span className="text-[2.5vw] font-bold md:text-[2vw]">1 Fevral 2025</span>
+            <span className="text-[2.5vw] font-bold md:text-[2vw]">
+              {t("bootcamp_start_date")}
+            </span>
           </div>
-          <span className="text-center text-[1.9vw] md:text-[1.18vw]">
-            En müasir tədris proqramı, <br /> real biznes layihələri və fərdi{" "}
-            <br /> karyera dəstəyi əsasında <br /> bizimlə mümkündür!
+          <span className="text-center text-[1.9vw] md:text-[1.18vw] max-w-60">
+            {t("bootcamp_description")}
           </span>
-          <div className="flex gap-5 mx-auto pt-3  ">
+          <div className="flex gap-5 mx-auto pt-3">
             <Link
               to={"/muraciet"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer  md:text-[1vw]  md:w-2/4"
+              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
             >
-              MURACIƏT ET
+              {t("apply_now")}
             </Link>
             <Link
               to={"/program"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw]  md:w-2/4"
+              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
             >
-              PROQRAMI YÜKLƏ
+              {t("download_program")}
             </Link>
           </div>
         </div>
       </section>
       <section className=" ">
         <div className="w-full mx-auto  px-10 md:w-5/6 md:px-20 md:mx-auto">
-          <h2 className="text-[#279996] text-[4vw] my-5 md:text-[2.61vw] md:my-10">DSA Bootcamp</h2>
+          <h2 className="text-[#279996] text-[4vw] my-5 md:text-[2.61vw] md:my-10">
+            DSA {t("bootcamp_type")}
+          </h2>
           <div className="flex flex-wrap justify-between w-full">
             <div className="flex flex-col gap-3 w-full text-[#555555] md:w-4/5">
-              <h2 className="font-bold text-[3vw] md:text-[1.18vw]">İcmal</h2>
+              <h2 className="font-bold text-[3vw] md:text-[1.18vw]">
+                {t("overview")}
+              </h2>
               <span className="text-[3vw] sm:text-[1.18vw] md:text-[1.18vw] md:pr-5">
-                Data Science Academy Bootcamp Data Analitikası, Vizuallaşdırma,
-                Machine Learning, Deep Learning, Artificial İntellegence və Big
-                Data mövzularının birlikdə tədris edildiyi dünyanın ən geniş
-                Data Science proqramlarından biridir. Siz bu proqramda
-                Statistika, Data Analitikası və Data Science metodologiyalarını
-                R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, Mongo DB,
-                MapReduce, Hive, Hadoop, Tenserflow, Tableau, SPSS, SPSS Modeler
-                və digər çox istifadə olunanan vasitələrlə öyrənəcəksiniz.
-                Vaxtınızın böyük hissəsində real layihələrlə işləyərək
-                biliklərinizi tətbiq edəcək və proqram sonunda GitHub Data
-                Science Portfolionuzu yaradacaqsınız. Şəxsi mentorlarınızla
-                işləyərkən real biznes problemləri və datasetlərlə əlaqəli
-                suallarınıza cavab tapmaq imkanınız olacaq. Bootcamp müddətində
-                peşəkar Data Analitiklərdən ibarət olan Data Science
-                cəmiyyətimizə qoşularaq Data Science Spacedə həyata keçirilən
-                müxtəlif networking tədbirlərinə qoşulacaqsınız. Bootcamp
-                sonunda imtahan nəticələrinə əsasasən Participant, Data Analyst,
-                Junior Data Scientist, Data Scientist, Associate Data Scientist
-                sertifikatlarından biri təqdim olunacaq. Bununla yanaşı,
-                individual karyera xidməti və CV- Vakansiya* bazamıza giriş əldə
-                edəcəksiniz.
+                {t("overview_text")}
               </span>
               <span className="text-[3vw] sm:text-[1.18vw] md:text-[1.18vw]">
-                *Akademiyamız bir çox nüfuzlu yerli və qlobal şirkətlərə
-                əməkdaşlıq əsasında data və analitika mütəxəssisləri təmin edir.
+                {t("overview_sub_text")}
               </span>
             </div>
             <div className="flex pt-1 justify-between w-full text-[#555555] md:w-1/5 md:flex-col">
               <div className="flex flex-col gap-2">
-                <h3 className="font-bold text-[2.5vw] md:text-[1.18vw]">Ön bilik tələbi</h3>
+                <h3 className="font-bold text-[2.5vw] md:text-[1.18vw]">
+                  {t("requirements")}
+                </h3>
                 <span className="text-[2.5vw] sm:text-[2vw] md:text-[1.18vw] w-4/5">
-                  Orta səviyyə ingilis dili, analitikaya həvəs və təhlil
-                  bacarığı
+                  {t("requirements_description")}
                 </span>
                 <span className="text-[2.5vw] sm:text-[2vw] md:text-[1.18vw] w-4/5">
-                  *İlkin proqramlaşdırma və təməl statistika biliklərinin olması
-                  üstünlükdür.
+                  {t("extra_requirements")}
                 </span>
               </div>
               <div className="flex  flex-col gap-2 ">
-                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Tədris Müddəti</h3>
+                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">
+                  {t("duration")}
+                </h3>
                 <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1.18vw]">
-                  3 ay, həftədə 3 dəfə, hər dərs fasilələr ilə 4 saat davam
-                  edəcək.
+                  {t("duration_description")}
                 </span>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">Məkan</h3>
+                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">
+                  {t("location")}
+                </h3>
                 <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1.18vw]">
-                  Aşıq Alı 24, Odlar Yurdu universiteti ilə üzbəüz
+                  {t("location_description")}
                 </span>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center mt-15  md:w-full">
             <button className=" text-[1.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
-              MÜRACİƏT ET
+              {t("apply_now")}
             </button>
           </div>
         </div>
@@ -113,7 +112,7 @@ const MainSection = () => {
       <section className="my-20 second-main-section">
         <div className="flex flex-col items-center w-full mx-auto px-10 text-[#555555] md:5/6 md:px-20 md:flex-col">
           <h2 className="text-[#212331] text-[4vw] font-[300] md:text-[2.61vw]">
-            Proqramın üstünlükləri
+            {t("program_advantages")}
           </h2>
           <div className="flex  gap-5 my-10 flex-wrap text-center main-div justify-between md:w-5/6">
             <div className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[25%]">
@@ -123,12 +122,10 @@ const MainSection = () => {
                 className="w-[100px] bg-[#28AAA8] rounded-full"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
-                {" "}
-                Data Science Bootcamp
+                {t("data_science_bootcamp")}
               </h4>
               <p className="text-[1.5vw] md:text-[.92vw]">
-                Data Science Academy sizə intensiv olaraq təşkil olunmuş 140
-                saatlıq proqram təklif edir.
+                {t("data_science_bootcamp_desc")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[25%]">
@@ -137,12 +134,11 @@ const MainSection = () => {
                 alt=""
                 className="w-[100px] bg-[#28AAA8] rounded-full "
               />
-              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">Təlim Proqramı</h4>
+              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
+                {t("training_program")}
+              </h4>
               <p className="text-[1.5vw] md:text-[.92vw] ">
-                R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, Mongo DB,
-                MapReduce, Hive, Hadoop, Tenserflow, Tableau, SPSS, SPSS Modeler
-                və digər çox istifadə olunanan proqramları birgə tədris edən
-                yeganə proqram.
+                {t("training_program_desc")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[25%]">
@@ -151,10 +147,11 @@ const MainSection = () => {
                 alt=""
                 className="w-[100px] bg-[#28AAA8] rounded-full"
               />
-              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">Mentor seçim prosesi</h4>
+              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
+                {t("mentor_selection")}
+              </h4>
               <p className="text-[1.5vw] md:text-[.92vw]">
-                Bootcamp müddətində tədris vaxtlarınızdan əlavə şəxsi mentorunuz
-                ilə görüşərək bütün suallarınıza cavab tapın.
+                {t("mentor_selection_desc")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[25%]">
@@ -163,10 +160,11 @@ const MainSection = () => {
                 alt=""
                 className="w-[100px] bg-[#28AAA8] rounded-full"
               />
-              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">Layihələrimiz</h4>
+              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
+                {t("projects")}
+              </h4>
               <p className="text-[1.5vw] md:text-[.92vw]">
-                Capstone layihələri əsasında bilik və bacarıqlarınızı göstərən
-                şəxsi Data Science GitHub portfolionuzu yaradın.
+                {t("projects_desc")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 w-[45%] cursor-pointer sub-main-div md:w-[25%]">
@@ -175,12 +173,11 @@ const MainSection = () => {
                 alt=""
                 className="w-[100px] bg-[#28AAA8] rounded-full"
               />
-              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">Community</h4>
+              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
+                {t("career_support")}
+              </h4>
               <p className="text-[1.5vw] md:text-[.92vw]">
-                Birə-bir karyera dəstəyi əsasında CV və Linkedin profilinizi
-                dizayn etmək, sınaq müsahibələrlə müsahibədə necə davranmalı
-                olduğunuzu öyrənmək və ekskluziv olaraq əməkdaşlıq etdiyimiz
-                şirkətlərdə işləmək imkanı əldə edin.
+                {t("career_support_desc")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[25%]">
@@ -189,11 +186,11 @@ const MainSection = () => {
                 alt=""
                 className="w-[100px] bg-[#28AAA8] rounded-full"
               />
-              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">Layihələrimiz</h4>
+              <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
+                {t("community")}
+              </h4>
               <p className="text-[1.5vw] md:text-[.92vw]">
-                Peşəkar Data Analitiklərdən ibarət olan Data Science
-                cəmiyyətimizə qoşularaq Data Science Spacedə həyata keçirilən
-                müxtəlif networking tədbirlərinə qoşulun.
+                {t("community_desc")}
               </p>
             </div>
           </div>

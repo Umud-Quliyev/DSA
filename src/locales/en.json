@@ -1,0 +1,164 @@
+{
+  "download_program": "Download Program",
+  "apply_now": "APPLY NOW",
+  "bootcamp_title": "Become a Data Scientist",
+  "bootcamp_subtitle": "In 12 Weeks?",
+  "bootcamp_name": "Data Science Academy",
+  "bootcamp_type": "BOOTCAMP",
+  "bootcamp_start_date": "February 1, 2025",
+  "bootcamp_description": "The most modern curriculum, real business projects, and personal career support are possible with us!",
+  "overview": "Overview",
+  "overview_text": "The Data Science Academy Bootcamp is one of the world's most comprehensive Data Science programs, covering Data Analytics, Visualization, Machine Learning, Deep Learning, Artificial Intelligence, and Big Data. In this program, you will learn Statistics, Data Analytics, and Data Science methodologies using R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, Hadoop, TensorFlow, Tableau, SPSS, SPSS Modeler, and many other widely used tools. Most of your time will be spent working on real projects, applying your knowledge, and by the end of the program, you will have created your GitHub Data Science Portfolio. Working with personal mentors, you will have the opportunity to get answers to your questions related to real business problems and datasets. During the bootcamp, you will join our Data Science community, consisting of professional Data Analysts, and participate in various networking events held in the Data Science Space. At the end of the bootcamp, based on exam results, you will receive one of the following certificates: Participant, Data Analyst, Junior Data Scientist, Data Scientist, or Associate Data Scientist. Additionally, you will gain access to individual career services and our CV-Vacancy* database.",
+  "overview_sub_text": "Our academy provides data and analytics professionals to numerous prestigious local and global companies through collaboration.",
+  "requirements": "Prerequisites",
+  "requirements_description": "Intermediate English, passion for analytics, and analytical skills",
+  "extra_requirements": "Basic programming and fundamental statistics knowledge is an advantage.",
+  "duration": "Duration",
+  "duration_description": "3 months, 3 times a week, each lesson lasting 4 hours with breaks.",
+  "location": "Location",
+  "location_description": "Ashiq Ali 24, opposite Odlar Yurdu University",
+  "program_advantages": "Program Advantages",
+  "data_science_bootcamp": "Data Science Bootcamp",
+  "data_science_bootcamp_desc": "Data Science Academy offers you an intensive 140-hour program.",
+  "training_program": "Training Program",
+  "training_program_desc": "The only program that jointly teaches R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, TensorFlow, Tableau, SPSS, and SPSS Modeler.",
+  "mentor_selection": "Mentor Selection Process",
+  "mentor_selection_desc": "During the bootcamp, in addition to your class hours, you will have meetings with your personal mentor to answer all your questions.",
+  "projects": "Our Projects",
+  "projects_desc": "Create your personal Data Science GitHub portfolio based on capstone projects to showcase your knowledge and skills.",
+  "career_support": "Career Support",
+  "career_support_desc": "Get one-on-one career support to design your CV and LinkedIn profile, participate in mock interviews, and gain exclusive access to job opportunities with our partner companies.",
+  "community": "Community",
+  "community_desc": "Join our community of professional Data Analysts and participate in various networking events in the Data Science space.",
+  "customer_title": "Companies we cooperate with",
+  "training_program": "Training Program",
+  "training_info": "The e-Government Development Center, Pasha Bank, Bakcell, International Bank, and Access Bank have selected books and created real business and analytics cases by our experts. The program is regularly updated taking into account market trends and business requirements. This program will cover 140 hours of educational content, including teaching Statistics, Data Analytics, and Data Science methodologies using R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, Hadoop, TensorFlow, Tableau, SPSS, and SPSS Modeler.",
+  "training_download": "Download the training program",
+  "training_process_title": "How does the process work?",
+  "training_step_1": "Initial Preparation",
+  "training_step_1_desc": "Before the bootcamp starts, your knowledge and skills will be tested and directed to appropriate training programs.",
+  "training_step_2": "Bootcamp",
+  "training_step_2_desc": "You will learn about Data Analytics, Visualization, Machine Learning, Deep Learning, Artificial Intelligence, and Big Data using one of the world's most comprehensive Data Science training programs.",
+  "training_step_3": "Application",
+  "training_step_3_desc": "Together with your personal mentor, you will work on real projects and apply the knowledge you have learned.",
+  "training_step_4": "Career",
+  "training_step_4_desc": "You will meet with professional Data Analysts and HR specialists, have one-on-one discussions, and gain access to the CV-Vacancy database.",
+  "training_step_5": "Congratulations!",
+  "training_step_5_desc": "The world has gained a new Data Scientist.",
+  "trainers": "Trainers",
+
+  "nav": {
+    "main": "Home",
+    "customer": "Customers",
+    "training": "Training Program",
+    "team": "Our Team",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "trainings": "Trainings"
+  },
+
+  "graduates": {
+    "title": "Our Graduates",
+    "workplace_title": "Our Graduates Work Here",
+    "positions": {
+      "remote_data_scientist": "Remote Data Scientist",
+      "data_analyst": "Data Analyst",
+      "senior_data_scientist": "Senior Data Scientist",
+      "head_of_analysis": "Head of Analysis and Statistics Division",
+      "business_analyst": "Business Analyst",
+      "data_scientist": "Data Scientist",
+      "lead_data_scientist": "Lead Data Scientist"
+    }
+  },
+
+  "teachers": {
+    "title": "Our Teachers"
+  },
+  "teacher": {
+    "etibar": {
+      "name": "Etibar Huseynli",
+      "position": "Chief Data Scientist",
+      "workplace": "QSS Analytics",
+      "desc": "Etibar Huseynli has more than 8 years of professional experience in data science. Currently, he is the head of the Data Analytics and Reporting department at Digital Umbrella."
+    },
+    "minure": {
+      "name": "Minure Huseynli",
+      "position": "Head of Data Analytics and Reporting",
+      "workplace": "Digital Umbrella",
+      "desc": "Minure Huseynli has over 8 years of professional experience in the field of data science and has worked as a consultant on numerous local and international projects."
+    },
+    "behruz": {
+      "name": "Behruz Qasimov",
+      "position": "Data Quality Management Expert",
+      "workplace": "Pasha Bank",
+      "desc": "Behruz Qasimov currently works as a senior specialist in Data Quality and Assurance Management at Pasha Bank."
+    },
+    "emil": {
+      "name": "Emil Mirzayev",
+      "position": "AI and Strategic Decision Making Researcher",
+      "workplace": "University College London",
+      "desc": "Dr. Emil Mirzayev holds a dual PhD in Economics and Business Administration and is currently conducting research at University College London."
+    },
+    "turgut": {
+      "name": "Turgut Abdullayev",
+      "position": "Data Scientist",
+      "workplace": "University College London",
+      "desc": "Turgut Abdullayev specializes in artificial intelligence and has extensive experience in data analytics."
+    },
+    "ehmed": {
+      "name": "Ahmed Ahmedov",
+      "position": "Senior Data Scientist",
+      "workplace": "University College London",
+      "desc": "Ahmed Ahmedov has more than 10 years of experience in data analytics and machine learning."
+    },
+    "celal": {
+      "name": "Jalal Rahmanov",
+      "position": "Data Science Expert",
+      "workplace": "Kapital Bank",
+      "desc": "Jalal Rahmanov is a data science specialist at Kapital Bank."
+    },
+    "sebnur": {
+      "name": "Sebnur Penahli",
+      "position": "Business Analyst",
+      "workplace": "Kapital Bank",
+      "desc": "Sebnur Penahli is an experienced business analyst."
+    }
+  },
+
+  "faq": {
+    "title": "Frequently asked questions"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "phone": "Phone Number",
+    "service": "How can we assist you?",
+    "message": "Message",
+    "send": "Send",
+    "success": "Successfully sent!",
+    "error": "An error occurred!",
+    "errors": {
+      "name": "Name cannot be empty.",
+      "surname": "Surname cannot be empty.",
+      "email": "Email cannot be empty.",
+      "email_invalid": "Please enter a valid email.",
+      "phone": "Phone number cannot be empty.",
+      "phone_invalid": "Phone number must be at least 10 digits.",
+      "service": "A service must be selected.",
+      "message": "Message cannot be empty.",
+      "message_short": "Message must be at least 10 characters."
+    },
+    "services": {
+      "data_science": "Data Science Bootcamp",
+      "spss": "SPSS Modeler Bootcamp",
+      "credit_risk": "Credit-Risk Analysis",
+      "corporate_training": "Corporate Trainings",
+      "data_employee": "Looking for a data-related employee",
+      "paid_project": "Paid project assistance",
+      "free_project": "Free project assistance"
+    }
+  }
+}

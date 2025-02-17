@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/svg/logoBlack.svg";
-import { Link } from "react-scroll";
 import { IoMdMail } from "react-icons/io";
 import {
   FaFacebook,
@@ -10,8 +9,28 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import "./Footer.css";
+import i18n from "../i18n";
 
 const Footer = () => {
+  const [activeLang, setActiveLang] = useState(i18n.language || "az");
+
+  const smoothScrollToTop = () => {
+    const scrollStep = window.scrollY / 50;
+    const scrollAnimation = () => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, -scrollStep);
+        requestAnimationFrame(scrollAnimation);
+      }
+    };
+    requestAnimationFrame(scrollAnimation);
+  };
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setActiveLang(lang);
+    smoothScrollToTop();
+  };
+
   return (
     <div className="contanierr">
       <div className="footer__container">
@@ -26,7 +45,7 @@ const Footer = () => {
           <div className="informations">
             <p>
               <span>
-              <IoMdMail />
+                <IoMdMail />
               </span>
               blablabla@gmail.com
             </p>
@@ -41,9 +60,24 @@ const Footer = () => {
         <div className="footer__bottom">
           <div className="languages">
             <ul>
-              <li className="language__active">Azərbaycan</li>
-              <li>English</li>
-              <li>French</li>
+              <li
+                onClick={() => changeLanguage("az")}
+                className={activeLang === "az" ? "language__active" : ""}
+              >
+                Azərbaycan
+              </li>
+              <li
+                onClick={() => changeLanguage("en")}
+                className={activeLang === "en" ? "language__active" : ""}
+              >
+                English
+              </li>
+              <li
+                onClick={() => changeLanguage("fr")}
+                className={activeLang === "fr" ? "language__active" : ""}
+              >
+                French
+              </li>
             </ul>
           </div>
           <div className="socials">

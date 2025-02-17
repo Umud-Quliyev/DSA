@@ -4,6 +4,8 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { useTranslation } from "react-i18next";
+
 import mehemmed from "../../assets/img/mehemmed.jpg";
 import aksin from "../../assets/img/aksin.jpg";
 import namiq from "../../assets/img/namiq.jpg";
@@ -33,150 +35,112 @@ import dsmf from "../../assets/img/dsmf.png";
 import "./Graduates.css";
 
 const Graduates = () => {
+  const { t } = useTranslation();
+
   const graduates = [
     {
       img: mehemmed,
       fullname: "Məhəmmədəli İsmayılov",
-      position: "Remote Data Scientist",
+      position: t("graduates.positions.remote_data_scientist"),
       workplace: "Dinemates",
     },
     {
       img: aksin,
       fullname: "Akşin Hüseynov",
-      position: "Data Analyst",
-      workplace: "Universal Music Group, Almaniya",
+      position: t("graduates.positions.data_analyst"),
+      workplace: "Universal Music Group, Germany",
     },
     {
       img: namiq,
       fullname: "Namiq Cəfərov",
-      position: "Data Analyst",
+      position: t("graduates.positions.data_analyst"),
       workplace: "Digital Umbrella",
     },
     {
       img: emil,
       fullname: "Emil Aydınsoy",
-      position: "Senior Data Scientist",
-      workplace: "Proxify, İsveç",
+      position: t("graduates.positions.senior_data_scientist"),
+      workplace: "Proxify, Sweden",
     },
     {
       img: leyla,
       fullname: "Leyla Fərzəliyeva",
-      position: "Head of Analysis and Statistics Division",
+      position: t("graduates.positions.head_of_analysis"),
       workplace: "DSMF",
     },
     {
       img: teymur,
       fullname: "Teymur Kosayev",
-      position: "Data Analyst",
-      workplace: "Accenture, Polşa",
+      position: t("graduates.positions.data_analyst"),
+      workplace: "Accenture, Poland",
     },
     {
       img: sevda,
       fullname: "Sevda Əsgərzadə",
-      position: "Business Analyst",
+      position: t("graduates.positions.business_analyst"),
       workplace: "Kapital Bank",
     },
     {
       img: rauf,
       fullname: "Rauf Omarov",
-      position: "Data Scientist",
+      position: t("graduates.positions.data_scientist"),
       workplace: "Kapital Bank",
     },
     {
       img: terlan,
       fullname: "Tərlan Cəbiyev",
-      position: "Lead Data Scientist",
+      position: t("graduates.positions.lead_data_scientist"),
       workplace: "PashaPay",
     },
   ];
 
   const graduate__workplace = [
-    {
-      src: yapikredi,
-    },
-    {
-      src: atltech,
-    },
-    {
-      src: kapital,
-    },
-    {
-      src: apf,
-    },
-    {
-      src: bravo,
-    },
-    {
-      src: rabitebank,
-    },
-    {
-      src: pashabank,
-    },
-    {
-      src: bakcell,
-    },
-    {
-      src: accesbank,
-    },
-    {
-      src: apikz,
-    },
-    {
-      src: unibank,
-    },
-    {
-      src: pashaheyat,
-    },
-    {
-      src: adta,
-    },
-    {
-      src: azercell,
-    },
-    {
-      src: dsmf,
-    },
+    { src: yapikredi },
+    { src: atltech },
+    { src: kapital },
+    { src: apf },
+    { src: bravo },
+    { src: rabitebank },
+    { src: pashabank },
+    { src: bakcell },
+    { src: accesbank },
+    { src: apikz },
+    { src: unibank },
+    { src: pashaheyat },
+    { src: adta },
+    { src: azercell },
+    { src: dsmf },
   ];
 
   return (
     <div className="contanierr">
       <div className="graduates">
         <div className="graduates__title">
-          <h2>Məzunlarımız</h2>
+          <h2>{t("graduates.title")}</h2>
         </div>
         <div className="graduates__list">
           <Swiper
             breakpoints={{
-              967: {
-                slidesPerView: 5,
-              },
-              768: {
-                slidesPerView: 4,
-              },
-              520: {
-                slidesPerView: 3,
-              },
-              320: {
-                slidesPerView: 2,
-              },
+              967: { slidesPerView: 5 },
+              768: { slidesPerView: 4 },
+              520: { slidesPerView: 3 },
+              320: { slidesPerView: 2 },
             }}
             spaceBetween={78}
-            pagination={{
-              clickable: true,
-            }}
+            pagination={{ clickable: true }}
             modules={[Pagination]}
           >
-            {graduates.map((graduates, index) => (
+            {graduates.map((graduate, index) => (
               <SwiperSlide style={{ height: "100%" }} key={index}>
                 <div className="graduate">
                   <div className="graduates__img">
-                    <img src={graduates.img} alt={`Mezun ${index + 1}`} />
+                    <img src={graduate.img} alt={`Graduate ${index + 1}`} />
                   </div>
                   <div className="graduate__info">
-                    <h3>{graduates.fullname}</h3>
-                    <h5>{graduates.position}</h5>
+                    <h3>{graduate.fullname}</h3>
+                    <h5>{graduate.position}</h5>
                     <h5>
-                      <span>{graduates.workplace}</span>
+                      <span>{graduate.workplace}</span>
                     </h5>
                   </div>
                 </div>
@@ -187,12 +151,12 @@ const Graduates = () => {
       </div>
       <div className="graduate__workplace">
         <div className="workplace__title">
-          <h2>Məzunlarımız burada çalışır</h2>
+          <h2>{t("graduates.workplace_title")}</h2>
         </div>
         <div className="workplace__list">
           {graduate__workplace.map((workplace, index) => (
             <div key={index} className="workplace">
-              <img src={workplace.src} alt={`sirket ${index}`} />
+              <img src={workplace.src} alt={`Company ${index}`} />
             </div>
           ))}
         </div>

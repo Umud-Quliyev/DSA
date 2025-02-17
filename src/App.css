@@ -64,9 +64,6 @@
   border-radius: 20px;
 }
 
-h2 {
-  font-size: clamp(1.5rem, 0.8571rem + 3.2143vw, 3.75rem);
-}
 
 .second-main-section .main-div .sub-main-div img {
   transition: all 0.5s ease;
