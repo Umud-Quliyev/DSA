@@ -53,22 +53,22 @@ const Footer = () => {
               <button>{t("footer.subscribeButton")}</button>
             </div>
           </div>
-          <div className="flex justify-evenly w-full py-3">
-            <div className="flex items-center gap-3">
+          <div className="flex justify-between  w-full py-3 address">
+            <div className="flex items-center gap-3 sub-address">
               <FaPhoneVolume className="text-[#28aaa8]"/>
               <div>
                 <p className="font-bold">{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 sub-address">
               <IoIosMail className="text-[#28aaa8]"/>
               <div>
                 <p className="font-bold">{t("footer.contactEmail")}</p>
                 <p>example@gmail.com</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 sub-address">
               <FaLocationDot className="text-[#28aaa8]"/>
               <div>
                 <p className="font-bold">{t("footer.contactAddress")}</p>

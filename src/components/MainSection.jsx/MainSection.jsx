@@ -35,7 +35,7 @@ const MainSection = () => {
               {t("bootcamp_start_date")}
             </span>
           </div>
-          <span className="text-center text-[1.9vw] md:text-[1.18vw] max-w-60">
+          <span className="text-center text-[1.9vw] md:text-[1.18vw] md:w-60">
             {t("bootcamp_description")}
           </span>
           <div className="flex gap-5 mx-auto pt-3">
@@ -61,41 +61,41 @@ const MainSection = () => {
           </h2>
           <div className="flex flex-wrap justify-between w-full">
             <div className="flex flex-col gap-3 w-full text-[#555555] md:w-4/5">
-              <h2 className="font-bold text-[3vw] md:text-[1.18vw]">
+              <h2 className="font-bold text-[3vw] md:text-[1.2vw]">
                 {t("overview")}
               </h2>
-              <span className="text-[3vw] sm:text-[1.18vw] md:text-[1.18vw] md:pr-5">
+              <span className="text-[3vw] sm:text-[2.1vw] md:text-[1.1vw] md:pr-5">
                 {t("overview_text")}
               </span>
-              <span className="text-[3vw] sm:text-[1.18vw] md:text-[1.18vw]">
+              <span className="text-[3vw] sm:text-[2.1vw] md:text-[1.11vw]">
                 {t("overview_sub_text")}
               </span>
             </div>
             <div className="flex pt-1 justify-between w-full text-[#555555] md:w-1/5 md:flex-col">
               <div className="flex flex-col gap-2">
-                <h3 className="font-bold text-[2.5vw] md:text-[1.18vw]">
+                <h3 className="font-bold text-[2.5vw] md:text-[1.2vw]">
                   {t("requirements")}
                 </h3>
-                <span className="text-[2.5vw] sm:text-[2vw] md:text-[1.18vw] w-4/5">
+                <span className="text-[2.5vw] sm:text-[2vw] md:text-[1vw] w-4/5">
                   {t("requirements_description")}
                 </span>
-                <span className="text-[2.5vw] sm:text-[2vw] md:text-[1.18vw] w-4/5">
+                <span className="text-[2.5vw] sm:text-[2vw] md:text-[1vw] w-4/5">
                   {t("extra_requirements")}
                 </span>
               </div>
               <div className="flex  flex-col gap-2 ">
-                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">
+                <h3 className=" font-bold text-[2.5vw] md:text-[1.1vw]">
                   {t("duration")}
                 </h3>
-                <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1.18vw]">
+                <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1vw]">
                   {t("duration_description")}
                 </span>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className=" font-bold text-[2.5vw] md:text-[1.18vw]">
+                <h3 className=" font-bold text-[2.5vw] md:text-[1vw]">
                   {t("location")}
                 </h3>
-                <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1.18vw]">
+                <span className="text-[2.5vw] sm:text-[2vw] w-4/5 md:text-[1vw]">
                   {t("location_description")}
                 </span>
               </div>
