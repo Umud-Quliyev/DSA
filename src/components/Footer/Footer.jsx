@@ -9,6 +9,9 @@ import {
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaLocationDot, FaPhoneFlip, FaPhoneVolume } from "react-icons/fa6";
+
 import "./Footer.css";
 
 const Footer = () => {
@@ -19,23 +22,40 @@ const Footer = () => {
           <div>
             <img src={logo} alt="Logo" />
           </div>
-          <div className="subscribe">
-            <input type="text" placeholder="Email daxil edin" />
-            <button>Abone ol</button>
+          <div className="flex justify-between w-full">
+            <div className="subscribe w-full py-2">
+              <input
+                type="text"
+                placeholder="Email daxil edin"
+                className="w-full"
+              />
+              <button>Abone ol</button>
+            </div>
           </div>
-          <div className="informations">
-            <p>
-              <span>
-              <IoMdMail />
-              </span>
-              blablabla@gmail.com
-            </p>
-            <p>
-              <span>
-                <FaPhone />
-              </span>{" "}
-              0550505050{" "}
-            </p>
+            <div className="flex justify-evenly w-full  py-3">
+              <div className="flex items-center gap-3">
+              <FaPhoneVolume />
+                <div>
+                  <p>Əlaqə telefon</p>
+                  <p>077 341 43 40</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+              <IoIosMail />
+                <div>
+                  <p>Poçt Ünvanı</p>
+                  <p>example@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+              <FaLocationDot />
+
+                <div>
+                  <p>Ünvan</p>
+                  <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
+                </div>
+              </div>
+           
           </div>
         </div>
         <div className="footer__bottom">
@@ -43,7 +63,6 @@ const Footer = () => {
             <ul>
               <li className="language__active">Azərbaycan</li>
               <li>English</li>
-              <li>French</li>
             </ul>
           </div>
           <div className="socials">
