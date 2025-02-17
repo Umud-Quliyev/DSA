@@ -217,11 +217,11 @@ const Header = () => {
           </li>
         </ul>
 
-        <div className="hidden  items-center gap-4 lg:flex">
-          <FaFacebook />
-          <FaInstagram />
-          <FaLinkedin />
-          <FaWhatsapp />
+        <div className="hidden text-[20px] items-center gap-4  lg:flex">
+          <FaFacebook className="cursor-pointer"/>
+          <FaInstagram className="cursor-pointer"/>
+          <FaLinkedin className="cursor-pointer"/>
+          <FaWhatsapp className="cursor-pointer"/>
         </div>
         <AiOutlineMenu
           className={`${open ? "hidden" : ""} block md:hidden`}

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/svg/logoBlack.svg";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
 import {
   FaFacebook,
   FaInstagram,
@@ -58,21 +57,21 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <FaPhoneVolume className="text-[#28aaa8]"/>
               <div>
-                <p>{t("footer.contactPhone")}</p>
+                <p className="font-bold">{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <IoIosMail className="text-[#28aaa8]"/>
               <div>
-                <p>{t("footer.contactEmail")}</p>
+                <p className="font-bold">{t("footer.contactEmail")}</p>
                 <p>example@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <FaLocationDot className="text-[#28aaa8]"/>
               <div>
-                <p>{t("footer.contactAddress")}</p>
+                <p className="font-bold">{t("footer.contactAddress")}</p>
                 <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
               </div>
             </div>
@@ -101,11 +100,11 @@ const Footer = () => {
             <FaLinkedin />
             <FaWhatsapp />
           </div>
-          <div className="copyright">
+          {/* <div className="copyright">
             <p>
               {new Date().getFullYear()} {t("footer.rightsReserved")}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

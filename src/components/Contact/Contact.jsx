@@ -108,6 +108,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder={t("contact.name")}
+              
             />
             {errors.name && <p className="error">{errors.name}</p>}
             <input
