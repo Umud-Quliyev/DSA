@@ -49,11 +49,11 @@
   border: 1px solid #ced4da;
   border-radius: 4px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
 }
 
 .form__select {
   width: 100%;
-  outline: none;
 }
 
 .MuiSelect-select {
@@ -77,6 +77,7 @@
   border-radius: 0.25rem;
   resize: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
 }
 
 .contact__form button {
