@@ -56,21 +56,21 @@ const Footer = () => {
           </div>
           <div className="flex justify-evenly w-full py-3">
             <div className="flex items-center gap-3">
-              <FaPhoneVolume />
+              <FaPhoneVolume className="text-[#28aaa8]"/>
               <div>
                 <p>{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <IoIosMail />
+              <IoIosMail className="text-[#28aaa8]"/>
               <div>
                 <p>{t("footer.contactEmail")}</p>
                 <p>example@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <FaLocationDot />
+              <FaLocationDot className="text-[#28aaa8]"/>
               <div>
                 <p>{t("footer.contactAddress")}</p>
                 <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
