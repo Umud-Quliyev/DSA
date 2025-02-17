@@ -24,6 +24,20 @@
   justify-content: space-between;
 }
 
+.form__head > div {
+  width: 100%;
+}
+
+.contact__form .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.contact__form > div {
+  width: 100%;
+}
+
 .contact__form input {
   width: 100%;
   padding: 6px 12px;

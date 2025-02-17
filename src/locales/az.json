@@ -141,17 +141,6 @@
     "send": "Göndər",
     "success": "Uğurla göndərildi!",
     "error": "Xəta baş verdi!",
-    "errors": {
-      "name": "Ad boş ola bilməz.",
-      "surname": "Soyad boş ola bilməz.",
-      "email": "Email boş ola bilməz.",
-      "email_invalid": "Düzgün bir email daxil edin.",
-      "phone": "Telefon nömrəsi boş ola bilməz.",
-      "phone_invalid": "Telefon nömrəsi minimum 10 rəqəm olmalıdır.",
-      "service": "Xidmət seçilməlidir.",
-      "message": "Mesaj boş ola bilməz.",
-      "message_short": "Mesaj minimum 10 simvol olmalıdır."
-    },
     "services": {
       "data_science": "Data Science Bootcamp",
       "spss": "SPSS Modeler Bootcamp",
@@ -161,6 +150,27 @@
       "paid_project": "Ödənişli proyekt köməyi",
       "free_project": "Ödənişsiz proyekt köməyi"
     }
+  },
+
+  "errors": {
+    "name": "Ad boş ola bilməz.",
+    "surname": "Soyad boş ola bilməz.",
+    "email": "Email boş ola bilməz.",
+    "email_invalid": "Düzgün bir email daxil edin.",
+    "phone": "Telefon nömrəsi boş ola bilməz.",
+    "phone_invalid": "Telefon nömrəsi minimum 10 rəqəm olmalıdır.",
+    "service": "Xidmət seçilməlidir.",
+    "message": "Mesaj boş ola bilməz.",
+    "message_short": "Mesaj minimum 10 simvol olmalıdır."
+  },
+
+  "toast": {
+    "success": "Uğurla göndərildi!",
+    "error": "Xəta baş verdi!"
+  },
+
+  "form": {
+    "title": "Müraciət"
   },
 
   "footer": {

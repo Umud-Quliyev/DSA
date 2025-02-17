@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
 import "react-toastify/dist/ReactToastify.css";
 
 const RequestPage = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -21,17 +23,18 @@ const RequestPage = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Ad boş ola bilməz.";
-    if (!formData.surname.trim()) newErrors.surname = "Soyad boş ola bilməz.";
+    if (!formData.name.trim()) newErrors.name = t("errors.name");
+    if (!formData.surname.trim())
+      newErrors.surname = t("errors.surname");
     if (!formData.email.trim()) {
-      newErrors.email = "Email boş ola bilməz.";
+      newErrors.email = t("errors.email");
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = "Düzgün bir email daxil edin.";
+      newErrors.email = t("errors.email_invalid");
     }
     if (!formData.phone.trim()) {
-      newErrors.phone = "Telefon nömrəsi boş ola bilməz.";
+      newErrors.phone = t("errors.phone");
     } else if (!/^\d{10,}$/.test(formData.phone)) {
-      newErrors.phone = "Telefon nömrəsi minimum 10 rəqəm olmalıdır.";
+      newErrors.phone = t("errors.phone_invalid");
     }
 
     setErrors(newErrors);
@@ -43,7 +46,7 @@ const RequestPage = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch(`${BASE_URL}/apply/`, {
+      const response = await fetch(`${BASE_URL}/muraciet/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,13 +55,13 @@ const RequestPage = () => {
       });
 
       if (response.ok) {
-        toast.success("Uğurla göndərildi!", { transition: Bounce });
+        toast.success(t("toast.success"), { transition: Bounce });
         setFormData({ name: "", surname: "", email: "", phone: "" });
       } else {
-        toast.error("Xəta baş verdi!", { transition: Bounce });
+        toast.error(t("toast.error"), { transition: Bounce });
       }
     } catch (error) {
-      toast.error("Xəta baş verdi!", { transition: Bounce });
+      toast.error(t("toast.error"), { transition: Bounce });
     }
   };
 
@@ -66,10 +69,10 @@ const RequestPage = () => {
     <section className="pt-30 request">
       <div className="w-5/6 mx-auto ">
         <h2 className="text-[4vw] text-center font-[300] text-[#212331] md:text-[2.61vw]">
-          Müraciət
+          {t("form.title")}
         </h2>
         <form
-          className="my-10  flex flex-wrap justify-evenly gap-3 mx-auto md:w-full"
+          className="my-10 flex flex-wrap justify-evenly gap-3 mx-auto md:w-full"
           onSubmit={handleSubmit}
         >
           {["name", "surname", "email", "phone"].map((field, index) => (
@@ -79,15 +82,7 @@ const RequestPage = () => {
                 value={formData[field]}
                 onChange={handleChange}
                 type={field === "email" ? "email" : "text"}
-                placeholder={
-                  field === "name"
-                    ? "Ad:"
-                    : field === "surname"
-                    ? "Soyad:"
-                    : field === "email"
-                    ? "Email:"
-                    : "Əlaqə nömrəsi:"
-                }
+                placeholder={t(`contact.${field}`)}
                 className={`w-full py-3 border-b-1 outline-none ${
                   errors[field] ? "border-red-500" : ""
                 }`}
@@ -102,7 +97,7 @@ const RequestPage = () => {
             type="submit"
             className="w-full bg-[#28aaa8] text-[#fff] font-bold py-3 mt-5 rounded-[30px] cursor-pointer transition duration-300 ease-in-out hover:bg-[#e2195b]"
           >
-            GÖNDƏR
+            {t("form.submit")}
           </button>
         </form>
       </div>

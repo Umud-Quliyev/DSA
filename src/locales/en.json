@@ -129,6 +129,11 @@
     "title": "Frequently asked questions"
   },
 
+  "toast": {
+    "success": "Uğurla göndərildi!",
+    "error": "Xəta baş verdi!"
+  },
+
   "contact": {
     "title": "Contact",
     "name": "Name",
@@ -140,17 +145,6 @@
     "send": "Send",
     "success": "Successfully sent!",
     "error": "An error occurred!",
-    "errors": {
-      "name": "Name cannot be empty.",
-      "surname": "Surname cannot be empty.",
-      "email": "Email cannot be empty.",
-      "email_invalid": "Please enter a valid email.",
-      "phone": "Phone number cannot be empty.",
-      "phone_invalid": "Phone number must be at least 10 digits.",
-      "service": "A service must be selected.",
-      "message": "Message cannot be empty.",
-      "message_short": "Message must be at least 10 characters."
-    },
     "services": {
       "data_science": "Data Science Bootcamp",
       "spss": "SPSS Modeler Bootcamp",
@@ -160,6 +154,27 @@
       "paid_project": "Paid project assistance",
       "free_project": "Free project assistance"
     }
+  },
+
+  "form": {
+    "title": "Application"
+  },
+
+  "toast": {
+    "success": "Successfully sent!",
+    "error": "An error occurred!"
+  },
+
+  "errors": {
+    "name": "Name cannot be empty.",
+    "surname": "Surname cannot be empty.",
+    "email": "Email cannot be empty.",
+    "email_invalid": "Please enter a valid email.",
+    "phone": "Phone number cannot be empty.",
+    "phone_invalid": "Phone number must be at least 10 digits.",
+    "service": "A service must be selected.",
+    "message": "Message cannot be empty.",
+    "message_short": "Message must be at least 10 characters."
   },
 
   "footer": {
