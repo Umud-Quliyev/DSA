@@ -15,16 +15,16 @@ const MainSection = () => {
       <section
         id="main"
         name="main"
-        className="h-[50vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
+        className=" h-[60vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
       >
-        <div className="text-[#fff] flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
+        <div className="text-[#fff]  flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
           <h1 className="font-[300] text-[5vw] md:text-[3.91vw]">
             {t("bootcamp_title")}
           </h1>
           <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.85vw]">
             {t("bootcamp_subtitle")}
           </h2>
-          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4">
+          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4 mb-2">
             <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw]">
               {t("bootcamp_name")}
             </span>
@@ -35,19 +35,19 @@ const MainSection = () => {
               {t("bootcamp_start_date")}
             </span>
           </div>
-          <span className="text-center text-[1.9vw] md:text-[1.18vw] md:w-60">
+          <span className="text-center text-[1.9vw] md:text-[1.18vw] w-[35%] sm:w-[40%]  md:w-[35%] lg:w-[35%] xl:w-60">
             {t("bootcamp_description")}
           </span>
-          <div className="flex gap-5 mx-auto pt-3">
+          <div className="flex  gap-5 mx-auto pt-3">
             <Link
               to={"/muraciet"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
+              className=" flex items-center justify-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
             >
               {t("apply_now")}
             </Link>
             <Link
               to={"/program"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
+              className=" flex items-center justify-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
             >
               {t("download_program")}
             </Link>
@@ -102,7 +102,7 @@ const MainSection = () => {
             </div>
           </div>
           <div className="flex items-center justify-center mt-15  md:w-full">
-            <button className=" text-[1.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
+            <button className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
               {t("apply_now")}
             </button>
           </div>
@@ -111,7 +111,7 @@ const MainSection = () => {
 
       <section className="my-20 second-main-section">
         <div className="flex flex-col items-center w-full mx-auto px-10 text-[#555555] md:5/6 md:px-20 md:flex-col">
-          <h2 className="text-[#212331] text-[4vw] font-[300] md:text-[2.61vw]">
+          <h2 className="text-[#212331] text-[5vw] font-[300] md:text-[2.61vw]">
             {t("program_advantages")}
           </h2>
           <div className="flex  gap-5 my-10 flex-wrap text-center main-div justify-between md:w-5/6">
