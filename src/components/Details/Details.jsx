@@ -16,14 +16,6 @@ const Details = () => {
 
   const BASE_URL = import.meta.env.VITE_API_URL;
 
-  /* const handleOpen = (index) => {
-    setOpenModals({ ...openModals, [index]: true });
-  };
-
-  const handleClose = (index) => {
-    setOpenModals({ ...openModals, [index]: false });
-  }; */
-
   useEffect(() => {
     const fetchTrainingDetails = async () => {
       try {
@@ -218,7 +210,7 @@ const Details = () => {
                       </div>
                       <div className="card__button">
                         <button
-                        onClick={()=> openModal(true)}
+                          onClick={() => openModal(true)}
                           style={{ backgroundColor: trainingInfo.bgcolor }}
                         >
                           Qeydiyyatdan keç

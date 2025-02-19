@@ -72,7 +72,7 @@ const Faq = () => {
 
         setFaqItems(faqData);
       } catch (error) {
-        console.error("Veri çekme hatası:", error);
+        console.error("Xeta:", error);
       }
     };
 

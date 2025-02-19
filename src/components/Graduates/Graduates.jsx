@@ -6,16 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 
-import mehemmed from "../../assets/img/mehemmed.jpg";
-import aksin from "../../assets/img/aksin.jpg";
-import namiq from "../../assets/img/namiq.jpg";
-import emil from "../../assets/img/emil.png";
-import leyla from "../../assets/img/leyla.jpg";
-import teymur from "../../assets/img/teymur.jpg";
-import sevda from "../../assets/img/sevda.jpg";
-import rauf from "../../assets/img/rauf.jpg";
-import terlan from "../../assets/img/terlan.jpg";
-
 import yapikredi from "../../assets/img/yapikredi.png";
 import atltech from "../../assets/img/atltech.png";
 import kapital from "../../assets/img/kapitalbank.png";

@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/svg/logoBlack.svg";
 import { FaLocationDot } from "react-icons/fa6";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaPhoneVolume,
   FaWhatsapp,
   FaYoutube,
