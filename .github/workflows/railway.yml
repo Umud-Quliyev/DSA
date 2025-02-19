@@ -27,7 +27,10 @@ jobs:
       - name: Build yarat
         run: npm run build
 
+      - name: Railway CLI Yükle
+        run: npm install -g @railway/cli
+
       - name: Railway-ə Deploy Et
-        run: npx railway up
+        run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
