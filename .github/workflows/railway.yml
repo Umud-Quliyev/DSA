@@ -31,6 +31,6 @@ jobs:
         run: npm run build
 
       - name: Railway-ə Deploy Et
-        run: npx railway up
+        run: npx railway up --service=DSA
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
