@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Railway CLI-ni quraşdır
-        run: npm install -g railway
+      - name: Railway CLI-ni quraşdır (Yenilənmiş Versiya)
+        run: npm install -g @railway/cli
 
       - name: Bağımlılıqları yüklə
         run: npm install
@@ -31,6 +31,6 @@ jobs:
         run: npm run build
 
       - name: Railway-ə Deploy Et
-        run: railway up
+        run: npx railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
