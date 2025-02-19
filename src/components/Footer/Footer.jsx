@@ -42,19 +42,6 @@ const Footer = () => {
     <div className="contanierr">
       <div className="footer__container">
         <div className="footer">
-          <div>
-            <img src={logo} alt="Logo" />
-          </div>
-          <div className="flex justify-between w-full">
-            <div className="subscribe w-full py-2">
-              <input
-                type="text"
-                placeholder={t("footer.subscribePlaceholder")}
-                className="w-full"
-              />
-              <button>{t("footer.subscribeButton")}</button>
-            </div>
-          </div>
           <div className="flex justify-between  w-full py-3 address">
             <div className="flex items-center gap-3 sub-address">
               <FaPhoneVolume className="text-[#28aaa8]" />
