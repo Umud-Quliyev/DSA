@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
-import { Skeleton } from "@mui/material";
+import { Box, Modal, Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Modals from "../Modal/Modals";
 import Cluster from "../Cluster/Cluster";
@@ -13,6 +13,8 @@ const Details = () => {
   const [loading, setLoading] = useState(true);
 
   const [openModals, setOpenModals] = useState(false);
+
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   /* const handleOpen = (index) => {
     setOpenModals({ ...openModals, [index]: true });
@@ -27,7 +29,7 @@ const Details = () => {
       try {
         setLoading(true);
 
-        const response = await fetch(`http://127.0.0.1:8000/scripts/11/`);
+        const response = await fetch(`${BASE_URL}/metinler/${id}/`);
 
         if (!response.ok) {
           throw new Error("Error fetching training details");
@@ -35,21 +37,6 @@ const Details = () => {
 
         const data = await response.json();
         setSelectedTraining(data);
-
-        const trainingsRes = await fetch("http://localhost:3000/trainings");
-        const trainingsData = await trainingsRes.json();
-
-        const sectionsRes = await fetch("http://localhost:3000/sections");
-        const sectionsData = await sectionsRes.json();
-
-        const mergedData = trainingsData.map((training) => ({
-          ...training,
-          sections: sectionsData.filter(
-            (sec) => Number(sec.trainingId) === Number(training.id)
-          ),
-        }));
-
-        setTrainings(mergedData);
       } catch (err) {
         console.error("Fetch Error:", err);
       } finally {
@@ -70,21 +57,18 @@ const Details = () => {
     },
     {
       language: "en",
-      title: selectedTraining?.headers?.en || "Training",
       date: "1st of February",
       time: "Planned",
       bgcolor: "#E21B5D",
     },
     {
       language: "de",
-      title: selectedTraining?.headers?.de || "Schulung",
       date: "1 Februar",
       time: "Wird noch festgelegt",
       bgcolor: "#FFB600",
     },
     {
       language: "ru",
-      title: selectedTraining?.headers?.ru || "Тренинг",
       date: "1 Февраля",
       time: "Будет определено",
       bgcolor: "#7D5EF5",
@@ -98,16 +82,13 @@ const Details = () => {
     ru: "Зарегистрироваться",
   };
 
-
-const openModal = ()=>{
-  setOpenModals(true)
-}
+  const openModal = () => {
+    setOpenModals(true);
+  };
 
   return (
     <div className="training__details pt-20">
-      {
-        openModals && <Modals setOpenModals={setOpenModals}/>
-      }
+      {openModals && <Modals setOpenModals={setOpenModals} />}
       <div className="contanierr">
         <div className="training__title">
           {loading ? (
@@ -131,7 +112,7 @@ const openModal = ()=>{
                 src={selectedTraining?.image}
                 alt={selectedTraining?.title}
               />
-              <h2>{selectedTraining.title}</h2>
+              <h2>{selectedTraining?.title}</h2>
             </>
           )}
         </div>
@@ -213,31 +194,39 @@ const openModal = ()=>{
                     </div>
                   </div>
                 ))
-              : selectedTraining.sessions.map((training, index) => (
-                  <div className="table__card" key={index}>
-                    <div
-                      style={{ backgroundColor: "#22C4CD" }}
-                      className="card__title"
-                    >
-                      <h3>{selectedTraining.title}</h3>
-                    </div>
-                    <div className="card__body">
-                      <div className="card__date">
-                        <FaCalendarAlt color="#22C4CD" />
-                        <span>{training.date}</span>
+              : selectedTraining?.sessiyalar?.map((session, index) => {
+                  const trainingInfo = trainingData[index];
+                  if (!trainingInfo) return null;
+
+                  return (
+                    <div className="table__card" key={index}>
+                      <div
+                        style={{ backgroundColor: trainingInfo.bgcolor }}
+                        className="card__title"
+                      >
+                        <h3>{selectedTraining.title}</h3>
                       </div>
-                      <div className="card__time">
-                        <FaRegClock color="#22C4CD" />
-                        <span>{training.hour}</span>
+                      <div className="card__body">
+                        <div className="card__date">
+                          <FaCalendarAlt color={trainingInfo.bgcolor} />
+                          <span>{session.date}</span>
+                        </div>
+                        <div className="card__time">
+                          <FaRegClock color={trainingInfo.bgcolor} />
+                          <span>{session.hour}</span>
+                        </div>
+                      </div>
+                      <div className="card__button">
+                        <button
+                        onClick={()=> openModal(true)}
+                          style={{ backgroundColor: trainingInfo.bgcolor }}
+                        >
+                          Qeydiyyatdan keç
+                        </button>
                       </div>
                     </div>
-                    <div className="card__button">
-                      <button style={{ backgroundColor: training.bgcolor }} onClick={openModal}>
-                        {registerTexts[training.language]}
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
           </div>
         </div>
       </div>
@@ -403,7 +392,7 @@ const openModal = ()=>{
                   <iframe
                     width="530"
                     height="374"
-                    src={`https://www.youtube.com/embed/${selectedTraining?.link}`}
+                    src={`https://www.youtube.com/embed/${selectedTraining?.nümayislər?.link}`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -427,7 +416,7 @@ const openModal = ()=>{
                   {loading ? (
                     <Skeleton variant="text" width="100%" height={20} />
                   ) : (
-                    <p>{selectedTraining?.broadcast.title}</p>
+                    <p>{selectedTraining?.nümayislər?.title}</p>
                   )}
                 </div>
                 <div>
@@ -435,7 +424,7 @@ const openModal = ()=>{
                   {loading ? (
                     <Skeleton variant="text" width="100%" height={20} />
                   ) : (
-                    <p>{selectedTraining?.broadcast.trainer}</p>
+                    <p>{selectedTraining?.nümayislər?.trainer}</p>
                   )}
                 </div>
                 <div>
@@ -447,7 +436,7 @@ const openModal = ()=>{
                       <Skeleton variant="text" width="80%" height={20} />
                     </>
                   ) : (
-                    <p>{selectedTraining?.broadcast.info}</p>
+                    <p>{selectedTraining?.nümayislər?.info}</p>
                   )}
                 </div>
               </div>
@@ -569,75 +558,58 @@ const openModal = ()=>{
             <h2>Sessiyalar</h2>
           </div>
           <div className="table__list">
-            {loading ? (
-              [...Array(4)].map((_, index) => (
-                <div className="table__card" key={index}>
-                  <div className="card__title">
-                    <Skeleton variant="text" width="100%" height={30} />
-                  </div>
-                  <div className="card__body">
-                    <div className="card__time">
-                      <Skeleton variant="circular" width={25} height={25} />
-                      <Skeleton variant="text" width={150} height={20} />
+            {loading
+              ? [...Array(4)].map((_, index) => (
+                  <div className="table__card" key={index}>
+                    <div className="card__title">
+                      <Skeleton variant="text" width="100%" height={30} />
                     </div>
-                    <div className="training__price">
-                      <Skeleton variant="text" width={120} height={30} />
+                    <div className="card__body">
+                      <div className="card__time">
+                        <Skeleton variant="circular" width={25} height={25} />
+                        <Skeleton variant="text" width={150} height={20} />
+                      </div>
+                      <div className="training__price">
+                        <Skeleton variant="text" width={120} height={30} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="card__button">
-                    <Skeleton variant="rectangular" width="100%" height={30} />
-                  </div>
-                </div>
-              ))
-            ) : trainingData.length > 0 ? (
-              trainingData.map((training, index) => (
-                <div className="table__card" key={index}>
-                  <div
-                    style={{ backgroundColor: training.bgcolor }}
-                    className="card__title"
-                  >
-                    <h3>{training.title}</h3>
-                  </div>
-                  <div className="card__body">
-                    <div className="card__time">
-                      <FaRegClock color={training.bgcolor} />
-                      <span>{training.time}</span>
-                    </div>
-                    <div className="training__price">
-                      <p>
-                        <span>300 AZN</span> 175 AZN
-                      </p>
+                    <div className="card__button">
+                      <Skeleton
+                        variant="rectangular"
+                        width="100%"
+                        height={30}
+                      />
                     </div>
                   </div>
-                  <div className="card__button">
-                    <button style={{ backgroundColor: training.bgcolor }}>
-                      {registerTexts[training.language]}
-                    </button>
+                ))
+              : trainingData.map((training, index) => (
+                  <div className="table__card" key={index}>
+                    <div
+                      style={{ backgroundColor: training.bgcolor }}
+                      className="card__title"
+                    >
+                      <h3>{training.title}</h3>
+                    </div>
+                    <div className="card__body">
+                      <div className="card__time">
+                        <FaRegClock color={training.bgcolor} />
+                        <span>{training.date}</span>
+                      </div>
+                      <div className="training__price">
+                        <p>
+                          <span>{selectedTraining?.money} AZN</span> 175 AZN
+                        </p>
+                      </div>
+                    </div>
+                    <div className="card__button">
+                      <button style={{ backgroundColor: training.bgcolor }}>
+                        {registerTexts[training.language]}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))
-            ) : (
-              <p>Seans tapılmadı.</p>
-            )}
+                ))}
           </div>
         </div>
-
-        {/* <Modal
-          open={false}
-          onClose={() => handleClose(index)}
-          disableEscapeKeyDown={false}
-        >
-          <Box className="modal-content">
-            <div className="teacher__info">
-              <div className="fullname">
-                <h4>salsalsa</h4>
-              </div>
-              <div className="desc">
-                <p>skjasd</p>
-              </div>
-            </div>
-          </Box>
-        </Modal> */}
       </div>
 
       <Cluster />

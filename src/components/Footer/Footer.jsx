@@ -8,12 +8,14 @@ import {
   FaLinkedin,
   FaPhoneVolume,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
 import { IoIosMail } from "react-icons/io";
 
 import "./Footer.css";
 import i18n from "../i18n";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -55,21 +57,21 @@ const Footer = () => {
           </div>
           <div className="flex justify-between  w-full py-3 address">
             <div className="flex items-center gap-3 sub-address">
-              <FaPhoneVolume className="text-[#28aaa8]"/>
+              <FaPhoneVolume className="text-[#28aaa8]" />
               <div>
                 <p className="font-bold">{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">
-              <IoIosMail className="text-[#28aaa8]"/>
+              <IoIosMail className="text-[#28aaa8]" />
               <div>
                 <p className="font-bold">{t("footer.contactEmail")}</p>
-                <p>example@gmail.com</p>
+                <p>info@dsa.az</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">
-              <FaLocationDot className="text-[#28aaa8]"/>
+              <FaLocationDot className="text-[#28aaa8]" />
               <div>
                 <p className="font-bold">{t("footer.contactAddress")}</p>
                 <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
@@ -95,16 +97,31 @@ const Footer = () => {
             </ul>
           </div>
           <div className="socials">
-            <FaFacebook />
-            <FaInstagram />
-            <FaLinkedin />
-            <FaWhatsapp />
+            <NavLink
+              to={
+                "https://www.facebook.com/groups/1433534440051100/?ref=share&mibextid=NSMWBT"
+              }
+            >
+              <FaFacebook />
+            </NavLink>
+            <NavLink
+              to={
+                "https://www.instagram.com/datascienceacademy_?igsh=MWQ3M2Y5M3VuYmU5cw=="
+              }
+            >
+              <FaInstagram />
+            </NavLink>
+            <NavLink
+              to={
+                "https://m.youtube.com/@dsaqssanalytics?fbclid=PAY2xjawIhJ4NleHRuA2FlbQIxMAABpq_1Srb7tuLShIwD-BTrOe9vayWU4gM0mnvbiLIDaMmX5pelx3XynJFofg_aem_SM8nv3tQ4WLd6ncgBdrlxg"
+              }
+            >
+              <FaYoutube />
+            </NavLink>
+            <NavLink to={"https://wa.me/994773414340"}>
+              <FaWhatsapp />
+            </NavLink>
           </div>
-          {/* <div className="copyright">
-            <p>
-              {new Date().getFullYear()} {t("footer.rightsReserved")}
-            </p>
-          </div> */}
         </div>
       </div>
     </div>
