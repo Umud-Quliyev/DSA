@@ -29,7 +29,6 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Eğer bir alan düzeltilirse hatayı temizle
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }

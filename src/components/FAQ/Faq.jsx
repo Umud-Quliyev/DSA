@@ -45,10 +45,12 @@ const Faq = () => {
   const [expanded, setExpanded] = useState(false);
   const [faqItems, setFaqItems] = useState([]);
 
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const faqRes = await fetch("http://localhost:3000/faq");
+        const faqRes = await fetch(`${BASE_URL}/faq`);
         const faqData = await faqRes.json();
 
         faqData.forEach((item) => {
@@ -70,7 +72,7 @@ const Faq = () => {
 
         setFaqItems(faqData);
       } catch (error) {
-        console.error("Veri çekme hatası:", error);
+        console.error("Xeta:", error);
       }
     };
 
@@ -101,14 +103,12 @@ const Faq = () => {
                   id={`panel${index}d-header`}
                 >
                   <Typography component="span">
-                    {i18n.language === "az"
-                      ? item.question_az
-                      : item.question_en}
+                    {i18n.language === "az" ? item.question : item.question_en}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
-                    {i18n.language === "az" ? item.answer_az : item.answer_en}
+                    {i18n.language === "az" ? item.answer : item.answer_en}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
