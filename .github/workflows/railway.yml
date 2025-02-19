@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Railway CLI-ni quraşdır
+        run: npm install -g railway
+
       - name: Bağımlılıqları yüklə
         run: npm install
 
