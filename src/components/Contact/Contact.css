@@ -97,3 +97,22 @@
   color: #fff;
   cursor: pointer;
 }
+
+.MuiInputLabel-root {
+  z-index: 1 !important;
+  background: white;
+  padding: 0 5px;
+}
+
+.MuiFormControl-root {
+  position: relative;
+}
+
+.MuiInputLabel-root {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: white;
+  padding: 0 5px;
+}
+
