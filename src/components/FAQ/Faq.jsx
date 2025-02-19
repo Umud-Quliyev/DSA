@@ -50,7 +50,7 @@ const Faq = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const faqRes = await fetch(`${BASE_URL}/faq`);
+        const faqRes = await fetch(`${BASE_URL}/faq/`);
         const faqData = await faqRes.json();
 
         faqData.forEach((item) => {
