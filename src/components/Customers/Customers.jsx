@@ -27,6 +27,7 @@ const Customers = () => {
     { src: bravo },
     { src: bakcell },
   ];
+
   return (
     <section id="customer" name="customer" className="contanierr">
       <div className="customers pt-15">
