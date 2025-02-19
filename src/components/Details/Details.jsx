@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
-import { Box, Modal, Skeleton } from "@mui/material";
+import { Box, Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Modals from "../Modal/Modals";
 import Cluster from "../Cluster/Cluster";
