@@ -24,7 +24,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  
   width: 100%;
   position: relative;
 }
@@ -43,6 +42,18 @@
   padding: 12px 20px;
   height: max-content;
 }
+
+/* .learning,
+.business {
+  display: none;
+  
+}
+.machine .business:hover .learning,
+.machine:hover .business {
+  display: block;
+} */
+
+
 
 .scrolled {
   position: fixed;
@@ -63,7 +74,6 @@
   padding: 5px 20px;
   border-radius: 20px;
 }
-
 
 .second-main-section .main-div .sub-main-div img {
   transition: all 0.5s ease;
@@ -115,7 +125,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.close{
+.close {
   position: absolute;
   top: 0;
   right: 0;
@@ -129,7 +139,7 @@
   color: #000000;
   animation-name: closesidebar;
   animation-duration: 1s;
-  animation-fill-mode: forwards
+  animation-fill-mode: forwards;
 }
 @keyframes sidebar {
   from {

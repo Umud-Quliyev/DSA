@@ -1,60 +1,54 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PracticTable = () => {
-  const navigate = useNavigate();
-  const [trainings, setTrainings] = useState([]);
-
+  const [data, setData] = useState(null);
   useEffect(() => {
-    const fetchData = async () => {
+    const getBootcampData = async () => {
       try {
-        const trainingsRes = await fetch("http://localhost:3000/trainings");
-        const trainingsData = await trainingsRes.json();
-
-        const sectionsRes = await fetch("http://localhost:3000/sections");
-        const sectionsData = await sectionsRes.json();
-
-        const mergedData = trainingsData.map((training) => ({
-          ...training,
-          sections: sectionsData.filter(
-            (sec) => Number(sec.trainingId) === Number(training.id)
-          ),
-        }));
-
-        setTrainings(mergedData);
+        const { data } = await axios.get(
+          "https://dsabackend-production-00f4.up.railway.app/api/bootcamps/"
+        );
+        setData(data);
       } catch (error) {
-        console.error("Veri çekme hatası:", error);
+        console.error("Error fetching data:", error);
       }
     };
 
-    fetchData();
+    getBootcampData();
   }, []);
-
-  const clickHandler = (section) => {
-    navigate(`/telim/${section.id}`);
-  };
-
+ 
   return (
-    <div className="practic__table absolute bottom-0 right-20 gap-1 flex-col md:flex-row md:top-10 md:right-0 w-max  bg-[#FFF]  px-4 py-5 flex md:gap-10 flex-wrap rounded-[5px] z-10">
-      {trainings.map((training) => (
-        <div key={training.id}>
-          <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">{training.name}</h1>
-          <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">{training.title}</p>
-          <div className="flex flex-col">
-            {training.sections.map((section) => (
-              <span
-                key={section.id}
-                onClick={() => clickHandler(section)}
-                className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1"
-              >
-                - {section.headers?.az}
-              </span>
-            ))}
+    <div className="practic__table   flex  flex-col gap-5 justify-center md:justify-between absolute top-14  right-11 sm:right-50 md:right-0  md:w-full  rounded-[5px] z-10   bg-[#FFF]">
+      {data?.map((dat) => (
+        <div key={dat.id} className="machine  flex  gap-5 md:gap-10">
+            <h1 className="text-[#2fa8a5] font-bold cursor-pointer text-nowrap text-[2vw] sm:text-[1vw] md:text-[1.1vw]">
+              {dat.name}
+            </h1>
+            <div className=" flex  flex-col  text-[#000000]">
+              {dat?.bootcamp_tipi.map((d) => (
+                <div key={d.id} className=" flex flex-col md:flex-row justify-between gap-1 md:gap-10  business">
+                  <h2 className="text-[#50264E] text-[2vw] sm:text-[1vw] md:text-[1.1vw] font-bold cursor-pointer">
+                    {d.name}
+                  </h2>
+                  <div className="">
+                  {d?.telimler.map((t) => (
+                    <div className="learning" key={t.id}>
+                      <Link to={`/telim/${t.id}`} className="text-nowrap text-[#50264E] text-[2vw] sm:text-[1vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] px-1 cursor-pointer ">
+                        {t.title}
+                      </Link>
+                    </div>
+                  ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
       ))}
     </div>
   );
 };
 
 export default PracticTable;
+/* sm:right-50 gap-1  md:flex-row md:top-15 md:left-150 mx-auto lg:w-max md:w-max   flex md:gap-10 flex-nowrap */

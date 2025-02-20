@@ -65,7 +65,7 @@ const Footer = () => {
               <IoIosMail className="text-[#28aaa8]"/>
               <div>
                 <p className="font-bold">{t("footer.contactEmail")}</p>
-                <p>example@gmail.com</p>
+                <p>info@dsa.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">

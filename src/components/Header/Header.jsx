@@ -213,9 +213,9 @@ const Header = () => {
             onClick={handleClick}
           >
             {t("nav.trainings")} <IoMdArrowDropdown />
-            {dropdown && <PracticTable />}
           </li>
         </ul>
+            {dropdown && <PracticTable />}
 
         <div className="hidden text-[20px] items-center gap-4  lg:flex">
           <FaFacebook className="cursor-pointer"/>
@@ -331,7 +331,6 @@ const Header = () => {
                 onClick={handleClick}
               >
                 {t("nav.trainings")} <IoMdArrowDropdown />
-                {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
@@ -348,6 +347,7 @@ const Header = () => {
                 </div>
               </div>
             </ul>
+                {dropdown && <PracticTable />}
           </div>
         ) : (
           <div className="close w-[35%] md:w-0">
@@ -453,7 +453,6 @@ const Header = () => {
                 onClick={handleClick}
               >
                 {t("nav.trainings")} <IoMdArrowDropdown />
-                {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
@@ -470,6 +469,7 @@ const Header = () => {
                 </div>
               </div>
             </ul>
+                {dropdown && <PracticTable />}
           </div>
         )}
       </div>
