@@ -11,6 +11,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
@@ -218,10 +219,30 @@ const Header = () => {
             {dropdown && <PracticTable />}
 
         <div className="hidden text-[20px] items-center gap-4  lg:flex">
-          <FaFacebook className="cursor-pointer"/>
-          <FaInstagram className="cursor-pointer"/>
-          <FaLinkedin className="cursor-pointer"/>
-          <FaWhatsapp className="cursor-pointer"/>
+          <NavLink
+            to={
+              "https://www.facebook.com/share/18dCBin8Y7/?mibextid=wwXIfr"
+            }
+          >
+            <FaFacebook />
+          </NavLink>
+          <NavLink
+            to={
+              "https://www.instagram.com/datascienceacademy_?igsh=MWQ3M2Y5M3VuYmU5cw=="
+            }
+          >
+            <FaInstagram />
+          </NavLink>
+          <NavLink
+            to={
+              "https://m.youtube.com/@dsaqssanalytics?fbclid=PAY2xjawIhJ4NleHRuA2FlbQIxMAABpq_1Srb7tuLShIwD-BTrOe9vayWU4gM0mnvbiLIDaMmX5pelx3XynJFofg_aem_SM8nv3tQ4WLd6ncgBdrlxg"
+            }
+          >
+            <FaYoutube />
+          </NavLink>
+          <NavLink to={"https://wa.me/994773414340"}>
+            <FaWhatsapp />
+          </NavLink>
         </div>
         <AiOutlineMenu
           className={`${open ? "hidden" : ""} block md:hidden`}

@@ -11,7 +11,6 @@ import azercell from "../../assets/img/azercell.png";
 import bravo from "../../assets/img/bravo.png";
 import bakcell from "../../assets/img/bakcell.png";
 import { Pagination } from "swiper/modules";
-import { Element } from "react-scroll";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
@@ -27,6 +26,7 @@ const Customers = () => {
     { src: bravo },
     { src: bakcell },
   ];
+
   return (
     <section id="customer" name="customer" className="contanierr">
       <div className="customers pt-15">

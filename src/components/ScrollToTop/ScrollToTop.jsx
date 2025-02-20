@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { FaAngleUp } from "react-icons/fa6";
 
 const ScrollToTop = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -54,13 +55,13 @@ const ScrollToTop = () => {
           <path
             d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
             fill="#fff"
-            stroke="#28aaa8"
+            stroke="#862359"
             strokeWidth="4"
             strokeDasharray={`${pathLength} ${pathLength}`}
             strokeDashoffset={scrollY}
           />
         </svg>
-        <span className="relative text-lg text-black">↑</span>
+        <span className="relative text-lg scrolltotop"><FaAngleUp /></span>
       </div>
     </>
   );

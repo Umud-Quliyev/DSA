@@ -24,6 +24,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
   width: 100%;
   position: relative;
 }
@@ -156,4 +157,8 @@
   to {
     transform: translateX(400px);
   }
+}
+
+.scrolltotop {
+  color: #862359;
 }

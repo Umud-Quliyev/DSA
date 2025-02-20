@@ -1,0 +1,36 @@
+name: Deploy to Railway
+
+on:
+  push:
+    branches:
+      - main # Main branch-ə push ediləndə işləsin
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Reposu klonla
+        uses: actions/checkout@v3
+
+      - name: Node.js quraşdır
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Railway CLI-ni quraşdır (Yenilənmiş Versiya)
+        run: npm install -g @railway/cli
+
+      - name: Bağımlılıqları yüklə
+        run: npm install
+
+      - name: Testləri işə sal (İstəyə bağlı)
+        run: npm test || echo "Testlər uğursuz oldu, davam edilir"
+
+      - name: Build yarat
+        run: npm run build
+
+      - name: Railway-ə Deploy Et
+        run: npx railway up --service=DSA
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}

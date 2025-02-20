@@ -1,51 +1,116 @@
-import axios from "axios";
+import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const PracticTable = () => {
-  const [data, setData] = useState(null);
+  const navigate = useNavigate();
+  const [trainings, setTrainings] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const getBootcampData = async () => {
       try {
-        const { data } = await axios.get(
-          "https://dsabackend-production-00f4.up.railway.app/api/bootcamps/"
-        );
-        setData(data);
+        const trainingsRes = await fetch(`${BASE_URL}/bootcamps/`);
+        let trainingsData = await trainingsRes.json();
+
+        trainingsData = trainingsData
+          .filter((training) => training.is_active)
+          .sort((a, b) => a.order - b.order);
+
+        trainingsData.forEach((training) => {
+          training.bootcamp_tipi = training.bootcamp_tipi
+            .filter((tip) => tip.is_active)
+            .sort((a, b) => a.order - b.order);
+
+          training.bootcamp_tipi.forEach((tip) => {
+            tip.telimler = tip.telimler
+              .filter((telim) => telim.is_active)
+              .sort((a, b) => a.order - b.order);
+          });
+        });
+
+        setTrainings(trainingsData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Xeta:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     getBootcampData();
   }, []);
- 
+
+  const clickHandler = (telim) => {
+    navigate(`/telim/${telim.id}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div className="practic__table   flex  flex-col gap-5 justify-center md:justify-between absolute top-14  right-11 sm:right-50 md:right-0  md:w-full  rounded-[5px] z-10   bg-[#FFF]">
-      {data?.map((dat) => (
-        <div key={dat.id} className="machine  flex  gap-5 md:gap-10">
-            <h1 className="text-[#2fa8a5] font-bold cursor-pointer text-nowrap text-[2vw] sm:text-[1vw] md:text-[1.1vw]">
-              {dat.name}
-            </h1>
-            <div className=" flex  flex-col  text-[#000000]">
-              {dat?.bootcamp_tipi.map((d) => (
-                <div key={d.id} className=" flex flex-col md:flex-row justify-between gap-1 md:gap-10  business">
-                  <h2 className="text-[#50264E] text-[2vw] sm:text-[1vw] md:text-[1.1vw] font-bold cursor-pointer">
-                    {d.name}
-                  </h2>
-                  <div className="">
-                  {d?.telimler.map((t) => (
-                    <div className="learning" key={t.id}>
-                      <Link to={`/telim/${t.id}`} className="text-nowrap text-[#50264E] text-[2vw] sm:text-[1vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] px-1 cursor-pointer ">
-                        {t.title}
-                      </Link>
-                    </div>
-                  ))}
+    <div className="practic__table absolute bottom-0 right-20 gap-1 flex-col md:flex-row md:top-10 md:right-0 w-max bg-[#FFF] px-4 py-5 flex md:gap-10 flex-wrap rounded-[5px] z-10">
+      {loading
+        ? [...Array(3)].map((_, index) => (
+            <div key={index} className="w-[300px]">
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="80%"
+                height={24}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="70%"
+                height={20}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="90%"
+                height={20}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="60%"
+                height={20}
+              />
+            </div>
+          ))
+        : trainings.map((training) => (
+            <div key={training.id}>
+              <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">
+                {training.name}
+              </h1>
+
+              {training.bootcamp_tipi.map((info) => (
+                <div key={info.id}>
+                  <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
+                    {info.name}
+                  </p>
+
+                  <div className="flex flex-col">
+                    {info.telimler.length > 0 ? (
+                      info.telimler.map((telim) => (
+                        <span
+                          key={telim.id}
+                          onClick={() => clickHandler(telim)}
+                          className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
+                        >
+                          - {telim.title}
+                        </span>
+                      ))
+                    ) : (
+                      <p className="text-gray-500 text-sm">
+                        Bu bootcampdə təlim mövcud deyil.
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-      ))}
+          ))}
     </div>
   );
 };

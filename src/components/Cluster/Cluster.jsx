@@ -11,25 +11,15 @@ const Cluster = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchTrainingDetails = async () => {
       try {
         setLoading(true);
-
-        const trainingsRes = await fetch("http://localhost:3000/trainings");
+        const trainingsRes = await fetch(`${BASE_URL}/bootcamps/`);
         const trainingsData = await trainingsRes.json();
-
-        const sectionsRes = await fetch("http://localhost:3000/sections");
-        const sectionsData = await sectionsRes.json();
-
-        const mergedData = trainingsData.map((training) => ({
-          ...training,
-          sections: sectionsData.filter(
-            (sec) => Number(sec.trainingId) === Number(training.id)
-          ),
-        }));
-
-        setTrainings(mergedData);
+        setTrainings(trainingsData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -40,30 +30,31 @@ const Cluster = () => {
     fetchTrainingDetails();
   }, [id]);
 
-  const clickHandler = (section) => {
+  const clickHandler = (telim) => {
     setSelectedSections((prevSelected) => {
-      const isSelected = prevSelected.find((s) => s.id === section.id);
+      const isSelected = prevSelected.find((s) => s.id === telim.id);
       let updatedSelection;
-
+  
       if (isSelected) {
-        // Eğer zaten seçiliyse kaldır
-        updatedSelection = prevSelected.filter((s) => s.id !== section.id);
+        updatedSelection = prevSelected.filter((s) => s.id !== telim.id);
       } else {
-        // Yeni seçim ekle
-        updatedSelection = [...prevSelected, section];
+        updatedSelection = [
+          ...prevSelected,
+          { ...telim, price: telim.money ?? 0 }, 
+        ];
       }
-
+  
       updateTotalPrice(updatedSelection);
       return updatedSelection;
     });
   };
+  
 
   const updateTotalPrice = (selected) => {
     const total = selected.reduce(
       (sum, section) => sum + (section.price || 0),
       0
     );
-
     const discountRate = getDiscountRate(selected.length);
     const discounted = total - total * discountRate;
 
@@ -72,10 +63,10 @@ const Cluster = () => {
   };
 
   const getDiscountRate = (count) => {
-    if (count === 1) return 0; // 1 seçimde indirim yok
-    if (count === 2) return 0.1; // %10 indirim
-    if (count === 3) return 0.15; // %15 indirim
-    if (count >= 4) return 0.2; // %20 indirim
+    if (count === 1) return 0;
+    if (count === 2) return 0.1;
+    if (count === 3) return 0.15;
+    if (count >= 4) return 0.2;
     return 0;
   };
 
@@ -101,21 +92,32 @@ const Cluster = () => {
                   <p className="text-[#50264E] font-bold">{training.title}</p>
                 </div>
                 <div className="flex flex-col">
-                  {training.sections.map((section) => (
-                    <span
-                      key={section.id}
-                      onClick={() => clickHandler(section)}
-                      className="training__chk text-[#50264E] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 flex item-center gap-1 cursor-pointer"
-                    >
-                      <Checkbox
-                        {...label}
-                        checked={selectedSections.some(
-                          (s) => s.id === section.id
-                        )}
-                        onChange={() => clickHandler(section)}
-                      />
-                      {section.headers?.az}
-                    </span>
+                  {training.bootcamp_tipi.map((section) => (
+                    <div key={section.id} className="training__section">
+                      <h5 className="text-[#50264E] font-bold">
+                        {section.name}
+                      </h5>
+
+                      <div className="flex flex-col pt-2 pb-2">
+                        {section.telimler.map((telim) => (
+                          <div
+                            key={telim.id}
+                            className="flex gap-2 items-center pt-2 pb-2"
+                          >
+                            <Checkbox
+                              {...label}
+                              checked={selectedSections.some(
+                                (s) => s.id === telim.id
+                              )}
+                              onChange={() => clickHandler(telim)}
+                            />
+                            <span className="text-[#50264E]">
+                              {telim.title}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -123,9 +125,9 @@ const Cluster = () => {
           </div>
           <div className="training__price text-xl font-bold">
             <p>
-              <span>
-                {selectedSections.length > 1 && <p> {totalPrice.toFixed(2)}</p>}
-              </span>
+              {selectedSections.length > 1 && (
+                <span>{totalPrice.toFixed(2)}</span>
+              )}
               {discountedPrice.toFixed(2)} AZN
             </p>
           </div>

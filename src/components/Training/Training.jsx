@@ -1,9 +1,15 @@
 import { t } from "i18next";
 import "./Training.css";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 const Training = () => {
   const { t } = useTranslation();
+
+  const clickHandle = (e) => {
+    e.preventDefault();
+    window.open(program, "_blank");
+  };
 
   return (
     <>
@@ -12,7 +18,7 @@ const Training = () => {
           <div className="training_program_info">
             <h2>{t("training_program")}</h2>
             <p>{t("training_info")}</p>
-            <button>{t("training_download")}</button>
+            <NavLink to="/program">{t("training_download")}</NavLink>
           </div>
         </div>
         <div className="training__program">
