@@ -44,6 +44,7 @@ const PracticTable = () => {
 
   const clickHandler = (telim) => {
     navigate(`/telim/${telim.id}`);
+    window.scrollTo(0, 0);
   };
 
   return (

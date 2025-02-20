@@ -94,6 +94,8 @@
   color: #28aaa8;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .footer__bottom {
     /*   flex-direction: column; */

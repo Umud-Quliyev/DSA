@@ -46,6 +46,7 @@ const Footer = () => {
               <div>
                 <p className="font-bold">{t("footer.contactPhone")}</p>
                 <p>077 341 43 40</p>
+                <p>051 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">
