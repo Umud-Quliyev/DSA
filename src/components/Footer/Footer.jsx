@@ -85,7 +85,7 @@ const Footer = () => {
           <div className="socials">
             <NavLink
               to={
-                "https://www.facebook.com/groups/1433534440051100/?ref=share&mibextid=NSMWBT"
+                "https://www.facebook.com/share/18dCBin8Y7/?mibextid=wwXIfr"
               }
             >
               <FaFacebook />
