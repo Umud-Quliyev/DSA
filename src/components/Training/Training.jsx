@@ -1,4 +1,3 @@
-import { t } from "i18next";
 import "./Training.css";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -6,10 +5,10 @@ import { NavLink } from "react-router-dom";
 const Training = () => {
   const { t } = useTranslation();
 
-  const clickHandle = (e) => {
+/*   const clickHandle = (e) => {
     e.preventDefault();
     window.open(program, "_blank");
-  };
+  }; */
 
   return (
     <>

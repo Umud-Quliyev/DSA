@@ -31,9 +31,9 @@
   border-radius: 30px;
   overflow: hidden;
   font-weight: 300;
-  font-size: 20px;
   color: #fff;
   max-width: 420px;
+  text-wrap: nowrap;
   width: 100%;
   margin: 0 auto;
 }
@@ -157,3 +157,4 @@
     display: block;
   }
 }
+

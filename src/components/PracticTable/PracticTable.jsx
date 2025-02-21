@@ -48,7 +48,7 @@ const PracticTable = () => {
   };
 
   return (
-    <div className="practic__table absolute bottom-0 right-20 gap-1 flex-col md:flex-row md:top-10 md:right-0 w-max bg-[#FFF] px-4 py-5 flex md:gap-10 flex-wrap rounded-[5px] z-10">
+    <div className="practic__table absolute top-18 right-20 gap-1 flex-col md:flex-row md:top-15 md:right-50 w-max bg-[#FFF] px-4 py-5 flex md:gap-10 flex-wrap rounded-[5px] z-10">
       {loading
         ? [...Array(3)].map((_, index) => (
             <div key={index} className="w-[300px]">
