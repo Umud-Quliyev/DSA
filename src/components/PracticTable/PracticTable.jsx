@@ -43,8 +43,10 @@ const PracticTable = () => {
   }, []);
 
   const clickHandler = (telim) => {
-    navigate(`/telim/${telim.id}`);
-    window.scrollTo(0, 0);
+    if (telim.metinler_ids.length > 0) {
+      navigate(`/telim/${telim.metinler_ids[0]}`);
+      window.scrollTo(0, 0);
+    }
   };
 
   return (
@@ -83,20 +85,22 @@ const PracticTable = () => {
               <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">
                 {training.name}
               </h1>
-
               {training.bootcamp_tipi.map((info) => (
                 <div key={info.id}>
                   <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
                     {info.name}
                   </p>
-
                   <div className="flex flex-col">
                     {info.telimler.length > 0 ? (
                       info.telimler.map((telim) => (
                         <span
                           key={telim.id}
                           onClick={() => clickHandler(telim)}
-                          className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
+                          className={`text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer ${
+                            telim.metinler_ids.length === 0
+                              ? "pointer-events-none text-gray-400"
+                              : ""
+                          }`}
                         >
                           - {telim.title}
                         </span>

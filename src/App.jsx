@@ -9,16 +9,13 @@ import ProgramPage from "./ProgramPage/ProgramPage";
 import { useEffect } from "react";
 
 function App() {
-  
-  
-  
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/muraciet" element={<RequestPage/>}/>
-          <Route path="/program" element={<ProgramPage/>}/>
+          <Route path="/muraciet" element={<RequestPage />} />
+          <Route path="/program" element={<ProgramPage />} />
           <Route path="/telim/:id" element={<Details />} />
         </Route>
       </Routes>
