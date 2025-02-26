@@ -15,39 +15,39 @@ const MainSection = () => {
       <section
         id="main"
         name="main"
-        className="h-[50vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
+        className=" h-[65vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
       >
-        <div className="text-[#fff] flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
-          <h1 className="font-[300] text-[5vw] md:text-[3.91vw]">
+        <div className="text-[#fff]  flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
+          <h1 className="font-[700] text-[5vw] md:text-[3.4vw]">
             {t("bootcamp_title")}
           </h1>
-          <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.85vw]">
+          <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.5vw]">
             {t("bootcamp_subtitle")}
           </h2>
-          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4">
-            <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw]">
+          <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4 mb-2">
+            <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw] font-[500]">
               {t("bootcamp_name")}
             </span>
-            <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw] uppercase">
+            <h3 className="text-[#ffca05] text-[4vw] font-bold md:text-[2.54vw] uppercase">
               {t("bootcamp")}
             </h3>
             <span className="text-[2.5vw] font-bold md:text-[2vw]">
               {t("bootcamp_start_date")}
             </span>
           </div>
-          <span className="text-center text-[1.9vw] md:text-[1.18vw] md:w-60">
+          <span className="text-center text-[1.9vw] md:text-[1.18vw] w-[35%] sm:w-[40%]  md:w-[35%] lg:w-[35%] xl:w-60">
             {t("bootcamp_description")}
           </span>
-          <div className="flex gap-5 mx-auto pt-3">
+          <div className="flex  gap-5 mx-auto pt-3">
             <Link
               to={"/muraciet"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
+              className=" flex  justify-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3  px-7 hover:bg-transparent cursor-pointer md:text-[1vw] "
             >
               {t("apply_now")}
             </Link>
             <Link
               to={"/program"}
-              className="text-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3 px-10 w-full hover:bg-transparent cursor-pointer md:text-[1vw] md:w-2/4"
+              className=" flex  justify-center text-nowrap bg-[#2baaaa] rounded-[20px] text-[2vw] py-3  px-5 hover:bg-transparent cursor-pointer md:text-[1vw]"
             >
               {t("download_program")}
             </Link>
@@ -102,16 +102,16 @@ const MainSection = () => {
             </div>
           </div>
           <div className="flex items-center justify-center mt-15  md:w-full">
-            <button className=" text-[1.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
+            <Link to={"/muraciet"} className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
               {t("apply_now")}
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="my-20 second-main-section">
         <div className="flex flex-col items-center w-full mx-auto px-10 text-[#555555] md:5/6 md:px-20 md:flex-col">
-          <h2 className="text-[#212331] text-[4vw] font-[300] md:text-[2.61vw]">
+          <h2 className="text-[#212331] text-[5vw] font-[300] md:text-[2.61vw]">
             {t("program_advantages")}
           </h2>
           <div className="flex  gap-5 my-10 flex-wrap text-center main-div justify-between md:w-5/6">
@@ -119,12 +119,12 @@ const MainSection = () => {
               <img
                 src={edu}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full"
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("data_science_bootcamp")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw]">
+              <p className="text-[2vw] md:text-[1vw]">
                 {t("data_science_bootcamp_desc")}
               </p>
             </div>
@@ -132,12 +132,12 @@ const MainSection = () => {
               <img
                 src={practic}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full "
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("training_program")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw] ">
+              <p className="text-[2vw] md:text-[.92vw] ">
                 {t("training_program_desc")}
               </p>
             </div>
@@ -145,12 +145,12 @@ const MainSection = () => {
               <img
                 src={mentor}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full"
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("mentor_selection")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw]">
+              <p className="text-[2vw] md:text-[1vw]">
                 {t("mentor_selection_desc")}
               </p>
             </div>
@@ -158,12 +158,12 @@ const MainSection = () => {
               <img
                 src={project}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full"
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("projects")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw]">
+              <p className="text-[2vw] md:text-[1vw]">
                 {t("projects_desc")}
               </p>
             </div>
@@ -171,12 +171,12 @@ const MainSection = () => {
               <img
                 src={career}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full"
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("career_support")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw]">
+              <p className="text-[2vw] md:text-[1vw]">
                 {t("career_support_desc")}
               </p>
             </div>
@@ -184,12 +184,12 @@ const MainSection = () => {
               <img
                 src={community}
                 alt=""
-                className="w-[100px] bg-[#28AAA8] rounded-full"
+                className="w-[80px] bg-[#28AAA8] rounded-full md:[100px]"
               />
               <h4 className="text-[2.5vw] font-bold md:text-[1.18vw]">
                 {t("community")}
               </h4>
-              <p className="text-[1.5vw] md:text-[.92vw]">
+              <p className="text-[2vw] md:text-[1vw]">
                 {t("community_desc")}
               </p>
             </div>

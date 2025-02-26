@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { t } from "i18next";
+import  { useEffect, useState } from "react";
 import "./Teachers.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";

@@ -40,9 +40,21 @@
 
 .practic__table {
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 12px 20px;
+  padding: 12px 10px;
   height: max-content;
 }
+
+/* .learning,
+.business {
+  display: none;
+  
+}
+.machine .business:hover .learning,
+.machine:hover .business {
+  display: block;
+} */
+
+
 
 .scrolled {
   position: fixed;
