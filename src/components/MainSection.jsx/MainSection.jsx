@@ -18,17 +18,17 @@ const MainSection = () => {
         className=" h-[65vh] sm:h-[50vh]  md:h-[50vh] lg:h-[80vh] xl:h-[100vh]"
       >
         <div className="text-[#fff]  flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
-          <h1 className="font-[300] text-[5vw] md:text-[3.91vw]">
+          <h1 className="font-[700] text-[5vw] md:text-[3.4vw]">
             {t("bootcamp_title")}
           </h1>
-          <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.85vw]">
+          <h2 className="text-nowrap text-[6vw] font-bold md:text-[3.5vw]">
             {t("bootcamp_subtitle")}
           </h2>
           <div className="bg-[#310d31] rounded-[10px] flex flex-col items-center p-4 mb-2">
-            <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw]">
+            <span className="text-[#ffca05] text-[2vw] md:text-[1.31vw] font-[500]">
               {t("bootcamp_name")}
             </span>
-            <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw] uppercase">
+            <h3 className="text-[#ffca05] text-[4vw] font-bold md:text-[2.54vw] uppercase">
               {t("bootcamp")}
             </h3>
             <span className="text-[2.5vw] font-bold md:text-[2vw]">

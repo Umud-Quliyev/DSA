@@ -1,7 +1,13 @@
-.training__title img {
-  max-width: 112px;
+/* .contanierr {
+  max-width: 1110px;
   width: 100%;
-  height: 112px;
+  margin: 0 auto;
+  padding: 0 15px;
+} */
+
+.training__title img {
+  /* width: 112px; */
+  /* height: 112px; */
   border-radius: 50%;
   border: 2px solid #ffcc00;
 }
@@ -13,12 +19,12 @@
   gap: 20px;
 }
 
-.training__title h2 {
+/* .training__title h2 {
   font-size: 40px;
   line-height: 59px;
   font-weight: 300;
   margin-left: 20px;
-}
+} */
 
 .training__desc {
   padding: 32px 0;
@@ -33,14 +39,14 @@
   display: flex;
   align-items: center;
   color: #fff;
-  font-style: 18px;
+  /* font-style: 18px; */
   background-color: #33cccc;
   height: 74px;
 }
 
-.training__workplace p {
+/* .training__workplace p {
   font-size: 18px;
-}
+} */
 
 .training__table {
   padding: 32px 0 48px 0;
@@ -158,7 +164,7 @@
 
 .training__company button {
   cursor: pointer;
-  padding: 7px 30px;
+  /* padding: 7px 30px; */
   border-radius: 7px;
   text-align: center;
   background-color: #33cccc;
@@ -172,11 +178,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 48px 0px;
+  /* padding: 48px 0px; */
 }
 
 .info__title h2 {
-  font-size: 40px;
+/*   font-size: 40px; */
   line-height: 59px;
   font-weight: 400;
 }
@@ -194,7 +200,7 @@
 }
 
 .info__certificate h2 {
-  font-size: 40px;
+ /*  font-size: 40px; */
   line-height: 59px;
   font-weight: 400;
   padding-bottom: 16px;

@@ -81,8 +81,8 @@ const Details = () => {
   return (
     <div className="training__details pt-20">
       {openModals && <Modals setOpenModals={setOpenModals} />}
-      <div className="contanierr">
-        <div className="training__title">
+      <div className="  w-full md:w-4/5 md:px-20  sm:px-10 px-5  mx-auto  ">
+        <div className="training__title  w-auto">
           {loading ? (
             <>
               <Skeleton
@@ -99,13 +99,16 @@ const Details = () => {
               />
             </>
           ) : (
-            <>
+            <div className="flex gap-2 items-center">
               <img
                 src={selectedTraining?.image}
                 alt={selectedTraining?.title}
+                className="w-20 h-auto"
               />
-              <h2>{selectedTraining?.title}</h2>
-            </>
+              <h2 className="text-[5vw] sm:text-[4vw] md:text-[2.6vw] ">
+                {selectedTraining?.title}
+              </h2>
+            </div>
           )}
         </div>
         <div className="training__desc">
@@ -117,15 +120,19 @@ const Details = () => {
                 <Skeleton animation="wave" />
               </>
             ) : (
-              selectedTraining?.description
+              <div className="text-[14px] md:text-[20px] ">
+                {selectedTraining?.description}
+              </div>
             )}
           </Typography>
         </div>
       </div>
 
       <div className="training__workplace">
-        <div className="contanierr">
-          <p>Təlimlər oflayn (ofisdaxili) və onlayn formada keçirilir.</p>
+        <div /* className="contanierr" */ className="w-full">
+          <p className="px-5 sm:px-10 text-[3.2vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.5vw] md:w-4/5 mx-auto md:px-20">
+            Təlimlər oflayn (ofisdaxili) və onlayn formada keçirilir.
+          </p>
         </div>
       </div>
 
@@ -224,18 +231,22 @@ const Details = () => {
       </div>
 
       <div className="training__company">
-        <div className="contanierr">
-          <span>
+        <div
+          /* className="contanierr" */ className="flex items-center justify-between w-full md:w-4/5 px-5 sm:px-10 md:px-20 mx-auto"
+        >
+          <span className="">
             Klaster kampanyasına qeydiyyatdan keçərək daha çox qənaət edin!
           </span>
-          <button>KLASTER KAMPANİYASI</button>
+          <button className="sm:py-4 md:px-5 md:py-4 md:px-5">
+            KLASTER KAMPANİYASI
+          </button>
         </div>
       </div>
 
-      <div className="contanierr">
-        <div className="training__info">
+      <div /* className="contanierr" */ className="my-5 ">
+        <div className="training__info   w-full md:w-4/5 px-5 sm:px-10 md:px-20 mx-auto">
           <div className="info__title">
-            <h2>Təlim haqqında məlumat</h2>
+            <h2 className="text-[6vw] md:text-[3vw]">Təlim haqqında məlumat</h2>
           </div>
           <div className="info__desc">
             {loading ? (
@@ -281,10 +292,12 @@ const Details = () => {
               <p>{selectedTraining?.information}</p>
             )}
           </div>
-          <div className="certificate__container">
-            <div className="info__certificate">
-              <div className="info__title">
-                <h2>Bu təlim kimlər üçündür?</h2>
+          <div className="certificate__container w-full">
+            <div className="info__certificate w-full">
+              <div className="info__title w-full">
+                <h2 className="text-[7vw] sm:text-[5vw] md:text-[3vw] text-nowrap">
+                  Bu təlim kimlər üçündür?
+                </h2>
                 {loading ? (
                   <>
                     <Skeleton
@@ -373,33 +386,38 @@ const Details = () => {
       </div>
 
       <div className="training__demo">
-        <div className="contanierr">
-          <div className="training__lessons">
+        <div
+          /* className="contanierr" */ className="w-full md:w-4/5 px-5 sm:px-10 md:px-20 mx-auto"
+        >
+          <div
+            /* className="training__lessons" */ className="flex flex-col lg:flex-row lg:gap-5 "
+          >
             <div>
-              <span>Nümayiş dərsi</span>
-              <div className="training__video">
+              <span className="text-[26px] font-bold">Nümayiş dərsi</span>
+              <div className="training__video mt-3">
                 {loading ? (
                   <Skeleton variant="rectangular" width={530} height={374} />
                 ) : (
-                  <iframe
-                    width="530"
-                    height="374"
-                    src={`https://www.youtube.com/embed/${selectedTraining?.nümayislər?.link}`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
+                  <div className=" h-[60vw] sm:h-[300px] lg:w-[500px] xl:w-[530px] md:w-full md:h-[374px] ">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${selectedTraining?.nümayislər?.link}`}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 )}
               </div>
             </div>
-            <div className="lessons__info">
+            <div className="lessons__info ">
               <div className="info__title">
                 {loading ? (
                   <Skeleton variant="text" width="100%" height={30} />
                 ) : (
-                  <h2>{selectedTraining?.title}</h2>
+                  <h2 className=" text-[18px] sm:text-[20px] md:text-[30px]">{selectedTraining?.title}</h2>
                 )}
               </div>
               <div className="demo__info">
@@ -502,7 +520,7 @@ const Details = () => {
 
       <div className="testimonials"></div>
 
-      <div className="trainers">
+       <div className="trainers">
         <div className="contanierr">
           <div className="trainers__title">
             <h2>Təlimçilər</h2>

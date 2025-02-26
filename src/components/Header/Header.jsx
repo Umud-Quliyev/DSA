@@ -109,16 +109,16 @@ const Header = () => {
         } `}
       >
         {isLocation ? (
-          <div className=" w-30 md:w-40 cursor-pointer">
+          <div className=" w-30 md:w-50 cursor-pointer">
             <img src={color ? logoBlack : logo} alt="logo" />
           </div>
         ) : (
-          <NavLink to={"/"} className="w-40 cursor-pointer">
+          <NavLink to={"/"} className="w-50 cursor-pointer">
             <img src={color ? logoBlack : logo} alt="logo" />
           </NavLink>
         )}
 
-        <ul className="w-full text-nowrap hidden  items-center  md:flex md:justify-evenly">
+        <ul className="w-full text-nowrap hidden  items-center  md:flex md:justify-evenly ">
           {isLocation ? (
             <>
               <Link to="main" smooth={true} duration={1500}>

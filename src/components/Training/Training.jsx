@@ -23,7 +23,7 @@ const Training = () => {
         <div className="training__program">
           <div className="contanierr">
             <div className="program__title">
-              <h2>{t("training_process_title")}</h2>
+              <h2 >{t("training_process_title")}</h2>
             </div>
             <div className="training__process">
               <div className="process">
@@ -34,7 +34,7 @@ const Training = () => {
                   <p>{t("training_step_1")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>{t("training_step_1_desc")}</p>
+                  <p >{t("training_step_1_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -45,7 +45,7 @@ const Training = () => {
                   <p>{t("training_step_2")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>{t("training_step_2_desc")}</p>
+                  <p >{t("training_step_2_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -56,7 +56,7 @@ const Training = () => {
                   <p>{t("training_step_3")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>{t("training_step_3_desc")}</p>
+                  <p >{t("training_step_3_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -67,7 +67,7 @@ const Training = () => {
                   <p>{t("training_step_4")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>{t("training_step_4_desc")}</p>
+                  <p >{t("training_step_4_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -78,7 +78,7 @@ const Training = () => {
                   <p>{t("training_step_5")}</p>
                 </div>
                 <div className="process__desc">
-                  <p>{t("training_step_5_desc")}</p>
+                  <p >{t("training_step_5_desc")}</p>
                 </div>
               </div>
             </div>
