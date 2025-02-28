@@ -293,7 +293,7 @@ const Details = () => {
             )}
           </div>
           <div className="certificate__container w-full">
-            <div className="info__certificate w-full">
+            <div className="info__certificate ">
               <div className="info__title w-full">
                 <h2 className="text-[7vw] sm:text-[5vw] md:text-[3vw] text-nowrap">
                   Bu təlim kimlər üçündür?
@@ -369,7 +369,7 @@ const Details = () => {
                 )}
               </div>
             </div>
-            <div className="certificate__img">
+            <div className="certificate__img ">
               {loading ? (
                 <Skeleton
                   animation="wave"

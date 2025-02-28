@@ -154,12 +154,13 @@ const Contact = () => {
           </div>
           <div className="form__select">
             <FormControl fullWidth error={!!errors.service}>
-              <InputLabel>{t("contact.service")}</InputLabel>
               <Select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
+                displayEmpty
               >
+                <MenuItem value="">{t("contact.service")}</MenuItem>
                 <MenuItem value="Data Science Bootcamp">
                   {t("contact.services.data_science")}
                 </MenuItem>
