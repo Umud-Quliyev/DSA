@@ -34,6 +34,7 @@
 .graduate__info h5 {
   font-size: 14px;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 
 .graduate__info h5 span {
@@ -75,5 +76,4 @@
   .workplace__title h2 {
     font-size: 25px;
   }
- 
 }
