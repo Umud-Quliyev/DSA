@@ -60,11 +60,11 @@ const MainSection = () => {
             DSA {t("bootcamp_type")}
           </h2>
           <div className="flex flex-wrap gap-5 md:gap-0 md:justify-between  h-auto  ">
-            <div className="flex flex-col gap-3 w-full  text-[#555555] md:w-4/5  lg:leading-[30px] ">
+            <div className="flex flex-col gap-3 w-full text-[#555555] md:w-4/5  lg:leading-[30px] ">
               <h2 className="font-bold text-[3vw] md:text-[1.2vw]">
                 {t("overview")}
               </h2>
-              <span className="text-[3vw] sm:text-[2.1vw] md:text-[1.1vw] pr-10 tracking-wide">
+              <span className=" text-[3vw] sm:text-[2.1vw] md:text-[1.1vw] pr-10 tracking-wide">
                 {t("overview_text")}
               </span>
               <span className="text-[3vw] sm:text-[2.1vw] md:text-[1.1vw] pr-10 tracking-wide">

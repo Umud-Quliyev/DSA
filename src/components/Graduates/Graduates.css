@@ -68,3 +68,12 @@
   max-width: 270px;
   width: 100%;
 }
+
+@media screen and (max-width: 768px ){
+  
+  .graduates__title h2,
+  .workplace__title h2 {
+    font-size: 25px;
+  }
+ 
+}
