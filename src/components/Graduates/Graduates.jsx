@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
@@ -43,8 +43,7 @@ const Graduates = () => {
         setGraduate(data);
       } catch (err) {
         console.error("Fetch Error:", err);
-      } finally {
-      }
+      } 
     };
 
     fetchGraduates();
@@ -76,14 +75,34 @@ const Graduates = () => {
         </div>
         <div className="graduates__list">
           <Swiper
+          
             breakpoints={{
-              967: { slidesPerView: 5 },
-              768: { slidesPerView: 4 },
-              520: { slidesPerView: 3 },
-              320: { slidesPerView: 2 },
+              320: {
+                slidesPerView: 1, 
+                slidesPerGroup: 1, 
+                spaceBetween:20,
+              },
+              480: {
+                slidesPerView: 3, 
+                slidesPerGroup: 3, 
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 4, 
+                slidesPerGroup: 4,
+                spaceBetween: 50, 
+              },
+              1024: {
+                slidesPerView: 5, 
+                slidesPerGroup: 5, 
+                spaceBetween:70,
+              },
             }}
-            spaceBetween={78}
-            pagination={{ clickable: true }}
+            
+            
+            pagination={{ clickable: true}}
+            loop={true}
+            speed={2500}
             modules={[Pagination]}
           >
             {graduate.map((graduate, index) => (

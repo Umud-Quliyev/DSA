@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
-import { Box, Skeleton } from "@mui/material";
+import {  Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Modals from "../Modal/Modals";
 import Cluster from "../Cluster/Cluster";
@@ -37,7 +37,7 @@ const Details = () => {
     };
 
     fetchTrainingDetails();
-  }, [id]);
+  }, [BASE_URL, id]);
 
   const trainingData = [
     {
@@ -99,13 +99,13 @@ const Details = () => {
               />
             </>
           ) : (
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-4 items-center">
               <img
                 src={selectedTraining?.image}
                 alt={selectedTraining?.title}
-                className="w-20 h-auto"
+                className="w-25 h-auto"
               />
-              <h2 className="text-[5vw] sm:text-[4vw] md:text-[2.6vw] ">
+              <h2 className="text-[5vw] sm:text-[4vw] md:text-[2.6vw] font-[300]">
                 {selectedTraining?.title}
               </h2>
             </div>
@@ -120,7 +120,7 @@ const Details = () => {
                 <Skeleton animation="wave" />
               </>
             ) : (
-              <div className="text-[14px] md:text-[20px] ">
+              <div className="text-[14px] md:text-[20px]">
                 {selectedTraining?.description}
               </div>
             )}
@@ -293,7 +293,7 @@ const Details = () => {
             )}
           </div>
           <div className="certificate__container w-full">
-            <div className="info__certificate w-full">
+            <div className="info__certificate ">
               <div className="info__title w-full">
                 <h2 className="text-[7vw] sm:text-[5vw] md:text-[3vw] text-nowrap">
                   Bu təlim kimlər üçündür?
@@ -369,7 +369,7 @@ const Details = () => {
                 )}
               </div>
             </div>
-            <div className="certificate__img">
+            <div className="certificate__img ">
               {loading ? (
                 <Skeleton
                   animation="wave"

@@ -22,6 +22,7 @@
   max-width: 240px;
   cursor: pointer;
   width: 100%;
+  margin: 20px auto;
 }
 
 .teacher__profile > div {
@@ -45,11 +46,14 @@
 
 .profile__info {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .profile__info h3 {
   margin-top: 25px;
-  margin-bottom: 15px;
   font-weight: bold;
   font-size: 18px;
 }
@@ -120,3 +124,18 @@
 .teacher__info .desc p {
   padding: 16px;
 }
+
+@media screen and (max-width: 1024px) {
+  .profile__img img {
+    width: 120px;
+  }
+  .profile__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .teacher__profile {
+    display: flex;
+  }
+}
+

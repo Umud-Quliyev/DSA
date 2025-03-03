@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const PracticTable = () => {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ const PracticTable = () => {
   };
 
   return (
-    <div className="practic__table absolute bottom-0 right-5 sm:right-15 gap-1 flex-col md:flex-row md:top-10  md:right-[-50px]  w-max bg-[#FFF] px-5 py-4 flex md:gap-10 flex-wrap rounded-[5px] z-10">
+    <div className="practic__table absolute -bottom-150 right-5 sm:right-15 gap-1 flex-col md:flex-row md:top-10  md:right-[-50px]  w-max bg-[#FFF] px-5 py-4 flex md:gap-10 flex-wrap rounded-[5px] z-10">
       {loading
         ? [...Array(3)].map((_, index) => (
             <div key={index} className="w-[300px]">
@@ -120,4 +120,3 @@ const PracticTable = () => {
 };
 
 export default PracticTable;
-/* sm:right-50 gap-1  md:flex-row md:top-15 md:left-150 mx-auto lg:w-max md:w-max   flex md:gap-10 flex-nowrap */

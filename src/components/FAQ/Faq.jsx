@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import "./Faq.css";
 import { useTranslation } from "react-i18next";
 import { styled } from "@mui/material/styles";

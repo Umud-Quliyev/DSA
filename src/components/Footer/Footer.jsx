@@ -14,7 +14,7 @@ import { IoIosMail } from "react-icons/io";
 import "./Footer.css";
 import i18n from "../i18n";
 import { NavLink } from "react-router-dom";
-
+import { FlagIcon } from "react-flag-kit";
 const Footer = () => {
   const { t } = useTranslation();
   const [activeLang, setActiveLang] = useState(i18n.language || "az");
@@ -70,14 +70,16 @@ const Footer = () => {
             <ul>
               <li
                 onClick={() => changeLanguage("az")}
-                className={activeLang === "az" ? "language__active" : ""}
+                className={`flex items-center gap-2 ${activeLang === "az" ? "language__active" : "" }`}
               >
+                <FlagIcon code="AZ" />
                 Azərbaycan
               </li>
               <li
                 onClick={() => changeLanguage("en")}
-                className={activeLang === "en" ? "language__active" : ""}
+                className={`flex items-center gap-2 ${activeLang === "en" ? "language__active" : ""}`}
               >
+                <FlagIcon code="GB" />
                 English
               </li>
             </ul>

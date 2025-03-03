@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Teachers.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";

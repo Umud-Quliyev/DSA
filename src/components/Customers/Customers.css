@@ -38,7 +38,21 @@
 .swiper-slide img {
   object-fit: contain;
 }
-
-.swiper-pagination-bullet-active {
+span.swiper-pagination-bullet {
   background: #28aaa8;
+  width: 10px;
+  height: 10px;
+}
+
+span.swiper-pagination-bullet-active {
+  background: #28aaa8;
+  width: 10px;
+  height: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .customer__title h2 {
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
 }
