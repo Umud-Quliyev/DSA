@@ -97,6 +97,9 @@
   color: #fff;
   cursor: pointer;
 }
+.contact__form button:hover {
+  background-color: #e2195b;
+}
 
 .MuiInputLabel-root {
   z-index: 1 !important;

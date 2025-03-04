@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Contact.css";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -159,6 +158,7 @@ const Contact = () => {
                 value={formData.service}
                 onChange={handleChange}
                 displayEmpty
+                
               >
                 <MenuItem value="">{t("contact.service")}</MenuItem>
                 <MenuItem value="Data Science Bootcamp">

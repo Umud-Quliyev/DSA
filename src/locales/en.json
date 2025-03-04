@@ -157,7 +157,8 @@
   },
 
   "form": {
-    "title": "Application"
+    "title": "Application",
+    "submit":"Send"
   },
 
   "toast": {
