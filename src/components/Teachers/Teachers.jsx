@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import { useTranslation } from "react-i18next";
 
 const Teachers = () => {
-  const [openModals, setOpenModals] = useState({});
+  const [openModals, setOpenModals] = useState(false);
   const [teachers, setTeachers] = useState([]);
 
   const handleOpen = (index) => {
@@ -33,12 +33,11 @@ const Teachers = () => {
         setTeachers(data);
       } catch (err) {
         console.error("Fetch Error:", err);
-      } finally {
-      }
+      } 
     };
 
     fetchTeacher();
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <div className="contanierr">
@@ -67,7 +66,9 @@ const Teachers = () => {
               <Modal
                 open={openModals[index] || false}
                 onClose={() => handleClose(index)}
-                disableEscapeKeyDown={false}
+                BackdropProps={{
+                  onClick: () => handleClose(index),  // dışarıya tıklanarak kapanmasını sağlıyoruz
+                }}                
               >
                 <Box className="modal-content">
                   <div className="teacher__info">

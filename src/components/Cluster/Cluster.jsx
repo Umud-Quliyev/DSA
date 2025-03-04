@@ -75,13 +75,13 @@ const Cluster = () => {
   return (
     <div className="cluster">
       <div className="contanierr">
-        <div className="cluster__title">
+        <div id="cluster" className="cluster__title pb-5">
           <h2>
             Klaster kampaniyasına qeydiyyatdan keçərək daha çox qənaət edin!
           </h2>
         </div>
-        <div className="cluster__list">
-          <div className="list__title">
+        <div id="cluster" className="cluster__list">
+          <div  className="list__title">
             <span>Öz klasterini seç</span>
           </div>
           <div className="cluster__box">
