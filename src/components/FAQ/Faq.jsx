@@ -77,7 +77,7 @@ const Faq = () => {
     };
 
     fetchData();
-  }, [i18n.language]);
+  }, [BASE_URL, i18n]);
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);

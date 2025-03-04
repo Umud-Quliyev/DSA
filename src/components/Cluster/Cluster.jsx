@@ -28,7 +28,7 @@ const Cluster = () => {
     };
 
     fetchTrainingDetails();
-  }, [id]);
+  }, [BASE_URL, id]);
 
   const clickHandler = (telim) => {
     setSelectedSections((prevSelected) => {
@@ -110,6 +110,16 @@ const Cluster = () => {
                                 (s) => s.id === telim.id
                               )}
                               onChange={() => clickHandler(telim)}
+                              sx={{
+                                color: selectedSections.some(
+                                  (s) => s.id === telim.id
+                                )
+                                  ? "#2fa8a5" 
+                                  : "inherit",
+                                '&.Mui-checked': {
+                                  color: "#2fa8a5", 
+                                },
+                              }}
                             />
                             <span className="text-[#50264E]">
                               {telim.title}

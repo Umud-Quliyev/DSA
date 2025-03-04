@@ -1,8 +1,8 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import { FaCalendarAlt, FaRegClock } from "react-icons/fa";
-import {  Skeleton } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Modals from "../Modal/Modals";
 import Cluster from "../Cluster/Cluster";
@@ -38,7 +38,19 @@ const Details = () => {
 
     fetchTrainingDetails();
   }, [BASE_URL, id]);
-
+  console.log(selectedTraining, "selectedsadad");
+  const formatDate = (dateString) => {
+    const months = [
+      "Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", 
+      "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"
+    ];
+  
+    const date = new Date(dateString); 
+  
+    const day = date.getDate(); 
+    const month = months[date.getMonth()]; 
+    return `${day} ${month}`; 
+  };
   const trainingData = [
     {
       language: "az",
@@ -120,9 +132,7 @@ const Details = () => {
                 <Skeleton animation="wave" />
               </>
             ) : (
-              <div className="text-[14px] md:text-[20px]">
-                {selectedTraining?.description}
-              </div>
+              <p className="">{selectedTraining?.description}</p>
             )}
           </Typography>
         </div>
@@ -417,7 +427,9 @@ const Details = () => {
                 {loading ? (
                   <Skeleton variant="text" width="100%" height={30} />
                 ) : (
-                  <h2 className=" text-[18px] sm:text-[20px] md:text-[30px]">{selectedTraining?.title}</h2>
+                  <h2 className=" text-[18px] sm:text-[20px] md:text-[30px]">
+                    {selectedTraining?.title}
+                  </h2>
                 )}
               </div>
               <div className="demo__info">
@@ -520,7 +532,7 @@ const Details = () => {
 
       <div className="testimonials"></div>
 
-       <div className="trainers">
+      <div className="trainers">
         <div className="contanierr">
           <div className="trainers__title">
             <h2>Təlimçilər</h2>
@@ -592,35 +604,41 @@ const Details = () => {
                     </div>
                   </div>
                 ))
-              : trainingData.map((training, index) => (
-                  <div className="table__card" key={index}>
-                    <div
-                      style={{ backgroundColor: training.bgcolor }}
-                      className="card__title"
-                    >
-                      <h3>{training.title}</h3>
-                    </div>
-                    <div className="card__body">
-                      <div className="card__time">
-                        <FaRegClock color={training.bgcolor} />
-                        <span>{training.date}</span>
+              : selectedTraining?.sessiyalar?.map((training, index) => {
+                const trainingInfo = trainingData[index];
+                console.log(training.date,"data")
+                if (!trainingInfo) return;
+                  return (
+                    <div className="table__card" key={index}>
+                      <div
+                        style={{ backgroundColor: trainingInfo.bgcolor }}
+                        className="card__title"
+                      >
+                        <h3>{selectedTraining.title}</h3>
                       </div>
-                      <div className="training__price">
-                        <p>
-                          <span>{selectedTraining?.money} AZN</span> 175 AZN
-                        </p>
+                      <div className="card__body">
+                        <div className="card__time">
+                          <FaCalendarAlt color={trainingInfo.bgcolor} />
+                          <span>{formatDate(training.date)}</span>
+                        </div>
+                        <div className="training__price">
+                          <p>
+                            <span>{selectedTraining.money} AZN</span> 250 AZN
+                          </p>
+                        </div>
+                      </div>
+                      <div className="card__button">
+                        <button style={{ backgroundColor: trainingInfo.bgcolor }}>
+                          {/* {registerTexts[trainingInfo.language]} */}Qeydİyyatdan keç
+                        </button>
                       </div>
                     </div>
-                    <div className="card__button">
-                      <button style={{ backgroundColor: training.bgcolor }}>
-                        {registerTexts[training.language]}
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
           </div>
         </div>
       </div>
+
 
       <Cluster />
     </div>

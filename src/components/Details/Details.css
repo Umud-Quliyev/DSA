@@ -186,11 +186,12 @@
   line-height: 59px;
   font-weight: 400;
 }
-
+.training__desc p,
 .info__desc p {
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
+  color: #330033;
 }
 
 .info__certificate {
