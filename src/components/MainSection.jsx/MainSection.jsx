@@ -6,10 +6,28 @@ import mentor from "../../assets/png/mentor.png";
 import practic from "../../assets/png/telim.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 const MainSection = () => {
   const { t } = useTranslation();
+  const [trainings, setTrainings] = useState([]);
+  const [startDate, setStartDate] = useState(""); 
+  const BASE_URL = import.meta.env.VITE_API_URL;
+  useEffect(() => {
+    const fetchTrainings = async () => {
+      const data = await fetch(`${BASE_URL}/metinler/`);
+      const result = await data.json();
+      setTrainings(result); 
 
+      /* const startDate = result[0]?.startDate; 
+      setStartDate(startDate); */
+    };
+
+    fetchTrainings();
+  }, [BASE_URL ]);
+
+
+  console.log(trainings,"Asd")
   return (
     <>
       <section
@@ -30,7 +48,14 @@ const MainSection = () => {
             </span>
             <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw] uppercase">
               {t("bootcamp")}
-            </h3>
+            </h3>{
+              trainings?.sessiyalar?.map((d,index)=>{
+                console.log(d,"daadt")
+                return(
+                <span>asd</span>
+              )
+              })
+            }
             <span className="text-[2.5vw] font-[700] md:text-[2vw]">
               {t("bootcamp_start_date")}
             </span>
