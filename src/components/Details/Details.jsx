@@ -11,11 +11,11 @@ const Details = () => {
   const { id } = useParams();
   const [selectedTraining, setSelectedTraining] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const [selectedSession, setSelectedSession] = useState(null);
   const [openModals, setOpenModals] = useState(false);
 
   const BASE_URL = import.meta.env.VITE_API_URL;
-  const handleIconClick = ( target) => {
+  const handleIconClick = (target) => {
     document.querySelector(target).scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -45,15 +45,25 @@ const Details = () => {
   }, [BASE_URL, id]);
   const formatDate = (dateString) => {
     const months = [
-      "Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", 
-      "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"
+      "Yanvar",
+      "Fevral",
+      "Mart",
+      "Aprel",
+      "May",
+      "İyun",
+      "İyul",
+      "Avqust",
+      "Sentyabr",
+      "Oktyabr",
+      "Noyabr",
+      "Dekabr",
     ];
-  
-    const date = new Date(dateString); 
-  
-    const day = date.getDate(); 
-    const month = months[date.getMonth()]; 
-    return `${day} ${month}`; 
+
+    const date = new Date(dateString);
+
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    return `${day} ${month}`;
   };
   const trainingData = [
     {
@@ -90,14 +100,18 @@ const Details = () => {
     ru: "Зарегистрироваться",
   };
 
-  const openModal = () => {
+  const openModal = (session) => {
     setOpenModals(true);
+    setSelectedSession(session);
   };
-
+  const closeModal = (event) => {
+    if (event.target === event.currentTarget) {
+      setOpenModals(false);
+    }
+  };
   return (
-    <div className="training__details pt-20">
-      
-      <div className="  w-full md:w-4/5 md:px-20  sm:px-10 px-5  mx-auto  ">
+    <div className="training__details pt-20 ">
+      <div className="  w-full lg:w-4/5 md:px-20  sm:px-10 px-5  mx-auto  ">
         <div className="training__title  w-auto">
           {loading ? (
             <>
@@ -115,7 +129,7 @@ const Details = () => {
               />
             </>
           ) : (
-            <div className="flex gap-4 items-center">
+            <div className="flex  gap-4 items-center">
               <img
                 src={selectedTraining?.image}
                 alt={selectedTraining?.title}
@@ -144,7 +158,7 @@ const Details = () => {
 
       <div className="training__workplace">
         <div /* className="contanierr" */ className="w-full">
-          <p className="px-5 sm:px-10 text-[3.2vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.5vw] md:w-4/5 mx-auto md:px-20">
+          <p className=" text-[3.2vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.5vw] w-full lg:w-4/5 md:px-20  sm:px-10 px-5  mx-auto">
             Təlimlər oflayn (ofisdaxili) və onlayn formada keçirilir.
           </p>
         </div>
@@ -231,7 +245,7 @@ const Details = () => {
                       </div>
                       <div className="card__button">
                         <button
-                          onClick={() => openModal(true)}
+                          onClick={() => openModal(selectedTraining)}
                           style={{ backgroundColor: trainingInfo.bgcolor }}
                         >
                           Qeydiyyatdan keç
@@ -240,28 +254,39 @@ const Details = () => {
                     </div>
                   );
                 })}
-                {openModals && <Modals setOpenModals={setOpenModals} />}
+            {openModals && (
+              <Modals
+                setOpenModals={setOpenModals}
+                session={selectedSession} 
+                closeModal={closeModal}
+              />
+            )}
           </div>
         </div>
       </div>
 
       <div className="training__company">
         <div
-          /* className="contanierr" */ className="flex items-center justify-between w-full md:w-4/5 px-5 sm:px-10 md:px-20 mx-auto"
+          /* className="contanierr" */ className="flex items-center justify-between w-full lg:w-4/5 md:px-20  sm:px-10 px-5  mx-auto"
         >
           <span className="">
             Klaster kampanyasına qeydiyyatdan keçərək daha çox qənaət edin!
           </span>
-          <button className="sm:py-4 md:px-5 md:py-4 md:px-5" onClick={() => handleIconClick("#cluster")}>
+          <button
+            className="sm:py-4 md:px-5 md:py-4 md:px-5"
+            onClick={() => handleIconClick("#cluster")}
+          >
             KLASTER KAMPANİYASI
           </button>
         </div>
       </div>
 
       <div /* className="contanierr" */ className="my-5 ">
-        <div className="training__info   w-full md:w-4/5 px-5 sm:px-10 md:px-20 mx-auto">
+        <div className="training__info   w-full lg:w-4/5 px-5 sm:px-10 md:px-20 mx-auto">
           <div className="info__title">
-            <h2 className="text-[6vw] md:text-[3vw] text-[#330033]">Təlim haqqında məlumat</h2>
+            <h2 className="text-[6vw] md:text-[3vw] text-[#330033]">
+              Təlim haqqında məlumat
+            </h2>
           </div>
           <div className="info__desc">
             {loading ? (
@@ -380,7 +405,9 @@ const Details = () => {
                     />
                   </>
                 ) : (
-                  <p className="text-[#330033]">{selectedTraining?.certificates}</p>
+                  <p className="text-[#330033]">
+                    {selectedTraining?.certificates}
+                  </p>
                 )}
               </div>
             </div>
@@ -499,14 +526,16 @@ const Details = () => {
                   {info.title && (
                     <div className="session__info">
                       <h3 className="text-[#330033]">
-                        <strong >{info.title}</strong>
+                        <strong>{info.title}</strong>
                       </h3>
                       <ul>
                         {info.description
                           ?.split(/\r\n/)
                           .filter((item) => item.trim() !== "")
                           .map((item, idx) => (
-                            <li key={idx} className="text-[#330033]">{item}</li>
+                            <li key={idx} className="text-[#330033]">
+                              {item}
+                            </li>
                           ))}
                       </ul>
                     </div>
@@ -521,7 +550,9 @@ const Details = () => {
                           ?.split(/\r\n/)
                           .filter((item) => item.trim() !== "")
                           .map((item, idx) => (
-                            <li key={idx} className="text-[#330033]">{item}</li>
+                            <li key={idx} className="text-[#330033]">
+                              {item}
+                            </li>
                           ))}
                       </ul>
                     </div>
@@ -584,7 +615,7 @@ const Details = () => {
           <div className="tables__title">
             <h2>Sessiyalar</h2>
           </div>
-          <div className="table__list">
+          <div className="table__list ]">
             {loading
               ? [...Array(4)].map((_, index) => (
                   <div className="table__card" key={index}>
@@ -610,8 +641,8 @@ const Details = () => {
                   </div>
                 ))
               : selectedTraining?.sessiyalar?.map((training, index) => {
-                const trainingInfo = trainingData[index];
-                if (!trainingInfo) return;
+                  const trainingInfo = trainingData[index];
+                  if (!trainingInfo) return;
                   return (
                     <div className="table__card" key={index}>
                       <div
@@ -632,8 +663,10 @@ const Details = () => {
                         </div>
                       </div>
                       <div className="card__button">
-                        <button style={{ backgroundColor: trainingInfo.bgcolor }}>
-                          {/* {registerTexts[trainingInfo.language]} */}Qeydİyyatdan keç
+                        <button
+                          style={{ backgroundColor: trainingInfo.bgcolor }}
+                        >
+                          {registerTexts[trainingInfo.language]}Qeydİyyatdan keç
                         </button>
                       </div>
                     </div>
@@ -642,7 +675,6 @@ const Details = () => {
           </div>
         </div>
       </div>
-
 
       <Cluster />
     </div>

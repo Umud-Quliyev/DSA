@@ -7,7 +7,7 @@ import practic from "../../assets/png/telim.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { format, parseISO } from "date-fns";
+import { format, isDate, parse } from "date-fns";
 import { az, enUS } from "date-fns/locale";
 import { Box, Skeleton } from "@mui/material";
 const MainSection = () => {
@@ -18,24 +18,41 @@ const MainSection = () => {
   useEffect(() => {
     const fetchTrainings = async () => {
       setLoading(true);
-      const data = await fetch(`${BASE_URL}/metinler/`);
-      const result = await data.json();
-      if (result[15]?.sessiyalar?.length > 0) {
-        const rawDate = result[15]?.sessiyalar[0]?.date;
+      try {
+        const data = await fetch(`${BASE_URL}/metinler/`);
+        const result = await data.json();
+        console.log(result);
 
-        const parsedDate = parseISO(rawDate);
-        const currentLocale = i18n.language === "az" ? az : enUS;
-        const formattedStartDate = format(parsedDate, "d MMMM yyyy", {
-          locale: currentLocale,
-        });
+        const training = result.find(
+          (t) => t.title === "Python ilə Deep Learning"
+        );
+        if (training && training.sessiyalar && training.sessiyalar.length > 0) {
+          const rawDate = training.sessiyalar[0]?.date;
 
-        setStartDate(formattedStartDate);
+          if (rawDate) {
+            const parsedDate = parse(rawDate, "yyyy-MM-dd", new Date());
+            if (isDate(parsedDate)) {
+              const currentLocale = i18n.language === "az" ? az : enUS;
+              const formattedStartDate = format(parsedDate, "d MMMM yyyy", {
+                locale: currentLocale,
+              });
+              setStartDate(formattedStartDate);
+            } else {
+              console.error("Geçersiz tarih formatı:", rawDate);
+            }
+          }
+        } else {
+          console.error("Sessiyon verisi bulunamadı.");
+        }
+      } catch (error) {
+        console.error("Veri alınırken hata oluştu:", error);
       }
       setLoading(false);
     };
 
     fetchTrainings();
   }, [BASE_URL, i18n.language]);
+
   return (
     <>
       <section
@@ -58,15 +75,17 @@ const MainSection = () => {
               {t("bootcamp")}
             </h3>
             {loading ? (
-               <Box sx={{ width: 200 }}>
-               <Skeleton animation="wave" sx={{ backgroundColor: "#e0e0e0", height: 50}} />
-             </Box>
+              <Box sx={{ width: 200 }}>
+                <Skeleton
+                  animation="wave"
+                  sx={{ backgroundColor: "#e0e0e0", height: 50 }}
+                />
+              </Box>
             ) : (
               <span className="text-[2.5vw] font-[900] md:text-[2vw]">
                 {startDate}
               </span>
             )}
-            
           </div>
           <span className="text-center text-[1.9vw] md:text-[1.18vw] w-[35%] sm:w-[40%]  md:w-[35%] lg:w-[35%] xl:w-60">
             {t("bootcamp_description")}
