@@ -5,13 +5,14 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { IoClose } from "react-icons/io5";
 import { toast, ToastContainer } from "react-toastify";
 import { Bounce } from "react-toastify";
 import { useTranslation } from "react-i18next";
 
-const Modals = ({ setOpenModals }) => {
-  const [open, setOpen] = useState(true);
+
+const Modals = ({ setOpenModals, session, closeModal }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -76,7 +77,6 @@ const Modals = ({ setOpenModals }) => {
           phone: "",
         });
 
-        setOpen(false);
       } else {
         throw new Error();
       }
@@ -92,11 +92,10 @@ const Modals = ({ setOpenModals }) => {
   return (
     <>
       <Dialog
-        open={open}
-        onClose={() => setOpen(false)}
+        open={true} onClose={closeModal}
         className="relative z-10"
       >
-        <DialogBackdrop className="fixed inset-0 bg-gray-500/75 transition-opacity" />
+        <DialogBackdrop className="fixed inset-0 bg-gray-500/75 transition-opacity" onClick={closeModal}/>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 text-center">
@@ -104,7 +103,7 @@ const Modals = ({ setOpenModals }) => {
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="flex items-center justify-between w-full mt-3 text-center sm:text-left">
                   <DialogTitle className="text-base font-bold text-[#555555]">
-                    Qeydiyyat - SPSS ilə Statistika və Data Analitikası
+                  {session.title}
                   </DialogTitle>
                   <span
                     onClick={() => setOpenModals(false)}
@@ -116,7 +115,7 @@ const Modals = ({ setOpenModals }) => {
 
                 <form onSubmit={handleSubmit} className="py-4">
                   <div className="flex flex-col">
-                    <label className="text-[#a9a9a9] text-[14px]">Ad</label>
+                    <label className="text-[#a9a9a9] text-[14px]">Ad, Soyad</label>
                     <input
                       name="name"
                       value={formData.name}
@@ -127,22 +126,6 @@ const Modals = ({ setOpenModals }) => {
                     {errors.name && (
                       <span className="text-red-500 text-sm">
                         {errors.name}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex flex-col">
-                    <label className="text-[#a9a9a9] text-[14px]">Soyad</label>
-                    <input
-                      name="surname"
-                      value={formData.surname}
-                      onChange={handleChange}
-                      type="text"
-                      className="border border-[#a9a9a9] py-1 rounded-[3px] outline-none"
-                    />
-                    {errors.surname && (
-                      <span className="text-red-500 text-sm">
-                        {errors.surname}
                       </span>
                     )}
                   </div>
@@ -209,8 +192,17 @@ const Modals = ({ setOpenModals }) => {
         autoClose={5000}
         transition={Bounce}
       />
+     
     </>
   );
+}
+  Modals.propTypes = {
+    setOpenModals: PropTypes.func.isRequired,
+    session: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+    closeModal: PropTypes.func.isRequired,
 };
 
 export default Modals;
+
