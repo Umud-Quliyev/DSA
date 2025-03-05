@@ -1,0 +1,59 @@
+.modal{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+  
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    outline: none;
+    z-index: 2;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .modal-content {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .teacher__info .fullname h4 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 16px;
+    color: #555;
+  }
+  
+  .teacher__info .fullname {
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .teacher__info .desc p {
+    padding: 16px;
+  }

@@ -7,27 +7,52 @@ import practic from "../../assets/png/telim.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-
+import { format, isDate, parse } from "date-fns";
+import { az, enUS } from "date-fns/locale";
+import { Box, Skeleton } from "@mui/material";
 const MainSection = () => {
-  const { t } = useTranslation();
-  const [trainings, setTrainings] = useState([]);
-  const [startDate, setStartDate] = useState(""); 
+  const { t, i18n } = useTranslation();
+  const [startDate, setStartDate] = useState("");
+  const [loading, setLoading] = useState(true);
   const BASE_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     const fetchTrainings = async () => {
-      const data = await fetch(`${BASE_URL}/metinler/`);
-      const result = await data.json();
-      setTrainings(result); 
+      setLoading(true);
+      try {
+        const data = await fetch(`${BASE_URL}/metinler/`);
+        const result = await data.json();
+        console.log(result);
 
-      /* const startDate = result[0]?.startDate; 
-      setStartDate(startDate); */
+        const training = result.find(
+          (t) => t.title === "Python ilə Deep Learning"
+        );
+        if (training && training.sessiyalar && training.sessiyalar.length > 0) {
+          const rawDate = training.sessiyalar[0]?.date;
+
+          if (rawDate) {
+            const parsedDate = parse(rawDate, "yyyy-MM-dd", new Date());
+            if (isDate(parsedDate)) {
+              const currentLocale = i18n.language === "az" ? az : enUS;
+              const formattedStartDate = format(parsedDate, "d MMMM yyyy", {
+                locale: currentLocale,
+              });
+              setStartDate(formattedStartDate);
+            } else {
+              console.error("Geçersiz tarih formatı:", rawDate);
+            }
+          }
+        } else {
+          console.error("Sessiyon verisi bulunamadı.");
+        }
+      } catch (error) {
+        console.error("Veri alınırken hata oluştu:", error);
+      }
+      setLoading(false);
     };
 
     fetchTrainings();
-  }, [BASE_URL ]);
+  }, [BASE_URL, i18n.language]);
 
-
-  console.log(trainings,"Asd")
   return (
     <>
       <section
@@ -48,17 +73,19 @@ const MainSection = () => {
             </span>
             <h3 className="text-[#ffca05] text-[4vw] font-extrabold md:text-[2.54vw] uppercase">
               {t("bootcamp")}
-            </h3>{
-              trainings?.sessiyalar?.map((d,index)=>{
-                console.log(d,"daadt")
-                return(
-                <span>asd</span>
-              )
-              })
-            }
-            <span className="text-[2.5vw] font-[700] md:text-[2vw]">
-              {t("bootcamp_start_date")}
-            </span>
+            </h3>
+            {loading ? (
+              <Box sx={{ width: 200 }}>
+                <Skeleton
+                  animation="wave"
+                  sx={{ backgroundColor: "#e0e0e0", height: 50 }}
+                />
+              </Box>
+            ) : (
+              <span className="text-[2.5vw] font-[900] md:text-[2vw]">
+                {startDate}
+              </span>
+            )}
           </div>
           <span className="text-center text-[1.9vw] md:text-[1.18vw] w-[35%] sm:w-[40%]  md:w-[35%] lg:w-[35%] xl:w-60">
             {t("bootcamp_description")}
@@ -127,7 +154,10 @@ const MainSection = () => {
             </div>
           </div>
           <div className="flex items-center justify-center mt-15  md:w-full">
-            <Link to={"/muraciet"} className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]">
+            <Link
+              to={"/muraciet"}
+              className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]"
+            >
               {t("apply_now")}
             </Link>
           </div>
