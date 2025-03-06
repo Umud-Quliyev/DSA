@@ -13,7 +13,6 @@ const Details = () => {
   const [loading, setLoading] = useState(true);
   const [selectedSession, setSelectedSession] = useState(null);
   const [openModals, setOpenModals] = useState(false);
-
   const BASE_URL = import.meta.env.VITE_API_URL;
   const handleIconClick = (target) => {
     document.querySelector(target).scrollIntoView({
@@ -64,6 +63,26 @@ const Details = () => {
     const day = date.getDate();
     const month = months[date.getMonth()];
     return `${day} ${month}`;
+  };
+
+  /* const formatHour = (hour) => {
+    if (!hour) return ""; 
+    const [time] = hour.split(' '); 
+    return time.slice(0, 5); 
+  }; */
+  const formatTime = (time) => {
+    const [hour, minute] = time.split(":"); 
+    return `${hour}:${minute}`;
+  };
+
+  const addTime = (time, hoursToAdd, minutesToAdd) => {
+    const [hour, minute] = time.split(":").map(Number); 
+    const totalMinutes = minute + minutesToAdd;
+    const totalHours = hour + hoursToAdd + Math.floor(totalMinutes / 60); 
+    const finalMinutes = totalMinutes % 60; 
+    return `${String(totalHours).padStart(2, "0")}:${String(
+      finalMinutes
+    ).padStart(2, "0")}`; 
   };
   const trainingData = [
     {
@@ -224,7 +243,8 @@ const Details = () => {
               : selectedTraining?.sessiyalar?.map((session, index) => {
                   const trainingInfo = trainingData[index];
                   if (!trainingInfo) return null;
-
+                  const startTime = session.hour;
+                  const endTime = addTime(startTime, 2, 55);
                   return (
                     <div className="table__card" key={index}>
                       <div
@@ -236,15 +256,20 @@ const Details = () => {
                       <div className="card__body">
                         <div className="card__date">
                           <FaCalendarAlt color={trainingInfo.bgcolor} />
-                          <span>{session.date}</span>
+                          <p className="text-[18px] font-[500] text-[#330033]">
+                            {formatDate(session.date)}
+                          </p>
                         </div>
                         <div className="card__time">
                           <FaRegClock color={trainingInfo.bgcolor} />
-                          <span>{session.hour}</span>
+                          <p className="text-[18px] font-[500] text-[#330033]">
+                          {`${formatTime(startTime)}-${formatTime(endTime)}`}
+                          </p>
                         </div>
                       </div>
                       <div className="card__button">
                         <button
+                          className="font-[500]"
                           onClick={() => openModal(selectedTraining)}
                           style={{ backgroundColor: trainingInfo.bgcolor }}
                         >
@@ -257,7 +282,7 @@ const Details = () => {
             {openModals && (
               <Modals
                 setOpenModals={setOpenModals}
-                session={selectedSession} 
+                session={selectedSession}
                 closeModal={closeModal}
               />
             )}
@@ -665,6 +690,7 @@ const Details = () => {
                       <div className="card__button">
                         <button
                           style={{ backgroundColor: trainingInfo.bgcolor }}
+                          onClick={() => openModal(selectedTraining)}
                         >
                           {registerTexts[trainingInfo.language]}Qeydİyyatdan keç
                         </button>

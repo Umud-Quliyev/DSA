@@ -1,6 +1,7 @@
 import { Checkbox } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import RegistrationModal from "../RegistrationModal/RegistrationModal";
 
 const Cluster = () => {
   const { id } = useParams();
@@ -10,8 +11,9 @@ const Cluster = () => {
   const [discountedPrice, setDiscountedPrice] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const [isOpen, setIsOpen] = useState(false);
   const BASE_URL = import.meta.env.VITE_API_URL;
+
 
   useEffect(() => {
     const fetchTrainingDetails = async () => {
@@ -34,21 +36,20 @@ const Cluster = () => {
     setSelectedSections((prevSelected) => {
       const isSelected = prevSelected.find((s) => s.id === telim.id);
       let updatedSelection;
-  
+
       if (isSelected) {
         updatedSelection = prevSelected.filter((s) => s.id !== telim.id);
       } else {
         updatedSelection = [
           ...prevSelected,
-          { ...telim, price: telim.money ?? 0 }, 
+          { ...telim, price: telim.money ?? 0 },
         ];
       }
-  
+
       updateTotalPrice(updatedSelection);
       return updatedSelection;
     });
   };
-  
 
   const updateTotalPrice = (selected) => {
     const total = selected.reduce(
@@ -81,7 +82,7 @@ const Cluster = () => {
           </h2>
         </div>
         <div id="cluster" className="cluster__list">
-          <div  className="list__title">
+          <div className="list__title">
             <span>Öz klasterini seç</span>
           </div>
           <div className="cluster__box">
@@ -114,10 +115,10 @@ const Cluster = () => {
                                 color: selectedSections.some(
                                   (s) => s.id === telim.id
                                 )
-                                  ? "#2fa8a5" 
+                                  ? "#2fa8a5"
                                   : "inherit",
-                                '&.Mui-checked': {
-                                  color: "#2fa8a5", 
+                                "&.Mui-checked": {
+                                  color: "#2fa8a5",
                                 },
                               }}
                             />
@@ -142,8 +143,11 @@ const Cluster = () => {
             </p>
           </div>
         </div>
-        <p className="training__register">QEYDİYYAT</p>
+        <p className="training__register" onClick={() => setIsOpen(true)}>
+          QEYDİYYAT
+        </p>
       </div>
+      {isOpen && <RegistrationModal  setOpenModals={setIsOpen}/>}
     </div>
   );
 };
