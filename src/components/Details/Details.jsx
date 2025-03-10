@@ -13,7 +13,6 @@ const Details = () => {
   const [loading, setLoading] = useState(true);
   const [selectedSession, setSelectedSession] = useState(null);
   const [openModals, setOpenModals] = useState(false);
-
   const BASE_URL = import.meta.env.VITE_API_URL;
   const handleIconClick = (target) => {
     document.querySelector(target).scrollIntoView({
@@ -64,6 +63,26 @@ const Details = () => {
     const day = date.getDate();
     const month = months[date.getMonth()];
     return `${day} ${month}`;
+  };
+
+  /* const formatHour = (hour) => {
+    if (!hour) return ""; 
+    const [time] = hour.split(' '); 
+    return time.slice(0, 5); 
+  }; */
+  const formatTime = (time) => {
+    const [hour, minute] = time.split(":"); 
+    return `${hour}:${minute}`;
+  };
+
+  const addTime = (time, hoursToAdd, minutesToAdd) => {
+    const [hour, minute] = time.split(":").map(Number); 
+    const totalMinutes = minute + minutesToAdd;
+    const totalHours = hour + hoursToAdd + Math.floor(totalMinutes / 60); 
+    const finalMinutes = totalMinutes % 60; 
+    return `${String(totalHours).padStart(2, "0")}:${String(
+      finalMinutes
+    ).padStart(2, "0")}`; 
   };
   const trainingData = [
     {
@@ -164,12 +183,12 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="contanierr">
+      <div className=" w-full lg:w-4/5 md:px-20  sm:px-10 px-5  mx-auto">
         <div className="training__table">
           <div className="table__title">
-            <h2 className="text-[#330033]">Təlim Cədvəli</h2>
+            <h2 className="text-[#330033] ">Təlim Cədvəli</h2>
           </div>
-          <div className="table__list">
+          <div className="table__card__list flex justify-between gap-5">
             {loading
               ? Array.from({ length: 4 }).map((_, index) => (
                   <div className="table__card" key={index}>
@@ -224,7 +243,8 @@ const Details = () => {
               : selectedTraining?.sessiyalar?.map((session, index) => {
                   const trainingInfo = trainingData[index];
                   if (!trainingInfo) return null;
-
+                  const startTime = session.hour;
+                  const endTime = addTime(startTime, 2, 55);
                   return (
                     <div className="table__card" key={index}>
                       <div
@@ -236,15 +256,20 @@ const Details = () => {
                       <div className="card__body">
                         <div className="card__date">
                           <FaCalendarAlt color={trainingInfo.bgcolor} />
-                          <span>{session.date}</span>
+                          <p className=" font-[500] text-[#330033] text-[18px]">
+                            {formatDate(session.date)}
+                          </p>
                         </div>
                         <div className="card__time">
                           <FaRegClock color={trainingInfo.bgcolor} />
-                          <span>{session.hour}</span>
+                          <p className=" font-[500] text-[#330033] text-[18px]">
+                          {`${formatTime(startTime)}-${formatTime(endTime)}`}
+                          </p>
                         </div>
                       </div>
                       <div className="card__button">
                         <button
+                          className="font-[500] text-[1.2vw]"
                           onClick={() => openModal(selectedTraining)}
                           style={{ backgroundColor: trainingInfo.bgcolor }}
                         >
@@ -257,7 +282,7 @@ const Details = () => {
             {openModals && (
               <Modals
                 setOpenModals={setOpenModals}
-                session={selectedSession} 
+                session={selectedSession}
                 closeModal={closeModal}
               />
             )}
@@ -267,11 +292,11 @@ const Details = () => {
 
       <div className="training__company">
         <div
-          /* className="contanierr" */ className="flex items-center justify-between w-full lg:w-4/5 md:px-20  sm:px-10 px-5  mx-auto"
+          /* className="contanierr" */ className="flex items-center justify-between w-full lg:w-4/5 md:px-20  sm:px-10 px-5 mx-auto "
         >
-          <span className="">
+          <p className="text-[3.2vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.5vw]  ">
             Klaster kampanyasına qeydiyyatdan keçərək daha çox qənaət edin!
-          </span>
+          </p>
           <button
             className="sm:py-4 md:px-5 md:py-4 md:px-5"
             onClick={() => handleIconClick("#cluster")}
@@ -332,9 +357,9 @@ const Details = () => {
               <p>{selectedTraining?.information}</p>
             )}
           </div>
-          <div className="certificate__container w-full">
+          <div className="certificate__container">
             <div className="info__certificate ">
-              <div className="info__title w-full">
+              <div className="info__title ">
                 <h2 className="text-[7vw] sm:text-[5vw] md:text-[3vw] text-nowrap text-[#330033]">
                   Bu təlim kimlər üçündür?
                 </h2>
@@ -381,7 +406,7 @@ const Details = () => {
                   <p className="text-[#330033]">{selectedTraining?.for_who}</p>
                 )}
               </div>
-              <div className="certificate__text">
+              <div className="certificate__text ">
                 <h2 className="text-[#330033]">Sertifikat</h2>
                 {loading ? (
                   <>
@@ -411,7 +436,7 @@ const Details = () => {
                 )}
               </div>
             </div>
-            <div className="certificate__img ">
+            <div className="certificate__img">
               {loading ? (
                 <Skeleton
                   animation="wave"
@@ -420,7 +445,7 @@ const Details = () => {
                   height={310}
                 />
               ) : (
-                <img src={selectedTraining?.certificate_image} alt="" />
+                <img src={selectedTraining?.certificate_image} alt="" className=""/>
               )}
             </div>
           </div>
@@ -615,7 +640,7 @@ const Details = () => {
           <div className="tables__title">
             <h2>Sessiyalar</h2>
           </div>
-          <div className="table__list ]">
+          <div className="table__list ">
             {loading
               ? [...Array(4)].map((_, index) => (
                   <div className="table__card" key={index}>
@@ -665,6 +690,7 @@ const Details = () => {
                       <div className="card__button">
                         <button
                           style={{ backgroundColor: trainingInfo.bgcolor }}
+                          onClick={() => openModal(selectedTraining)}
                         >
                           {registerTexts[trainingInfo.language]}Qeydİyyatdan keç
                         </button>

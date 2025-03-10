@@ -5,9 +5,9 @@
   padding: 0 15px;
 } */
 
-.training__title img {
-  /* width: 112px; */
-  /* height: 112px; */
+/* .training__title img {
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   border: 2px solid #ffcc00;
 }
@@ -18,7 +18,7 @@
   margin-top: 40px;
   gap: 20px;
 }
-
+ */
 /* .training__title h2 {
   font-size: 40px;
   line-height: 59px;
@@ -26,7 +26,7 @@
   margin-left: 20px;
 } */
 
-.training__desc {
+/* .training__desc {
   padding: 32px 0;
 }
 
@@ -39,16 +39,84 @@
   display: flex;
   align-items: center;
   color: #fff;
-  /* font-style: 18px; */
+  font-style: 18px;
   background-color: #33cccc;
   height: 74px;
-}
+} */
 
 /* .training__workplace p {
   font-size: 18px;
 } */
+.table__card {
+  box-shadow: 0 0 5px 0 #bdb2bd;
+  border-radius: 15px;
+}
+.card__title {
+  padding: 15px 18px;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 
-.training__table {
+.card__title h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: white;
+}
+.card__date {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card__time {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.card__date svg,
+.card__time svg {
+  width: 26px;
+  height: 26px;
+}
+.card__date p,
+.card__time p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.card__button button {
+  border: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 7px;
+  padding: 10px 8px;
+  font-size: 18px;
+  line-height: 20px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 1rem;
+}
+/* .training__table {
   padding: 32px 0 48px 0;
 }
 
@@ -58,17 +126,12 @@
   font-size: 24px;
   line-height: 59px;
 }
-.table__list {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
 
 .table__card {
-  max-width: 255px;
-  width: 100%;
   box-shadow: 0 0 5px 0 #bdb2bd;
   border-radius: 15px;
+  max-width: 250px;
+  width: 100%;
 }
 
 .card__title {
@@ -79,7 +142,7 @@
 }
 
 .card__title h3 {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   color: white;
@@ -160,33 +223,208 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+} */
+.training__company {
+  background-color: #3b388b;
+  height: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
 }
-
 .training__company button {
   cursor: pointer;
-  /* padding: 7px 30px; */
+  padding: 7px 30px;
   border-radius: 7px;
   text-align: center;
   background-color: #33cccc;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   transition: opacity 0.2s;
   display: block;
+  cursor: pointer;
 }
 
-.training__info {
+
+.syllabus__item {
+  /* max-width: 49%;
+  width: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 7px;
+}
+
+.session__info h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 20px;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+
+.session__info ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.case__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.case__info h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 20px;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+.testimonials {
+  background-color: #3b388b;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+.trainers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.trainers {
+  padding: 80px 0;
+}
+
+.trainers__title h2 {
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 64px;
+}
+
+.trainer__img {
+  max-width: 150px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.trainer__img img {
+  border-radius: 50%;
+}
+
+/* .trainer {
+  display: flex;
+  gap: 60px;
+} */
+
+.trainer__info {
+  width: 100%;
+}
+
+.trainer__info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.trainer__info span {
+  display: block;
+  font-weight: 500;
+  padding-bottom: 16px;
+  color: #22c4cd;
+}
+
+.training__price p span {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.training__price p {
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+
+
+.cluster {
+  background-color: #f1f2f2;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.cluster__title h2 {
+  font-size: 24px;
+  padding-bottom: 32px;
+  font-weight: 500;
+}
+
+.cluster__list {
+  background-color: #fff;
+  padding: 24px 32px 32px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.list__title span {
+  font-size: 21px;
+  font-weight: 500;
+  padding-bottom: 24px;
+  display: block;
+}
+
+/* .cluster__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+} */
+
+
+
+.training__chk input {
+  width: 24px;
+  height: 24px;
+}
+
+.MuiCheckbox-root {
+  padding: 0 !important;
+}
+
+.training__chk {
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+
+
+.training__register {
+  text-align: end;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* .training__info {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  /* padding: 48px 0px; */
-}
+  padding: 48px 0px;
+} */
 
-.info__title h2 {
-/*   font-size: 40px; */
+/* .info__title h2 {
+    font-size: 40px;
   line-height: 59px;
   font-weight: 400;
-}
-.training__desc p,
+} */
+/* .training__desc p,
 .info__desc p {
   font-size: 18px;
   line-height: 26px;
@@ -198,16 +436,16 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-}
+} */
 
-.info__certificate h2 {
- /*  font-size: 40px; */
+/* .info__certificate h2 {
+   font-size: 40px;
   line-height: 59px;
   font-weight: 400;
   padding-bottom: 16px;
-}
+} */
 
-.certificate__container {
+/* .certificate__container {
   display: flex;
   gap: 100px;
   align-items: center;
@@ -225,6 +463,7 @@
 .certificate__img {
   max-width: 460px;
   width: 100%;
+  
 }
 
 .certificate__text h2 {
@@ -518,4 +757,12 @@
   font-size: 16px;
   line-height: 19px;
   font-weight: 500;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 1280px) {
+  .table__card__list {
+    flex-wrap: wrap;
+  }
+}
+ */

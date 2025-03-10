@@ -6,7 +6,7 @@ import Details from "./components/Details/Details";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import RequestPage from "./RequestPage/RequestPage";
 import ProgramPage from "./ProgramPage/ProgramPage";
-import { useEffect } from "react";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -14,9 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/muraciet" element={<RequestPage />} />
-          <Route path="/program" element={<ProgramPage />} />
-          <Route path="/telim/:id" element={<Details />} />
+          <Route path="/muraciet" element={<RequestPage/>}/>
+          <Route path="/program" element={<ProgramPage/>}/>
+         {/*  <Route path="/telim/:id" element={<Details />} /> */}
+          <Route path="/telim/:id" element={<Detail />} />
         </Route>
       </Routes>
 
