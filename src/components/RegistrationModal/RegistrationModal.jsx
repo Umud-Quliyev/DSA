@@ -82,7 +82,7 @@ const RegistrationModal = ({setOpenModals}) => {
            <div
              ref={modalRef}
              onClick={(e) => e.stopPropagation()}
-             className="flex flex-col w-120 p-4 bg-white rounded-lg shadow-lg  absolute top-1/16 left-1/2 transfrom -translate-x-1/2 -trasnlate-y-1/2"
+             className="flex flex-col w-11/12 sm:w-120 p-4 bg-white rounded-lg shadow-lg absolute top-1/2  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
            >
              <div className="flex items-center justify-between w-full mt-3 text-center sm:text-left">
                <div className="text-base font-bold text-[#555555]">

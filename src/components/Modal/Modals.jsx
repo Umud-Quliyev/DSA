@@ -38,7 +38,7 @@ const Modals = ({ setOpenModals, session }) => {
     }
     if (!formData.phone || !formData.phone.trim()) {
       newErrors.phone = t("errors.phone");
-    } else if (!/^\d{10,}$/.test(formData.phone)) {
+    } else if (!/^\d{10,15}$/.test(formData.phone)) {
       newErrors.phone = t("errors.phone_invalid");
     }
 
@@ -50,11 +50,11 @@ const Modals = ({ setOpenModals, session }) => {
     e.preventDefault();
     if (!validateForm()) return;
     const formattedEventDate = new Date(formData.event_date);
-    const formattedDate = formattedEventDate.toISOString().split("T")[0]; // YYYY-MM-DD formatına dönüştür
+    const formattedDate = formattedEventDate.toISOString().split("T")[0]; 
 
     const dataToSend = {
       ...formData,
-      event_date: formattedDate, // Form verisini güncelle
+      event_date: formattedDate, 
     };
     try {
       const response = await fetch(`${BASE_URL}/qeydiyyat/`, {
@@ -114,7 +114,7 @@ const Modals = ({ setOpenModals, session }) => {
         <div
           ref={modalRef}
           onClick={(e) => e.stopPropagation()}
-          className="flex flex-col w-120 p-4 bg-white rounded-lg shadow-lg  absolute top-1/16 left-1/2 transfrom -translate-x-1/2 -trasnlate-y-1/2"
+          className="flex flex-col w-11/12 sm:w-120 p-4 bg-white rounded-lg shadow-lg absolute top-1/2  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <div className="flex items-center justify-between w-full mt-3 text-center sm:text-left">
             <div className="text-base font-bold text-[#555555]">

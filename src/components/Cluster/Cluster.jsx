@@ -14,7 +14,6 @@ const Cluster = () => {
   const [isOpen, setIsOpen] = useState(false);
   const BASE_URL = import.meta.env.VITE_API_URL;
 
-
   useEffect(() => {
     const fetchTrainingDetails = async () => {
       try {
@@ -75,7 +74,7 @@ const Cluster = () => {
 
   return (
     <div className="cluster">
-      <div className="contanierr">
+      <div className="w-full mx-auto lg:w-5/6 px-2 md:px-5  lg:px-0">
         <div id="cluster" className="cluster__title pb-5">
           <h2>
             Klaster kampaniyasına qeydiyyatdan keçərək daha çox qənaət edin!
@@ -85,17 +84,17 @@ const Cluster = () => {
           <div className="list__title">
             <span>Öz klasterini seç</span>
           </div>
-          <div className="cluster__box">
+          <div className="cluster__box flex flex-wrap xl:flex-nowrap gap-5 justify-between">
             {trainings.map((training) => (
               <div className="training" key={training.id}>
                 <div>
-                  <h4 className="text-[#2fa8a5] font-bold">{training.name}</h4>
-                  <p className="text-[#50264E] font-bold">{training.title}</p>
+                  <h4 className="text-[#2fa8a5] font-bold text-[20px]">{training.name}</h4>
+                  <p className="text-[#50264E] font-bold ">{training.title}</p>
                 </div>
                 <div className="flex flex-col">
                   {training.bootcamp_tipi.map((section) => (
                     <div key={section.id} className="training__section">
-                      <h5 className="text-[#50264E] font-bold">
+                      <h5 className="text-[#50264E] font-bold text-[18px]">
                         {section.name}
                       </h5>
 
@@ -122,7 +121,7 @@ const Cluster = () => {
                                 },
                               }}
                             />
-                            <span className="text-[#50264E]">
+                            <span className="text-[#50264E] text-[20px]">
                               {telim.title}
                             </span>
                           </div>
@@ -134,8 +133,8 @@ const Cluster = () => {
               </div>
             ))}
           </div>
-          <div className="training__price text-xl font-bold">
-            <p>
+          <div className="training__price text-xl font-bold text-end">
+            <p className="flex items-center justify-end g-5">
               {selectedSections.length > 1 && (
                 <span>{totalPrice.toFixed(2)}</span>
               )}
@@ -143,11 +142,11 @@ const Cluster = () => {
             </p>
           </div>
         </div>
-        <p className="training__register" onClick={() => setIsOpen(true)}>
+        <p className="training__register pr-5" onClick={() => setIsOpen(true)}>
           QEYDİYYAT
         </p>
       </div>
-      {isOpen && <RegistrationModal  setOpenModals={setIsOpen}/>}
+      {isOpen && <RegistrationModal setOpenModals={setIsOpen} />}
     </div>
   );
 };
