@@ -45,8 +45,8 @@ const Footer = () => {
               <FaPhoneVolume className="text-[#28aaa8]" />
               <div>
                 <p className="font-bold">{t("footer.contactPhone")}</p>
-                <p>077 341 43 40</p>
-                <p>051 341 43 40</p>
+                <p>(+994)77 341 43 40</p>
+                <p>(+994)51 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">

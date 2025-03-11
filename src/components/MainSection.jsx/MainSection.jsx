@@ -21,10 +21,10 @@ const MainSection = () => {
       try {
         const data = await fetch(`${BASE_URL}/metinler/`);
         const result = await data.json();
-        console.log(result);
+        console.log(result,"asd");
 
         const training = result.find(
-          (t) => t.title === "Python ilə Deep Learning"
+          (t) => t.title === "Data Science üçün Python Proqramlaşdırma"
         );
         if (training && training.sessiyalar && training.sessiyalar.length > 0) {
           const rawDate = training.sessiyalar[0]?.date;
