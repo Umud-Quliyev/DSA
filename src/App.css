@@ -41,12 +41,13 @@
 .practic__table {
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
   padding: 12px 10px;
-  height: max-content;
+  height: fit-content;
+  max-height: 50vh;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  cursor: pointer;
+  z-index: 999;
 }
-
-
-
-
 
 .scrolled {
   position: fixed;

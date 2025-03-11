@@ -83,7 +83,7 @@ const Header = () => {
       if (scroll > 50) {
         setColor(true);
         setChooseScroll(true);
-        setDropdown(false);
+        
       } else {
         setColor(false);
         setChooseScroll(false);
@@ -100,7 +100,10 @@ const Header = () => {
   const handleClick = () => {
     setDropdown(!dropdown);
   };
-
+  const handleCloseMenu = () => {
+    setOpen(false);  
+    setDropdown(false);  
+  };
   return (
     <>
       <div
@@ -214,10 +217,9 @@ const Header = () => {
             onClick={handleClick}
           >
             {t("nav.trainings")} <IoMdArrowDropdown />
-            {dropdown && <PracticTable />}
           </li>
         </ul>
-
+        {dropdown ? <PracticTable /> : ""}
         <div className="hidden text-[20px] items-center gap-4  lg:flex">
           <NavLink
             to={
@@ -253,7 +255,7 @@ const Header = () => {
             <ul className="md:hidden h-[100vh] text-nowrap text-[3vw] flex flex-col items-center gap-5 py-20">
               <span
                 className="absolute top-[20px] right-[10px] text-[20px]"
-                onClick={() => setOpen(false)}
+                onClick={handleCloseMenu}
               >
                 <IoClose />
               </span>
@@ -352,7 +354,6 @@ const Header = () => {
                 onClick={handleClick}
               >
                 {t("nav.trainings")} <IoMdArrowDropdown />
-                {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
@@ -474,7 +475,6 @@ const Header = () => {
                 onClick={handleClick}
               >
                 {t("nav.trainings")} <IoMdArrowDropdown />
-                {dropdown && <PracticTable />}
               </li>
               <div className="  items-center flex-wrap  gap-5 justify-center flex px-3">
                 <div className="text-[20px]">
@@ -492,6 +492,7 @@ const Header = () => {
               </div>
             </ul>
                 
+            
           </div>
         )}
       </div>
