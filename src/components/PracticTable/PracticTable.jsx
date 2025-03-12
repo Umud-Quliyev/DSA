@@ -43,8 +43,8 @@ const PracticTable = () => {
     getBootcampData();
   }, [BASE_URL]);
 
-  const clickHandler = (trainingId) => {
-    navigate(`/telim/${trainingId}`);
+  const clickHandler = (telim) => {
+    navigate(`/telim/${telim.id}`);
     window.scrollTo(0, 0);
   };
 
