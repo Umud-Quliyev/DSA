@@ -97,7 +97,7 @@ const PracticTable = () => {
                           {info.telimler.length > 0 ? (
                             info.telimler.map((telim) => (
                               <span
-                                key={telim.id}
+                                key={telim.metinler_ids?.[0]}
                                 onClick={() => clickHandler(telim)}
                                 className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
                               >
