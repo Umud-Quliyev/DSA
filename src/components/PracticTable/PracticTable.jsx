@@ -43,12 +43,16 @@ const PracticTable = () => {
     getBootcampData();
   }, [BASE_URL]);
 
-  const metinlerId = telim.metinler_ids?.[0];
-
   const clickHandler = (telim) => {
-    navigate(`/telim/${metinlerId}`);
-    window.scrollTo(0, 0);
+    const metinlerId = telim.metinler_ids?.[0];
+    if (metinlerId) {
+      navigate(`/telim/${metinlerId}`); 
+      window.scrollTo(0, 0);
+    } else {
+      console.warn("Metinler ID bulunamadı:", telim);
+    }
   };
+  
 
   const handleTrainingToggle = (trainingId) => {
     setOpenStates((prevState) => ({
