@@ -32,7 +32,7 @@ const DetailSessionSection = ({
                   </div>
                   <div className="training__price text-center">
                     <p>
-                      <span>{selectedTraining.money} AZN</span> 250 AZN
+                      <span>500 AZN</span> {selectedTraining.money} AZN
                     </p>
                   </div>
                 </div>
