@@ -116,7 +116,7 @@ const Header = () => {
             <img src={color ? logoBlack : logo} alt="logo" />
           </div>
         ) : (
-          <NavLink to={"/"} className="w-50 cursor-pointer">
+          <NavLink to={"/"} className="w-30 md:w-50 cursor-pointer">
             <img src={color ? logoBlack : logo} alt="logo" />
           </NavLink>
         )}
