@@ -11,7 +11,7 @@ import DetailTrainerSection from "./DetailTrainerSection/DetailTrainerSection";
 import DetailSessionSection from "./DetailSessionSection/DetailSessionSection";
 
 const Detail = () => {
-  const { id } = useParams();
+  const { trainingId } = useParams();
   const BASE_URL = import.meta.env.VITE_API_URL;
   const [selectedTraining, setSelectedTraining] = useState(null);
   const [selectedSession, setSelectedSession] = useState(null);
@@ -31,7 +31,7 @@ const Detail = () => {
     const fetchTrainingDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${BASE_URL}/metinler/${id}/`);
+        const response = await fetch(`${BASE_URL}/metinler/${trainingId}/`);
         if (!response.ok) {
           throw new Error("Error fetching training details");
         }

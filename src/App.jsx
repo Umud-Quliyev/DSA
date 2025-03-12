@@ -17,7 +17,7 @@ function App() {
           <Route path="/muraciet" element={<RequestPage/>}/>
           <Route path="/program" element={<ProgramPage/>}/>
          {/*  <Route path="/telim/:id" element={<Details />} /> */}
-          <Route path="/telim/:id" element={<Detail />} />
+          <Route path="/telim/:trainingId" element={<Detail />} />
         </Route>
       </Routes>
 
