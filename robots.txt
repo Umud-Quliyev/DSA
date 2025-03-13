@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/          
+Disallow: /login/           
+Disallow: /private/ 
+
+Allow: /                    
+Allow: /program              
+Allow: /muraciet              
+             

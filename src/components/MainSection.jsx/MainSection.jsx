@@ -21,7 +21,6 @@ const MainSection = () => {
       try {
         const data = await fetch(`${BASE_URL}/metinler/`);
         const result = await data.json();
-        console.log(result,"asd");
 
         const training = result.find(
           (t) => t.title === "Data Science üçün Python Proqramlaşdırma"

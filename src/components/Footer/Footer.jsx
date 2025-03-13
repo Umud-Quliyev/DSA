@@ -70,14 +70,14 @@ const Footer = () => {
             <ul>
               <li
                 onClick={() => changeLanguage("az")}
-                className={`flex items-center gap-2 ${activeLang === "az" ? "language__active" : "" }`}
+                className={`flex items-center gap-2 px-2 ${activeLang === "az" ? "language__active" : "" }`}
               >
                 <FlagIcon code="AZ" />
                 Azərbaycan
               </li>
               <li
                 onClick={() => changeLanguage("en")}
-                className={`flex items-center gap-2 ${activeLang === "en" ? "language__active" : ""}`}
+                className={`flex items-center gap-2 px-2 ${activeLang === "en" ? "language__active" : ""}`}
               >
                 <FlagIcon code="GB" />
                 English
