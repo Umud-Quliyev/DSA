@@ -1,15 +1,14 @@
-import { useState, useEffect, useRef } from "react";
-import { IoMdArrowDropdown, IoMdArrowDropleft } from "react-icons/io";
+import { Skeleton } from "@mui/material";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const PracticTable = () => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [openStates, setOpenStates] = useState({});  
+  const [openStates, setOpenStates] = useState({});
   const BASE_URL = import.meta.env.VITE_API_URL;
 
-  
   useEffect(() => {
     const getBootcampData = async () => {
       try {
@@ -46,13 +45,12 @@ const PracticTable = () => {
   const clickHandler = (telim) => {
     const metinlerId = telim.metinler_ids?.[0];
     if (metinlerId) {
-      navigate(`/telim/${metinlerId}`); 
+      navigate(`/telim/${metinlerId}`);
       window.scrollTo(0, 0);
     } else {
       console.warn("Metinler ID bulunamadı:", telim);
     }
   };
-  
 
   const handleTrainingToggle = (trainingId) => {
     setOpenStates((prevState) => ({
@@ -64,12 +62,81 @@ const PracticTable = () => {
   const handleBootcampTipiToggle = (trainingId, tipId) => {
     setOpenStates((prevState) => ({
       ...prevState,
-      [`${trainingId}-${tipId}`]: !prevState[`${trainingId}-${tipId}`], 
+      [`${trainingId}-${tipId}`]: !prevState[`${trainingId}-${tipId}`],
     }));
   };
 
   return (
-    <div  className="practic__table absolute    top-65   right-25  sm:top-80 sm:right-50 gap-1 md:top-15 xl:right-[220px] lg:right-[200px] md:right-[50px] w-max bg-[#FFF] px-5 py-4 rounded-[5px]">
+    <div className="practic__table   overflow-y-auto max-h-[70vh] md:h-max  absolute top-50 right-30 sm:right-15 gap-5 flex flex-col md:flex-row  md:flex-wrap   md:top-15  md:right-[50px] xl:right-[230px]  lg:right-[200px] w-max bg-[#FFF] px-5 py-4  rounded-[5px] z-10">
+      {loading
+        ? [...Array(3)].map((_, index) => (
+            <div key={index} className="w-[300px]">
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="80%"
+                height={24}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="70%"
+                height={20}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="90%"
+                height={20}
+              />
+              <Skeleton
+                animation="wave"
+                variant="text"
+                width="60%"
+                height={20}
+              />
+            </div>
+          ))
+        : trainings.map((training) => (
+            <div key={training.id} className=" flex flex-col">
+              <div className="text-[#2fa8a5]">
+                <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">
+                  {training.name}
+                </h1>
+              </div>
+              {training.bootcamp_tipi.map((info) => (
+                <div key={info.id} className="flex  flex-col ">
+                  <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
+                    {info.name}
+                  </p>
+
+                  <div className="flex flex-col  ">
+                    {info.telimler.length > 0 ? (
+                      info.telimler.map((telim) => (
+                        <span
+                          key={telim.id}
+                          onClick={() => clickHandler(telim)}
+                          className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
+                        >
+                          - {telim.title}
+                        </span>
+                      ))
+                    ) : (
+                      <p className="text-gray-500 text-sm">
+                        Bu bootcampdə təlim mövcud deyil.
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+    </div>
+  );
+};
+
+export default PracticTable;
+/* <div  className="practic__table absolute    top-65   right-25  sm:top-80 sm:right-50 gap-1 md:top-15 xl:right-[220px] lg:right-[200px] md:right-[50px] w-max bg-[#FFF] px-5 py-4 rounded-[5px]">
       {trainings?.map((training) => {
         const isTrainingOpen = openStates[training.id];  
         return (
@@ -125,82 +192,4 @@ const PracticTable = () => {
           </div>
         );
       })}
-    </div>
-  );
-};
-
-export default PracticTable;
-
-
-
-
- /* <div className="practic__table absolute -bottom-150 right-5 sm:right-15 gap-1 flex  flex-wrap flex-col  md:top-10  md:right-[-50px]  w-max bg-[#FFF] px-5 py-4  rounded-[5px] z-10">
-      {loading
-        ? [...Array(3)].map((_, index) => (
-            <div key={index} className="w-[300px]">
-              <Skeleton
-                animation="wave"
-                variant="text"
-                width="80%"
-                height={24}
-              />
-              <Skeleton
-                animation="wave"
-                variant="text"
-                width="70%"
-                height={20}
-              />
-              <Skeleton
-                animation="wave"
-                variant="text"
-                width="90%"
-                height={20}
-              />
-              <Skeleton
-                animation="wave"
-                variant="text"
-                width="60%"
-                height={20}
-              />
-            </div>
-          ))
-        : trainings.map((training) => (
-            <div key={training.id} className=" flex flex-col gap-10">
-              <div
-                className=" text-[#2fa8a5]"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <h1 className="flex items-center flex-wrap text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">
-                  <IoMdArrowDropdown />
-                  {training.name}
-                </h1>
-                </div>
-                {isOpen &&
-                  training.bootcamp_tipi.map((info) => (
-                    <div key={info.id} className=" flex bg-[green] ">
-                      <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
-                        {info.name}
-                      </p>
-
-                      <div className="flex flex-col bg-[red] ">
-                        {info.telimler.length > 0 ? (
-                          info.telimler.map((telim) => (
-                            <span
-                              key={telim.id}
-                              onClick={() => clickHandler(telim)}
-                              className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
-                            >
-                              - {telim.title}
-                            </span>
-                          ))
-                        ) : (
-                          <p className="text-gray-500 text-sm">
-                            Bu bootcampdə təlim mövcud deyil.
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-              </div>
-          ))}
     </div> */
