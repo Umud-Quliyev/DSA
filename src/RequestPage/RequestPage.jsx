@@ -33,7 +33,7 @@ const RequestPage = () => {
     }
     if (!formData.phone.trim()) {
       newErrors.phone = t("errors.phone");
-    } else if (!/^\d{10,}$/.test(formData.phone)) {
+    } else if (!/^\d{10,15}$/.test(formData.phone)) {
       newErrors.phone = t("errors.phone_invalid");
     }
 
