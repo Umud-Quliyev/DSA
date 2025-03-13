@@ -6,7 +6,6 @@ const PracticTable = () => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [openStates, setOpenStates] = useState({});
   const BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
@@ -52,19 +51,7 @@ const PracticTable = () => {
     }
   };
 
-  const handleTrainingToggle = (trainingId) => {
-    setOpenStates((prevState) => ({
-      ...prevState,
-      [trainingId]: !prevState[trainingId],
-    }));
-  };
-
-  const handleBootcampTipiToggle = (trainingId, tipId) => {
-    setOpenStates((prevState) => ({
-      ...prevState,
-      [`${trainingId}-${tipId}`]: !prevState[`${trainingId}-${tipId}`],
-    }));
-  };
+  
 
   return (
     <div className="practic__table   overflow-y-auto max-h-[70vh] md:h-max  absolute top-50 right-30 sm:right-15 gap-5 flex flex-col md:flex-row  md:flex-wrap   md:top-15  md:right-[50px] xl:right-[230px]  lg:right-[200px] w-max bg-[#FFF] px-5 py-4  rounded-[5px] z-10">
@@ -136,60 +123,4 @@ const PracticTable = () => {
 };
 
 export default PracticTable;
-/* <div  className="practic__table absolute    top-65   right-25  sm:top-80 sm:right-50 gap-1 md:top-15 xl:right-[220px] lg:right-[200px] md:right-[50px] w-max bg-[#FFF] px-5 py-4 rounded-[5px]">
-      {trainings?.map((training) => {
-        const isTrainingOpen = openStates[training.id];  
-        return (
-          <div key={training.id} className="md:flex  justify-between flex-row-reverse ">
-            <div
-              className="text-[#2fa8a5]"
-              onClick={() => handleTrainingToggle(training.id)}
-            >
-              <h1 className="flex items-center font-bold text-[2.5vw] md:text-[1.1vw]">
-              {isTrainingOpen ?   <IoMdArrowDropleft /> : <IoMdArrowDropdown />}  
-                {training.name}
-              </h1>
-            </div>
-            {isTrainingOpen && (
-              <div>
-                {training.bootcamp_tipi.map((info) => {
-                  const isBootcampTipiOpen = openStates[`${training.id}-${info.id}`];
-                  return (
-                    <div key={info.id}>
-                      <div
-                        className="flex flex-col"
-                        onClick={() => handleBootcampTipiToggle(training.id, info.id)}
-                      >
-                        <p className="flex items-center text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
-                          {isBootcampTipiOpen ? <IoMdArrowDropdown /> : <IoMdArrowDropleft />}
-                          {info.name}
-                        </p>
-                      </div>
-                      {isBootcampTipiOpen && (
-                        <div className="flex flex-col">
-                          {info.telimler.length > 0 ? (
-                            info.telimler.map((telim) => (
-                              <span
-                                key={telim.metinler_ids?.[0]}
-                                onClick={() => clickHandler(telim)}
-                                className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
-                              >
-                                - {telim.title}
-                              </span>
-                            ))
-                          ) : (
-                            <p className="text-gray-500 text-sm">
-                              Bu bootcampdə təlim mövcud deyil.
-                            </p>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div> */
+
