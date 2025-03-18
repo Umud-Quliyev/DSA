@@ -93,7 +93,6 @@ const Headers = () => {
     setOpen(false);
     setDropdown(false);
   };
-  console.log(open, "ad");
   return (
     <div
       className={`${
