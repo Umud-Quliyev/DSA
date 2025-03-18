@@ -75,6 +75,12 @@ const RegistrationModal = ({setOpenModals}) => {
             autoClose: 5000,
             transition: Bounce,
           });
+          setFormData({
+            name: "",
+            surname: "",
+            email: "",
+            phone: "",
+          });
         }
       };
   return (

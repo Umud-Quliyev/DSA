@@ -155,7 +155,7 @@ const MainSection = () => {
           <div className="flex items-center justify-center mt-15  md:w-full">
             <Link
               to={"/muraciet"}
-              className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer hover:bg-[#e2195b]"
+              className=" text-[2.5vw] md:text-[1vw] text-nowrap text-center  bg-[#28AAA8] text-[#fff] py-3 px-10  rounded-[30px] cursor-pointer  duration-500 ease-in-out hover:bg-[#e2195b]"
             >
               {t("apply_now")}
             </Link>

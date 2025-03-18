@@ -96,6 +96,7 @@
   background-color: #28aaa8;
   color: #fff;
   cursor: pointer;
+  transition: all .5s ease;
 }
 .contact__form button:hover {
   background-color: #e2195b;

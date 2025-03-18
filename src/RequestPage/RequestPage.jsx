@@ -59,9 +59,13 @@ const RequestPage = () => {
         setFormData({ name: "", surname: "", email: "", phone: "" });
       } else {
         toast.error(t("toast.error"), { transition: Bounce });
+        setFormData({ name: "", surname: "", email: "", phone: "" });
+
       }
     } catch (error) {
       toast.error(t("toast.error"), { transition: Bounce });
+      setFormData({ name: "", surname: "", email: "", phone: "" });
+
     }
   };
 
@@ -95,7 +99,7 @@ const RequestPage = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#28aaa8] text-[#fff] font-bold py-3 mt-5 rounded-[30px] cursor-pointer transition duration-300 ease-in-out hover:bg-[#e2195b]"
+            className="w-full bg-[#28aaa8] text-[#fff] font-bold py-3 mt-5 rounded-[30px] cursor-pointer transition duration-500 ease-in-out hover:bg-[#e2195b]"
           >
             {t("form.submit")}
           </button>
