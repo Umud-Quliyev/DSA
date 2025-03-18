@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Team.css";
 import "swiper/css";
 import "swiper/css/pagination";

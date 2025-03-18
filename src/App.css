@@ -24,7 +24,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
   width: 100%;
   position: relative;
 }
@@ -43,6 +42,7 @@
   padding: 12px 10px;
   height: fit-content;
   cursor: pointer;
+  z-index: 999;
 }
 
 .scrolled {
@@ -99,6 +99,8 @@
   }
 }
 
+
+
 .sidebar {
   position: absolute;
   top: 0;
@@ -114,6 +116,8 @@
   animation-name: sidebar;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  
+  
 }
 .close {
   position: absolute;
@@ -133,7 +137,7 @@
 }
 @keyframes sidebar {
   from {
-    transform: translateX(400px);
+    transform: translateX(200px);
   }
   to {
     transform: translateX(0);
@@ -144,7 +148,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(400px);
+    transform: translateX(200px);
   }
 }
 

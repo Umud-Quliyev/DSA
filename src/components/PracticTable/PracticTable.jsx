@@ -54,7 +54,7 @@ const PracticTable = () => {
   
 
   return (
-    <div className="practic__table   overflow-y-auto max-h-[60vh] md:h-max  absolute top-20 right-35 sm:right-15 gap-5 flex flex-col md:flex-row  md:flex-wrap   md:top-15  md:right-[50px] xl:right-[230px]  lg:right-[200px] w-max bg-[#FFF] px-5 py-4  rounded-[5px] z-10">
+    <div className="practic__table   overflow-y-auto max-h-[60vh] md:h-max  absolute top-20 right-35 sm:right-15 gap-5 flex flex-col md:flex-row  md:flex-wrap   md:top-15  md:right-[50px] xl:right-[230px]  lg:right-[200px] w-max bg-[#FFF] px-5 py-4  rounded-[5px] ">
       {loading
         ? [...Array(3)].map((_, index) => (
             <div key={index} className="w-[300px]">

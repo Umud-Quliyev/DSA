@@ -79,12 +79,19 @@ const Modals = ({ setOpenModals, session }) => {
         });
       } else {
         throw new Error();
+        
       }
     } catch {
       toast.error(t("toast.error"), {
         position: "top-right",
         autoClose: 5000,
         transition: Bounce,
+      });
+      setFormData({
+        full_name: "",
+        email: "",
+        phone: "",
+        event_date: "",
       });
     }
   };

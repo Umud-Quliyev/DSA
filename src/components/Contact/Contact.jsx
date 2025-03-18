@@ -196,7 +196,7 @@ const Contact = () => {
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
 
-          <button type="submit">{t("contact.send")}</button>
+          <button type="submit" >{t("contact.send")}</button>
         </form>
       </div>
       <ToastContainer

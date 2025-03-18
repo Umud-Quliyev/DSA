@@ -23,7 +23,7 @@ const ProgramPage = () => {
           />
           <button
             type="submit"
-            className="w-full bg-[#28aaa8] text-[#fff] font-bold py-3  mt-5 rounded-[30px] cursor-pointer transition  duration-300 ease-in-out hover:bg-[#e2195b]"
+            className="w-full bg-[#28aaa8] text-[#fff] font-bold py-3  mt-5 rounded-[30px] cursor-pointer transition  duration-500 ease-in-out hover:bg-[#e2195b]"
           >
             GÖNDƏR
           </button>
