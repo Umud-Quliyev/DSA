@@ -31,7 +31,7 @@ const Customers = () => {
     <section id="customer" name="customer" className="contanierr">
       <div className="customers pt-15">
         <div className="customer__title">
-          <h2>{t("customer_title")}</h2>
+          {<h2>{t("customer_title")}</h2>}
         </div>
         <div className="customer__list">
           <Swiper

@@ -36,23 +36,23 @@ const Footer = () => {
             <div className="flex items-center gap-3 sub-address">
               <FaPhoneVolume className="text-[#28aaa8]" />
               <div>
-                <p className="font-bold">{t("footer.contactPhone")}</p>
-                <p>(+994)77 341 43 40</p>
-                <p>(+994)51 341 43 40</p>
+                <p className="font-bold text-[#1b1136]">{t("footer.contactPhone")}</p>
+                <p className="text-[#1b1136]">(+994)77 341 43 40</p>
+                <p className="text-[#1b1136]">(+994)51 341 43 40</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">
               <IoIosMail className="text-[#28aaa8]" />
               <div>
-                <p className="font-bold">{t("footer.contactEmail")}</p>
-                <p>info@dsa.az</p>
+                <p className="font-bold text-[#1b1136]">{t("footer.contactEmail")}</p>
+                <p className="text-[#1b1136]">info@dsa.az</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sub-address">
               <FaLocationDot className="text-[#28aaa8]" />
               <div>
-                <p className="font-bold">{t("footer.contactAddress")}</p>
-                <p>Aşıq Alı 2A, Baku, Azerbaijan</p>
+                <p className="font-bold text-[#1b1136]">{t("footer.contactAddress")}</p>
+                <p className="text-[#1b1136]">Aşıq Alı 2A, Baku, Azerbaijan</p>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Footer = () => {
             <ul>
               <li
                 onClick={() => changeLanguage("az")}
-                className={`flex items-center p-2 gap-2 ${
+                className={`flex items-center p-2 gap-2 text-[#1b1136] ${
                   activeLang === "az" ? "language__active" : ""
                 }`}
               >
@@ -71,7 +71,7 @@ const Footer = () => {
               </li>
               <li
                 onClick={() => changeLanguage("en")}
-                className={`flex items-center p-2 gap-2 ${
+                className={`flex items-center p-2 gap-2 text-[#1b1136] ${
                   activeLang === "en" ? "language__active" : ""
                 }`}
               >

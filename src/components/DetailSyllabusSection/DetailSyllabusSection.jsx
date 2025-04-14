@@ -5,7 +5,7 @@ const DetailSyllabusSection = ({ selectedTraining }) => {
     <section className="bg-[#f1f3f2]">
       <div className="w-full  mx-auto  lg:w-5/6 pb-10 px-2 md:px-5  lg:px-0">
         <div className="pt-10 pb-5">
-          <h2 className="text-[#330033] text-[26px] font-bold">Sillabus</h2>
+          <h2 className="text-[#330033] text-[24px] font-bold">Sillabus</h2>
         </div>
         <div className="flex  flex-wrap justify-between gap-5">
           {selectedTraining?.syllabus?.length > 0 ? (
@@ -24,7 +24,7 @@ const DetailSyllabusSection = ({ selectedTraining }) => {
                         ?.split(/\r\n/)
                         .filter((item) => item.trim() !== "")
                         .map((item, idx) => (
-                          <li key={idx} className="text-[#330033] text-[20px]">
+                          <li key={idx} className="text-[#330033] text-[16px] font-[400]">
                             {item}
                           </li>
                         ))}
@@ -41,7 +41,7 @@ const DetailSyllabusSection = ({ selectedTraining }) => {
                         ?.split(/\r\n/)
                         .filter((item) => item.trim() !== "")
                         .map((item, idx) => (
-                          <li key={idx} className="text-[#330033] text-[20px]">
+                          <li key={idx} className="text-[#330033] text-[16px] font-[400]">
                             {item}
                           </li>
                         ))}

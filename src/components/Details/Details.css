@@ -237,7 +237,7 @@
   border-radius: 7px;
   text-align: center;
   background-color: #33cccc;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   transition: opacity 0.2s;
   display: block;
@@ -360,7 +360,6 @@
 .cluster__title h2 {
   font-size: 24px;
   padding-bottom: 32px;
-  font-weight: 500;
 }
 
 .cluster__list {
@@ -372,7 +371,8 @@
 
 .list__title span {
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #330033;
   padding-bottom: 24px;
   display: block;
 }
@@ -408,8 +408,9 @@
   padding-top: 14px;
   font-size: 16px;
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
+  color: #330033;
 }
 
 /* .training__info {

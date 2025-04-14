@@ -58,6 +58,8 @@
 
 .MuiSelect-select {
   height: 50px;
+  color: #495057 !important;
+
 }
 
 .form__text {
@@ -106,6 +108,7 @@
   z-index: 1 !important;
   background: white;
   padding: 0 5px;
+  
 }
 
 .MuiFormControl-root {
@@ -118,5 +121,9 @@
   left: 10px;
   background: white;
   padding: 0 5px;
-}
+  color: #495057 !important; 
 
+}
+.MuiButtonBase-root{
+  color: #495057 !important;
+}

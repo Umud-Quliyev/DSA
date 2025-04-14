@@ -10,9 +10,9 @@ const Training = () => {
       <section id="training" name="training">
         <div className="contanierr">
           <div className="training_program_info">
-            <h2>{t("training_program")}</h2>
+            <h2 className="text-[#212331]">{t("training_program")}</h2>
             <p>{t("training_info")}</p>
-            <Link to="/program">{t("training_download")}</Link>
+            <Link className=" text-[2.5vw] sm:text-[20px]" to="/program">{t("training_download")}</Link>
           </div>
         </div>
         <div className="training__program">
@@ -20,7 +20,7 @@ const Training = () => {
             <div className="program__title">
               <h2 >{t("training_process_title")}</h2>
             </div>
-            <div className="training__process">
+            <div className="training__process ">
               <div className="process">
                 <div className="process__numb">
                   <span>01</span>

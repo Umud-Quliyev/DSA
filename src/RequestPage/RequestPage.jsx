@@ -24,16 +24,17 @@ const RequestPage = () => {
   const validateForm = () => {
     let newErrors = {};
     if (!formData.name.trim()) newErrors.name = t("errors.name");
-    if (!formData.surname.trim())
-      newErrors.surname = t("errors.surname");
+    if (!formData.surname.trim()) newErrors.surname = t("errors.surname");
     if (!formData.email.trim()) {
       newErrors.email = t("errors.email");
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = t("errors.email_invalid");
     }
+
+    // 📌 Telefon 10 rəqəm olmalıdır
     if (!formData.phone.trim()) {
       newErrors.phone = t("errors.phone");
-    } else if (!/^\d{10,15}$/.test(formData.phone)) {
+    } else if (!/^\d{7,20}$/.test(formData.phone)) {
       newErrors.phone = t("errors.phone_invalid");
     }
 
@@ -56,16 +57,16 @@ const RequestPage = () => {
 
       if (response.ok) {
         toast.success(t("toast.success"), { transition: Bounce });
-        setFormData({ name: "", surname: "", email: "", phone: "" });
       } else {
         toast.error(t("toast.error"), { transition: Bounce });
-        setFormData({ name: "", surname: "", email: "", phone: "" });
-
       }
-    } catch (error) {
-      toast.error(t("toast.error"), { transition: Bounce });
+
+      // Formu sıfırla yalnız bir dəfə
       setFormData({ name: "", surname: "", email: "", phone: "" });
 
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error(t("toast.error"), { transition: Bounce });
     }
   };
 

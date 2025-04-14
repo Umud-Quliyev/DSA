@@ -8,7 +8,7 @@ const DetailTrainingSection = ({selectedTraining, trainingData, formatTime, addT
     <section>
         <div className=" w-full lg:w-5/6  mx-auto mb-10 px-2 md:px-5  lg:px-0">
           <div className="mb-10">
-            <h2 className="text-[#330033] text-[30px]">Təlim Cədvəli</h2>
+            <h2 className="text-[#330033] text-[24px]">Təlim Cədvəli</h2>
           </div>
           <div className="flex flex-wrap  xl:flex-nowrap  justify-center md:justify-between xl:justify-between  gap-5">
             {selectedTraining?.sessiyalar?.map((session, index) => {

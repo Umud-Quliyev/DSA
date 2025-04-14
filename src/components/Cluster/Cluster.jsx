@@ -76,25 +76,25 @@ const Cluster = () => {
     <div className="cluster">
       <div className="w-full mx-auto lg:w-5/6 px-2 md:px-5  lg:px-0">
         <div id="cluster" className="cluster__title pb-5">
-          <h2>
+          <h2 className="font-[600] text-[24px] text-[#330033]">
             Klaster kampaniyasına qeydiyyatdan keçərək daha çox qənaət edin!
           </h2>
         </div>
         <div id="cluster" className="cluster__list">
           <div className="list__title">
-            <span>Öz klasterini seç</span>
+            <span >Öz klasterini seç</span>
           </div>
           <div className="cluster__box flex flex-wrap xl:flex-nowrap gap-5 justify-between">
             {trainings.map((training) => (
               <div className="training" key={training.id}>
                 <div>
                   <h4 className="text-[#2fa8a5] font-bold text-[20px]">{training.name}</h4>
-                  <p className="text-[#50264E] font-bold ">{training.title}</p>
+                  <p className="text-[#50264E] font-[500] ">{training.title}</p>
                 </div>
                 <div className="flex flex-col">
                   {training.bootcamp_tipi.map((section) => (
                     <div key={section.id} className="training__section">
-                      <h5 className="text-[#50264E] font-bold text-[18px]">
+                      <h5 className="text-[#50264E] font-bold text-[16px]">
                         {section.name}
                       </h5>
 
@@ -114,14 +114,14 @@ const Cluster = () => {
                                 color: selectedSections.some(
                                   (s) => s.id === telim.id
                                 )
-                                  ? "#2fa8a5"
+                                  ? "#2fa8a5 !important"
                                   : "inherit",
                                 "&.Mui-checked": {
-                                  color: "#2fa8a5",
+                                  color: "#2fa8a5 !important",
                                 },
                               }}
                             />
-                            <span className="text-[#50264E] text-[20px]">
+                            <span className="text-[#50264E] text-[18px] font-[500]">
                               {telim.title}
                             </span>
                           </div>

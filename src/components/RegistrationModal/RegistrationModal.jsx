@@ -34,7 +34,7 @@ const RegistrationModal = ({setOpenModals}) => {
         }
         if (!formData.phone || !formData.phone.trim()) {
           newErrors.phone = t("errors.phone");
-        } else if (!/^\d{10,}$/.test(formData.phone)) {
+        } else if (!/^\d{10}$/.test(formData.phone)) {
           newErrors.phone = t("errors.phone_invalid");
         }
     

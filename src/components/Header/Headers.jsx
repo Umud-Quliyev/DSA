@@ -97,7 +97,7 @@ const Headers = () => {
     <div
       className={`${
         chooseScroll ? "scrolled" : bgColor ? "bgColor" : ""
-      } flex items-center justify-between px-5 md:px-0 md:justify-evenly w-full h-20 nav`}
+      } flex items-center justify-between px-5 md:px-0 md:justify-evenly w-full h-20  nav font-[300]`}
     >
       {isLocation ? (
         <>
@@ -108,7 +108,7 @@ const Headers = () => {
               className="w-full"
             />
           </div>
-          <ul className="text-nowrap hidden md:flex items-center  gap-5 xl:gap-10 ">
+          <ul className="text-nowrap hidden md:flex items-center  gap-5 xl:gap-10 text-[14px] lg:text-[14px]">
             <Link
               to="main"
               smooth={true}
@@ -228,7 +228,7 @@ const Headers = () => {
           handleCloseMenu={handleCloseMenu}
         />
       )}
-      {dropdown && <PracticTable />}
+      {dropdown && <PracticTable setDropdown={setDropdown}/>}
     </div>
   );
 };

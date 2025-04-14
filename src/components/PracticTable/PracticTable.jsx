@@ -1,8 +1,9 @@
 import { Skeleton } from "@mui/material";
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-const PracticTable = () => {
+const PracticTable = ({setDropdown}) => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ const PracticTable = () => {
     if (metinlerId) {
       navigate(`/telim/${metinlerId}`);
       window.scrollTo(0, 0);
+      setDropdown(false)
     } else {
       console.warn("Metinler ID bulunamadı:", telim);
     }
@@ -54,7 +56,9 @@ const PracticTable = () => {
   
 
   return (
-    <div className="practic__table   overflow-y-auto max-h-[60vh] md:h-max  absolute top-20 right-35 sm:right-15 gap-5 flex flex-col md:flex-row  md:flex-wrap   md:top-15  md:right-[50px] xl:right-[230px]  lg:right-[200px] w-max bg-[#FFF] px-5 py-4  rounded-[5px] ">
+    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-35 sm:right-15 md:top-15 md:right-[50px] xl:right-0 lg:right-0 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 w-full md:max-w-[100%]">
+
+
       {loading
         ? [...Array(3)].map((_, index) => (
             <div key={index} className="w-[300px]">
@@ -120,6 +124,9 @@ const PracticTable = () => {
           ))}
     </div>
   );
+};
+PracticTable.propTypes = {
+  setDropdown: PropTypes.func.isRequired,
 };
 
 export default PracticTable;

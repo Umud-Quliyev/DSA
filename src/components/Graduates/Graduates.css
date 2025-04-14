@@ -6,6 +6,7 @@
   font-weight: 300;
   margin-bottom: 25px;
   font-size: 40px;
+  color: #212331;
 }
 
 .graduates__img img {
@@ -29,16 +30,19 @@
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 18px;
+  color: #1b1136;
 }
 
 .graduate__info h5 {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 20px;
+  color: #1b1136;
 }
 
 .graduate__info h5 span {
   font-weight: bold;
+  color: #1b1136;
 }
 
 .swiper-slide {
@@ -70,10 +74,20 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px ){
-  
+@media screen and (max-width: 768px) {
   .graduates__title h2,
   .workplace__title h2 {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 480px) {
+ 
+  .graduates__img img {
+    width: 50%;
+    margin: auto;
+  }
+  .workplace__title h2 {
+    font-size: 20px;
+  }
+}
+

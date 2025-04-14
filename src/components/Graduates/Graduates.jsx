@@ -126,7 +126,7 @@ const Graduates = () => {
       </div>
       <div className="graduate__workplace">
         <div className="workplace__title">
-          <h2>{t("graduates.workplace_title")}</h2>
+          {<h2>{t("graduates.workplace_title")}</h2>}
         </div>
         <div className="workplace__list">
           {graduate__workplace.map((workplace, index) => (

@@ -12,7 +12,7 @@
   font-family: sans-serif;
   font-size: 15px;
   margin-bottom: 32px;
-  color: #555;
+  color: #555555;
   font-weight: 300;
   letter-spacing: 0.5;
 }
@@ -20,7 +20,6 @@
 .training_program_info a {
   cursor: pointer;
   position: relative;
-  font-size: 15px;
   padding: 1rem 2.5rem;
   line-height: 1;
   text-transform: uppercase;
@@ -36,7 +35,7 @@
   text-wrap: nowrap;
   width: 100%;
   margin: 0 auto;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .training_program_info a:hover {
@@ -146,7 +145,6 @@
   text-align: center;
   color: #fff;
   font-size: 14px;
-  
 }
 
 .process:first-child .processbf__numb::after {

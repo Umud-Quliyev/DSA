@@ -9,7 +9,7 @@ const DetailSertificateSection = ({selectedTraining}) => {
             <h1 className="text-[40px]  font-[400] text-[#330033] mb-5">
               Təlim haqqında məlumat
             </h1>
-            <p className="text-[20px]  font-[400] text-[#330033]">
+            <p className="text-[18px]  font-[400] text-[#330033]">
               {selectedTraining?.information}
             </p>
           </div>
@@ -19,7 +19,7 @@ const DetailSertificateSection = ({selectedTraining}) => {
                 <h1 className="text-[40px]  font-[400] text-[#330033] mb-5">
                   Bu təlim kimlər üçündür?
                 </h1>
-                <p className="text-[20px]  font-[400] text-[#330033]">
+                <p className="text-[18px]  font-[400] text-[#330033]">
                   {selectedTraining?.for_who}
                 </p>
               </div>
@@ -27,7 +27,7 @@ const DetailSertificateSection = ({selectedTraining}) => {
                 <h1 className="text-[40px]  font-[400] text-[#330033] mb-5">
                   Sertifikat
                 </h1>
-                <p className="text-[20px]  font-[400] text-[#330033]">
+                <p className="text-[18px]  font-[400] text-[#330033]">
                   {selectedTraining?.certificates}
                 </p>
               </div>

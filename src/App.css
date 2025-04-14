@@ -1,17 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+
+*{
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 0.5px;
+}
 .contanierr {
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-@font-face {
-  font-family: "Gotham";
-  font-weight: 600;
-  font-style: normal;
-  src: url("./assets/fonts/Gotham-Light.otf") format("truetype");
 }
 
 /*  navbar  */
@@ -99,8 +98,6 @@
   }
 }
 
-
-
 .sidebar {
   position: absolute;
   top: 0;
@@ -116,8 +113,6 @@
   animation-name: sidebar;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  
-  
 }
 .close {
   position: absolute;

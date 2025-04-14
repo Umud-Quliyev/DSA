@@ -109,8 +109,8 @@ const Detail = () => {
     <div className="pt-30">
       <DetailHeadSection data={selectedTraining} />
       <section>
-        <div className=" bg-[#32cccc] text-white py-8 tracking-wide mb-10 px-2 md:px-5  lg:px-0">
-          <p className="text-[20px]    lg:w-5/6  mx-auto">
+        <div className=" bg-[#32cccc] text-white py-6 tracking-wide mb-10 px-2 md:px-5  lg:px-0">
+          <p className="text-[18px]    lg:w-5/6  mx-auto">
             Təlimlər oflayn (ofisdaxili) və onlayn formada keçirilir.
           </p>
         </div>

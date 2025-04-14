@@ -56,3 +56,9 @@ span.swiper-pagination-bullet-active {
     text-wrap: nowrap;
   }
 }
+@media screen and (max-width: 480px) {
+  .customer__title h2 {
+    font-size: 18px;
+    text-wrap: nowrap;
+  }
+}
