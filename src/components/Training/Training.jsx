@@ -35,8 +35,8 @@ const Training = () => {
             <div className="program__title">
               <h2 data-aos="fade-up">{t("training_process_title")}</h2>
             </div>
-            <div className="training__process ">
-              <div className="process">
+            <div className="training__process " >
+              <div className="process" data-aos="fade" data-aos-duration="500" data-aos-delay="50">
                 <div className="process__numb">
                   <span>01</span>
                 </div>
@@ -47,7 +47,7 @@ const Training = () => {
                   <p>{t("training_step_1_desc")}</p>
                 </div>
               </div>
-              <div className="process">
+              <div className="process" data-aos="fade" data-aos-duration="1000" data-aos-delay="100">
                 <div className="process__numb processbf__numb">
                   <span>02</span>
                 </div>
@@ -58,7 +58,7 @@ const Training = () => {
                   <p>{t("training_step_2_desc")}</p>
                 </div>
               </div>
-              <div className="process">
+              <div className="process" data-aos="fade" data-aos-duration="1500" data-aos-delay="150">
                 <div className="process__numb processbf__numb">
                   <span>03</span>
                 </div>
@@ -69,7 +69,7 @@ const Training = () => {
                   <p>{t("training_step_3_desc")}</p>
                 </div>
               </div>
-              <div className="process">
+              <div className="process" data-aos="fade" data-aos-duration="2000" data-aos-delay="200">
                 <div className="process__numb processbf__numb">
                   <span>04</span>
                 </div>
@@ -80,7 +80,7 @@ const Training = () => {
                   <p>{t("training_step_4_desc")}</p>
                 </div>
               </div>
-              <div className="process">
+              <div className="process" data-aos="fade" data-aos-duration="2500" data-aos-delay="250">
                 <div className="process__numb processbf__numb">
                   <span>05</span>
                 </div>
