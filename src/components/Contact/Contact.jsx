@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Contact.css";
 import MenuItem from "@mui/material/MenuItem";
@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 import { Bounce } from "react-toastify";
-
+import { motion } from "motion/react";
 const Contact = () => {
   const { t } = useTranslation();
 
@@ -104,9 +104,25 @@ const Contact = () => {
     <section id="contact" className="contanierr">
       <div className="contact">
         <div className="contact__title">
-          <h2>{t("contact.title")}</h2>
+          <motion.h2 initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }} className="font-[300]">
+            {t("contact.title")}
+          </motion.h2>
         </div>
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <motion.form
+          className="contact__form"
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: .5,
+              ease: "easeIn",
+            }}
+            viewport={{ once: true }}
+        >
           <div className="form__head">
             <div>
               <input
@@ -158,7 +174,6 @@ const Contact = () => {
                 value={formData.service}
                 onChange={handleChange}
                 displayEmpty
-                
               >
                 <MenuItem value="">{t("contact.service")}</MenuItem>
                 <MenuItem value="Data Science Bootcamp">
@@ -196,8 +211,8 @@ const Contact = () => {
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
 
-          <button type="submit" >{t("contact.send")}</button>
-        </form>
+          <button type="submit">{t("contact.send")}</button>
+        </motion.form>
       </div>
       <ToastContainer
         position="top-right"

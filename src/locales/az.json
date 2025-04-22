@@ -31,7 +31,6 @@
   "community": "Cəmiyyət",
   "community_desc": "Peşəkar Data Analitiklərdən ibarət olan Data Science cəmiyyətimizə qoşularaq Data Science Spacedə həyata keçirilən müxtəlif networking tədbirlərinə qoşulun.",
   "customer_title": "Əməkdaşlıq etdiyimiz şirkətlər",
-  "training_program": "Təlim Proqramı",
   "training_info": "Elektron Hökumətin İnkişafı Mərkəzi, Paşa Bank, Bakcell, Beynəlxalq Bank və Access Bank kimi iri qurumlarda çalışan mütəxəssislərimiz tərəfindən seçilmiş kitablar, real biznes və analitika keyzləri əsasında yaradılmışdır. Proqram bazardakı trendlər və biznesin tələbləri nəzərə alınaraq müntəzəm yenilənir. Bu proqram Statistika, Data Analitikası və Data Science metodologiyalarını R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, Hadoop, TensorFlow, Tableau, SPSS, SPSS Modeler öyrədilməsi daxil olmaqla 140 saatlıq tədris məzmununu əhatə edəcəkdir.",
   "training_download": "TƏLİM PROQRAMINI YÜKLƏYİN",
   "training_process_title": "Proses necə işləyir?",
@@ -44,7 +43,7 @@
   "training_step_4": "Karyera",
   "training_step_4_desc": "Peşəkar Data analitiklər və HR mütəxəssisləri ilə görüşüb birə-bir müzakirələr aparacaq və CV-Vakansiya bazasına giriş əldə edəcəksiniz.",
   "training_step_5": "Təbriklər!",
-  "training_step_5_desc": "Dünya yeni bir Data Scientist qazandı.",
+  "training_step_5_desc": "Dünya yeni Data Scientist qazandı.",
   "trainers": "Təlimçilərimiz",
 
   "nav": {

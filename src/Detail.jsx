@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Cluster from "./Cluster/Cluster";
-import DetailHeadSection from "./DetailHeadSection/DetailHeadSection";
-import DetailTrainingSection from "./DetailTrainingSection/DetailTrainingSection";
-import DetailTrainingCompanySection from "./DetailTrainingCompanySection/DetailTrainingCompanySection";
-import DetailSertificateSection from "./DetailSertificateSection/DetailSertificateSection";
-import DetailYoutubeSection from "./DetailYoutubeSection/DetailYoutubeSection";
-import DetailSyllabusSection from "./DetailSyllabusSection/DetailSyllabusSection";
-import DetailTrainerSection from "./DetailTrainerSection/DetailTrainerSection";
-import DetailSessionSection from "./DetailSessionSection/DetailSessionSection";
-
+import Cluster from "./components/Cluster/Cluster";
+import DetailHeadSection from "./components/DetailHeadSection/DetailHeadSection";
+import DetailTrainingSection from "./components/DetailTrainingSection/DetailTrainingSection";
+import DetailTrainingCompanySection from "./components/DetailTrainingCompanySection/DetailTrainingCompanySection";
+import DetailSertificateSection from "./components/DetailSertificateSection/DetailSertificateSection";
+import DetailYoutubeSection from "./components/DetailYoutubeSection/DetailYoutubeSection";
+import DetailSyllabusSection from "./components/DetailSyllabusSection/DetailSyllabusSection";
+import DetailTrainerSection from "./components/DetailTrainerSection/DetailTrainerSection";
+import DetailSessionSection from "./components/DetailSessionSection/DetailSessionSection";
+import "./components/Details/Details.css"
 const Detail = () => {
   const { id } = useParams();
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -98,12 +98,7 @@ const Detail = () => {
     },
   ];
 
-  /*  const registerTexts = {
-    az: "Qeydiyyatdan keç",
-    en: "Register",
-    de: "Registrieren",
-    ru: "Зарегистрироваться",
-  }; */
+ 
 
   return (
     <div className="pt-30">

@@ -9,7 +9,7 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-
+import { motion } from "motion/react";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -87,9 +87,19 @@ const Faq = () => {
     <section id="faq" name="faq" className="faq">
       <div className="contanierr">
         <div className="faq__title">
-          <h2>{t("faq.title")}</h2>
+          <motion.h2 initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }}>{t("faq.title")}</motion.h2>
         </div>
-        <div className="faq__list">
+        <motion.div className="faq__list" initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: .5,
+              ease: "easeIn",
+            }}
+            viewport={{ once: true }}>
           {faqItems.length > 0 ? (
             faqItems.map((item, index) => (
               <Accordion
@@ -116,7 +126,7 @@ const Faq = () => {
           ) : (
             <p>{t("faq.loading")}</p>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

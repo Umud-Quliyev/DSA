@@ -14,7 +14,7 @@ const DetailTrainingCompanySection = () => {
               Klaster kampanyasına qeydiyyatdan keçərək daha çox qənaət edin!
             </p>
             <button
-              className="sm:w-1/2 md:w-2/6 lg:w-1/4 xl:w-1/5 sm:mb-0 mb-5 text-[14px]"
+              className="sm:w-1/2 md:w-2/6 lg:w-1/4 xl:w-1/5 sm:mb-0 mb-5 text-[14px] hover:opacity-80"
               onClick={() => handleIconClick("#cluster")}
             >
               KLASTER KAMPANİYASI

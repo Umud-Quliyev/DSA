@@ -18,7 +18,10 @@ const DetailSessionSection = ({
             const trainingInfo = trainingData[index];
             if (!trainingInfo) return;
             return (
-              <div className="table__card lg:w-2/5 xl:w-full md:w-2/5 sm:w-2/5 w-full" key={index}>
+              <div
+                className="table__card lg:w-2/5 xl:w-full md:w-2/5 sm:w-2/5 w-full"
+                key={index}
+              >
                 <div
                   style={{ backgroundColor: trainingInfo.bgcolor }}
                   className="card__title"
@@ -28,7 +31,9 @@ const DetailSessionSection = ({
                 <div className="card__body ">
                   <div className="card__time  justify-center border-b-2 border-[lightgray]">
                     <FaCalendarAlt color={trainingInfo.bgcolor} />
-                    <span className="text-[20px]">{formatDate(training.date)}</span>
+                    <span className="text-[18px]">
+                      {formatDate(training.date)}
+                    </span>
                   </div>
                   <div className="training__price text-center">
                     <p>
@@ -38,6 +43,7 @@ const DetailSessionSection = ({
                 </div>
                 <div className="card__button">
                   <button
+                    className="hover:opacity-80"
                     style={{ backgroundColor: trainingInfo.bgcolor }}
                     onClick={() => openModal(selectedTraining)}
                   >

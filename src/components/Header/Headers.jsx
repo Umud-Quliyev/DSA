@@ -64,6 +64,7 @@ const Headers = () => {
         setDropdown(false);
       } else {
         setChooseScroll(false);
+        setActiveSection("")
       }
       setCurrentScroll(scroll);
     };

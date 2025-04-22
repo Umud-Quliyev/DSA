@@ -26,7 +26,10 @@
 }
 
 .teacher__profile > div {
-  max-width: 160px;
+  max-width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -35,6 +38,7 @@
 }
 
 .profile__img img {
+  max-width: 160px;
   border-radius: 50%;
   border: 5px solid transparent;
   transition: ease 0.3s;
@@ -61,15 +65,8 @@
 
 .profile__info span {
   font-size: 14px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.profile__info h5 span {
-  padding-top: 20px;
   font-weight: 700;
 }
-
 
 @media screen and (max-width: 1024px) {
   .profile__img img {
@@ -84,4 +81,3 @@
     display: flex;
   }
 }
-

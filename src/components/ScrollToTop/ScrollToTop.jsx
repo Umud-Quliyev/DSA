@@ -40,7 +40,7 @@ const ScrollToTop = () => {
   return (
     <>
       <div
-        className={`fixed right-10 w-12 h-12 flex items-center justify-center bg-transparent text-white rounded-full shadow-lg cursor-pointer transition-opacity duration-300 ${
+        className={`fixed left-10 w-12 h-12 flex items-center justify-center bg-transparent text-white rounded-full shadow-lg cursor-pointer transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ bottom: `${bottomOffset}px` }}
@@ -55,13 +55,13 @@ const ScrollToTop = () => {
           <path
             d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
             fill="#fff"
-            stroke="#862359"
+            stroke="#e2195b"
             strokeWidth="4"
             strokeDasharray={`${pathLength} ${pathLength}`}
             strokeDashoffset={scrollY}
           />
         </svg>
-        <span className="relative text-lg scrolltotop"><FaAngleUp /></span>
+        <span className="relative text-lg  text-[#e2195b]"><FaAngleUp /></span>
       </div>
     </>
   );

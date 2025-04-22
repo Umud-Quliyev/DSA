@@ -10,15 +10,30 @@ const Training = () => {
       <section id="training" name="training">
         <div className="contanierr">
           <div className="training_program_info">
-            <h2 className="text-[#212331]">{t("training_program")}</h2>
-            <p>{t("training_info")}</p>
-            <Link className=" text-[2.5vw] sm:text-[20px]" to="/program">{t("training_download")}</Link>
+            <h2
+              className="text-[#212331]"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              {t("training_program")}
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="400">
+              {t("training_info")}
+            </p>
+            <Link
+              className=" text-[2.5vw] sm:text-[20px]"
+              to="/program"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              {t("training_download")}
+            </Link>
           </div>
         </div>
         <div className="training__program">
           <div className="contanierr">
             <div className="program__title">
-              <h2 >{t("training_process_title")}</h2>
+              <h2 data-aos="fade-up">{t("training_process_title")}</h2>
             </div>
             <div className="training__process ">
               <div className="process">
@@ -29,7 +44,7 @@ const Training = () => {
                   <p>{t("training_step_1")}</p>
                 </div>
                 <div className="process__desc">
-                  <p >{t("training_step_1_desc")}</p>
+                  <p>{t("training_step_1_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -40,7 +55,7 @@ const Training = () => {
                   <p>{t("training_step_2")}</p>
                 </div>
                 <div className="process__desc">
-                  <p >{t("training_step_2_desc")}</p>
+                  <p>{t("training_step_2_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -51,7 +66,7 @@ const Training = () => {
                   <p>{t("training_step_3")}</p>
                 </div>
                 <div className="process__desc">
-                  <p >{t("training_step_3_desc")}</p>
+                  <p>{t("training_step_3_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -62,7 +77,7 @@ const Training = () => {
                   <p>{t("training_step_4")}</p>
                 </div>
                 <div className="process__desc">
-                  <p >{t("training_step_4_desc")}</p>
+                  <p>{t("training_step_4_desc")}</p>
                 </div>
               </div>
               <div className="process">
@@ -73,7 +88,7 @@ const Training = () => {
                   <p>{t("training_step_5")}</p>
                 </div>
                 <div className="process__desc">
-                  <p >{t("training_step_5_desc")}</p>
+                  <p>{t("training_step_5_desc")}</p>
                 </div>
               </div>
             </div>

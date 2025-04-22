@@ -11,7 +11,6 @@ import azercell from "../../assets/img/azercell.png";
 import bravo from "../../assets/img/bravo.png";
 import bakcell from "../../assets/img/bakcell.png";
 import { Pagination } from "swiper/modules";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const Customers = () => {
@@ -30,8 +29,11 @@ const Customers = () => {
   return (
     <section id="customer" name="customer" className="contanierr">
       <div className="customers pt-15">
-        <div className="customer__title">
-          {<h2>{t("customer_title")}</h2>}
+        <div className="customer__title"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-delay="0">
+          <h2>{t("customer_title")}</h2>
         </div>
         <div className="customer__list">
           <Swiper

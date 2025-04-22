@@ -30,20 +30,20 @@ const DetailTrainingSection = ({selectedTraining, trainingData, formatTime, addT
                   <div className="card__body">
                     <div className="card__date">
                       <FaCalendarAlt color={trainingInfo.bgcolor} />
-                      <p className=" text-[#330033]">
+                      <p>
                         {formatDate(session.date)}
                       </p>
                     </div>
                     <div className="card__time">
-                      <FaRegClock color={trainingInfo.bgcolor} />
-                      <p className="  text-[#330033] ">
+                      <FaRegClock color={trainingInfo.bgcolor}/>
+                      <p>
                         {`${formatTime(startTime)}-${formatTime(endTime)}`}
                       </p>
                     </div>
                   </div>
                   <div className="card__button">
                     <button
-                      className=""
+                      className="hover:opacity-80"
                       onClick={() => openModal(selectedTraining)}
                       style={{ backgroundColor: trainingInfo.bgcolor }}
                     >

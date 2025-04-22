@@ -31,7 +31,6 @@
   "community": "Community",
   "community_desc": "Join our community of professional Data Analysts and participate in various networking events in the Data Science space.",
   "customer_title": "Companies we cooperate with",
-  "training_program": "Training Program",
   "training_info": "The e-Government Development Center, Pasha Bank, Bakcell, International Bank, and Access Bank have selected books and created real business and analytics cases by our experts. The program is regularly updated taking into account market trends and business requirements. This program will cover 140 hours of educational content, including teaching Statistics, Data Analytics, and Data Science methodologies using R, Python, Spark, Spark SQL, Spark MLlib, AWS, Hadoop, MongoDB, MapReduce, Hive, Hadoop, TensorFlow, Tableau, SPSS, and SPSS Modeler.",
   "training_download": "Download the training program",
   "training_process_title": "How does the process work?",
@@ -44,7 +43,7 @@
   "training_step_4": "Career",
   "training_step_4_desc": "You will meet with professional Data Analysts and HR specialists, have one-on-one discussions, and gain access to the CV-Vacancy database.",
   "training_step_5": "Congratulations!",
-  "training_step_5_desc": "The world has gained a new Data Scientist.",
+  "training_step_5_desc": "The world has gained  new Data Scientist.",
   "trainers": "Trainers",
 
   "nav": {

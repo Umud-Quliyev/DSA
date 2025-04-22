@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Teachers.css";
 import { useTranslation } from "react-i18next";
 import Popup from "../Popup/Popup";
-
+import { motion } from "motion/react";
 const Teachers = () => {
   const [openModals, setOpenModals] = useState({});
   const [teachers, setTeachers] = useState([]);
@@ -49,7 +49,10 @@ const Teachers = () => {
       <div className="contanierr">
         <div className="teachers">
           <div className="teacher__title">
-            <h2>{t("teachers.title")}</h2>
+            <motion.h2 initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            viewport={{ once: true }}>{t("teachers.title")}</motion.h2>
           </div>
           <div className="teacher__list">
             {teachers.map((teacher, index) => (
@@ -64,9 +67,7 @@ const Teachers = () => {
                 <div className="profile__info">
                   <h3>{teacher.name}</h3>
                   <h5>{teacher.work_position}</h5>
-                  <h5>
                     <span>{teacher.work_location}</span>
-                  </h5>
                 </div>
               </div>
             ))}

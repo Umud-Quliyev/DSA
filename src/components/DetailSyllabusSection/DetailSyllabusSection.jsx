@@ -24,7 +24,7 @@ const DetailSyllabusSection = ({ selectedTraining }) => {
                         ?.split(/\r\n/)
                         .filter((item) => item.trim() !== "")
                         .map((item, idx) => (
-                          <li key={idx} className="text-[#330033] text-[16px] font-[400]">
+                          <li key={idx} className="text-[#330033] text-[16px] font-[500]">
                             {item}
                           </li>
                         ))}
@@ -41,7 +41,7 @@ const DetailSyllabusSection = ({ selectedTraining }) => {
                         ?.split(/\r\n/)
                         .filter((item) => item.trim() !== "")
                         .map((item, idx) => (
-                          <li key={idx} className="text-[#330033] text-[16px] font-[400]">
+                          <li key={idx} className="text-[#330033] text-[16px] font-[500]">
                             {item}
                           </li>
                         ))}

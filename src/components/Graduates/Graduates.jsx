@@ -5,7 +5,6 @@ import "swiper/css/free-mode";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-
 import yapikredi from "../../assets/img/yapikredi.png";
 import atltech from "../../assets/img/atltech.png";
 import kapital from "../../assets/img/kapitalbank.png";
@@ -21,9 +20,8 @@ import pashaheyat from "../../assets/img/pashaheyat.png";
 import adta from "../../assets/img/adta.png";
 import azercell from "../../assets/img/azercell.png";
 import dsmf from "../../assets/img/dsmf.png";
-
 import "./Graduates.css";
-
+import { motion } from "motion/react";
 const Graduates = () => {
   const [graduate, setGraduate] = useState([]);
   const { t } = useTranslation();
@@ -43,11 +41,11 @@ const Graduates = () => {
         setGraduate(data);
       } catch (err) {
         console.error("Fetch Error:", err);
-      } 
+      }
     };
 
     fetchGraduates();
-  }, []);
+  }, [BASE_URL]);
 
   const graduate__workplace = [
     { src: yapikredi },
@@ -71,36 +69,40 @@ const Graduates = () => {
     <div className="contanierr">
       <div className="graduates">
         <div className="graduates__title">
-          <h2>{t("graduates.title")}</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            {t("graduates.title")}
+          </motion.h2>
         </div>
         <div className="graduates__list">
           <Swiper
-          
             breakpoints={{
               320: {
-                slidesPerView: 1, 
-                slidesPerGroup: 1, 
-                spaceBetween:20,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 20,
               },
               480: {
-                slidesPerView: 3, 
-                slidesPerGroup: 3, 
+                slidesPerView: 3,
+                slidesPerGroup: 3,
                 spaceBetween: 30,
               },
               768: {
-                slidesPerView: 4, 
+                slidesPerView: 4,
                 slidesPerGroup: 4,
-                spaceBetween: 50, 
+                spaceBetween: 50,
               },
               1024: {
-                slidesPerView: 5, 
-                slidesPerGroup: 5, 
-                spaceBetween:70,
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 70,
               },
             }}
-            
-            
-            pagination={{ clickable: true}}
+            pagination={{ clickable: true }}
             loop={true}
             speed={2500}
             modules={[Pagination]}
@@ -126,7 +128,14 @@ const Graduates = () => {
       </div>
       <div className="graduate__workplace">
         <div className="workplace__title">
-          {<h2>{t("graduates.workplace_title")}</h2>}
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            {t("graduates.workplace_title")}
+          </motion.h2>
         </div>
         <div className="workplace__list">
           {graduate__workplace.map((workplace, index) => (

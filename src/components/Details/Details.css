@@ -1,65 +1,17 @@
-/* .contanierr {
-  max-width: 1110px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
 
-/* .training__title img {
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  border: 2px solid #ffcc00;
-}
-
-.training__title {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  gap: 20px;
-}
- */
-/* .training__title h2 {
-  font-size: 40px;
-  line-height: 59px;
-  font-weight: 300;
-  margin-left: 20px;
-} */
-
-/* .training__desc {
-  padding: 32px 0;
-}
-
-.training__desc span {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.training__workplace {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-style: 18px;
-  background-color: #33cccc;
-  height: 74px;
-} */
-
-/* .training__workplace p {
-  font-size: 18px;
-} */
 .table__card {
   box-shadow: 0 0 5px 0 #bdb2bd;
   border-radius: 15px;
 }
 .card__title {
-  padding: 15px 18px;
+  padding: 24px 18px;
   color: #fff;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
 .card__title h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 26px;
   font-weight: 400;
   color: white;
@@ -91,8 +43,10 @@
 }
 .card__date p,
 .card__time p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
+  color: #330033;
+  font-weight: 400;
 }
 
 .card__button button {
@@ -104,100 +58,6 @@
   color: white;
   border-radius: 7px;
   padding: 10px 8px;
-  font-size: 18px;
-  line-height: 20px;
-  transition: opacity 0.2s;
-  cursor: pointer;
-}
-
-.card__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem 1rem;
-}
-/* .training__table {
-  padding: 32px 0 48px 0;
-}
-
-.table__title h2 {
-  padding-bottom: 16px;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 59px;
-}
-
-.table__card {
-  box-shadow: 0 0 5px 0 #bdb2bd;
-  border-radius: 15px;
-  max-width: 250px;
-  width: 100%;
-}
-
-.card__title {
-  padding: 18px;
-  color: #fff;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.card__title h3 {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  color: white;
-}
-
-.card__date {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.card__body {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.card__date svg {
-  width: 26px;
-  height: 26px;
-}
-
-.card__date span {
-  font-size: 16px;
-  line-height: 26px;
-}
-
-.card__time {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding-bottom: 10px;
-  width: 100%;
-}
-
-.card__time svg {
-  width: 26px;
-  height: 26px;
-}
-
-.card__time span {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.card__button button {
-  border: none;
-  width: 100%;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 7px;
-  padding: 8px;
   font-size: 14px;
   line-height: 20px;
   transition: opacity 0.2s;
@@ -211,19 +71,6 @@
   padding: 0 1rem 1rem;
 }
 
-.training__company {
-  background-color: #3b388b;
-  height: 73px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.training__company .contanierr {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 .training__company {
   background-color: #3b388b;
   height: auto;
@@ -246,8 +93,6 @@
 
 
 .syllabus__item {
-  /* max-width: 49%;
-  width: 100%; */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -314,11 +159,6 @@
   border-radius: 50%;
 }
 
-/* .trainer {
-  display: flex;
-  gap: 60px;
-} */
-
 .trainer__info {
   width: 100%;
 }
@@ -377,15 +217,6 @@
   display: block;
 }
 
-/* .cluster__box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-} */
-
-
-
 .training__chk input {
   width: 24px;
   height: 24px;
@@ -400,8 +231,6 @@
   line-height: 30px;
   cursor: pointer;
 }
-
-
 
 .training__register {
   text-align: end;
@@ -413,357 +242,3 @@
   color: #330033;
 }
 
-/* .training__info {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 48px 0px;
-} */
-
-/* .info__title h2 {
-    font-size: 40px;
-  line-height: 59px;
-  font-weight: 400;
-} */
-/* .training__desc p,
-.info__desc p {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #330033;
-}
-
-.info__certificate {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-} */
-
-/* .info__certificate h2 {
-   font-size: 40px;
-  line-height: 59px;
-  font-weight: 400;
-  padding-bottom: 16px;
-} */
-
-/* .certificate__container {
-  display: flex;
-  gap: 100px;
-  align-items: center;
-}
-
-.certificate__container > div {
-  flex: 1;
-}
-
-.info__certificate p {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.certificate__img {
-  max-width: 460px;
-  width: 100%;
-  
-}
-
-.certificate__text h2 {
-  font-size: 40px;
-  line-height: 59px;
-  font-weight: 400;
-  padding-bottom: 16px;
-}
-
-.certificate__text p {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-}
-
-.training__demo {
-  padding: 48px 0 64px 0;
-  background-color: #3b388b;
-  color: white;
-}
-
-.training__lessons {
-  display: flex;
-  gap: 30px;
-}
-
-.training__lessons span {
-  font-size: 24px;
-  line-height: 59px;
-  color: white;
-  font-weight: 500;
-}
-
-.lessons__info {
-  width: 100%;
-  padding-top: 42px;
-}
-
-.demo__title span {
-  font-size: 24px;
-  line-height: 59px;
-  color: white;
-  font-weight: 500;
-}
-
-.demo__info span {
-  font-size: 16px;
-  line-height: 35px;
-  color: #22c4cd;
-}
-
-.demo__info p {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.demo__info > div {
-  padding-top: 16px;
-}
-
-.syllabus {
-  background-color: #f1f2f2;
-  padding-top: 32px;
-  padding-bottom: 48px;
-}
-
-.syllabus__title h2 {
-  font-size: 24px;
-  line-height: 59px;
-  font-weight: 500;
-}
-
-.syllabus__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.syllabus__item {
-  max-width: 520px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  background-color: white;
-  padding: 24px;
-  border-radius: 7px;
-}
-
-.session__info h3 {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 20px;
-  font-weight: 500;
-  padding-bottom: 16px;
-}
-
-.session__info ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.case__info {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-
-.case__info h3 {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 20px;
-  font-weight: 500;
-  padding-bottom: 16px;
-}
-
-.testimonials {
-  background-color: #3b388b;
-  padding-top: 64px;
-  padding-bottom: 32px;
-}
-
-.trainers__list {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
-}
-
-.trainers {
-  padding: 80px 0;
-}
-
-.trainers__title h2 {
-  font-size: 40px;
-  font-weight: 400;
-  padding-bottom: 64px;
-}
-
-.trainer__img {
-  max-width: 150px;
-  width: 100%;
-  border-radius: 50%;
-}
-
-.trainer__img img {
-  border-radius: 50%;
-}
-
-.trainer {
-  display: flex;
-  gap: 60px;
-}
-
-.trainer__info {
-  width: 100%;
-}
-
-.trainer__info h3 {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 5px;
-}
-
-.trainer__info span {
-  display: block;
-  font-weight: 500;
-  padding-bottom: 16px;
-  color: #22c4cd;
-}
-
-.tables__title h2 {
-  padding-bottom: 16px;
-  font-weight: 5 00;
-  font-size: 24px;
-  line-height: 59px;
-}
-
-.training__price p span {
-  text-decoration: line-through;
-  color: #666666;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.training__price p {
-  font-weight: bold;
-  font-size: 18px;
-  padding-left: 5px;
-}
-
-.session__tables {
-  padding-top: 32px;
-  padding-bottom: 48px;
-}
-
-.session__tables .card__body {
-  align-items: center;
-}
-
-.session__tables .card__time span {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.session__tables .card__time {
-  justify-content: center;
-  border-bottom: 2px solid lightgray;
-}
-
-.session__tables .table__card {
-  max-width: 340px;
-  width: 100%;
-}
-
-.session__tables .table__list {
-  flex-wrap: wrap;
-}
-
-.session__tables .card__title {
-  text-align: center;
-}
-
-.cluster {
-  background-color: #f1f2f2;
-  padding-top: 32px;
-  padding-bottom: 48px;
-}
-
-.cluster__title h2 {
-  font-size: 24px;
-  padding-bottom: 32px;
-  font-weight: 500;
-}
-
-.cluster__list {
-  background-color: #fff;
-  padding: 24px 32px 32px;
-  background-color: white;
-  border-radius: 7px;
-}
-
-.list__title span {
-  font-size: 21px;
-  font-weight: 500;
-  padding-bottom: 24px;
-  display: block;
-}
-
-.cluster__box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-}
-
-.training h4 {
-  font-size: 20px;
-}
-
-.training__chk input {
-  width: 24px;
-  height: 24px;
-}
-
-.MuiCheckbox-root {
-  padding: 0 !important;
-}
-
-.training__chk {
-  font-size: 18px;
-  line-height: 30px;
-  cursor: pointer;
-}
-
-.training__price {
-  padding-top: 10px;
-  text-align: end;
-}
-
-.training__price p {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 10px;
-}
-
-.training__register {
-  text-align: end;
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 1280px) {
-  .table__card__list {
-    flex-wrap: wrap;
-  }
-}
- */

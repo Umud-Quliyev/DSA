@@ -10,8 +10,8 @@ i18n
   .use(LanguageDetector)
   .init({
     resources: {
-      az: { translation: az },
       en: { translation: en },
+      az: { translation: az },
     },
     fallbackLng: "az", 
     interpolation: {
