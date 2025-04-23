@@ -11,7 +11,7 @@ const DetailHeadSection = ({ data }) => {
               alt={data?.title}
               className="w-25 h-25 rounded-full border border-[2.5px] border-[#e7ce66]"
             />
-            <h2 className="text-[40px]  font-[300] text-[#330033]">
+            <h2 className="text-[26px] md:text-[40px]  font-[300] text-[#330033]">
               {data?.title}
             </h2>
           </div>

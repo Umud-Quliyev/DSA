@@ -56,7 +56,7 @@ const PracticTable = ({setDropdown}) => {
   
 
   return (
-    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-35 sm:right-15 md:top-15 md:right-[50px] xl:right-0 lg:right-0 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 w-full md:max-w-[100%]">
+    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-0 lg:right-0 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[100%]">
 
 
       {loading
@@ -91,13 +91,13 @@ const PracticTable = ({setDropdown}) => {
         : trainings.map((training) => (
             <div key={training.id} className=" flex flex-col">
               <div className="text-[#2fa8a5]">
-                <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1.1vw]">
+                <h1 className="text-[#2fa8a5] font-bold text-[2.5vw] md:text-[1vw]">
                   {training.name}
                 </h1>
               </div>
               {training.bootcamp_tipi.map((info) => (
                 <div key={info.id} className="flex  flex-col ">
-                  <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1.1vw]">
+                  <p className="text-[#50264E] font-bold text-[2.5vw] md:text-[1vw]">
                     {info.name}
                   </p>
 
@@ -107,7 +107,7 @@ const PracticTable = ({setDropdown}) => {
                         <span
                           key={telim.id}
                           onClick={() => clickHandler(telim)}
-                          className="text-[#50264E] text-[2.4vw] md:text-[1.1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
+                          className="text-[#50264E] text-[2.4vw] md:text-[1vw] pr-3 transition duration-300 ease hover:text-[#fccd00] hover:bg-[#f8f9fb] p-1 cursor-pointer"
                         >
                           - {telim.title}
                         </span>
