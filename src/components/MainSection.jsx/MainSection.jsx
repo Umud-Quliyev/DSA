@@ -62,29 +62,34 @@ const MainSection = () => {
         className="relative h-[100vh] w-full bg-cover bg-center"
       >
         <motion.div className="text-white flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 text-center">
-          <motion.h1
+          <h1
             className="font-light text-[5vw] lg:text-[54px] xl:text-[60px] leading-snug"
-            initial={{ opacity: 0, x: -40 }}
+            /* initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.3,
               duration: 2,
               ease: "easeIn",
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true }} */
+            data-aos="fade-right"
+            data-aos-duration="1600"
           >
             {t("bootcamp_title")}
-          </motion.h1>
+          </h1>
 
-          <motion.h2
+          <h2
             className="text-nowrap text-[6vw] lg:text-[54px] xl:text-[60px] font-bold"
-            initial={{ opacity: 0, scale: 0.9 }}
+            /* initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true }} */
+            data-aos="fade"
+            data-aos-duration="2000"
+            data-aos-delay="500"
           >
             {t("bootcamp_subtitle")}
-          </motion.h2>
+          </h2>
 
           <motion.div
             className="bg-[#1e092880] rounded-[10px] flex flex-col items-center p-4 my-4"
@@ -92,6 +97,7 @@ const MainSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             viewport={{ once: true }}
+            
           >
             <span className="text-[#ffca05] text-[2vw] lg:text-[18px] xl:text-[20px] font-light leading-3">
               {t("bootcamp_name")}
@@ -120,6 +126,7 @@ const MainSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             viewport={{ once: true }}
+            
           >
             {t("bootcamp_description")}
           </motion.span>
@@ -252,11 +259,12 @@ const MainSection = () => {
             {t("program_advantages")}
           </h2>
           <div className=" flex justify-between  gap-5 my-10 flex-wrap text-center main-div ">
-            <div className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[32%] "
-                data-aos="fade-up"
-                data-aos-duration="400"
-                data-aos-delay="0"
-                >
+            <div
+              className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[32%] "
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="0"
+            >
               <img
                 src={edu}
                 alt="edu"
@@ -269,10 +277,12 @@ const MainSection = () => {
                 {t("data_science_bootcamp_desc")}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[32%]"
-            data-aos="fade-up"
-            data-aos-duration="500"
-            data-aos-delay="0">
+            <div
+              className="flex flex-col items-center gap-2  w-[45%] cursor-pointer sub-main-div md:w-[32%]"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="0"
+            >
               <img
                 src={practic}
                 alt="practic"
@@ -285,10 +295,12 @@ const MainSection = () => {
                 {t("training_program_desc")}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
-             data-aos="fade-up"
-             data-aos-duration="600"
-             data-aos-delay="0">
+            <div
+              className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="0"
+            >
               <img
                 src={mentor}
                 alt="mentor"
@@ -301,9 +313,11 @@ const MainSection = () => {
                 {t("mentor_selection_desc")}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
-             data-aos="fade-up"
-             data-aos-duration="400">
+            <div
+              className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
+              data-aos="fade-up"
+              data-aos-duration="400"
+            >
               <img
                 src={project}
                 alt="project"
@@ -316,9 +330,11 @@ const MainSection = () => {
                 {t("projects_desc")}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[45%] cursor-pointer sub-main-div md:w-[32%] "
-             data-aos="fade-up"
-             data-aos-duration="500">
+            <div
+              className="flex flex-col items-center gap-2 w-[45%] cursor-pointer sub-main-div md:w-[32%] "
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
               <img
                 src={career}
                 alt="career"
@@ -331,9 +347,11 @@ const MainSection = () => {
                 {t("career_support_desc")}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
-             data-aos="fade-up"
-             data-aos-duration="600">
+            <div
+              className="flex flex-col items-center gap-2 w-[45%]  cursor-pointer sub-main-div md:w-[32%] "
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <img
                 src={community}
                 alt="community"

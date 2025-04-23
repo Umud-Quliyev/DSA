@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 function App() {
   AOS.init({
+    duration: 1000,
     once: true,      
   });
   return (
