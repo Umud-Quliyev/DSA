@@ -1,5 +1,5 @@
 import { Skeleton } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,19 @@ const PracticTable = ({setDropdown}) => {
   const [trainings, setTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
   const BASE_URL = import.meta.env.VITE_API_URL;
-
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   useEffect(() => {
     const getBootcampData = async () => {
       try {
@@ -56,7 +68,7 @@ const PracticTable = ({setDropdown}) => {
   
 
   return (
-    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-5 lg:right-5 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[98%]">
+    <div  ref={dropdownRef} className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-5 lg:right-5 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[98%]">
 
 
       {loading
