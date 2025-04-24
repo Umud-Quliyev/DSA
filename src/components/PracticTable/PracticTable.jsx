@@ -9,7 +9,7 @@ const PracticTable = ({setDropdown}) => {
   const [loading, setLoading] = useState(true);
   const BASE_URL = import.meta.env.VITE_API_URL;
   const dropdownRef = useRef(null);
-  useEffect(() => {
+  /* useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdown(false);
@@ -20,7 +20,7 @@ const PracticTable = ({setDropdown}) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [setDropdown]);
+  }, []); */
   useEffect(() => {
     const getBootcampData = async () => {
       try {
