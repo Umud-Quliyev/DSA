@@ -20,7 +20,7 @@ const PracticTable = ({setDropdown}) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [setDropdown]);
   useEffect(() => {
     const getBootcampData = async () => {
       try {

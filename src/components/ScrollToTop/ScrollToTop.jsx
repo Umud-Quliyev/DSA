@@ -40,14 +40,14 @@ const ScrollToTop = () => {
   return (
     <>
       <div
-        className={`fixed left-10 w-12 h-12 flex items-center justify-center bg-transparent text-white rounded-full shadow-lg cursor-pointer transition-opacity duration-300 ${
+        className={`fixed left-10 w-10 h-10  flex items-center justify-center bg-transparent text-white rounded-full shadow-lg cursor-pointer transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ bottom: `${bottomOffset}px` }}
         onClick={scrollToTop}
       >
         <svg
-          className="absolute w-full h-full"
+          className="absolute w-full h-full "
           viewBox="-1 -1 102 102"
           width="100%"
           height="100%"
@@ -56,7 +56,7 @@ const ScrollToTop = () => {
             d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
             fill="#fff"
             stroke="#e2195b"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeDasharray={`${pathLength} ${pathLength}`}
             strokeDashoffset={scrollY}
           />
