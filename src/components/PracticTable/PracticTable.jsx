@@ -56,12 +56,12 @@ const PracticTable = ({setDropdown}) => {
   
 
   return (
-    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-0 lg:right-0 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[100%]">
+    <div className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-5 lg:right-5 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[98%]">
 
 
       {loading
         ? [...Array(3)].map((_, index) => (
-            <div key={index} className="w-[300px]">
+            <div key={index} className="w-[500px]">
               <Skeleton
                 animation="wave"
                 variant="text"

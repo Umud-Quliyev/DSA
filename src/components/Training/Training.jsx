@@ -21,7 +21,7 @@ const Training = () => {
               {t("training_info")}
             </p>
             <Link
-              className=" text-[2.5vw] sm:text-[20px]"
+              className=" text-[2.5vw] sm:text-[20px] "
               to="/program"
               data-aos="fade-up"
               data-aos-duration="300"

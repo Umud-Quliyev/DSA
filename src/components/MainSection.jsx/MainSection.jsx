@@ -141,13 +141,13 @@ const MainSection = () => {
           >
             <Link
               to={"/muraciet"}
-              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[14px] py-3 px-6 w-2/6 lg:w-1/4"
+              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 w-2/6 lg:w-1/4"
             >
               {t("apply_now")}
             </Link>
             <Link
               to={"/program"}
-              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[14px] py-3 px-6 w-2/6 lg:w-1/4"
+              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 w-2/6 lg:w-1/4"
             >
               {t("download_program")}
             </Link>
