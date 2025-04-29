@@ -3,16 +3,22 @@ import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-const PracticTable = ({setDropdown}) => {
+const PracticTable = ({setDropdown,setPreventOpen }) => {
   const navigate = useNavigate();
   const [trainings, setTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
   const BASE_URL = import.meta.env.VITE_API_URL;
   const dropdownRef = useRef(null);
-  /* useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdown(false);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        // setTimeout ilə delay veririk ki, button klik əvvəl baş versin
+        setTimeout(() => {
+          setPreventOpen(false);
+        }, 50);
       }
     };
   
@@ -20,7 +26,7 @@ const PracticTable = ({setDropdown}) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []); */
+  }, [setPreventOpen]);
   useEffect(() => {
     const getBootcampData = async () => {
       try {
@@ -68,7 +74,7 @@ const PracticTable = ({setDropdown}) => {
   
 
   return (
-    <div  ref={dropdownRef} className="practic__table overflow-y-auto max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-5 lg:right-5 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[98%]">
+    <div  ref={dropdownRef} className="practic__table overflow-y-auto inset-x-5 max-h-[60vh] md:h-max absolute top-20 right-25 sm:right-15 md:top-15 md:right-[50px] xl:right-5 lg:right-5 bg-white px-5 py-4 rounded-[5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  md:max-w-[98%]">
 
 
       {loading
@@ -139,6 +145,7 @@ const PracticTable = ({setDropdown}) => {
 };
 PracticTable.propTypes = {
   setDropdown: PropTypes.func.isRequired,
+  setPreventOpen: PropTypes.func.isRequired,
 };
 
 export default PracticTable;

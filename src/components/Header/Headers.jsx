@@ -10,6 +10,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import IconsSection from "../IconsSection/IconsSection";
 import { t } from "i18next";
 const Headers = () => {
+  const [preventOpen, setPreventOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [currentScroll, setCurrentScroll] = useState(0);
   const [chooseScroll, setChooseScroll] = useState(false);
@@ -88,8 +89,16 @@ const Headers = () => {
   }, [isLocation]);
 
   const handleClick = () => {
-    setDropdown(!dropdown);
+    setPreventOpen(true);
+    setTimeout(() => {
+      setDropdown((prev) => !prev);
+    }, 0);
   };
+  useEffect(() => {
+    if (!preventOpen) {
+      setDropdown(false);
+    }
+  }, [preventOpen]);
   const handleCloseMenu = () => {
     setOpen(false);
     setDropdown(false);
@@ -229,7 +238,7 @@ const Headers = () => {
           handleCloseMenu={handleCloseMenu}
         />
       )}
-      {dropdown && <PracticTable setDropdown={setDropdown}/>}
+      {dropdown && <PracticTable setDropdown={setDropdown} setPreventOpen={setPreventOpen}/>}
     </div>
   );
 };

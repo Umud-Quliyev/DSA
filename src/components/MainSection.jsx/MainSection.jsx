@@ -97,7 +97,6 @@ const MainSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             viewport={{ once: true }}
-            
           >
             <span className="text-[#ffca05] text-[2vw] lg:text-[18px] xl:text-[20px] font-light leading-3">
               {t("bootcamp_name")}
@@ -126,7 +125,6 @@ const MainSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             viewport={{ once: true }}
-            
           >
             {t("bootcamp_description")}
           </motion.span>
@@ -136,18 +134,17 @@ const MainSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.5, duration: 2 }}
-            style={{ filter: "blur(5px)" }}
             viewport={{ once: true }}
           >
             <Link
               to={"/muraciet"}
-              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 w-2/6 lg:w-1/4"
+              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 min-w-[150px] max-w-[250px] flex-1"
             >
               {t("apply_now")}
             </Link>
             <Link
               to={"/program"}
-              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 w-2/6 lg:w-1/4"
+              className="flex justify-center text-nowrap bg-[#2baaaa] hover:bg-transparent hover:border-none border border-[#2baaaa] transition-all duration-300 rounded-[24px] text-[2vw] md:text-[16px] py-3 px-6 min-w-[150px] max-w-[250px] flex-1"
             >
               {t("download_program")}
             </Link>
