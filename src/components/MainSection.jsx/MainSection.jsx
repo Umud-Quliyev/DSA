@@ -59,19 +59,11 @@ const MainSection = () => {
       <section
         id="main"
         name="main"
-        className="relative h-[100vh] w-full bg-cover bg-center"
+        className="relative h-[60vh] sm:h-[80vh] md:h-[100vh] w-full bg-cover bg-center"
       >
         <motion.div className="text-white flex flex-col items-center absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 text-center">
           <h1
             className="font-light text-[5vw] lg:text-[54px] xl:text-[60px] leading-snug"
-            /* initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 2,
-              ease: "easeIn",
-            }}
-            viewport={{ once: true }} */
             data-aos="fade-right"
             data-aos-duration="1600"
           >
@@ -80,10 +72,6 @@ const MainSection = () => {
 
           <h2
             className="text-nowrap text-[6vw] lg:text-[54px] xl:text-[60px] font-bold"
-            /* initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 2 }}
-            viewport={{ once: true }} */
             data-aos="fade"
             data-aos-duration="2000"
             data-aos-delay="500"
@@ -120,7 +108,7 @@ const MainSection = () => {
           </motion.div>
 
           <motion.span
-            className="font-normal text-[1.9vw] md:text-[16px] w-[70%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[34%]"
+            className="font-normal text-[1.9vw] md:text-[16px] w-[40%] sm:w-[45%] md:w-[40%] lg:w-[40%] xl:w-[34%]"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
